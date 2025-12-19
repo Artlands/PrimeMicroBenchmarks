@@ -1,7 +1,12 @@
+/* 
+ * Tree-walk benchmark.
+ * Random BST searches to stress pointer chasing, branch behavior,
+ * and cache miss latency.
+ */
+
 #include <stdio.h>
 #include <stdlib.h>
 #include "bench_args.h"
-
 typedef struct Node {
     int value;
     struct Node *left;

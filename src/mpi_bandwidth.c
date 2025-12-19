@@ -1,10 +1,15 @@
+/* 
+ * MPI bandwidth benchmark.
+ * Ping-pong send/recv between ranks to stress interconnect bandwidth
+ * and message latency under steady traffic.
+ */
+
 #include <mpi.h>
 #include <stdio.h>
 #include <limits.h>
 #include <stdlib.h>
 #include <time.h>
 #include "bench_args.h"
-
 #define SIZE (1024 * 1024 * 10) // 10MB Message
 #define DEFAULT_MSG_SIZE SIZE
 #define DEFAULT_ITERS 1000ULL

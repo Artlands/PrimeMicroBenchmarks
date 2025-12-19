@@ -1,7 +1,12 @@
+/* 
+ * STREAM triad benchmark.
+ * Large arrays with the triad kernel to drive sustained DRAM bandwidth
+ * and saturate the memory controllers.
+ */
+
 #include <stdio.h>
 #include <stdlib.h>
 #include "bench_args.h"
-
 // Array size (adjust based on system memory, keep it larger than L3 cache)
 #define N 20000000  // 20 million elements
 #define DEFAULT_ITERS 200ULL

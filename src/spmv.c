@@ -1,7 +1,12 @@
+/* 
+ * Sparse matrix-vector multiply benchmark.
+ * CSR SpMV with random column indices to drive irregular memory access
+ * and TLB pressure from indirect gathers.
+ */
+
 #include <stdio.h>
 #include <stdlib.h>
 #include "bench_args.h"
-
 #define N 1000000  // Rows
 #define NZ_PER_ROW 10 // Non-zeros per row
 #define DEFAULT_SEED 1u

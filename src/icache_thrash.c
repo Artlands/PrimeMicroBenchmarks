@@ -1,7 +1,12 @@
+/* 
+ * Instruction cache thrash benchmark.
+ * Executes a large unrolled instruction stream to overflow L1i and
+ * stress frontend fetch and decode bandwidth.
+ */
+
 #include <stdio.h>
 #include <stdlib.h>
 #include "bench_args.h"
-
 // Macro to generate massive code volume without loops (linear execution)
 #define OP a^=b; b+=a; a|=b; b^=a;
 #define OP10 OP OP OP OP OP OP OP OP OP OP 

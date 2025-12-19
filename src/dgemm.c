@@ -1,8 +1,13 @@
+/* 
+ * DGEMM (Double-precision General Matrix Multiply) benchmark.
+ * BLAS dense matrix multiply to stress floating-point throughput and
+ * compute-bound execution.
+ */
+
 #include <stdio.h>
 #include <stdlib.h>
 #include <cblas.h> // Requires BLAS library (e.g., OpenBLAS, MKL)
 #include "bench_args.h"
-
 // Matrix dimensions (adjust for L3 cache size, e.g., 256MB / sizeof(double))
 #define N 2048
 #define DEFAULT_SEED 1u

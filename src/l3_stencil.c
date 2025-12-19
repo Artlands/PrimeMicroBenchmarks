@@ -1,7 +1,12 @@
+/* 
+ * L3-resident stencil benchmark.
+ * Applies a 3-point stencil over an array sized to sit in L3, emphasizing
+ * cache reuse bandwidth with low arithmetic intensity.
+ */
+
 #include <stdio.h>
 #include <stdlib.h>
 #include "bench_args.h"
-
 // Size: 2MB (Large enough to bust L2, small enough to fit in L3)
 // Adjust this: typical L2 is 256KB-1MB, L3 is 10MB-64MB.
 #define N (2 * 1024 * 1024 / sizeof(double)) 

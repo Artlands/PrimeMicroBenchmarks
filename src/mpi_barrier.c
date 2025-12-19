@@ -1,8 +1,13 @@
+/* 
+ * MPI barrier benchmark.
+ * Tight MPI_Barrier loop to measure synchronization latency and
+ * idle spinning across ranks.
+ */
+
 #include <stdio.h>
 #include <stdlib.h>
 #include <mpi.h>
 #include "bench_args.h"
-
 int main(int argc, char *argv[]) {
     int rank, size;
     double t0 = bench_now_sec();

@@ -1,9 +1,14 @@
+/* 
+ * FFT mix benchmark.
+ * Runs a recursive FFT on fixed-size arrays to mix compute intensity with
+ * cache behavior and twiddle-factor access patterns.
+ */
+
 #include <complex.h>
 #include <math.h>
 #include <stdio.h>
 #include <stdlib.h>
 #include "bench_args.h"
-
 #define PI 3.14159265358979323846
 #define N 16384 // Fit in L2/L3 boundary
 #define DEFAULT_ITERS 2000ULL

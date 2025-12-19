@@ -1,7 +1,12 @@
+/* 
+ * Atomic increment contention benchmark.
+ * Multiple threads increment a single shared counter to force cache-line ping-pong
+ * and highlight coherence traffic under heavy atomic serialization.
+ */
+
 #include <omp.h>
 #include <stdio.h>
 #include "bench_args.h"
-
 int main(int argc, char **argv) {
     double t0 = bench_now_sec();
     double warmup = bench_parse_warmup(argc, argv, 0.0);

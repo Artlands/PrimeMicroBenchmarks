@@ -1,7 +1,12 @@
+/* 
+ * Pointer chase benchmark.
+ * Follows a random single-cycle permutation to serialize loads and expose
+ * memory latency from caches and DRAM.
+ */
+
 #include <stdio.h>
 #include <stdlib.h>
 #include "bench_args.h"
-
 #define N 1000000  // Number of elements
 #define DEFAULT_SEED 1u
 #define DEFAULT_ITERS 50000000ULL

@@ -1,7 +1,12 @@
+/* 
+ * Branch misprediction benchmark.
+ * Uses a random data-dependent branch with ~50% taken rate to stress
+ * branch predictor accuracy and highlight misprediction penalties.
+ */
+
 #include <stdio.h>
 #include <stdlib.h>
 #include "bench_args.h"
-
 #define N 10000000 // 10 Million elements
 #define DEFAULT_SEED 1u
 #define DEFAULT_ITERS 200ULL

@@ -1,8 +1,13 @@
+/* 
+ * I/O write wait benchmark.
+ * Repeated buffered writes followed by fsync to force storage flushes and
+ * emphasize I/O wait and sync overhead.
+ */
+
 #include <stdio.h>
 #include <stdlib.h>
 #include <unistd.h>
 #include "bench_args.h"
-
 #define CHUNK_SIZE (1024 * 1024 * 10) // 10 MB chunks
 #define DEFAULT_CHUNK_SIZE CHUNK_SIZE
 #define DEFAULT_ITERS 5ULL
