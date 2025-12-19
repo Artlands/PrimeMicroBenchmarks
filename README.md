@@ -128,6 +128,7 @@ D. Idle and waiting (the "Sleep" group)
 ## Usage examples
 
 All benchmarks accept `--duration <seconds>` (default: 60).
+Optional `--warmup <seconds>` runs a pre-measurement warm-up loop before timing.
 
 Some benchmarks also accept:
 - `--seed <int>` to control randomized data generation (e.g., `spmv`, `dgemm`, `pointer_chase`)

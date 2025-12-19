@@ -20,6 +20,7 @@ void fft(double complex *buf, double complex *out, int n, int step) {
 }
 
 int main(int argc, char **argv) {
+    double t0 = bench_now_sec();
     double complex *buf = malloc(N * sizeof(double complex));
     double complex *out = malloc(N * sizeof(double complex));
 
@@ -29,11 +30,22 @@ int main(int argc, char **argv) {
         out[i] = buf[i];
     }
 
+    double warmup = bench_parse_warmup(argc, argv, 0.0);
     double duration = bench_parse_duration(argc, argv, 60.0);
+
+    if (warmup > 0.0) {
+        double warm_start = bench_now_sec();
+        while ((bench_now_sec() - warm_start) < warmup) {
+            fft(buf, out, N, 1);
+        }
+    }
+
     double start = bench_now_sec();
+    fprintf(stderr, "LOOP_START_REL %f\n", bench_now_sec() - t0);
     while ((bench_now_sec() - start) < duration) {
         fft(buf, out, N, 1);
     }
+    fprintf(stderr, "LOOP_END_REL %f\n", bench_now_sec() - t0);
     free(buf); free(out);
     return 0;
 }

@@ -46,6 +46,7 @@ int search(Node* root, int key) {
 #define DEFAULT_SEED 1u
 
 int main(int argc, char **argv) {
+    double t0 = bench_now_sec();
     srand(bench_parse_seed(argc, argv, DEFAULT_SEED));
     Node *root = NULL;
 
@@ -58,16 +59,28 @@ int main(int argc, char **argv) {
 
     printf("Tree built. Starting walk...\n");
 
-    double start = bench_now_sec();
+    double warmup = bench_parse_warmup(argc, argv, 0.0);
     double duration = bench_parse_duration(argc, argv, 60.0);
     long found_count = 0;
 
     // 2. The Walk Loop
+    if (warmup > 0.0) {
+        double warm_start = bench_now_sec();
+        while ((bench_now_sec() - warm_start) < warmup) {
+            int key = rand();
+            found_count += search(root, key);
+        }
+        found_count = 0;
+    }
+
+    double start = bench_now_sec();
+    fprintf(stderr, "LOOP_START_REL %f\n", bench_now_sec() - t0);
     while ((bench_now_sec() - start) < duration) {
         // Search for a random value
         int key = rand(); 
         found_count += search(root, key);
     }
+    fprintf(stderr, "LOOP_END_REL %f\n", bench_now_sec() - t0);
 
     printf("Searches completed. Found: %ld\n", found_count);
     return 0;

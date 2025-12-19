@@ -20,6 +20,15 @@ static inline double bench_parse_duration(int argc, char **argv, double def) {
     return def;
 }
 
+static inline double bench_parse_warmup(int argc, char **argv, double def) {
+    for (int i = 1; i < argc - 1; i++) {
+        if (strcmp(argv[i], "--warmup") == 0) {
+            return atof(argv[i + 1]);
+        }
+    }
+    return def;
+}
+
 static inline unsigned int bench_parse_seed(int argc, char **argv, unsigned int def) {
     for (int i = 1; i < argc - 1; i++) {
         if (strcmp(argv[i], "--seed") == 0) {

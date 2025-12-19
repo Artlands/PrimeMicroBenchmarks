@@ -1,4 +1,5 @@
 #include <mpi.h>
+#include <stdio.h>
 #include <limits.h>
 #include <stdlib.h>
 #include <time.h>
@@ -8,6 +9,7 @@
 #define DEFAULT_MSG_SIZE SIZE
 
 int main(int argc, char** argv) {
+    double t0 = bench_now_sec();
     MPI_Init(&argc, &argv);
     int rank, size;
     MPI_Comm_rank(MPI_COMM_WORLD, &rank);
@@ -22,9 +24,30 @@ int main(int argc, char** argv) {
     int msg_size = (parsed_size > (size_t)INT_MAX) ? INT_MAX : (int)parsed_size;
     char *buf = (char*)malloc((size_t)msg_size);
 
+    double warmup = bench_parse_warmup(argc, argv, 0.0);
     double duration = bench_parse_duration(argc, argv, 60.0);
+
+    if (warmup > 0.0) {
+        MPI_Barrier(MPI_COMM_WORLD);
+        double warm_start = MPI_Wtime();
+        while (MPI_Wtime() - warm_start < warmup) {
+            if (rank % 2 == 0) {
+                if (rank + 1 < size) {
+                    MPI_Send(buf, msg_size, MPI_CHAR, rank + 1, 0, MPI_COMM_WORLD);
+                    MPI_Recv(buf, msg_size, MPI_CHAR, rank + 1, 0, MPI_COMM_WORLD, MPI_STATUS_IGNORE);
+                }
+            } else {
+                MPI_Recv(buf, msg_size, MPI_CHAR, rank - 1, 0, MPI_COMM_WORLD, MPI_STATUS_IGNORE);
+                MPI_Send(buf, msg_size, MPI_CHAR, rank - 1, 0, MPI_COMM_WORLD);
+            }
+        }
+    }
+
     MPI_Barrier(MPI_COMM_WORLD);
     double start_time = MPI_Wtime();
+    if (rank == 0) {
+        fprintf(stderr, "LOOP_START_REL %f\n", bench_now_sec() - t0);
+    }
     while (MPI_Wtime() - start_time < duration) {
         if (rank % 2 == 0) {
             if (rank + 1 < size) {
@@ -35,6 +58,9 @@ int main(int argc, char** argv) {
             MPI_Recv(buf, msg_size, MPI_CHAR, rank - 1, 0, MPI_COMM_WORLD, MPI_STATUS_IGNORE);
             MPI_Send(buf, msg_size, MPI_CHAR, rank - 1, 0, MPI_COMM_WORLD);
         }
+    }
+    if (rank == 0) {
+        fprintf(stderr, "LOOP_END_REL %f\n", bench_now_sec() - t0);
     }
     
     free(buf);

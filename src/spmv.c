@@ -7,6 +7,7 @@
 #define DEFAULT_SEED 1u
 
 int main(int argc, char **argv) {
+    double t0 = bench_now_sec();
     // 1. Setup CSR Format (Compressed Sparse Row)
     double *values = (double*)malloc(N * NZ_PER_ROW * sizeof(double));
     int *col_indices = (int*)malloc(N * NZ_PER_ROW * sizeof(int));
@@ -30,8 +31,22 @@ int main(int argc, char **argv) {
     }
 
     // 2. The Loop
+    double warmup = bench_parse_warmup(argc, argv, 0.0);
     double duration = bench_parse_duration(argc, argv, 60.0);
+    if (warmup > 0.0) {
+        double warm_start = bench_now_sec();
+        while ((bench_now_sec() - warm_start) < warmup) {
+            for (int i = 0; i < N; i++) {
+                double sum = 0.0;
+                for (int j = row_ptr[i]; j < row_ptr[i+1]; j++) {
+                    sum += values[j] * x[col_indices[j]];
+                }
+                y[i] = sum;
+            }
+        }
+    }
     double start = bench_now_sec();
+    fprintf(stderr, "LOOP_START_REL %f\n", bench_now_sec() - t0);
     while ((bench_now_sec() - start) < duration) {
         // SpMV Kernel
         for (int i = 0; i < N; i++) {
@@ -43,6 +58,7 @@ int main(int argc, char **argv) {
             y[i] = sum;
         }
     }
+    fprintf(stderr, "LOOP_END_REL %f\n", bench_now_sec() - t0);
     
     printf("SpMV Complete\n");
     free(values);

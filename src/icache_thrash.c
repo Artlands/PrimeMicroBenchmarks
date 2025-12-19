@@ -9,10 +9,24 @@
 #define OP1000 OP100 OP100 OP100 OP100 OP100 OP100 OP100 OP100 OP100 OP100
 
 int main(int argc, char **argv) {
+    double t0 = bench_now_sec();
     volatile int a = 1, b = 2;
-    double start = bench_now_sec();
+    double warmup = bench_parse_warmup(argc, argv, 0.0);
     double duration = bench_parse_duration(argc, argv, 60.0);
 
+    if (warmup > 0.0) {
+        double warm_start = bench_now_sec();
+        while ((bench_now_sec() - warm_start) < warmup) {
+            OP1000
+            OP1000
+            OP1000
+            OP1000
+        }
+    }
+
+    double start = bench_now_sec();
+
+    fprintf(stderr, "LOOP_START_REL %f\n", bench_now_sec() - t0);
     while ((bench_now_sec() - start) < duration) {
         // This block expands to thousands of instructions.
         // If this loop body > 32KB, it thrashes L1i.
@@ -21,6 +35,7 @@ int main(int argc, char **argv) {
         OP1000
         OP1000
     }
+    fprintf(stderr, "LOOP_END_REL %f\n", bench_now_sec() - t0);
     printf("%d\n", a);
     return 0;
 }

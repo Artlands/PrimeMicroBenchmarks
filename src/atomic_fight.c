@@ -3,9 +3,25 @@
 #include "bench_args.h"
 
 int main(int argc, char **argv) {
+    double t0 = bench_now_sec();
+    double warmup = bench_parse_warmup(argc, argv, 0.0);
     long shared_counter = 0;
-    double start = omp_get_wtime();
     double duration = bench_parse_duration(argc, argv, 60.0);
+
+    if (warmup > 0.0) {
+        double warm_start = omp_get_wtime();
+        #pragma omp parallel
+        {
+            while (omp_get_wtime() - warm_start < warmup) {
+                #pragma omp atomic
+                shared_counter++;
+            }
+        }
+        shared_counter = 0;
+    }
+
+    double start = omp_get_wtime();
+    fprintf(stderr, "LOOP_START_REL %f\n", bench_now_sec() - t0);
 
     #pragma omp parallel
     {
@@ -16,6 +32,7 @@ int main(int argc, char **argv) {
             shared_counter++;
         }
     }
+    fprintf(stderr, "LOOP_END_REL %f\n", bench_now_sec() - t0);
     printf("Final Count: %ld\n", shared_counter);
     return 0;
 }

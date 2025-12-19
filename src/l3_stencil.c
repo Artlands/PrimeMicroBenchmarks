@@ -7,14 +7,27 @@
 #define N (2 * 1024 * 1024 / sizeof(double)) 
 
 int main(int argc, char **argv) {
+    double t0 = bench_now_sec();
     double *A = (double*)malloc(N * sizeof(double));
     double *B = (double*)malloc(N * sizeof(double));
     
     // Initialize
     for(int i=0; i<N; i++) { A[i] = 1.0; B[i] = 0.5; }
 
+    double warmup = bench_parse_warmup(argc, argv, 0.0);
     double duration = bench_parse_duration(argc, argv, 60.0);
+
+    if (warmup > 0.0) {
+        double warm_start = bench_now_sec();
+        while ((bench_now_sec() - warm_start) < warmup) {
+            for (int i = 1; i < N - 1; i++) {
+                A[i] = (B[i-1] + B[i] + B[i+1]) * 0.33;
+            }
+            if (A[N/2] > 1000) break;
+        }
+    }
     double start = bench_now_sec();
+    fprintf(stderr, "LOOP_START_REL %f\n", bench_now_sec() - t0);
     
     // Stencil-like 3-point average (Read 2, Write 1, Spatial Locality)
     while ((bench_now_sec() - start) < duration) {
@@ -24,6 +37,7 @@ int main(int argc, char **argv) {
         // Prevent compiler optimizing the loop away by using the result
         if (A[N/2] > 1000) break; 
     }
+    fprintf(stderr, "LOOP_END_REL %f\n", bench_now_sec() - t0);
     free(A);
     free(B);
     return 0;
