@@ -32,15 +32,15 @@ int main(int argc, char **argv) {
 
     // Pointer chasing loop
     int current_index = perm[0];
-    int value;
+    volatile int sink = 0;
     double duration = bench_parse_duration(argc, argv, 60.0);
     do {
         current_index = next[current_index]; // Chase the pointer
-        value = values[current_index]; // Access the value (force load)
+        sink = values[current_index]; // Access the value (force load)
     } while ((bench_now_sec() - start_time) < duration);
 
     double seconds = bench_now_sec() - start_time;
-    printf("Pointer chasing took %f seconds\n", seconds);
+    printf("Pointer chasing took %f seconds (sink=%d)\n", seconds, sink);
 
     free(perm);
     free(values);
