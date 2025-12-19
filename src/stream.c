@@ -16,6 +16,7 @@ double scale = 3.0;
 
 int main(int argc, char **argv) {
     double t0 = bench_now_sec();
+    printf("STREAM start\n");
     // Initialize arrays
     for (int i = 0; i < N; i++) {
         a[i] = 1.0;
@@ -26,6 +27,7 @@ int main(int argc, char **argv) {
     unsigned long long warmup_iters = bench_parse_warmup_iterations(argc, argv, 0ULL);
     unsigned long long iterations = bench_parse_iterations(argc, argv, DEFAULT_ITERS);
     if (warmup_iters > 0ULL) {
+        printf("STREAM warmup start\n");
         for (unsigned long long iter = 0; iter < warmup_iters; iter++) {
             for (int i = 0; i < N; i++) {
                 a[i] = b[i] + scale * c[i];
@@ -34,6 +36,7 @@ int main(int argc, char **argv) {
     }
     double start_time = bench_now_sec();
     fprintf(stderr, "LOOP_START_REL %f\n", bench_now_sec() - t0);
+    printf("STREAM loop start\n");
     for (unsigned long long iter = 0; iter < iterations; iter++) {
         for (int i = 0; i < N; i++) {
             a[i] = b[i] + scale * c[i];
@@ -42,6 +45,7 @@ int main(int argc, char **argv) {
     fprintf(stderr, "LOOP_END_REL %f\n", bench_now_sec() - t0);
 
     double seconds = bench_now_sec() - start_time;
+    printf("STREAM complete\n");
     printf("Loop iterations: %llu\n", iterations);
     printf("Loop time: %f seconds\n", seconds);
 

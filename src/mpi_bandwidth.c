@@ -25,6 +25,9 @@ int main(int argc, char** argv) {
         MPI_Finalize();
         return 0;
     }
+    if (rank == 0) {
+        printf("MPI bandwidth start\n");
+    }
 
     size_t parsed_size = bench_parse_size(argc, argv, DEFAULT_MSG_SIZE);
     int msg_size = (parsed_size > (size_t)INT_MAX) ? INT_MAX : (int)parsed_size;
@@ -34,6 +37,9 @@ int main(int argc, char** argv) {
     unsigned long long iterations = bench_parse_iterations(argc, argv, DEFAULT_ITERS);
 
     if (warmup_iters > 0ULL) {
+        if (rank == 0) {
+            printf("MPI bandwidth warmup start\n");
+        }
         MPI_Barrier(MPI_COMM_WORLD);
         for (unsigned long long iter = 0; iter < warmup_iters; iter++) {
             if (rank % 2 == 0) {
@@ -52,6 +58,7 @@ int main(int argc, char** argv) {
     double start_time = MPI_Wtime();
     if (rank == 0) {
         fprintf(stderr, "LOOP_START_REL %f\n", bench_now_sec() - t0);
+        printf("MPI bandwidth loop start\n");
     }
     for (unsigned long long iter = 0; iter < iterations; iter++) {
         if (rank % 2 == 0) {
@@ -66,6 +73,7 @@ int main(int argc, char** argv) {
     }
     if (rank == 0) {
         fprintf(stderr, "LOOP_END_REL %f\n", bench_now_sec() - t0);
+        printf("MPI bandwidth complete\n");
         printf("Loop iterations: %llu\n", iterations);
         printf("Loop time: %f seconds\n", MPI_Wtime() - start_time);
     }

@@ -14,6 +14,7 @@
 
 int main(int argc, char **argv) {
     double t0 = bench_now_sec();
+    printf("L3 stencil start\n");
     double *A = (double*)malloc(N * sizeof(double));
     double *B = (double*)malloc(N * sizeof(double));
     
@@ -24,6 +25,7 @@ int main(int argc, char **argv) {
     unsigned long long iterations = bench_parse_iterations(argc, argv, DEFAULT_ITERS);
 
     if (warmup_iters > 0ULL) {
+        printf("L3 stencil warmup start\n");
         for (unsigned long long iter = 0; iter < warmup_iters; iter++) {
             for (int i = 1; i < N - 1; i++) {
                 A[i] = (B[i-1] + B[i] + B[i+1]) * 0.33;
@@ -32,6 +34,7 @@ int main(int argc, char **argv) {
         }
     }
     double start = bench_now_sec();
+    printf("L3 stencil loop start\n");
     fprintf(stderr, "LOOP_START_REL %f\n", bench_now_sec() - t0);
     
     // Stencil-like 3-point average (Read 2, Write 1, Spatial Locality)
@@ -42,6 +45,7 @@ int main(int argc, char **argv) {
         if (A[N/2] > 1000) break;
     }
     fprintf(stderr, "LOOP_END_REL %f\n", bench_now_sec() - t0);
+    printf("L3 stencil complete\n");
     printf("Loop iterations: %llu\n", iterations);
     printf("Loop time: %f seconds\n", bench_now_sec() - start);
     free(A);

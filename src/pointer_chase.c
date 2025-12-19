@@ -13,6 +13,7 @@
 
 int main(int argc, char **argv) {
     double t0 = bench_now_sec();
+    printf("Pointer chase start\n");
     int *next = (int*)malloc(N * sizeof(int));
     int *values = (int*)malloc(N * sizeof(int));
     int *perm = (int*)malloc(N * sizeof(int));
@@ -43,6 +44,7 @@ int main(int argc, char **argv) {
     volatile int sink = 0;
     unsigned long long iterations = bench_parse_iterations(argc, argv, DEFAULT_ITERS);
     if (warmup_iters > 0ULL) {
+        printf("Pointer chase warmup start\n");
         for (unsigned long long iter = 0; iter < warmup_iters; iter++) {
             current_index = next[current_index];
             sink = values[current_index];
@@ -51,6 +53,7 @@ int main(int argc, char **argv) {
 
     start_time = bench_now_sec();
     fprintf(stderr, "LOOP_START_REL %f\n", bench_now_sec() - t0);
+    printf("Pointer chase loop start\n");
     for (unsigned long long iter = 0; iter < iterations; iter++) {
         current_index = next[current_index];
         sink = values[current_index];
@@ -59,6 +62,7 @@ int main(int argc, char **argv) {
 
     double seconds = bench_now_sec() - start_time;
     printf("Sink: %d\n", sink);
+    printf("Pointer chase complete\n");
     printf("Loop iterations: %llu\n", iterations);
     printf("Loop time: %f seconds\n", seconds);
 

@@ -14,10 +14,16 @@ int main(int argc, char *argv[]) {
     MPI_Init(&argc, &argv);
     MPI_Comm_rank(MPI_COMM_WORLD, &rank);
     MPI_Comm_size(MPI_COMM_WORLD, &size);
+    if (rank == 0) {
+        printf("MPI barrier start\n");
+    }
     // Run for a fixed workload by default
     unsigned long long warmup_iters = bench_parse_warmup_iterations(argc, argv, 0ULL);
     unsigned long long iterations = bench_parse_iterations(argc, argv, 100000ULL);
     if (warmup_iters > 0ULL) {
+        if (rank == 0) {
+            printf("MPI barrier warmup start\n");
+        }
         for (unsigned long long iter = 0; iter < warmup_iters; iter++) {
             MPI_Barrier(MPI_COMM_WORLD);
         }
@@ -25,12 +31,14 @@ int main(int argc, char *argv[]) {
     double start_time = MPI_Wtime();
     if (rank == 0) {
         fprintf(stderr, "LOOP_START_REL %f\n", bench_now_sec() - t0);
+        printf("MPI barrier loop start\n");
     }
     for (unsigned long long iter = 0; iter < iterations; iter++) {
         MPI_Barrier(MPI_COMM_WORLD);
     }
     if (rank == 0) {
         fprintf(stderr, "LOOP_END_REL %f\n", bench_now_sec() - t0);
+        printf("MPI barrier complete\n");
         printf("Loop iterations: %llu\n", iterations);
         printf("Loop time: %f seconds\n", MPI_Wtime() - start_time);
     }
