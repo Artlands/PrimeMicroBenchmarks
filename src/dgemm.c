@@ -38,37 +38,23 @@ int main(int argc, char **argv) {
     CBLAS_TRANSPOSE transA = CblasNoTrans;
     CBLAS_TRANSPOSE transB = CblasNoTrans;
 
-    double warmup = bench_parse_warmup(argc, argv, 0.0);
     unsigned long long warmup_iters = bench_parse_warmup_iterations(argc, argv, 0ULL);
-    int use_duration = bench_has_arg(argc, argv, "--duration");
-    double duration = use_duration ? bench_parse_duration(argc, argv, 60.0) : 0.0; // seconds
     unsigned long long iterations = bench_parse_iterations(argc, argv, DEFAULT_ITERS);
     if (warmup_iters > 0ULL) {
         for (unsigned long long iter = 0; iter < warmup_iters; iter++) {
             cblas_dgemm(layout, transA, transB, N, N, N, alpha, A, N, B, N, beta, C, N);
         }
-    } else if (warmup > 0.0) {
-        double warm_start = bench_now_sec();
-        while ((bench_now_sec() - warm_start) < warmup) {
-            cblas_dgemm(layout, transA, transB, N, N, N, alpha, A, N, B, N, beta, C, N);
-        }
     }
     double start_time = bench_now_sec();
     fprintf(stderr, "LOOP_START_REL %f\n", bench_now_sec() - t0);
-    if (use_duration) {
-        do {
-            // DGEMM call (C = alpha*A*B + beta*C)
-            cblas_dgemm(layout, transA, transB, N, N, N, alpha, A, N, B, N, beta, C, N);
-        } while ((bench_now_sec() - start_time) < duration);
-    } else {
-        for (unsigned long long iter = 0; iter < iterations; iter++) {
-            cblas_dgemm(layout, transA, transB, N, N, N, alpha, A, N, B, N, beta, C, N);
-        }
+    for (unsigned long long iter = 0; iter < iterations; iter++) {
+        cblas_dgemm(layout, transA, transB, N, N, N, alpha, A, N, B, N, beta, C, N);
     }
     fprintf(stderr, "LOOP_END_REL %f\n", bench_now_sec() - t0);
 
     double seconds = bench_now_sec() - start_time;
-    printf("DGEMM took %f seconds\n", seconds);
+    printf("Loop iterations: %llu\n", iterations);
+    printf("Loop time: %f seconds\n", seconds);
 
     return 0;
 }

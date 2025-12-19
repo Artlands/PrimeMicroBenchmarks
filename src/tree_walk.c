@@ -65,10 +65,7 @@ int main(int argc, char **argv) {
 
     printf("Tree built. Starting walk...\n");
 
-    double warmup = bench_parse_warmup(argc, argv, 0.0);
     unsigned long long warmup_iters = bench_parse_warmup_iterations(argc, argv, 0ULL);
-    int use_duration = bench_has_arg(argc, argv, "--duration");
-    double duration = use_duration ? bench_parse_duration(argc, argv, 60.0) : 0.0;
     unsigned long long iterations = bench_parse_iterations(argc, argv, DEFAULT_ITERS);
     long found_count = 0;
 
@@ -79,30 +76,18 @@ int main(int argc, char **argv) {
             found_count += search(root, key);
         }
         found_count = 0;
-    } else if (warmup > 0.0) {
-        double warm_start = bench_now_sec();
-        while ((bench_now_sec() - warm_start) < warmup) {
-            int key = rand();
-            found_count += search(root, key);
-        }
-        found_count = 0;
     }
 
     double start = bench_now_sec();
     fprintf(stderr, "LOOP_START_REL %f\n", bench_now_sec() - t0);
-    if (use_duration) {
-        while ((bench_now_sec() - start) < duration) {
-            int key = rand(); 
-            found_count += search(root, key);
-        }
-    } else {
-        for (unsigned long long iter = 0; iter < iterations; iter++) {
-            int key = rand();
-            found_count += search(root, key);
-        }
+    for (unsigned long long iter = 0; iter < iterations; iter++) {
+        int key = rand();
+        found_count += search(root, key);
     }
     fprintf(stderr, "LOOP_END_REL %f\n", bench_now_sec() - t0);
 
     printf("Searches completed. Found: %ld\n", found_count);
+    printf("Loop iterations: %llu\n", iterations);
+    printf("Loop time: %f seconds\n", bench_now_sec() - start);
     return 0;
 }

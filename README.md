@@ -128,10 +128,8 @@ D. Idle and waiting (the "Sleep" group)
 ## Usage examples
 
 All benchmarks accept `--iterations <count>` and run a fixed amount of work by default.
-Optional `--duration <seconds>` switches to time-based execution for legacy usage.
-Optional `--warmup <seconds>` runs a pre-measurement warm-up loop before timing.
 Optional `--warmup-iterations <count>` runs a fixed warm-up workload instead of a timed warm-up.
-For DVFS sweeps, prefer `--iterations` so each run executes the same workload and you can compare time, energy, and EDP directly.
+For DVFS sweeps, `--iterations` ensures each run executes the same workload for comparable time, energy, and EDP.
 The default iteration counts are tuned to target ~60s on a typical server-class CPU; override `--iterations` if your platform is significantly faster or slower.
 
 Some benchmarks also accept:

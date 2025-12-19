@@ -5,37 +5,10 @@
 #include <string.h>
 #include <time.h>
 
-static inline int bench_has_arg(int argc, char **argv, const char *name) {
-    for (int i = 1; i < argc; i++) {
-        if (strcmp(argv[i], name) == 0) {
-            return 1;
-        }
-    }
-    return 0;
-}
-
 static inline double bench_now_sec(void) {
     struct timespec ts;
     clock_gettime(CLOCK_MONOTONIC, &ts);
     return (double)ts.tv_sec + (double)ts.tv_nsec * 1e-9;
-}
-
-static inline double bench_parse_duration(int argc, char **argv, double def) {
-    for (int i = 1; i < argc - 1; i++) {
-        if (strcmp(argv[i], "--duration") == 0) {
-            return atof(argv[i + 1]);
-        }
-    }
-    return def;
-}
-
-static inline double bench_parse_warmup(int argc, char **argv, double def) {
-    for (int i = 1; i < argc - 1; i++) {
-        if (strcmp(argv[i], "--warmup") == 0) {
-            return atof(argv[i + 1]);
-        }
-    }
-    return def;
 }
 
 static inline unsigned long long bench_parse_warmup_iterations(int argc, char **argv, unsigned long long def) {
