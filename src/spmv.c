@@ -14,7 +14,9 @@
 
 int main(int argc, char **argv) {
     double t0 = bench_now_sec();
+
     printf("SpMV start\n");
+
     // 1. Setup CSR Format (Compressed Sparse Row)
     double *values = (double*)malloc(N * NZ_PER_ROW * sizeof(double));
     int *col_indices = (int*)malloc(N * NZ_PER_ROW * sizeof(int));
@@ -41,7 +43,9 @@ int main(int argc, char **argv) {
     unsigned long long warmup_iters = bench_parse_warmup_iterations(argc, argv, 0ULL);
     unsigned long long iterations = bench_parse_iterations(argc, argv, DEFAULT_ITERS);
     if (warmup_iters > 0ULL) {
+
         printf("SpMV warmup start\n");
+
         for (unsigned long long iter = 0; iter < warmup_iters; iter++) {
             for (int i = 0; i < N; i++) {
                 double sum = 0.0;
@@ -53,8 +57,10 @@ int main(int argc, char **argv) {
         }
     }
     double start = bench_now_sec();
-    fprintf(stderr, "LOOP_START_REL %f\n", bench_now_sec() - t0);
+
     printf("SpMV loop start\n");
+
+    fprintf(stderr, "LOOP_START_REL %f\n", bench_now_sec() - t0);
     for (unsigned long long iter = 0; iter < iterations; iter++) {
         // SpMV Kernel
         for (int i = 0; i < N; i++) {
@@ -67,10 +73,12 @@ int main(int argc, char **argv) {
         }
     }
     fprintf(stderr, "LOOP_END_REL %f\n", bench_now_sec() - t0);
-    
+
     printf("SpMV complete\n");
+
     printf("Loop iterations: %llu\n", iterations);
     printf("Loop time: %f seconds\n", bench_now_sec() - start);
+    
     free(values);
     free(col_indices);
     free(row_ptr);

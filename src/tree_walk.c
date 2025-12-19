@@ -37,7 +37,7 @@ int search(Node* root, int key) {
     Node* current = root;
     while (current != NULL) {
         if (key == current->value) return 1; // Found
-        
+
         // This logic requires ALU + Branching + Memory Load
         if (key < current->value)
             current = current->left;
@@ -53,7 +53,9 @@ int search(Node* root, int key) {
 
 int main(int argc, char **argv) {
     double t0 = bench_now_sec();
+
     printf("Tree walk start\n");
+
     srand(bench_parse_seed(argc, argv, DEFAULT_SEED));
     Node *root = NULL;
 
@@ -70,7 +72,9 @@ int main(int argc, char **argv) {
 
     // 2. The Walk Loop
     if (warmup_iters > 0ULL) {
+
         printf("Tree walk warmup start\n");
+
         for (unsigned long long iter = 0; iter < warmup_iters; iter++) {
             int key = rand();
             found_count += search(root, key);
@@ -79,8 +83,10 @@ int main(int argc, char **argv) {
     }
 
     double start = bench_now_sec();
-    fprintf(stderr, "LOOP_START_REL %f\n", bench_now_sec() - t0);
+
     printf("Tree walk loop start\n");
+
+    fprintf(stderr, "LOOP_START_REL %f\n", bench_now_sec() - t0);
     for (unsigned long long iter = 0; iter < iterations; iter++) {
         int key = rand();
         found_count += search(root, key);
@@ -89,7 +95,9 @@ int main(int argc, char **argv) {
 
     printf("Searches completed. Found: %ld\n", found_count);
     printf("Tree walk complete\n");
+
     printf("Loop iterations: %llu\n", iterations);
     printf("Loop time: %f seconds\n", bench_now_sec() - start);
+    
     return 0;
 }

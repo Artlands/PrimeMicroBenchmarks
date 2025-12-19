@@ -23,7 +23,9 @@ void init_matrix(double *matrix, int n) {
 
 int main(int argc, char **argv) {
     double t0 = bench_now_sec();
+
     printf("DGEMM start\n");
+
     // Seed the random number generator
     srand(bench_parse_seed(argc, argv, DEFAULT_SEED));
 
@@ -42,13 +44,18 @@ int main(int argc, char **argv) {
     unsigned long long warmup_iters = bench_parse_warmup_iterations(argc, argv, 0ULL);
     unsigned long long iterations = bench_parse_iterations(argc, argv, DEFAULT_ITERS);
     if (warmup_iters > 0ULL) {
+
         printf("DGEMM warmup start\n");
+
         for (unsigned long long iter = 0; iter < warmup_iters; iter++) {
             cblas_dgemm(layout, transA, transB, N, N, N, alpha, A, N, B, N, beta, C, N);
         }
     }
+
     double start_time = bench_now_sec();
+
     printf("DGEMM loop start\n");
+
     fprintf(stderr, "LOOP_START_REL %f\n", bench_now_sec() - t0);
     for (unsigned long long iter = 0; iter < iterations; iter++) {
         cblas_dgemm(layout, transA, transB, N, N, N, alpha, A, N, B, N, beta, C, N);
@@ -57,6 +64,7 @@ int main(int argc, char **argv) {
 
     double seconds = bench_now_sec() - start_time;
     printf("DGEMM complete\n");
+
     printf("Loop iterations: %llu\n", iterations);
     printf("Loop time: %f seconds\n", seconds);
 

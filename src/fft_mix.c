@@ -27,7 +27,9 @@ void fft(double complex *buf, double complex *out, int n, int step) {
 
 int main(int argc, char **argv) {
     double t0 = bench_now_sec();
+
     printf("FFT mix start\n");
+
     double complex *buf = malloc(N * sizeof(double complex));
     double complex *out = malloc(N * sizeof(double complex));
 
@@ -41,22 +43,29 @@ int main(int argc, char **argv) {
     unsigned long long iterations = bench_parse_iterations(argc, argv, DEFAULT_ITERS);
 
     if (warmup_iters > 0ULL) {
+
         printf("FFT mix warmup start\n");
+
         for (unsigned long long iter = 0; iter < warmup_iters; iter++) {
             fft(buf, out, N, 1);
         }
     }
 
     double start = bench_now_sec();
+
     printf("FFT mix loop start\n");
+
     fprintf(stderr, "LOOP_START_REL %f\n", bench_now_sec() - t0);
     for (unsigned long long iter = 0; iter < iterations; iter++) {
         fft(buf, out, N, 1);
     }
     fprintf(stderr, "LOOP_END_REL %f\n", bench_now_sec() - t0);
+
     printf("FFT mix complete\n");
+
     printf("Loop iterations: %llu\n", iterations);
     printf("Loop time: %f seconds\n", bench_now_sec() - start);
+    
     free(buf); free(out);
     return 0;
 }
