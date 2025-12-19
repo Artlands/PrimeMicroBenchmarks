@@ -6,6 +6,7 @@
 // Matrix dimensions (adjust for L3 cache size, e.g., 256MB / sizeof(double))
 #define N 2048
 #define DEFAULT_SEED 1u
+#define DEFAULT_ITERS 50ULL
 
 double A[N*N], B[N*N], C[N*N]; // Static allocation
 
@@ -33,9 +34,15 @@ int main(int argc, char **argv) {
     CBLAS_TRANSPOSE transB = CblasNoTrans;
 
     double warmup = bench_parse_warmup(argc, argv, 0.0);
-    // Start timing
-    double duration = bench_parse_duration(argc, argv, 60.0); // seconds
-    if (warmup > 0.0) {
+    unsigned long long warmup_iters = bench_parse_warmup_iterations(argc, argv, 0ULL);
+    int use_duration = bench_has_arg(argc, argv, "--duration");
+    double duration = use_duration ? bench_parse_duration(argc, argv, 60.0) : 0.0; // seconds
+    unsigned long long iterations = bench_parse_iterations(argc, argv, DEFAULT_ITERS);
+    if (warmup_iters > 0ULL) {
+        for (unsigned long long iter = 0; iter < warmup_iters; iter++) {
+            cblas_dgemm(layout, transA, transB, N, N, N, alpha, A, N, B, N, beta, C, N);
+        }
+    } else if (warmup > 0.0) {
         double warm_start = bench_now_sec();
         while ((bench_now_sec() - warm_start) < warmup) {
             cblas_dgemm(layout, transA, transB, N, N, N, alpha, A, N, B, N, beta, C, N);
@@ -43,10 +50,16 @@ int main(int argc, char **argv) {
     }
     double start_time = bench_now_sec();
     fprintf(stderr, "LOOP_START_REL %f\n", bench_now_sec() - t0);
-    do {
-        // DGEMM call (C = alpha*A*B + beta*C)
-        cblas_dgemm(layout, transA, transB, N, N, N, alpha, A, N, B, N, beta, C, N);
-    } while ((bench_now_sec() - start_time) < duration);
+    if (use_duration) {
+        do {
+            // DGEMM call (C = alpha*A*B + beta*C)
+            cblas_dgemm(layout, transA, transB, N, N, N, alpha, A, N, B, N, beta, C, N);
+        } while ((bench_now_sec() - start_time) < duration);
+    } else {
+        for (unsigned long long iter = 0; iter < iterations; iter++) {
+            cblas_dgemm(layout, transA, transB, N, N, N, alpha, A, N, B, N, beta, C, N);
+        }
+    }
     fprintf(stderr, "LOOP_END_REL %f\n", bench_now_sec() - t0);
 
     double seconds = bench_now_sec() - start_time;

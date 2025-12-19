@@ -1,0 +1,30 @@
+SHORT HPC_DVFS_MODEL_INTEL
+EVENTSET
+FIXC0 INSTR_RETIRED_ANY
+FIXC1 CPU_CLK_UNHALTED_CORE
+FIXC2 CPU_CLK_UNHALTED_REF
+PMC0  FP_ARITH_INST_RETIRED_512B_PACKED_DOUBLE
+PMC1  FP_ARITH_INST_RETIRED_256B_PACKED_DOUBLE
+PMC2  FP_ARITH_INST_RETIRED_SCALAR_DOUBLE
+PMC3  L2_LINES_IN_ALL
+PMC4  CYCLE_ACTIVITY_STALLS_L3_MISS
+PMC5  BR_MISP_RETIRED_ALL_BRANCHES
+METRICS
+CPI [FIXC1]/[FIXC0]
+# Common Feature 1: Math Intensity
+# Sum of weighted vector instructions / Cycles
+Math_Intensity (([PMC0]*8.0)+([PMC1]*4.0)+[PMC2])/[FIXC1]
+# Common Feature 2: Memory Stall Ratio
+# Counts cycles where execution is stalled specifically due to L3 Misses (DRAM wait)
+Stall_Ratio [PMC4]/[FIXC1]
+# Common Feature 3: Bandwidth Signal
+# Measures cache lines filling L2 from L3/Memory.
+System_BW_Proxy [PMC3]*64.0/time/1.0E9
+# Common Feature 4: Bad Speculation (Misses Per Kilo-Instruction)
+Branch_MPKI ([PMC5]/[FIXC0])*1000
+# Common Feature 5: GFLOPS (Approximate)
+# Sum of all FP widths normalized to GFLOPS. 
+# Note: Undercounts FMA instructions by 2x.
+GFLOPS_Approx (([PMC0]*8.0)+([PMC1]*4.0)+[PMC2])/time/1.0E9
+# Common Feature 6: Frequency State
+Clock_Ratio [FIXC1]/[FIXC2]

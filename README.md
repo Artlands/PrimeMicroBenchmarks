@@ -127,8 +127,12 @@ D. Idle and waiting (the "Sleep" group)
 
 ## Usage examples
 
-All benchmarks accept `--duration <seconds>` (default: 60).
+All benchmarks accept `--iterations <count>` and run a fixed amount of work by default.
+Optional `--duration <seconds>` switches to time-based execution for legacy usage.
 Optional `--warmup <seconds>` runs a pre-measurement warm-up loop before timing.
+Optional `--warmup-iterations <count>` runs a fixed warm-up workload instead of a timed warm-up.
+For DVFS sweeps, prefer `--iterations` so each run executes the same workload and you can compare time, energy, and EDP directly.
+The default iteration counts are tuned to target ~60s on a typical server-class CPU; override `--iterations` if your platform is significantly faster or slower.
 
 Some benchmarks also accept:
 - `--seed <int>` to control randomized data generation (e.g., `spmv`, `dgemm`, `pointer_chase`)
@@ -136,9 +140,9 @@ Some benchmarks also accept:
 
 Example commands:
 ```bash
-./spmv --duration 45 --seed 42
-mpirun -n 2 ./mpi_bandwidth --duration 20 --size 33554432
-./io_write --duration 15 --size 16777216
+./spmv --iterations 12 --seed 42
+mpirun -n 2 ./mpi_bandwidth --iterations 200 --size 33554432
+./io_write --iterations 2 --size 16777216
 ```
 
 ## Execution instructions

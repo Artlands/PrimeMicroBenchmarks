@@ -1,0 +1,31 @@
+SHORT HPC_DVFS_MODEL_ZEN4
+EVENTSET
+FIXC1 ACTUAL_CPU_CLOCK
+FIXC2 MAX_CPU_CLOCK
+PMC0  RETIRED_INSTRUCTIONS
+PMC1  RETIRED_SSE_AVX_FLOPS_ALL
+PMC2  RETIRED_FP_OPS_BY_TYPE_SCALAR_ALL
+PMC3  CYCLES_NO_RETIRE_LOAD_NOT_COMPLETE
+PMC4  CORE_TO_L2_CACHE_REQUESTS_MISSES
+PMC5  RETIRED_MISP_BRANCH_INSTR
+METRICS
+CPI [FIXC1]/[PMC0]
+# Common Feature 1: Math Intensity
+# (Vector uOps + Scalar uOps) / Cycles
+Math_Intensity ([PMC1]+[PMC2])/[FIXC1]
+# Common Feature 2: Memory Stall Ratio
+# Specific cycles where the pipeline is empty waiting for Load completion
+Stall_Ratio [PMC3]/[FIXC1]
+# Common Feature 3: Bandwidth Signal (Off-Core Traffic)
+# Measures requests leaving L2 towards L3/DRAM. 
+# Multiplied by 64B to approximate GB/s pressure.
+System_BW_Proxy [PMC4]*64.0/time/1.0E9
+# Common Feature 4: Bad Speculation (Misses Per Kilo-Instruction)
+Branch_MPKI ([PMC5]/[PMC0])*1000
+# Common Feature 5: GFLOPS (Approximate)
+# Zen4 counts 512-bit instr as 2x 256-bit uOps.
+# So [PMC1] effectively counts 256-bit chunks.
+# (Vector_uOps * 4 doubles) + (Scalar * 1 double)
+GFLOPS_Approx (([PMC1]*4.0) + [PMC2])/time/1.0E9
+# Common Feature 6: Frequency State
+Clock_Ratio [FIXC1]/[FIXC2]

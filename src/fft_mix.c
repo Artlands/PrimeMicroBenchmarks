@@ -6,6 +6,7 @@
 
 #define PI 3.14159265358979323846
 #define N 16384 // Fit in L2/L3 boundary
+#define DEFAULT_ITERS 2000ULL
 
 void fft(double complex *buf, double complex *out, int n, int step) {
     if (step < n) {
@@ -31,9 +32,16 @@ int main(int argc, char **argv) {
     }
 
     double warmup = bench_parse_warmup(argc, argv, 0.0);
-    double duration = bench_parse_duration(argc, argv, 60.0);
+    unsigned long long warmup_iters = bench_parse_warmup_iterations(argc, argv, 0ULL);
+    int use_duration = bench_has_arg(argc, argv, "--duration");
+    double duration = use_duration ? bench_parse_duration(argc, argv, 60.0) : 0.0;
+    unsigned long long iterations = bench_parse_iterations(argc, argv, DEFAULT_ITERS);
 
-    if (warmup > 0.0) {
+    if (warmup_iters > 0ULL) {
+        for (unsigned long long iter = 0; iter < warmup_iters; iter++) {
+            fft(buf, out, N, 1);
+        }
+    } else if (warmup > 0.0) {
         double warm_start = bench_now_sec();
         while ((bench_now_sec() - warm_start) < warmup) {
             fft(buf, out, N, 1);
@@ -42,8 +50,14 @@ int main(int argc, char **argv) {
 
     double start = bench_now_sec();
     fprintf(stderr, "LOOP_START_REL %f\n", bench_now_sec() - t0);
-    while ((bench_now_sec() - start) < duration) {
-        fft(buf, out, N, 1);
+    if (use_duration) {
+        while ((bench_now_sec() - start) < duration) {
+            fft(buf, out, N, 1);
+        }
+    } else {
+        for (unsigned long long iter = 0; iter < iterations; iter++) {
+            fft(buf, out, N, 1);
+        }
     }
     fprintf(stderr, "LOOP_END_REL %f\n", bench_now_sec() - t0);
     free(buf); free(out);
