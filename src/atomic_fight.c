@@ -10,15 +10,15 @@
 int main(int argc, char **argv) {
     double t0 = bench_now_sec();
 
-    printf("Atomic fight start\n");
+    BENCH_PRINTF("Atomic fight start\n");
 
-    unsigned long long warmup_iters = bench_parse_warmup_iterations(argc, argv, 0ULL);
+    unsigned long long warmup_iters = bench_parse_warmup_iterations(argc, argv, 100000ULL);
     long shared_counter = 0;
-    unsigned long long iterations = bench_parse_iterations(argc, argv, 10000000ULL);
+    unsigned long long iterations = bench_parse_iterations(argc, argv, 40000000ULL);
 
     if (warmup_iters > 0ULL) {
 
-        printf("Atomic fight warmup start\n");
+        BENCH_PRINTF("Atomic fight warmup start\n");
 
         #pragma omp parallel
         {
@@ -32,9 +32,9 @@ int main(int argc, char **argv) {
 
     double start = omp_get_wtime();
 
-    printf("Atomic fight loop start\n");
+    BENCH_PRINTF("Atomic fight loop start\n");
 
-    fprintf(stderr, "LOOP_START_REL %f\n", bench_now_sec() - t0);
+    BENCH_EPRINTF("LOOP_START_REL %f\n", bench_now_sec() - t0);
 
     #pragma omp parallel
     {
@@ -45,14 +45,14 @@ int main(int argc, char **argv) {
             shared_counter++;
         }
     }
-    fprintf(stderr, "LOOP_END_REL %f\n", bench_now_sec() - t0);
+    BENCH_EPRINTF("LOOP_END_REL %f\n", bench_now_sec() - t0);
 
     double end = omp_get_wtime();
-    printf("Final Count: %ld\n", shared_counter);
-    printf("Atomic fight complete\n");
+    BENCH_PRINTF("Final Count: %ld\n", shared_counter);
+    BENCH_PRINTF("Atomic fight complete\n");
 
-    printf("Loop iterations: %llu\n", (unsigned long long)shared_counter);
-    printf("Loop time: %f seconds\n", end - start);
+    BENCH_PRINTF("Loop iterations: %llu\n", (unsigned long long)shared_counter);
+    BENCH_PRINTF("Loop time: %f seconds\n", end - start);
     
     return 0;
 }

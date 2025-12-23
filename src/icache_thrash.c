@@ -16,15 +16,15 @@
 int main(int argc, char **argv) {
     double t0 = bench_now_sec();
 
-    printf("I-cache thrash start\n");
+    BENCH_PRINTF("I-cache thrash start\n");
 
     volatile int a = 1, b = 2;
-    unsigned long long warmup_iters = bench_parse_warmup_iterations(argc, argv, 0ULL);
-    unsigned long long iterations = bench_parse_iterations(argc, argv, 200000ULL);
+    unsigned long long warmup_iters = bench_parse_warmup_iterations(argc, argv, 10000ULL);
+    unsigned long long iterations = bench_parse_iterations(argc, argv, 1000000ULL);
 
     if (warmup_iters > 0ULL) {
 
-        printf("I-cache thrash warmup start\n");
+        BENCH_PRINTF("I-cache thrash warmup start\n");
 
         for (unsigned long long iter = 0; iter < warmup_iters; iter++) {
             OP1000
@@ -36,9 +36,9 @@ int main(int argc, char **argv) {
 
     double start = bench_now_sec();
 
-    printf("I-cache thrash loop start\n");
+    BENCH_PRINTF("I-cache thrash loop start\n");
 
-    fprintf(stderr, "LOOP_START_REL %f\n", bench_now_sec() - t0);
+    BENCH_EPRINTF("LOOP_START_REL %f\n", bench_now_sec() - t0);
     for (unsigned long long iter = 0; iter < iterations; iter++) {
         // This block expands to thousands of instructions.
         // If this loop body > 32KB, it thrashes L1i.
@@ -47,13 +47,13 @@ int main(int argc, char **argv) {
         OP1000
         OP1000
     }
-    fprintf(stderr, "LOOP_END_REL %f\n", bench_now_sec() - t0);
+    BENCH_EPRINTF("LOOP_END_REL %f\n", bench_now_sec() - t0);
 
-    printf("%d\n", a);
-    printf("I-cache thrash complete\n");
+    BENCH_PRINTF("%d\n", a);
+    BENCH_PRINTF("I-cache thrash complete\n");
 
-    printf("Loop iterations: %llu\n", iterations);
-    printf("Loop time: %f seconds\n", bench_now_sec() - start);
+    BENCH_PRINTF("Loop iterations: %llu\n", iterations);
+    BENCH_PRINTF("Loop time: %f seconds\n", bench_now_sec() - start);
     
     return 0;
 }

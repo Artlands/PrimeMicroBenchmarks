@@ -145,6 +145,90 @@ mpirun -n 2 ./mpi_bandwidth --iterations 200 --size 33554432
 
 ## Execution instructions
 
+Single-core runs are useful for sanity checks, but they do not reflect full-socket behavior:
+- Memory contention: one core sees near-ideal bandwidth/latency; many cores saturate the IMC and spike latency.
+- Thermal throttling (turbo): a single core can run at max turbo, while all-core runs are power-limited.
+- Shared cache (L3): a single core owns the LLC; full-socket runs increase eviction and miss rates.
+
+For realistic training data, use "profile one, saturate all": generate load on every core but only collect
+counters from core 0 (your "canary"). This keeps profiling overhead low while capturing full-socket contention.
+
+### Step 1: ensure every micro-benchmark fills the socket
+
+- OpenMP codes (`atomic_fight`, `l3_stencil`): scale threads with `OMP_NUM_THREADS`.
+- Serial codes (`dgemm`, `pointer_chase`, `stream`): launch `N` independent copies, where `N` is the core count.
+  Use `mpirun` as a process launcher even if the binary is not MPI.
+
+### Step 2: universal execution script
+
+A. Find the core list for socket 0:
+
+```bash
+# Example: get list of physical cores on Socket 0
+SOCKET0_CORES=$(likwid-topology -c | grep "Socket 0" | awk '{print $NF}' | tr '\n' ',' | sed 's/,$//')
+# Example output: 0,1,2,3,...,63
+```
+
+B. Execution commands:
+
+1. Serial benchmarks (DGEMM, STREAM, pointer chase)
+
+```bash
+# -np 64: launch 64 copies (fills the socket)
+# --map-by core --bind-to core: ensure 1 process per core
+# likwid-perfctr -C 0: only read registers from core 0
+
+mpirun -np 64 --map-by core --bind-to core \
+    likwid-perfctr -C 0 -g ./txt/hpc_dvfs_amd_zen4c.txt -t 1s \
+    ./dgemm
+```
+
+2. OpenMP benchmarks (L3 stencil, atomic fight)
+
+```bash
+export OMP_NUM_THREADS=64
+export OMP_PROC_BIND=true
+
+likwid-perfctr -C 0 -g ./txt/hpc_dvfs_amd_zen4c.txt -t 1s \
+    ./l3_stencil
+```
+
+3. MPI benchmarks (network BW)
+
+```bash
+# Run across two nodes (or full sockets), but profile rank 0.
+mpirun -np 128 ... ./mpi_bandwidth
+
+# Profiling specific ranks is easier with the LIKWID marker API inside the code,
+# or by wrapping the binary:
+mpirun -np 128 --map-by core --bind-to core \
+    likwid-perfctr -C 0 -g ./txt/hpc_dvfs_amd_zen4c.txt -t 1s \
+    ./mpi_bandwidth
+```
+
+### Step 3: frequency strategy (socket level)
+
+Set frequency at the socket level, then run the benchmark while measuring only core 0.
+This avoids per-core overhead and reflects shared voltage/thermal domains.
+
+```bash
+# Example pseudo-code for a sweep
+AVAILABLE_FREQS="2.5GHz 2.2GHz 2.0GHz 1.5GHz"
+
+for freq in $AVAILABLE_FREQS; do
+    # 1. Set frequency for the whole socket
+    likwid-setFrequencies -c 0-63 -f $freq
+
+    # 2. Run benchmark (saturating all cores)
+    # 3. Profile only core 0
+    mpirun -np 64 --map-by core --bind-to core \
+        likwid-perfctr -C 0 -g ./txt/hpc_dvfs_amd_zen4c.txt -t 1s \
+        ./dgemm
+done
+```
+
+### Single-core sanity checks
+
 Run each benchmark as shown to trigger the intended behavior.
 
 A. Compute and frontend (single core)

@@ -9,12 +9,12 @@
 #include "bench_args.h"
 #define N 10000000 // 10 Million elements
 #define DEFAULT_SEED 1u
-#define DEFAULT_ITERS 200ULL
+#define DEFAULT_ITERS 1000ULL
 
 int main(int argc, char **argv) {
     double t0 = bench_now_sec();
 
-    printf("Branch mispredict start\n");
+    BENCH_PRINTF("Branch mispredict start\n");
 
     // 1. Setup Data
     // Use short to keep cache pressure lower than memory benchmarks, 
@@ -26,12 +26,12 @@ int main(int argc, char **argv) {
         data[i] = rand() % 256; // Random values 0-255
     }
 
-    unsigned long long warmup_iters = bench_parse_warmup_iterations(argc, argv, 0ULL);
+    unsigned long long warmup_iters = bench_parse_warmup_iterations(argc, argv, 100ULL);
     long long sum = 0;
     unsigned long long iterations = bench_parse_iterations(argc, argv, DEFAULT_ITERS);
     if (warmup_iters > 0ULL) {
 
-        printf("Branch mispredict warmup start\n");
+        BENCH_PRINTF("Branch mispredict warmup start\n");
 
         for (unsigned long long iter = 0; iter < warmup_iters; iter++) {
             for (int i = 0; i < N; i++) {
@@ -44,12 +44,12 @@ int main(int argc, char **argv) {
     }
     double start = bench_now_sec();
 
-    printf("Branch mispredict loop start\n");
+    BENCH_PRINTF("Branch mispredict loop start\n");
 
     // 2. The Loop
     // The condition (data[i] >= 128) is true 50% of the time, randomly.
     // This is the mathematical worst-case for a branch predictor.
-    fprintf(stderr, "LOOP_START_REL %f\n", bench_now_sec() - t0);
+    BENCH_EPRINTF("LOOP_START_REL %f\n", bench_now_sec() - t0);
     for (unsigned long long iter = 0; iter < iterations; iter++) {
         for (int i = 0; i < N; i++) {
             if (data[i] >= 128) {
@@ -57,13 +57,13 @@ int main(int argc, char **argv) {
             }
         }
     }
-    fprintf(stderr, "LOOP_END_REL %f\n", bench_now_sec() - t0);
+    BENCH_EPRINTF("LOOP_END_REL %f\n", bench_now_sec() - t0);
 
-    printf("Sum: %lld\n", sum);
-    printf("Branch mispredict complete\n");
+    BENCH_PRINTF("Sum: %lld\n", sum);
+    BENCH_PRINTF("Branch mispredict complete\n");
 
-    printf("Loop iterations: %llu\n", iterations);
-    printf("Loop time: %f seconds\n", bench_now_sec() - start);
+    BENCH_PRINTF("Loop iterations: %llu\n", iterations);
+    BENCH_PRINTF("Loop time: %f seconds\n", bench_now_sec() - start);
     
     free(data);
     return 0;

@@ -5,27 +5,27 @@ FIXC2 MAX_CPU_CLOCK
 PMC0  RETIRED_INSTRUCTIONS
 PMC1  RETIRED_SSE_AVX_FLOPS_ALL
 PMC2  RETIRED_FP_OPS_BY_TYPE_SCALAR_ALL
-PMC3  CYCLES_NO_RETIRE_LOAD_NOT_COMPLETE
-PMC4  CORE_TO_L2_CACHE_REQUESTS_MISSES
-PMC5  RETIRED_MISP_BRANCH_INSTR
+PMC3  CORE_TO_L2_CACHE_REQUESTS_MISSES
+PMC4  RETIRED_MISP_BRANCH_INSTR
+PMC5  CYCLES_NO_RETIRE_LOAD_NOT_COMPLETE  # Keep this as a potential secondary stall signal, but PMC3 is primary
 METRICS
-CPI [FIXC1]/[PMC0]
+Runtime [s] time
+CPI FIXC1/PMC0
 # Common Feature 1: Math Intensity
 # (Vector uOps + Scalar uOps) / Cycles
-Math_Intensity ([PMC1]+[PMC2])/[FIXC1]
-# Common Feature 2: Memory Stall Ratio
-# Specific cycles where the pipeline is empty waiting for Load completion
-Stall_Ratio [PMC3]/[FIXC1]
-# Common Feature 3: Bandwidth Signal (Off-Core Traffic)
-# Measures requests leaving L2 towards L3/DRAM. 
-# Multiplied by 64B to approximate GB/s pressure.
-System_BW_Proxy [PMC4]*64.0/time/1.0E9
+Math_Intensity (PMC1+PMC2)/FIXC1
+# Common Feature 2: Memory Stall Proxy
+# Using L2 Misses per Instruction as a proxy for latency/bandwidth pressure.
+# High L2 misses usually correlate with stalls.
+Stall_Ratio PMC3/PMC0
+# Common Feature 3: Bandwidth Proxy (Approximate GB/s)
+# Measures L2 Miss Requests, scaled by 64B per request.
+System_BW_Proxy PMC3*64/time/1.0E9
 # Common Feature 4: Bad Speculation (Misses Per Kilo-Instruction)
-Branch_MPKI ([PMC5]/[PMC0])*1000
+Branch_MPKI 1000*PMC4/PMC0
 # Common Feature 5: GFLOPS (Approximate)
 # Zen4 counts 512-bit instr as 2x 256-bit uOps.
-# So [PMC1] effectively counts 256-bit chunks.
-# (Vector_uOps * 4 doubles) + (Scalar * 1 double)
-GFLOPS_Approx (([PMC1]*4.0) + [PMC2])/time/1.0E9
+# So PMC1 effectively counts 256-bit chunks.
+GFLOPS_Approx (PMC1*4 + PMC2)/time/1.0E9
 # Common Feature 6: Frequency State
-Clock_Ratio [FIXC1]/[FIXC2]
+Clock_Ratio FIXC1/FIXC2

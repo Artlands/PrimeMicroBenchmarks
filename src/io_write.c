@@ -10,24 +10,24 @@
 #include "bench_args.h"
 #define CHUNK_SIZE (1024 * 1024 * 10) // 10 MB chunks
 #define DEFAULT_CHUNK_SIZE CHUNK_SIZE
-#define DEFAULT_ITERS 5ULL
+#define DEFAULT_ITERS 10ULL
 
 int main(int argc, char **argv) {
     double t0 = bench_now_sec();
 
-    printf("I/O write start\n");
+    BENCH_PRINTF("I/O write start\n");
 
     size_t chunk_size = bench_parse_size(argc, argv, DEFAULT_CHUNK_SIZE);
     char *buffer = (char*)malloc(chunk_size);
     // Fill buffer to prevent OS zero-page optimization
     for (size_t i = 0; i < chunk_size; i++) buffer[i] = (char)i;
 
-    unsigned long long warmup_iters = bench_parse_warmup_iterations(argc, argv, 0ULL);
+    unsigned long long warmup_iters = bench_parse_warmup_iterations(argc, argv, 1ULL);
     unsigned long long iterations = bench_parse_iterations(argc, argv, DEFAULT_ITERS);
 
     if (warmup_iters > 0ULL) {
 
-        printf("I/O write warmup start\n");
+        BENCH_PRINTF("I/O write warmup start\n");
 
         for (unsigned long long iter = 0; iter < warmup_iters; iter++) {
             FILE *fp = fopen("/tmp/test_io_file.bin", "wb");
@@ -42,9 +42,9 @@ int main(int argc, char **argv) {
     }
     double start = bench_now_sec();
 
-    printf("I/O write loop start\n");
+    BENCH_PRINTF("I/O write loop start\n");
 
-    fprintf(stderr, "LOOP_START_REL %f\n", bench_now_sec() - t0);
+    BENCH_EPRINTF("LOOP_START_REL %f\n", bench_now_sec() - t0);
 
     for (unsigned long long iter = 0; iter < iterations; iter++) {
         FILE *fp = fopen("/tmp/test_io_file.bin", "wb");
@@ -55,12 +55,12 @@ int main(int argc, char **argv) {
         fsync(fileno(fp));
         fclose(fp);
     }
-    fprintf(stderr, "LOOP_END_REL %f\n", bench_now_sec() - t0);
+    BENCH_EPRINTF("LOOP_END_REL %f\n", bench_now_sec() - t0);
 
-    printf("I/O write complete\n");
+    BENCH_PRINTF("I/O write complete\n");
 
-    printf("Loop iterations: %llu\n", iterations);
-    printf("Loop time: %f seconds\n", bench_now_sec() - start);
+    BENCH_PRINTF("Loop iterations: %llu\n", iterations);
+    BENCH_PRINTF("Loop time: %f seconds\n", bench_now_sec() - start);
 
     remove("/tmp/test_io_file.bin");
     free(buffer);

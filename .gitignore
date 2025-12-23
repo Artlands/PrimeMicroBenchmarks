@@ -1,1 +1,8 @@
 bin/
+out/
+profiles/
+*.out
+*.err
+*.prof
+*.tmp
+2.50GHz/

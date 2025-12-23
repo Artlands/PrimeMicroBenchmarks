@@ -1,6 +1,7 @@
 #ifndef BENCH_ARGS_H
 #define BENCH_ARGS_H
 
+#include <stdio.h>
 #include <stdlib.h>
 #include <string.h>
 #include <time.h>
@@ -46,5 +47,25 @@ static inline size_t bench_parse_size(int argc, char **argv, size_t def) {
     }
     return def;
 }
+
+static inline int bench_is_root(void) {
+    const char *rank = getenv("SLURM_PROCID");
+    if (!rank || rank[0] == '\0') {
+        rank = getenv("PMI_RANK");
+    }
+    if (!rank || rank[0] == '\0') {
+        rank = getenv("OMPI_COMM_WORLD_RANK");
+    }
+    if (!rank || rank[0] == '\0') {
+        rank = getenv("MV2_COMM_WORLD_RANK");
+    }
+    if (!rank || rank[0] == '\0') {
+        return 1;
+    }
+    return atoi(rank) == 0;
+}
+
+#define BENCH_PRINTF(...) do { if (bench_is_root()) printf(__VA_ARGS__); } while (0)
+#define BENCH_EPRINTF(...) do { if (bench_is_root()) fprintf(stderr, __VA_ARGS__); } while (0)
 
 #endif

@@ -12,7 +12,7 @@
 #include "bench_args.h"
 #define SIZE (1024 * 1024 * 10) // 10MB Message
 #define DEFAULT_MSG_SIZE SIZE
-#define DEFAULT_ITERS 1000ULL
+#define DEFAULT_ITERS 20000ULL
 
 int main(int argc, char** argv) {
     double t0 = bench_now_sec();
@@ -27,7 +27,7 @@ int main(int argc, char** argv) {
     }
     if (rank == 0) {
 
-        printf("MPI bandwidth start\n");
+        BENCH_PRINTF("MPI bandwidth start\n");
 
     }
 
@@ -35,13 +35,13 @@ int main(int argc, char** argv) {
     int msg_size = (parsed_size > (size_t)INT_MAX) ? INT_MAX : (int)parsed_size;
     char *buf = (char*)malloc((size_t)msg_size);
 
-    unsigned long long warmup_iters = bench_parse_warmup_iterations(argc, argv, 0ULL);
+    unsigned long long warmup_iters = bench_parse_warmup_iterations(argc, argv, 200ULL);
     unsigned long long iterations = bench_parse_iterations(argc, argv, DEFAULT_ITERS);
 
     if (warmup_iters > 0ULL) {
         if (rank == 0) {
 
-            printf("MPI bandwidth warmup start\n");
+            BENCH_PRINTF("MPI bandwidth warmup start\n");
 
         }
         MPI_Barrier(MPI_COMM_WORLD);
@@ -62,9 +62,9 @@ int main(int argc, char** argv) {
     double start_time = MPI_Wtime();
     if (rank == 0) {
 
-        printf("MPI bandwidth loop start\n");
+        BENCH_PRINTF("MPI bandwidth loop start\n");
 
-        fprintf(stderr, "LOOP_START_REL %f\n", bench_now_sec() - t0);
+        BENCH_EPRINTF("LOOP_START_REL %f\n", bench_now_sec() - t0);
     }
     for (unsigned long long iter = 0; iter < iterations; iter++) {
         if (rank % 2 == 0) {
@@ -78,12 +78,12 @@ int main(int argc, char** argv) {
         }
     }
     if (rank == 0) {
-        fprintf(stderr, "LOOP_END_REL %f\n", bench_now_sec() - t0);
+        BENCH_EPRINTF("LOOP_END_REL %f\n", bench_now_sec() - t0);
 
-        printf("MPI bandwidth complete\n");
+        BENCH_PRINTF("MPI bandwidth complete\n");
 
-        printf("Loop iterations: %llu\n", iterations);
-        printf("Loop time: %f seconds\n", MPI_Wtime() - start_time);
+        BENCH_PRINTF("Loop iterations: %llu\n", iterations);
+        BENCH_PRINTF("Loop time: %f seconds\n", MPI_Wtime() - start_time);
     }
 
     free(buf);

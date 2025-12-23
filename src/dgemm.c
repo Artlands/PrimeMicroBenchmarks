@@ -11,7 +11,7 @@
 // Matrix dimensions (adjust for L3 cache size, e.g., 256MB / sizeof(double))
 #define N 2048
 #define DEFAULT_SEED 1u
-#define DEFAULT_ITERS 50ULL
+#define DEFAULT_ITERS 250ULL
 
 double A[N*N], B[N*N], C[N*N]; // Static allocation
 
@@ -24,7 +24,7 @@ void init_matrix(double *matrix, int n) {
 int main(int argc, char **argv) {
     double t0 = bench_now_sec();
 
-    printf("DGEMM start\n");
+    BENCH_PRINTF("DGEMM start\n");
 
     // Seed the random number generator
     srand(bench_parse_seed(argc, argv, DEFAULT_SEED));
@@ -41,11 +41,11 @@ int main(int argc, char **argv) {
     CBLAS_TRANSPOSE transA = CblasNoTrans;
     CBLAS_TRANSPOSE transB = CblasNoTrans;
 
-    unsigned long long warmup_iters = bench_parse_warmup_iterations(argc, argv, 0ULL);
+    unsigned long long warmup_iters = bench_parse_warmup_iterations(argc, argv, 20ULL);
     unsigned long long iterations = bench_parse_iterations(argc, argv, DEFAULT_ITERS);
     if (warmup_iters > 0ULL) {
 
-        printf("DGEMM warmup start\n");
+        BENCH_PRINTF("DGEMM warmup start\n");
 
         for (unsigned long long iter = 0; iter < warmup_iters; iter++) {
             cblas_dgemm(layout, transA, transB, N, N, N, alpha, A, N, B, N, beta, C, N);
@@ -54,19 +54,19 @@ int main(int argc, char **argv) {
 
     double start_time = bench_now_sec();
 
-    printf("DGEMM loop start\n");
+    BENCH_PRINTF("DGEMM loop start\n");
 
-    fprintf(stderr, "LOOP_START_REL %f\n", bench_now_sec() - t0);
+    BENCH_EPRINTF("LOOP_START_REL %f\n", bench_now_sec() - t0);
     for (unsigned long long iter = 0; iter < iterations; iter++) {
         cblas_dgemm(layout, transA, transB, N, N, N, alpha, A, N, B, N, beta, C, N);
     }
-    fprintf(stderr, "LOOP_END_REL %f\n", bench_now_sec() - t0);
+    BENCH_EPRINTF("LOOP_END_REL %f\n", bench_now_sec() - t0);
 
     double seconds = bench_now_sec() - start_time;
-    printf("DGEMM complete\n");
+    BENCH_PRINTF("DGEMM complete\n");
 
-    printf("Loop iterations: %llu\n", iterations);
-    printf("Loop time: %f seconds\n", seconds);
+    BENCH_PRINTF("Loop iterations: %llu\n", iterations);
+    BENCH_PRINTF("Loop time: %f seconds\n", seconds);
 
     return 0;
 }

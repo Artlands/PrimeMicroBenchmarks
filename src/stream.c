@@ -9,7 +9,7 @@
 #include "bench_args.h"
 // Array size (adjust based on system memory, keep it larger than L3 cache)
 #define N 20000000  // 20 million elements
-#define DEFAULT_ITERS 200ULL
+#define DEFAULT_ITERS 1500ULL
 
 double a[N], b[N], c[N];
 double scale = 3.0;
@@ -17,7 +17,7 @@ double scale = 3.0;
 int main(int argc, char **argv) {
     double t0 = bench_now_sec();
 
-    printf("STREAM start\n");
+    BENCH_PRINTF("STREAM start\n");
 
     // Initialize arrays
     for (int i = 0; i < N; i++) {
@@ -26,11 +26,11 @@ int main(int argc, char **argv) {
         c[i] = 3.0;
     }
 
-    unsigned long long warmup_iters = bench_parse_warmup_iterations(argc, argv, 0ULL);
+    unsigned long long warmup_iters = bench_parse_warmup_iterations(argc, argv, 15ULL);
     unsigned long long iterations = bench_parse_iterations(argc, argv, DEFAULT_ITERS);
     if (warmup_iters > 0ULL) {
 
-        printf("STREAM warmup start\n");
+        BENCH_PRINTF("STREAM warmup start\n");
 
         for (unsigned long long iter = 0; iter < warmup_iters; iter++) {
             for (int i = 0; i < N; i++) {
@@ -41,21 +41,21 @@ int main(int argc, char **argv) {
 
     double start_time = bench_now_sec();
 
-    printf("STREAM loop start\n");
+    BENCH_PRINTF("STREAM loop start\n");
 
-    fprintf(stderr, "LOOP_START_REL %f\n", bench_now_sec() - t0);
+    BENCH_EPRINTF("LOOP_START_REL %f\n", bench_now_sec() - t0);
     for (unsigned long long iter = 0; iter < iterations; iter++) {
         for (int i = 0; i < N; i++) {
             a[i] = b[i] + scale * c[i];
         }
     }
-    fprintf(stderr, "LOOP_END_REL %f\n", bench_now_sec() - t0);
+    BENCH_EPRINTF("LOOP_END_REL %f\n", bench_now_sec() - t0);
 
     double seconds = bench_now_sec() - start_time;
-    printf("STREAM complete\n");
+    BENCH_PRINTF("STREAM complete\n");
 
-    printf("Loop iterations: %llu\n", iterations);
-    printf("Loop time: %f seconds\n", seconds);
+    BENCH_PRINTF("Loop iterations: %llu\n", iterations);
+    BENCH_PRINTF("Loop time: %f seconds\n", seconds);
 
     return 0;
 }

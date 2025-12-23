@@ -24,7 +24,7 @@ dgemm: dgemm.c | $(BIN_DIR)
 
 branch_mispredict: branch_mispredict.c | $(BIN_DIR)
 	# Critical: Disable vectorization to keep the branch logic intact
-	$(CC) -O3 -fno-tree-vectorize -fno-if-conversion -o $(BIN_DIR)/branch_mispredict branch_mispredict.c
+	$(CC) $(CFLAGS) -fno-tree-vectorize -fno-if-conversion -o $(BIN_DIR)/branch_mispredict branch_mispredict.c
 
 icache_thrash: icache_thrash.c | $(BIN_DIR)
 	# Critical: -O0 is required to prevent code folding/loop removal
@@ -38,7 +38,7 @@ fft_mix: fft_mix.c | $(BIN_DIR)
 
 # --- Memory & Data ---
 l3_stencil: l3_stencil.c | $(BIN_DIR)
-	$(CC) $(CFLAGS) -o $(BIN_DIR)/l3_stencil l3_stencil.c
+	$(CC) $(CFLAGS) $(OMP_FLAGS) -o $(BIN_DIR)/l3_stencil l3_stencil.c
 
 stream: stream.c | $(BIN_DIR)
 	$(CC) $(CFLAGS) -o $(BIN_DIR)/stream stream.c
