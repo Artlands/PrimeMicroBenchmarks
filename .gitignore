@@ -6,5 +6,9 @@ profiles/
 *.err
 *.prof
 *.tmp
+*.csv
+*.o
+dvfs_controller
 apps/
+csv/
 *GHz*/
