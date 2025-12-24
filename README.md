@@ -143,6 +143,16 @@ mpirun -n 2 ./mpi_bandwidth --iterations 200 --size 33554432
 ./io_write --iterations 2 --size 16777216
 ```
 
+## Organize experiment outputs
+
+Use `scripts/organize_apps.py` to collect DVFS and energy outputs into `apps/<benchmark>/`.
+You can select one or more frequency folders and optionally move files instead of copying.
+
+```bash
+python3 scripts/organize_apps.py --freq 0.80GHz --freq 1.00GHz
+python3 scripts/organize_apps.py --freq 0.80GHz --dry-run
+```
+
 ## Execution instructions
 
 Single-core runs are useful for sanity checks, but they do not reflect full-socket behavior:
