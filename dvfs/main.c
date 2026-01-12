@@ -5,19 +5,22 @@
 #include <signal.h>
 #include <likwid.h>
 
-// Include your previous headers
+// Include headers
 #include "dvfs_config.h"
 #include "dvfs_policy.h"
 #include "model.h"
 #include "config_loader.h"
 
-// Define the Target CPU Core to monitor (e.g., Core 0)
-// For a system-wide policy, you might want to loop over all cores or specific sockets.
-#define TARGET_CPU_ID 0
+// Define the CPU Core to monitor (e.g., Core 0).
+// For a system-wide policy, may loop over all cores or specific sockets.
+#define MONITOR_CPU_ID 0
 
-// Define the Event String based on your HPC_DVFS_MODEL_INTEL group
-// Note: Ensure these event names are exact matches for your specific architecture (e.g., Skylake, Icelake)
-// You can check valid names with 'likwid-perfctr -e'
+// Define the CPU Core to run the controller on.
+#define CONTROLLER_CPU_ID 0
+
+// Define the Event String based on the HPC_DVFS_MODEL_INTEL group
+// Note: Ensure these event names are exact matches for the specific architecture
+// Check valid names with 'likwid-perfctr -e'
 const char* EVENT_STRING = 
     "INSTR_RETIRED_ANY:FIXC0,"
     "CPU_CLK_UNHALTED_CORE:FIXC1,"
@@ -39,16 +42,57 @@ static void handle_signal(int sig) {
 int main(int argc, char* argv[]) {
     int i, gid;
     double time_sec = 0.5; // 500ms
+    int monitor_cpu_id = MONITOR_CPU_ID;
+    int controller_cpu_id = CONTROLLER_CPU_ID;
 
-    (void)argc;
-    (void)argv;
+    int opt;
+    while ((opt = getopt(argc, argv, "m:c:")) != -1) {
+        switch (opt) {
+            case 'm':
+                monitor_cpu_id = atoi(optarg);
+                break;
+            case 'c':
+                controller_cpu_id = atoi(optarg);
+                break;
+            default:
+                fprintf(stderr, "Usage: %s [-m monitor_cpu] [-c controller_cpu]\n", argv[0]);
+                return EXIT_FAILURE;
+        }
+    }
     
     // --- 1. Initialization ---
     load_config("dvfs_settings.conf");
 
     // Initialize Likwid topology and access
     topology_init();
-    perfmon_init(1, (int[]){TARGET_CPU_ID}); // Monitor only TARGET_CPU_ID
+    affinity_init();
+
+    CpuTopology_t topo = get_cpuTopology();
+    int num_threads = (int)topo->activeHWThreads;
+    if (monitor_cpu_id < 0 || monitor_cpu_id >= num_threads) {
+        fprintf(stderr, "Invalid MONITOR_CPU_ID=%d (active HW threads=%u)\n",
+                monitor_cpu_id, topo->activeHWThreads);
+        return EXIT_FAILURE;
+    }
+    if (controller_cpu_id < 0 || controller_cpu_id >= num_threads) {
+        fprintf(stderr, "Invalid CONTROLLER_CPU_ID=%d (active HW threads=%u)\n",
+                controller_cpu_id, topo->activeHWThreads);
+        return EXIT_FAILURE;
+    }
+
+    // Pin controller and register all CPUs for perfmon.
+    affinity_pinThread(controller_cpu_id);
+    int *threads_to_cpu = malloc((size_t)num_threads * sizeof(*threads_to_cpu));
+    if (!threads_to_cpu) {
+        fprintf(stderr, "Failed to allocate threads_to_cpu\n");
+        return EXIT_FAILURE;
+    }
+    for (i = 0; i < num_threads; i++) {
+        threads_to_cpu[i] = i;
+    }
+    perfmon_init(num_threads, threads_to_cpu);
+
+    int monitor_thread_idx = monitor_cpu_id;
 
     // Add the Event Set
     gid = perfmon_addEventSet((char*)EVENT_STRING);
@@ -60,7 +104,8 @@ int main(int argc, char* argv[]) {
     // Setup counters
     perfmon_setupCounters(gid);
 
-    printf("[Main] DVFS Controller Started. Monitoring Core %d every %.1f s...\n", TARGET_CPU_ID, time_sec);
+    printf("[Main] DVFS Controller Started. Monitoring Core %d every %.1f s...\n",
+           monitor_cpu_id, time_sec);
 
     signal(SIGINT, handle_signal);
     signal(SIGTERM, handle_signal);
@@ -84,7 +129,7 @@ int main(int argc, char* argv[]) {
         
         double events[9];
         for (i = 0; i < 9; i++) {
-            events[i] = perfmon_getResult(gid, 0, i); // 0 = first core in list
+            events[i] = perfmon_getResult(gid, monitor_thread_idx, i);
         }
 
         // Map array to named variables for clarity
@@ -125,7 +170,9 @@ int main(int argc, char* argv[]) {
     }
 
     // --- 3. Cleanup ---
+    free(threads_to_cpu);
     perfmon_finalize();
+    affinity_finalize();
     topology_finalize();
     return 0;
 }
