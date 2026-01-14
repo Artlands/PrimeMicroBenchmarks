@@ -11,7 +11,7 @@ BLAS_LIBS   = $(shell pkg-config --libs openblas)
 LIBS    = -lopenblas -lm
 
 # Project definition
-TARGET  = dvfs_test_app
+TARGET  = test_app
 SRCS    = dvfs_test_app.c
 OBJS    = $(SRCS:.c=.o)
 

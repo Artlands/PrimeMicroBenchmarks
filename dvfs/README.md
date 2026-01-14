@@ -26,11 +26,12 @@ Defaults are compiled in via `MONITOR_CPU_ID` and `CONTROLLER_CPU_ID` in
 Override at runtime:
 
 ```bash
-./dvfs_controller -m 0 -c 1
+./dvfs_controller -m 0 -c 1 -f dvfs_settings.conf
 ```
 
 - `-m`: CPU to monitor for performance counters.
 - `-c`: CPU to run the controller on.
+- `-f`: path to `dvfs_settings.conf`.
 
 ## Permissions
 

@@ -44,14 +44,16 @@ static void handle_signal(int sig) {
 }
 
 int main(int argc, char* argv[]) {
+    setvbuf(stdout, NULL, _IOLBF, 0);
     int i, gid;
     double time_sec = 0.5; // 500ms
     int monitor_cpu_id = MONITOR_CPU_ID;
     int controller_cpu_id = CONTROLLER_CPU_ID;
     int debug = 0;
+    const char *config_path = "dvfs/dvfs_settings.conf";
 
     int opt;
-    while ((opt = getopt(argc, argv, "m:c:d")) != -1) {
+    while ((opt = getopt(argc, argv, "m:c:df:")) != -1) {
         switch (opt) {
             case 'm':
                 monitor_cpu_id = atoi(optarg);
@@ -62,14 +64,17 @@ int main(int argc, char* argv[]) {
             case 'd':
                 debug = 1;
                 break;
+            case 'f':
+                config_path = optarg;
+                break;
             default:
-                fprintf(stderr, "Usage: %s [-m monitor_cpu] [-c controller_cpu] [-d]\n", argv[0]);
+                fprintf(stderr, "Usage: %s [-m monitor_cpu] [-c controller_cpu] [-f config] [-d]\n", argv[0]);
                 return EXIT_FAILURE;
         }
     }
     
     // --- 1. Initialization ---
-    load_config("dvfs_settings.conf");
+    load_config(config_path);
 
     // Initialize Likwid topology and access
     HPMmode(ACCESSMODE_DIRECT);

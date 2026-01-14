@@ -12,3 +12,7 @@ dvfs_controller
 apps/
 csv/
 *GHz*/
+test_app
+2.5GHz/
+DVFS/
+*.log

@@ -5,8 +5,8 @@
 
 // Set defaults
 DvfsConfig global_dvfs_config = {
-    .low_freq_khz = 1200000,
-    .med_freq_khz = 2000000,
+    .low_freq_khz = 800000,
+    .med_freq_khz = 1800000,
     .high_freq_khz = 2500000
 };
 
