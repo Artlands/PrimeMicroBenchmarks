@@ -15,4 +15,5 @@ csv/
 test_app
 2.5GHz/
 DVFS/
+ondemand/
 *.log
