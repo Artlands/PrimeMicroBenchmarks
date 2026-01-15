@@ -8,7 +8,8 @@ BLAS_CFLAGS = $(shell pkg-config --cflags openblas)
 BLAS_LIBS   = $(shell pkg-config --libs openblas)
 LIBS = -lopenblas -lm
 
-BIN_DIR = ../bin
+# Change this to your desired output directory
+BIN_DIR = ../bin/amd
 
 # Targets
 all: compute memory latency idle

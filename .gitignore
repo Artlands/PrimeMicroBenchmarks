@@ -16,4 +16,5 @@ test_app
 2.5GHz/
 DVFS/
 ondemand/
+performance/
 *.log
