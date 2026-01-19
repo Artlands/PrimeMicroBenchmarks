@@ -29,11 +29,6 @@ fi
 
 echo "Detected CPU frequency: ${FREQ_MHZ} MHz"
 
-# likwid-perfctr -c 0 -g HPC_DVFS_MODEL_INTEL -t 500ms -O \
-#   -- srun --ntasks=32 --cpu-bind=cores --distribution=block:block "${BIN}/dgemm" \
-#   2> "${RESULT_DIR}/dgemm.${FREQ_MHZ}.${SLURM_JOB_ID}.prof"
-
-
 srun --cpu-bind=cores --distribution=block:block \
   bash -c '
     if [ "$SLURM_PROCID" -eq 0 ]; then

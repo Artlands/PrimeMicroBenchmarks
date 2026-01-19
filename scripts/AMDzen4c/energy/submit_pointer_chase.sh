@@ -1,8 +1,10 @@
 #!/bin/bash
 #SBATCH -J PRIME
 #SBATCH -N 1
-#SBATCH --partition=h100-build
-#SBATCH --ntasks-per-node=32
+#SBATCH --partition=zen4
+#SBATCH --reservation=cpufreq
+#SBATCH --nodelist=rpc-97-[1-20]
+#SBATCH --ntasks-per-node=256
 #SBATCH --cpus-per-task=1
 #SBATCH --exclusive
 #SBATCH --time=2:00:00
@@ -11,7 +13,7 @@
 
 set -euo pipefail
 
-BIN="/mnt/REPACSS/home/li29729/Research2025/CPUfreq/PrimeMicroBenchmarks/bin"
+BIN="/mnt/REPACSS/home/li29729/Research2025/CPUfreq/PrimeMicroBenchmarks/bin/amd"
 RESULT_DIR="./profiles"
 
 mkdir -p "${RESULT_DIR}"
@@ -28,6 +30,6 @@ fi
 
 echo "Detected CPU frequency: ${FREQ_MHZ} MHz"
 
-likwid-perfctr -f -c 0,1 -g ENERGY -t 500ms -O \
-  -- srun --ntasks=32 --cpu-bind=cores --distribution=block:block "${BIN}/pointer_chase" \
+likwid-perfctr -f -c 0,128 -g ENERGY -t 500ms -O \
+  -- srun --cpu-bind=cores --distribution=block:block "${BIN}/pointer_chase" \
   2> "${RESULT_DIR}/pointer_chase.${FREQ_MHZ}.${SLURM_JOB_ID}.prof"

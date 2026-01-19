@@ -26,6 +26,6 @@ Branch_MPKI 1000*PMC4/PMC0
 # Common Feature 5: GFLOPS (Approximate)
 # Zen4 counts 512-bit instr as 2x 256-bit uOps.
 # So PMC1 effectively counts 256-bit chunks.
-GFLOPS_Approx (PMC1*4 + PMC2)/time/1.0E9
+GFLOPS_Approx (PMC1*4+PMC2)/time/1.0E9
 # Common Feature 6: Frequency State
 Clock_Ratio FIXC1/FIXC2

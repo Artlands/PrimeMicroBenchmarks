@@ -30,7 +30,7 @@ fi
 
 echo "Detected CPU frequency: ${FREQ_MHZ} MHz"
 
-export OMP_NUM_THREADS=32
+export OMP_NUM_THREADS=256
 export OMP_PROC_BIND=true
 
 likwid-perfctr -f -c 0 -g HPC_DVFS_MODEL_AMD -t 500ms -O \

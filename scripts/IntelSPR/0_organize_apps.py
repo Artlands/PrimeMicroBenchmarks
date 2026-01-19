@@ -86,9 +86,8 @@ def parse_args() -> argparse.Namespace:
 
 def main() -> int:
     args = parse_args()
-    base_dir = Path(args.base)
-    apps_dir = Path(args.apps_dir)
-
+    base_dir = Path(__file__).resolve().parent
+    apps_dir = Path(__file__).resolve().parent / Path(args.apps_dir)
     if not args.freq:
         print("No --freq provided. Nothing to do.")
         return 1
