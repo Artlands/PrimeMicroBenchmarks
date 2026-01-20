@@ -16,3 +16,5 @@ DVFS/
 ondemand/
 performance/
 *.log
+pattern_edp
+pattern_energy
