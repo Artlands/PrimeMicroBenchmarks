@@ -2,13 +2,13 @@
 set -euo pipefail
 
 SCRIPT_DIR="$(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd)"
-BENCHMARK_FILE="${SCRIPT_DIR}/tiny.txt"
+BENCHMARK_FILE="${SCRIPT_DIR}/small.txt"
 SPECHPC_DIR="/mnt/SHARED-AREA/HPC-Benchmarks/SPEC/SPEC-HPC/SPEChpc"
-RANK=32
+RANK=256
 
 HOSTNAME_SHORT="$(hostname -s)"
-if [[ "${HOSTNAME_SHORT}" != rpg-93* ]]; then
-  echo "This script must be executed on an rpg-93 node; current host: ${HOSTNAME_SHORT}" >&2
+if [[ "${HOSTNAME_SHORT}" != rpc-97-* ]]; then
+  echo "This script must be executed on an rpc-97 node; current host: ${HOSTNAME_SHORT}" >&2
   exit 1
 fi
 
@@ -23,7 +23,7 @@ cd "${SPECHPC_DIR}"
 source shrc
 ml load mpich/4.3.2
 
-mkdir -p "${SCRIPT_DIR}/mpi-intel-logs"
+mkdir -p "${SCRIPT_DIR}/mpi-amd-logs"
 
 for benchmark in "${BENCHMARKS[@]}"; do
   echo "Starting benchmark ${benchmark}"
@@ -36,6 +36,6 @@ for benchmark in "${BENCHMARKS[@]}"; do
     --define model=mpi \
     --ranks "${RANK}" \
     "${benchmark}" \
-    >"${SCRIPT_DIR}/mpi-intel-logs/${benchmark}_fake_mpi.log" 2>&1
+    >"${SCRIPT_DIR}/mpi-amd-logs/${benchmark}_fake_mpi.log" 2>&1
   echo "Completed benchmark ${benchmark}"
 done

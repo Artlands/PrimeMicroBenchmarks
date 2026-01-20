@@ -1,14 +1,15 @@
 #!/bin/bash
 #SBATCH -J spechpc_clvleaf
 #SBATCH -N 1
+#SBATCH --partition=zen4
 #SBATCH --reservation=cpufreq
-#SBATCH --partition=h100-build
-#SBATCH --ntasks-per-node=32
+#SBATCH --nodelist=rpc-97-[1-20]
+#SBATCH --ntasks-per-node=256
 #SBATCH --cpus-per-task=1
 #SBATCH --exclusive
 #SBATCH --time=4:00:00
-#SBATCH -o 519.clvleaf_t/spechpc_clvleaf.%A.out
-#SBATCH -e 519.clvleaf_t/spechpc_clvleaf.%A.err
+#SBATCH -o 619.clvleaf_s/spechpc_clvleaf.%A.out
+#SBATCH -e 619.clvleaf_s/spechpc_clvleaf.%A.err
 
 set -euo pipefail
 
@@ -23,10 +24,10 @@ module load mpich/4.3.2 likwid/5.4.1-daemon
 
 cd "${SPECHPC_DIR}"
 source shrc
-go "519.clvleaf_t" "${RUN_SUBDIR}"
+go "619.clvleaf_s" "${RUN_SUBDIR}"
 
-echo "Launching 519.clvleaf with 32 MPI ranks"
+echo "Launching 619.clvleaf with 256 MPI ranks"
 
-likwid-perfctr -f -c 0,1 -g ENERGY -t 500ms -O \
+likwid-perfctr -f -c 0,128 -g ENERGY -t 500ms -O \
   -- srun --mpi=pmix --cpu-bind=cores --distribution=block:block ./clvleaf \
   2> "${RESULT_DIR}/spechpc_clvleaf.${SLURM_JOB_ID}.prof"

@@ -2,13 +2,13 @@
 #SBATCH -J spechpc_weather
 #SBATCH -N 1
 #SBATCH --reservation=cpufreq
-#SBATCH --partition=h100-build
-#SBATCH --ntasks-per-node=32
+#SBATCH --nodelist=rpc-97-[1-20]
+#SBATCH --ntasks-per-node=256
 #SBATCH --cpus-per-task=1
 #SBATCH --exclusive
 #SBATCH --time=4:00:00
-#SBATCH -o 535.weather_t/spechpc_weather.%A.out
-#SBATCH -e 535.weather_t/spechpc_weather.%A.err
+#SBATCH -o 635.weather_s/spechpc_weather.%A.out
+#SBATCH -e 635.weather_s/spechpc_weather.%A.err
 
 set -euo pipefail
 
@@ -23,10 +23,10 @@ module load mpich/4.3.2 likwid/5.4.1-daemon
 
 cd "${SPECHPC_DIR}"
 source shrc
-go "535.weather_t" "${RUN_SUBDIR}"
+go "635.weather_s" "${RUN_SUBDIR}"
 
-echo "Launching 535.weather with 32 MPI ranks"
+echo "Launching 635.weather with 256 MPI ranks"
 
-likwid-perfctr -f -c 0,1 -g ENERGY -t 500ms -O \
-  -- srun --mpi=pmix --cpu-bind=cores --distribution=block:block ./weather output6.ref.txt 24000 10000 3000 1250 600 100 6 \
+likwid-perfctr -f -c 0,128 -g ENERGY -t 500ms -O \
+  -- srun --mpi=pmix --cpu-bind=cores --distribution=block:block ./weather output6.ref.txt 192000 10000 24000 1250 600 100 6 \
   2> "${RESULT_DIR}/spechpc_weather.${SLURM_JOB_ID}.prof"

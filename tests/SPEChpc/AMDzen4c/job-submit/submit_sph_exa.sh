@@ -2,13 +2,13 @@
 #SBATCH -J spechpc_sph_exa
 #SBATCH -N 1
 #SBATCH --reservation=cpufreq
-#SBATCH --partition=h100-build
-#SBATCH --ntasks-per-node=32
+#SBATCH --nodelist=rpc-97-[1-20]
+#SBATCH --ntasks-per-node=256
 #SBATCH --cpus-per-task=1
 #SBATCH --exclusive
 #SBATCH --time=4:00:00
-#SBATCH -o 532.sph_exa_t/spechpc_sph_exa.%A.out
-#SBATCH -e 532.sph_exa_t/spechpc_sph_exa.%A.err
+#SBATCH -o 632.sph_exa_s/spechpc_sph_exa.%A.out
+#SBATCH -e 632.sph_exa_s/spechpc_sph_exa.%A.err
 
 set -euo pipefail
 
@@ -23,10 +23,10 @@ module load mpich/4.3.2 likwid/5.4.1-daemon
 
 cd "${SPECHPC_DIR}"
 source shrc
-go "532.sph_exa_t" "${RUN_SUBDIR}"
+go "632.sph_exa_s" "${RUN_SUBDIR}"
 
-echo "Launching 532.sph_exa with 32 MPI ranks"
+echo "Launching 632.sph_exa with 256 MPI ranks"
 
-likwid-perfctr -f -c 0,1 -g ENERGY -t 500ms -O \
-  -- srun --mpi=pmix --cpu-bind=cores --distribution=block:block ./sph_exa -n 210 -s 80 -w -1 \
+likwid-perfctr -f -c 0,128 -g ENERGY -t 500ms -O \
+  -- srun --mpi=pmix --cpu-bind=cores --distribution=block:block ./sph_exa -n 350 -s 100 -w -1 \
   2> "${RESULT_DIR}/spechpc_sph_exa.${SLURM_JOB_ID}.prof"

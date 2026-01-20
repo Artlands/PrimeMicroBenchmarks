@@ -2,14 +2,14 @@
 set -euo pipefail
 
 SCRIPT_DIR="$(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd)"
-BENCHMARK_FILE="${SCRIPT_DIR}/tiny.txt"
+BENCHMARK_FILE="${SCRIPT_DIR}/small.txt"
 SPECHPC_DIR="/mnt/SHARED-AREA/HPC-Benchmarks/SPEC/SPEC-HPC/SPEChpc"
 BUILD_SUBDIR="build/build_base_gnu_mpi.0000"
 RUN_SUBDIR="run/run_base_ref_gnu_mpi.0000"
 
 HOSTNAME_SHORT="$(hostname -s)"
-if [[ "${HOSTNAME_SHORT}" != rpg-93* ]]; then
-  echo "This script must be executed on an rpg-93 node; current host: ${HOSTNAME_SHORT}" >&2
+if [[ "${HOSTNAME_SHORT}" != rpc-97-* ]]; then
+  echo "This script must be executed on an rpc-97 node; current host: ${HOSTNAME_SHORT}" >&2
   exit 1
 fi
 
@@ -25,11 +25,11 @@ source shrc
 ml load mpich/4.3.2
 
 declare -A BINARY_OVERRIDES=(
-  ["521.miniswp"]="sweep"
+  ["621.miniswp"]="sweep"
 )
 
 for benchmark in "${BENCHMARKS[@]}"; do
-  base_name="${benchmark%_t}"
+  base_name="${benchmark%_s}"
   binary_name="${BINARY_OVERRIDES[${base_name}]:-${base_name#*.}}"
 
   echo "Processing benchmark ${base_name}"

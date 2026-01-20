@@ -2,13 +2,13 @@
 #SBATCH -J spechpc_lbm
 #SBATCH -N 1
 #SBATCH --reservation=cpufreq
-#SBATCH --partition=h100-build
-#SBATCH --ntasks-per-node=32
+#SBATCH --nodelist=rpc-97-[1-20]
+#SBATCH --ntasks-per-node=256
 #SBATCH --cpus-per-task=1
 #SBATCH --exclusive
 #SBATCH --time=4:00:00
-#SBATCH -o 505.lbm_t/spechpc_lbm.%A.out
-#SBATCH -e 505.lbm_t/spechpc_lbm.%A.err
+#SBATCH -o 605.lbm_s/spechpc_lbm.%A.out
+#SBATCH -e 605.lbm_s/spechpc_lbm.%A.err
 
 set -euo pipefail
 
@@ -23,10 +23,10 @@ module load mpich/4.3.2 likwid/5.4.1-daemon
 
 cd "${SPECHPC_DIR}"
 source shrc
-go "505.lbm_t" "${RUN_SUBDIR}"
+go "605.lbm_s" "${RUN_SUBDIR}"
 
-echo "Launching 505.lbm with 32 MPI ranks"
+echo "Launching 605.lbm with 256 MPI ranks"
 
-likwid-perfctr -f -c 0,1 -g ENERGY -t 500ms -O \
+likwid-perfctr -f -c 0,128 -g ENERGY -t 500ms -O \
   -- srun --mpi=pmix --cpu-bind=cores --distribution=block:block ./lbm \
   2> "${RESULT_DIR}/spechpc_lbm.${SLURM_JOB_ID}.prof"

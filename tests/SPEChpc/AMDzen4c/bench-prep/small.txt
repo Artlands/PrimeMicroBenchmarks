@@ -1,0 +1,9 @@
+605.lbm_s
+613.soma_s
+618.tealeaf_s
+619.clvleaf_s
+621.miniswp_s
+628.pot3d_s
+632.sph_exa_s
+634.hpgmgfv_s
+635.weather_s
