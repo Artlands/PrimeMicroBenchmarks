@@ -5,12 +5,29 @@
 #include <signal.h>
 #include <time.h>
 #include <likwid.h>
+#include <limits.h>
 
 // Include headers
 #include "dvfs_config.h"
 #include "dvfs_policy.h"
 #include "model.h"
 #include "config_loader.h"
+
+#define predict_phase_level predict_phase_level_amdzen4c_edp
+#include "model_amdzen4c_edp.c"
+#undef predict_phase_level
+
+#define predict_phase_level predict_phase_level_amdzen4c_energy
+#include "model_amdzen4c_energy.c"
+#undef predict_phase_level
+
+#define predict_phase_level predict_phase_level_intelspr_edp
+#include "model_intelspr_edp.c"
+#undef predict_phase_level
+
+#define predict_phase_level predict_phase_level_intelspr_energy
+#include "model_intelspr_energy.c"
+#undef predict_phase_level
 
 // Define the CPU Core to monitor (e.g., Core 0).
 // For a system-wide policy, may loop over all cores or specific sockets.
@@ -64,6 +81,74 @@ static int is_amd_cpu(void) {
     return is_amd;
 }
 
+static int resolve_config_path(const char *requested, char *out, size_t out_size) {
+    if (!requested || !out || out_size == 0) {
+        return 0;
+    }
+
+    if (access(requested, R_OK) == 0) {
+        snprintf(out, out_size, "%s", requested);
+        return 1;
+    }
+
+    char exe_path[PATH_MAX];
+    ssize_t len = readlink("/proc/self/exe", exe_path, sizeof(exe_path) - 1);
+    if (len <= 0) {
+        return 0;
+    }
+    exe_path[len] = '\0';
+
+    char *last_slash = strrchr(exe_path, '/');
+    if (!last_slash) {
+        return 0;
+    }
+    *last_slash = '\0';
+
+    size_t exe_len = strlen(exe_path);
+    size_t req_len = strlen(requested);
+    if (exe_len + 1 + req_len + 1 > out_size) {
+        return 0;
+    }
+    memcpy(out, exe_path, exe_len);
+    out[exe_len] = '/';
+    memcpy(out + exe_len + 1, requested, req_len);
+    out[exe_len + 1 + req_len] = '\0';
+    if (access(out, R_OK) == 0) {
+        return 1;
+    }
+
+    return 0;
+}
+
+static model_predict_fn_t get_model_fn(const char *name, int is_amd, const char **out_name) {
+    struct model_entry {
+        const char *name;
+        model_predict_fn_t fn;
+    };
+
+    static const struct model_entry models[] = {
+        {"amd_edp", predict_phase_level_amdzen4c_edp},
+        {"amd_energy", predict_phase_level_amdzen4c_energy},
+        {"intel_edp", predict_phase_level_intelspr_edp},
+        {"intel_energy", predict_phase_level_intelspr_energy},
+    };
+
+    const char *default_name = is_amd ? "amd_energy" : "intel_energy";
+    const char *selected = name ? name : default_name;
+    size_t i;
+
+    for (i = 0; i < sizeof(models) / sizeof(models[0]); i++) {
+        if (strcmp(models[i].name, selected) == 0) {
+            if (out_name) {
+                *out_name = models[i].name;
+            }
+            return models[i].fn;
+        }
+    }
+
+    return NULL;
+}
+
 static volatile sig_atomic_t keep_running = 1;
 
 static void handle_signal(int sig) {
@@ -79,9 +164,13 @@ int main(int argc, char* argv[]) {
     int controller_cpu_id = CONTROLLER_CPU_ID;
     int debug = 0;
     const char *config_path = "dvfs/dvfs_settings.conf";
+    int config_path_set = 0;
+    const char *model_name = NULL;
+    int is_amd = 0;
+    char resolved_config_path[PATH_MAX];
 
     int opt;
-    while ((opt = getopt(argc, argv, "m:c:df:")) != -1) {
+    while ((opt = getopt(argc, argv, "m:c:df:p:")) != -1) {
         switch (opt) {
             case 'm':
                 monitor_cpu_id = atoi(optarg);
@@ -94,13 +183,26 @@ int main(int argc, char* argv[]) {
                 break;
             case 'f':
                 config_path = optarg;
+                config_path_set = 1;
+                break;
+            case 'p':
+                model_name = optarg;
                 break;
             default:
-                fprintf(stderr, "Usage: %s [-m monitor_cpu] [-c controller_cpu] [-f config] [-d]\n", argv[0]);
+                fprintf(stderr, "Usage: %s [-m monitor_cpu] [-c controller_cpu] [-f config] [-p model] [-d]\n", argv[0]);
                 return EXIT_FAILURE;
         }
     }
     
+    is_amd = is_amd_cpu();
+    if (!config_path_set) {
+        config_path = is_amd ? "dvfs_amd_settings.conf"
+                             : "dvfs_intel_settings.conf";
+    }
+    if (resolve_config_path(config_path, resolved_config_path, sizeof(resolved_config_path))) {
+        config_path = resolved_config_path;
+    }
+
     // --- 1. Initialization ---
     load_config(config_path);
 
@@ -166,10 +268,21 @@ int main(int argc, char* argv[]) {
     // Add the Event Set (prefer group file for metric definitions)
     perfmon_check_counter_map(monitor_cpu_id);
     int use_metrics = 0;
-    int is_amd = is_amd_cpu();
     int event_count = is_amd ? 8 : 9;
     const char *perf_group_name = is_amd ? PERF_GROUP_NAME_AMD : PERF_GROUP_NAME_INTEL;
     const char *event_string = is_amd ? EVENT_STRING_AMD : EVENT_STRING_INTEL;
+    const char *selected_model_name = NULL;
+    model_predict_fn_t selected_model = get_model_fn(model_name, is_amd, &selected_model_name);
+    if (!selected_model) {
+        fprintf(stderr, "Unknown model '%s'. Valid options: amd_edp, amd_energy, intel_edp, intel_energy\n",
+                model_name ? model_name : "");
+        free(apic_ids);
+        return EXIT_FAILURE;
+    }
+    dvfs_set_model_predictor(selected_model);
+    if (debug) {
+        printf("[Main] Model selected: %s\n", selected_model_name);
+    }
     const char *group_path = getenv("LIKWID_GROUPPATH");
     if (group_path && *group_path) {
         CpuInfo_t cpu_info = get_cpuInfo();
@@ -344,7 +457,7 @@ int main(int argc, char* argv[]) {
         }
 
         // F. Call the ML Controller
-        // apply_dvfs_policy(CPI, Math_Intensity, Stall_Ratio, System_BW_Proxy, Branch_MPKI, GFLOPS_Approx, Clock_Ratio);
+        apply_dvfs_policy(CPI, Math_Intensity, Stall_Ratio, System_BW_Proxy, Branch_MPKI, GFLOPS_Approx, Clock_Ratio);
     }
 
     // --- 3. Cleanup ---

@@ -6,14 +6,26 @@
 
 #include "dvfs_config.h"
 #include "model.h"
+#include "dvfs_policy.h"
 
 
 static unsigned long current_freq_khz = 0;
+static model_predict_fn_t predict_fn = NULL;
+
+void dvfs_set_model_predictor(model_predict_fn_t fn) {
+    if (fn) {
+        predict_fn = fn;
+    }
+}
 
 void apply_dvfs_policy(double CPI, double Math_Intensity, double Stall_Ratio, double System_BW_Proxy, double Branch_MPKI, double GFLOPS_Approx, double Clock_Ratio) {
     
     // 1. Get the Abstract Level from ML Model
-    FreqLevel level = predict_phase_level(CPI, Math_Intensity, Stall_Ratio, System_BW_Proxy, Branch_MPKI, GFLOPS_Approx, Clock_Ratio);
+    if (!predict_fn) {
+        fprintf(stderr, "[DVFS] Model predictor not set\n");
+        return;
+    }
+    FreqLevel level = predict_fn(CPI, Math_Intensity, Stall_Ratio, System_BW_Proxy, Branch_MPKI, GFLOPS_Approx, Clock_Ratio);
     
     // 2. Map Level to Configured Frequency
     unsigned long target_freq_khz = 0;

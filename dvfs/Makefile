@@ -14,7 +14,7 @@ LDFLAGS += $(LIKWID_LIB)
 
 # Project definitions
 TARGET  = dvfs_controller
-SRCS    = main.c config_loader.c dvfs_policy.c model.c
+SRCS    = main.c config_loader.c dvfs_policy.c
 OBJS    = $(SRCS:.c=.o)
 HEADERS = dvfs_config.h dvfs_policy.h model.h config_loader.h
 
