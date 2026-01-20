@@ -6,11 +6,9 @@ profiles/
 *.err
 *.prof
 *.tmp
-*.csv
 *.o
 dvfs_controller
 apps/
-csv/
 *GHz*/
 test_app
 2.5GHz/
