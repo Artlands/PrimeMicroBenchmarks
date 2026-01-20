@@ -19,7 +19,7 @@ Math_Intensity (PMC0*8+PMC1*4+PMC2)/FIXC1
 Stall_Ratio PMC4/FIXC1
 # Common Feature 3: Bandwidth Signal
 # Measures cache lines filling L2 from L3/Memory.
-System_BW_Proxy [GB/s] PMC3*64/time/1.0E9
+System_BW_Proxy PMC3*64/time/1.0E9
 # Common Feature 4: Bad Speculation (Misses Per Kilo-Instruction)
 Branch_MPKI 1000*PMC5/FIXC0
 # Common Feature 5: GFLOPS (Approximate)
