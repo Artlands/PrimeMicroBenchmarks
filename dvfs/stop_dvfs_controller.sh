@@ -1,7 +1,21 @@
 #!/usr/bin/env bash
 set -euo pipefail
 
-# Stop all running DVFS controller instances on the node.
-if pgrep -x dvfs_controller >/dev/null 2>&1; then
-  pkill -x dvfs_controller
+PIDS="$(pgrep -f dvfs_controller || true)"
+
+if [ -z "${PIDS}" ]; then
+  echo "No dvfs_controller processes running."
+  exit 0
+fi
+
+echo "Stopping dvfs_controller: ${PIDS}"
+kill ${PIDS}
+
+sleep 2
+
+# Force kill if still running
+REMAINING="$(pgrep -f dvfs_controller || true)"
+if [ -n "${REMAINING}" ]; then
+  echo "Processes still running, sending SIGKILL: ${REMAINING}"
+  kill -9 ${REMAINING}
 fi
