@@ -17,6 +17,7 @@ ondemand/
 performance/
 DVFS-edp/
 DVFS-energy/
+everest/
 *.log
 pattern_edp
 pattern_energy
