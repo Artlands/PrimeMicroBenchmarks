@@ -170,7 +170,7 @@ int main(int argc, char* argv[]) {
     char resolved_config_path[PATH_MAX];
 
     int opt;
-    while ((opt = getopt(argc, argv, "m:c:df:p:")) != -1) {
+    while ((opt = getopt(argc, argv, "m:c:df:p:t:")) != -1) {
         switch (opt) {
             case 'm':
                 monitor_cpu_id = atoi(optarg);
@@ -188,8 +188,18 @@ int main(int argc, char* argv[]) {
             case 'p':
                 model_name = optarg;
                 break;
+            case 't': {
+                char *end = NULL;
+                double parsed = strtod(optarg, &end);
+                if (!end || *end != '\0' || parsed <= 0.0) {
+                    fprintf(stderr, "Invalid time_sec value: %s\n", optarg);
+                    return EXIT_FAILURE;
+                }
+                time_sec = parsed;
+                break;
+            }
             default:
-                fprintf(stderr, "Usage: %s [-m monitor_cpu] [-c controller_cpu] [-f config] [-p model] [-d]\n", argv[0]);
+                fprintf(stderr, "Usage: %s [-m monitor_cpu] [-c controller_cpu] [-f config] [-p model] [-t time_sec] [-d]\n", argv[0]);
                 return EXIT_FAILURE;
         }
     }

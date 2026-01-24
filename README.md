@@ -89,6 +89,10 @@ make dgemm
 make mpi_bandwidth
 ```
 
+## DVFS controller
+
+The DVFS controller in `dvfs/main.c` accepts `-t <seconds>` to set the sampling interval (default: 0.5s).
+
 ## Benchmark groups and DVFS guidance
 
 A. Compute and frontend (the "Run Fast" group)

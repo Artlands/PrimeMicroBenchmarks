@@ -13,5 +13,5 @@ fi
 
 module load likwid/5.4.1-perf
 
-nohup "${SCRIPT_DIR}/dvfs_controller" -m 0 -c 255 -p amd_energy \
+nohup "${SCRIPT_DIR}/dvfs_controller" -m 0 -c 255 -p amd_energy -t 0.5 \
   > /var/log/dvfs_controller.log 2>&1 &

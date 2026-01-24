@@ -17,7 +17,9 @@ ondemand/
 performance/
 DVFS-edp/
 DVFS-energy/
+DVFS-energy2/
 everest/
 *.log
 pattern_edp
 pattern_energy
+plot_likwid_profiles_all.ipynb
