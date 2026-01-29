@@ -11,12 +11,12 @@ dvfs_controller
 apps/
 *GHz*/
 test_app
-2.5GHz/
-DVFS/
-ondemand/
-performance/
+# 2.5GHz/
+# DVFS/
+# ondemand/
+# performance/
 DVFS-edp/
-DVFS-energy/
+# DVFS-energy/
 DVFS-energy2/
 everest/
 *.log
