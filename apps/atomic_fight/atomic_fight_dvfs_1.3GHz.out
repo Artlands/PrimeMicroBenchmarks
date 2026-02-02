@@ -1,0 +1,16 @@
+Detected CPU frequency: 1300 MHz
+--------------------------------------------------------------------------------
+CPU name:	Intel(R) Xeon(R) Gold 6426Y
+CPU type:	Intel SapphireRapids processor
+CPU clock:	2.50 GHz
+--------------------------------------------------------------------------------
+# HWThreads: 0
+# GID|MetricsCount|CpuCount|Total runtime [s]|CPI|Math_Intensity|Stall_Ratio|System_BW_Proxy [GB/s]|Branch_MPKI|GFLOPS_Approx|Clock_Ratio
+Atomic fight start
+Atomic fight warmup start
+Atomic fight loop start
+Final Count: 1280000000
+Atomic fight complete
+Loop iterations: 1280000000
+Loop time: 101.462112 seconds
+--------------------------------------------------------------------------------

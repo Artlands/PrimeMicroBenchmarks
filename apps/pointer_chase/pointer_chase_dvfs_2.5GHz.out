@@ -1,0 +1,17 @@
+Detected CPU frequency: 2500 MHz
+INFO: You are running LIKWID in a cpuset with 1 CPUs. Taking given IDs as logical ID in cpuset
+--------------------------------------------------------------------------------
+CPU name:	Intel(R) Xeon(R) Gold 6426Y
+CPU type:	Intel SapphireRapids processor
+CPU clock:	2.50 GHz
+--------------------------------------------------------------------------------
+# HWThreads: 0
+# GID|MetricsCount|CpuCount|Total runtime [s]|CPI|Math_Intensity|Stall_Ratio|System_BW_Proxy [GB/s]|Branch_MPKI|GFLOPS_Approx|Clock_Ratio
+Pointer chase start
+Pointer chase warmup start
+Pointer chase loop start
+Sink: 76124
+Pointer chase complete
+Loop iterations: 1000000000
+Loop time: 63.687208 seconds
+--------------------------------------------------------------------------------

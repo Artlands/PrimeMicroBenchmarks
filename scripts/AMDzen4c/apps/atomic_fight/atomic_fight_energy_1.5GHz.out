@@ -1,0 +1,16 @@
+Detected CPU frequency: 1500 MHz
+--------------------------------------------------------------------------------
+CPU name:	AMD EPYC 9754 128-Core Processor               
+CPU type:	AMD K19 (Zen4c) architecture
+CPU clock:	2.25 GHz
+--------------------------------------------------------------------------------
+# HWThreads: 0|128
+# GID|MetricsCount|CpuCount|Total runtime [s]|Runtime (RDTSC) [s]|Runtime unhalted [s]|Clock [MHz]|CPI|Energy Core [J]|Power Core [W]|Energy L3 [J]|Power L3 [W]
+Atomic fight start
+Atomic fight warmup start
+Atomic fight loop start
+Final Count: 10240000000
+Atomic fight complete
+Loop iterations: 10240000000
+Loop time: 160.820772 seconds
+--------------------------------------------------------------------------------

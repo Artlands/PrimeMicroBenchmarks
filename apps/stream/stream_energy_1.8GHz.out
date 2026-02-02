@@ -1,0 +1,15 @@
+Detected CPU frequency: 1800 MHz
+--------------------------------------------------------------------------------
+CPU name:	Intel(R) Xeon(R) Gold 6426Y
+CPU type:	Intel SapphireRapids processor
+CPU clock:	2.50 GHz
+--------------------------------------------------------------------------------
+# HWThreads: 0|1
+# GID|MetricsCount|CpuCount|Total runtime [s]|Runtime (RDTSC) [s]|Runtime unhalted [s]|Clock [MHz]|CPI|Temperature [C]|Energy [J]|Power [W]|Energy PP0 [J]|Power PP0 [W]|Energy DRAM [J]|Power DRAM [W]|Energy PLATFORM [J]|Power PLATFORM [W]
+STREAM start
+STREAM warmup start
+STREAM loop start
+STREAM complete
+Loop iterations: 1500
+Loop time: 72.612921 seconds
+--------------------------------------------------------------------------------

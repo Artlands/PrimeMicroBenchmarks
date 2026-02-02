@@ -1,0 +1,15 @@
+Detected CPU frequency: 1900 MHz
+--------------------------------------------------------------------------------
+CPU name:	Intel(R) Xeon(R) Gold 6426Y
+CPU type:	Intel SapphireRapids processor
+CPU clock:	2.50 GHz
+--------------------------------------------------------------------------------
+# HWThreads: 0
+# GID|MetricsCount|CpuCount|Total runtime [s]|CPI|Math_Intensity|Stall_Ratio|System_BW_Proxy [GB/s]|Branch_MPKI|GFLOPS_Approx|Clock_Ratio
+L3 stencil start
+L3 stencil warmup start
+L3 stencil loop start
+L3 stencil complete
+Loop iterations: 5000000
+Loop time: 63.761232 seconds
+--------------------------------------------------------------------------------

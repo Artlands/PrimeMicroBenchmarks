@@ -8,7 +8,7 @@ out/
 *.tmp
 *.o
 dvfs_controller
-apps/
+!apps/
 *GHz*/
 test_app
 scripts/AMDzen4c/dvfs/2.25GHz/

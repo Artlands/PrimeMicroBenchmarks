@@ -1,0 +1,16 @@
+Detected CPU frequency: 1500 MHz
+--------------------------------------------------------------------------------
+CPU name:	Intel(R) Xeon(R) Gold 6426Y
+CPU type:	Intel SapphireRapids processor
+CPU clock:	2.50 GHz
+--------------------------------------------------------------------------------
+# HWThreads: 0|1
+# GID|MetricsCount|CpuCount|Total runtime [s]|Runtime (RDTSC) [s]|Runtime unhalted [s]|Clock [MHz]|CPI|Temperature [C]|Energy [J]|Power [W]|Energy PP0 [J]|Power PP0 [W]|Energy DRAM [J]|Power DRAM [W]|Energy PLATFORM [J]|Power PLATFORM [W]
+Tree walk start
+Tree walk warmup start
+Tree walk loop start
+Searches completed. Found: 37431
+Tree walk complete
+Loop iterations: 80000000
+Loop time: 69.562027 seconds
+--------------------------------------------------------------------------------

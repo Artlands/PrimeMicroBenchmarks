@@ -1,0 +1,15 @@
+Detected CPU frequency: 2250 MHz
+--------------------------------------------------------------------------------
+CPU name:	AMD EPYC 9754 128-Core Processor               
+CPU type:	AMD K19 (Zen4c) architecture
+CPU clock:	2.25 GHz
+--------------------------------------------------------------------------------
+# HWThreads: 0|128
+# GID|MetricsCount|CpuCount|Total runtime [s]|Runtime (RDTSC) [s]|Runtime unhalted [s]|Clock [MHz]|CPI|Energy Core [J]|Power Core [W]|Energy L3 [J]|Power L3 [W]
+MPI barrier start
+MPI barrier warmup start
+MPI barrier loop start
+MPI barrier complete
+Loop iterations: 30000000
+Loop time: 335.268391 seconds
+--------------------------------------------------------------------------------

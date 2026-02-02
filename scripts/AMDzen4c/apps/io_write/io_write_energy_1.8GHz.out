@@ -1,0 +1,15 @@
+Detected CPU frequency: 1800 MHz
+--------------------------------------------------------------------------------
+CPU name:	AMD EPYC 9754 128-Core Processor               
+CPU type:	AMD K19 (Zen4c) architecture
+CPU clock:	2.25 GHz
+--------------------------------------------------------------------------------
+# HWThreads: 0|128
+# GID|MetricsCount|CpuCount|Total runtime [s]|Runtime (RDTSC) [s]|Runtime unhalted [s]|Clock [MHz]|CPI|Energy Core [J]|Power Core [W]|Energy L3 [J]|Power L3 [W]
+I/O write start
+I/O write warmup start
+I/O write loop start
+I/O write complete
+Loop iterations: 10
+Loop time: 879.514365 seconds
+--------------------------------------------------------------------------------

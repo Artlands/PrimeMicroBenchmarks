@@ -1,0 +1,17 @@
+Detected CPU frequency: 1499 MHz
+INFO: You are running LIKWID in a cpuset with 1 CPUs. Taking given IDs as logical ID in cpuset
+--------------------------------------------------------------------------------
+CPU name:	AMD EPYC 9754 128-Core Processor               
+CPU type:	AMD K19 (Zen4c) architecture
+CPU clock:	2.25 GHz
+--------------------------------------------------------------------------------
+# HWThreads: 0
+# GID|MetricsCount|CpuCount|Total runtime [s]|Runtime [s]|CPI|Math_Intensity|Stall_Ratio|System_BW_Proxy|Branch_MPKI|GFLOPS_Approx|Clock_Ratio
+I-cache thrash start
+I-cache thrash warmup start
+I-cache thrash loop start
+7
+I-cache thrash complete
+Loop iterations: 1000000
+Loop time: 11.152478 seconds
+--------------------------------------------------------------------------------
