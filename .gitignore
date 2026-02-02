@@ -11,6 +11,9 @@ dvfs_controller
 apps/
 *GHz*/
 test_app
+scripts/AMDzen4c/dvfs/2.25GHz/
+scripts/AMDzen4c/energy/2.25GHz/
+!2.25GHz/
 # DVFS/
 # ondemand/
 # performance/
