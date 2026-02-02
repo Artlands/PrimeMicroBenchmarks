@@ -1,0 +1,15 @@
+/mnt/SHARED-AREA/HPC-Benchmarks/SPEC/SPEC-HPC/SPEChpc/benchspec/HPC/635.weather_s/run/run_base_ref_gnu_mpi.0000
+Launching 635.weather with 256 MPI ranks
+--------------------------------------------------------------------------------
+CPU name:	AMD EPYC 9754 128-Core Processor               
+CPU type:	AMD K19 (Zen4c) architecture
+CPU clock:	2.25 GHz
+--------------------------------------------------------------------------------
+# HWThreads: 0|128
+# GID|MetricsCount|CpuCount|Total runtime [s]|Runtime (RDTSC) [s]|Runtime unhalted [s]|Clock [MHz]|CPI|Energy Core [J]|Power Core [W]|Energy L3 [J]|Power L3 [W]
+[1768932472.512927] [rpc-97-19:31366:0]           ib_md.c:287  UCX  ERROR ibv_reg_mr(address=0x151660c82000, length=544768, access=0xf) failed: Cannot allocate memory
+[1768932472.513205] [rpc-97-19:31366:0]           mpool.c:269  UCX  ERROR Failed to allocate memory pool (name=ud_recv_skb) chunk: Input/output error
+ nx_glob, nz_glob:                24000                 1250
+ dx,dz:    8.0000000000000000        8.0000000000000000     
+ dt:    2.6666666666666665E-002
+--------------------------------------------------------------------------------

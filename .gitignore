@@ -1,7 +1,7 @@
 .venv/
 bin/
 out/
-profiles/
+# profiles/
 # *.out
 # *.err
 # *.prof
@@ -11,14 +11,14 @@ dvfs_controller
 apps/
 *GHz*/
 test_app
-2.25GHz/
-DVFS/
-ondemand/
-performance/
+# 2.25GHz/
+# DVFS/
+# ondemand/
+# performance/
 DVFS-edp/
 # DVFS-energy/
 DVFS-energy2/
-everest/
+# everest/
 *.log
 pattern_edp
 pattern_energy

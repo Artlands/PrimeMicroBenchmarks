@@ -1,0 +1,62 @@
+/mnt/SHARED-AREA/HPC-Benchmarks/SPEC/SPEChpc/benchspec/HPC/528.pot3d_t/run/run_base_ref_gnu_mpi.0000
+Launching 528.pot3d with 32 MPI ranks
+--------------------------------------------------------------------------------
+CPU name:	Intel(R) Xeon(R) Gold 6426Y
+CPU type:	Intel SapphireRapids processor
+CPU clock:	2.50 GHz
+--------------------------------------------------------------------------------
+# HWThreads: 0|1
+# GID|MetricsCount|CpuCount|Total runtime [s]|Runtime (RDTSC) [s]|Runtime unhalted [s]|Clock [MHz]|CPI|Temperature [C]|Energy [J]|Power [W]|Energy PP0 [J]|Power PP0 [W]|Energy DRAM [J]|Power DRAM [W]|Energy PLATFORM [J]|Power PLATFORM [W]
+
+ POT3D Version 2.21-, updated on 01/14/2019
+
+ ### COMMENT from CHECK_INPUT:
+ ### Field solve type:
+
+ OPTION = ss              
+
+ Total number of MPI ranks =           32
+
+ Number of MPI ranks in r =            1
+ Number of MPI ranks in t =            4
+ Number of MPI ranks in p =            8
+
+ Global mesh dimension in r =          173
+ Global mesh dimension in t =          361
+ Global mesh dimension in p =         1171
+
+ Average # of r mesh pts per rank =  173.0
+ Average # of t mesh pts per rank =   90.2
+ Average # of p mesh pts per rank =  146.4
+
+ Estimated load imbalance =   1.77 %
+
+ ### COMMENT from READBR:
+ ### Reading Br file: br_input_small.h5
+
+ ### COMMENT from READBR:
+ ### Computed flux balance:
+
+ Positive flux =    40.840678534187958     
+ Negative flux =   -42.213828512542641     
+
+ ### COMMENT from READBR:
+ ### Flux balance correction:
+
+ BR00 (monopole Br field magnitude) =  -0.10927145466668350     
+
+ ### COMMENT from POT3D:
+ ### Starting CG solve.
+
+ ### COMMENT from SOLVE:
+ ### The field solver converged.
+ Number of iterations =        13799
+
+ ### COMMENT from GETB:
+ ### Magnetic energy diagnostic:
+
+Energy in Br**2 = 5.98186158E+01
+Energy in Bt**2 = 2.19454290E+01
+Energy in Bp**2 = 3.27180068E+01
+Magnetic energy = 1.14482052E+02
+--------------------------------------------------------------------------------

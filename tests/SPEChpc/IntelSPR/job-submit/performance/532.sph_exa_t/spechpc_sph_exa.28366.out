@@ -1,0 +1,172 @@
+/mnt/SHARED-AREA/HPC-Benchmarks/SPEC/SPEChpc/benchspec/HPC/532.sph_exa_t/run/run_base_ref_gnu_mpi.0000
+Launching 532.sph_exa with 32 MPI ranks
+--------------------------------------------------------------------------------
+CPU name:	Intel(R) Xeon(R) Gold 6426Y
+CPU type:	Intel SapphireRapids processor
+CPU clock:	2.50 GHz
+--------------------------------------------------------------------------------
+# HWThreads: 0|1
+# GID|MetricsCount|CpuCount|Total runtime [s]|Runtime (RDTSC) [s]|Runtime unhalted [s]|Clock [MHz]|CPI|Temperature [C]|Energy [J]|Power [W]|Energy PP0 [J]|Power PP0 [W]|Energy DRAM [J]|Power DRAM [W]|Energy PLATFORM [J]|Power PLATFORM [W]
+=== Total time for iteration(0) 10.5279s
+
+=== Total time for iteration(1) 10.2471s
+
+=== Total time for iteration(2) 10.1708s
+
+=== Total time for iteration(3) 10.1181s
+
+=== Total time for iteration(4) 10.151s
+
+=== Total time for iteration(5) 10.0563s
+
+=== Total time for iteration(6) 10.0153s
+
+=== Total time for iteration(7) 9.98762s
+
+=== Total time for iteration(8) 9.99016s
+
+=== Total time for iteration(9) 10.0015s
+
+=== Total time for iteration(10) 10.0541s
+
+=== Total time for iteration(11) 10.11s
+
+=== Total time for iteration(12) 9.96547s
+
+=== Total time for iteration(13) 9.92832s
+
+=== Total time for iteration(14) 9.98587s
+
+=== Total time for iteration(15) 10.0205s
+
+=== Total time for iteration(16) 10.0209s
+
+=== Total time for iteration(17) 9.9124s
+
+=== Total time for iteration(18) 10.01s
+
+=== Total time for iteration(19) 9.99622s
+
+=== Total time for iteration(20) 10.1178s
+
+=== Total time for iteration(21) 9.98926s
+
+=== Total time for iteration(22) 10.2502s
+
+=== Total time for iteration(23) 9.96482s
+
+=== Total time for iteration(24) 9.90398s
+
+=== Total time for iteration(25) 10.25s
+
+=== Total time for iteration(26) 9.97152s
+
+=== Total time for iteration(27) 9.86243s
+
+=== Total time for iteration(28) 9.91912s
+
+=== Total time for iteration(29) 9.93588s
+
+=== Total time for iteration(30) 10.0882s
+
+=== Total time for iteration(31) 10.0939s
+
+=== Total time for iteration(32) 9.96586s
+
+=== Total time for iteration(33) 9.91067s
+
+=== Total time for iteration(34) 10.0946s
+
+=== Total time for iteration(35) 9.94506s
+
+=== Total time for iteration(36) 9.92398s
+
+=== Total time for iteration(37) 10.0131s
+
+=== Total time for iteration(38) 9.99984s
+
+=== Total time for iteration(39) 10.029s
+
+=== Total time for iteration(40) 9.99548s
+
+=== Total time for iteration(41) 9.98876s
+
+=== Total time for iteration(42) 10.002s
+
+=== Total time for iteration(43) 10.0259s
+
+=== Total time for iteration(44) 10.0017s
+
+=== Total time for iteration(45) 10.1468s
+
+=== Total time for iteration(46) 10.0503s
+
+=== Total time for iteration(47) 10.0714s
+
+=== Total time for iteration(48) 10.0958s
+
+=== Total time for iteration(49) 10.0834s
+
+=== Total time for iteration(50) 10.166s
+
+=== Total time for iteration(51) 10.0924s
+
+=== Total time for iteration(52) 10.1326s
+
+=== Total time for iteration(53) 10.1216s
+
+=== Total time for iteration(54) 10.1428s
+
+=== Total time for iteration(55) 10.1005s
+
+=== Total time for iteration(56) 10.0733s
+
+=== Total time for iteration(57) 10.1005s
+
+=== Total time for iteration(58) 10.0872s
+
+=== Total time for iteration(59) 10.1393s
+
+=== Total time for iteration(60) 10.1981s
+
+=== Total time for iteration(61) 10.3796s
+
+=== Total time for iteration(62) 10.2366s
+
+=== Total time for iteration(63) 10.143s
+
+=== Total time for iteration(64) 10.1924s
+
+=== Total time for iteration(65) 10.1337s
+
+=== Total time for iteration(66) 10.1886s
+
+=== Total time for iteration(67) 10.2686s
+
+=== Total time for iteration(68) 10.283s
+
+=== Total time for iteration(69) 10.2503s
+
+=== Total time for iteration(70) 10.4651s
+
+=== Total time for iteration(71) 10.2478s
+
+=== Total time for iteration(72) 10.2321s
+
+=== Total time for iteration(73) 10.1866s
+
+=== Total time for iteration(74) 10.226s
+
+=== Total time for iteration(75) 10.3261s
+
+=== Total time for iteration(76) 10.283s
+
+=== Total time for iteration(77) 10.236s
+
+=== Total time for iteration(78) 10.2329s
+
+=== Total time for iteration(79) 10.276s
+
+=== Total time for iteration(80) 10.3107s
+
+--------------------------------------------------------------------------------
