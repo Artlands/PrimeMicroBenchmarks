@@ -25,3 +25,4 @@ DVFS-energy2/
 pattern_edp
 pattern_energy
 plot_likwid_profiles_all.ipynb
+SPECcpu/

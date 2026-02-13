@@ -43,12 +43,12 @@ const char* EVENT_STRING_INTEL =
     "INSTR_RETIRED_ANY:FIXC0,"
     "CPU_CLK_UNHALTED_CORE:FIXC1,"
     "CPU_CLK_UNHALTED_REF:FIXC2,"
-    "FP_ARITH_INST_RETIRED_512B_PACKED_DOUBLE:PMC0,"
-    "FP_ARITH_INST_RETIRED_256B_PACKED_DOUBLE:PMC1,"
-    "FP_ARITH_INST_RETIRED_SCALAR_DOUBLE:PMC2,"
-    "L2_LINES_IN_ALL:PMC3,"
-    "MEMORY_ACTIVITY_STALLS_L3_MISS:PMC4,"
-    "BR_MISP_RETIRED_ALL_BRANCHES:PMC5";
+    "TOPDOWN_SLOTS:FIXC3,"
+    "BR_MISP_RETIRED_ALL_BRANCHES:PMC0,"
+    "TOPDOWN_MEMORY_BOUND_SLOTS:PMC1,"
+    "TOPDOWN_BACKEND_BOUND_SLOTS:PMC2,"
+    "FP_ARITH_INST_RETIRED2_SCALAR:PMC3,"
+    "FP_ARITH_INST_RETIRED2_VECTOR:PMC4";
 
 const char* EVENT_STRING_AMD =
     "ACTUAL_CPU_CLOCK:FIXC1,"
@@ -56,9 +56,9 @@ const char* EVENT_STRING_AMD =
     "RETIRED_INSTRUCTIONS:PMC0,"
     "RETIRED_SSE_AVX_FLOPS_ALL:PMC1,"
     "RETIRED_FP_OPS_BY_TYPE_SCALAR_ALL:PMC2,"
-    "CORE_TO_L2_CACHE_REQUESTS_MISSES:PMC3,"
+    "DEMAND_DATA_CACHE_FILLS_ALL:PMC3,"
     "RETIRED_MISP_BRANCH_INSTR:PMC4,"
-    "CYCLES_NO_RETIRE_LOAD_NOT_COMPLETE:PMC5";
+    "DISPATCH_STALLS_PER_SLOT_BACKEND:PMC5";
 
 // Performance group names (must exist in LIKWID perfgroups for this CPU).
 #define PERF_GROUP_NAME_INTEL "HPC_DVFS_MODEL_INTEL"
@@ -243,37 +243,18 @@ int main(int argc, char* argv[]) {
         return EXIT_FAILURE;
     }
 
-    // Pin controller and register all CPUs for perfmon.
+    // Pin controller and register only the monitored CPU for perfmon.
     affinity_pinThread(controller_cpu_id);
-    int threads_count = num_threads;
-    int *apic_ids = malloc((size_t)threads_count * sizeof(*apic_ids));
-    if (!apic_ids) {
-        fprintf(stderr, "Failed to allocate apic_ids\n");
-        return EXIT_FAILURE;
-    }
-    for (i = 0; i < threads_count; i++) {
-        apic_ids[i] = (int)topo->threadPool[i].apicId;
-    }
+    int threads_count = 1;
+    int apic_ids[1];
+    int monitor_apic = (int)topo->threadPool[monitor_cpu_id].apicId;
+    apic_ids[0] = monitor_apic;
     if (perfmon_init(threads_count, apic_ids) < 0) {
         fprintf(stderr, "perfmon_init failed\n");
-        free(apic_ids);
         return EXIT_FAILURE;
     }
 
-    int monitor_thread_idx = -1;
-    int monitor_apic = (int)topo->threadPool[monitor_cpu_id].apicId;
-    for (i = 0; i < threads_count; i++) {
-        if (apic_ids[i] == monitor_apic) {
-            monitor_thread_idx = i;
-            break;
-        }
-    }
-    if (monitor_thread_idx < 0) {
-        fprintf(stderr, "Failed to map monitor CPU %d to thread index\n",
-                monitor_cpu_id);
-        free(apic_ids);
-        return EXIT_FAILURE;
-    }
+    int monitor_thread_idx = 0;
 
     // Add the Event Set (prefer group file for metric definitions)
     perfmon_check_counter_map(monitor_cpu_id);
@@ -286,7 +267,6 @@ int main(int argc, char* argv[]) {
     if (!selected_model) {
         fprintf(stderr, "Unknown model '%s'. Valid options: amd_edp, amd_energy, intel_edp, intel_energy\n",
                 model_name ? model_name : "");
-        free(apic_ids);
         return EXIT_FAILURE;
     }
     dvfs_set_model_predictor(selected_model);
@@ -318,7 +298,6 @@ int main(int argc, char* argv[]) {
     }
     if (gid < 0) {
         fprintf(stderr, "Failed to add event set\n");
-        free(apic_ids);
         return EXIT_FAILURE;
     }
 
@@ -328,13 +307,21 @@ int main(int argc, char* argv[]) {
         return EXIT_FAILURE;
     }
 
+    int metric_offset = 0;
     if (use_metrics) {
         int metric_count = perfmon_getNumberOfMetrics(gid);
-        if (metric_count < 7 || (is_amd && metric_count != 7)) {
+        if (metric_count < 6) {
             if (debug) {
                 fprintf(stderr, "Group metrics not available, falling back to raw counters\n");
             }
             use_metrics = 0;
+        } else {
+            // If Runtime [s] is provided as the first metric, skip it.
+            if (is_amd) {
+                metric_offset = (metric_count >= 8) ? 1 : 0;
+            } else {
+                metric_offset = (metric_count >= 7) ? 1 : 0;
+            }
         }
     } else if (debug) {
         fprintf(stderr, "Group metrics not available, falling back to raw counters\n");
@@ -356,10 +343,7 @@ int main(int argc, char* argv[]) {
         }
 
         // B. Wait for the sampling interval
-        struct timespec t0, t1;
-        clock_gettime(CLOCK_MONOTONIC, &t0);
         usleep((useconds_t)(time_sec * 1000000));
-        clock_gettime(CLOCK_MONOTONIC, &t1);
 
         // C. Stop Counting
         ret = perfmon_stopCounters();
@@ -370,30 +354,35 @@ int main(int argc, char* argv[]) {
 
         // D. Read Raw Hardware Counters
         // We use likwid_getCmdLine helper or getResult directly.
-        // indices correspond to the order in EVENT_STRING:
-        // 0:FIXC0, 1:FIXC1, 2:FIXC2, 3:PMC0, ... 8:PMC5
-        
-        double CPI, Math_Intensity, Stall_Ratio, System_BW_Proxy;
-        double Branch_MPKI, GFLOPS_Approx, Clock_Ratio;
+        // indices correspond to the order in EVENT_STRING.
+        // Intel: 0:FIXC0 1:FIXC1 2:FIXC2 3:FIXC3 4:PMC0 5:PMC1 6:PMC2 7:PMC3 8:PMC4
+        // AMD:   0:FIXC1 1:FIXC2 2:PMC0 3:PMC1 4:PMC2 5:PMC3 6:PMC4 7:PMC5
+        double CPI, Compute_Density, Mem_Boundness, Stall_Ratio;
+        double Branch_MPKI, Vector_Intensity, Clock_Ratio;
+        double events[9];
+        for (i = 0; i < event_count; i++) {
+            events[i] = perfmon_getLastResult(gid, i, monitor_thread_idx);
+        }
 
         if (use_metrics) {
-            CPI = perfmon_getMetric(gid, 0, monitor_thread_idx);
-            Math_Intensity = perfmon_getMetric(gid, 1, monitor_thread_idx);
-            Stall_Ratio = perfmon_getMetric(gid, 2, monitor_thread_idx);
-            System_BW_Proxy = perfmon_getMetric(gid, 3, monitor_thread_idx);
-            Branch_MPKI = perfmon_getMetric(gid, 4, monitor_thread_idx);
-            GFLOPS_Approx = perfmon_getMetric(gid, 5, monitor_thread_idx);
-            Clock_Ratio = perfmon_getMetric(gid, 6, monitor_thread_idx);
-        } else {
-            double events[9];
-            for (i = 0; i < event_count; i++) {
-                events[i] = perfmon_getLastResult(gid, i, monitor_thread_idx);
+            CPI = perfmon_getMetric(gid, metric_offset + 0, monitor_thread_idx);
+            Compute_Density = perfmon_getMetric(gid, metric_offset + 1, monitor_thread_idx);
+            Mem_Boundness = perfmon_getMetric(gid, metric_offset + 2, monitor_thread_idx);
+            Stall_Ratio = perfmon_getMetric(gid, metric_offset + 3, monitor_thread_idx);
+            Branch_MPKI = perfmon_getMetric(gid, metric_offset + 4, monitor_thread_idx);
+            Vector_Intensity = perfmon_getMetric(gid, metric_offset + 5, monitor_thread_idx);
+            if (is_amd) {
+                double FIXC1 = events[0];
+                double FIXC2 = events[1];
+                if (FIXC2 == 0) FIXC2 = 1.0;
+                Clock_Ratio = FIXC1 / FIXC2;
+            } else {
+                double FIXC1 = events[1];
+                double FIXC2 = events[2];
+                if (FIXC2 == 0) FIXC2 = 1.0;
+                Clock_Ratio = FIXC1 / FIXC2;
             }
-
-            double dt = (double)(t1.tv_sec - t0.tv_sec) +
-                        (double)(t1.tv_nsec - t0.tv_nsec) / 1.0e9;
-            if (dt <= 0.0) dt = time_sec;
-
+        } else {
             if (is_amd) {
                 // Map array to named variables for clarity (AMD Zen4)
                 double FIXC1 = events[0]; // ACTUAL_CPU_CLOCK
@@ -401,77 +390,79 @@ int main(int argc, char* argv[]) {
                 double PMC0  = events[2]; // RETIRED_INSTRUCTIONS
                 double PMC1  = events[3]; // RETIRED_SSE_AVX_FLOPS_ALL
                 double PMC2  = events[4]; // RETIRED_FP_OPS_BY_TYPE_SCALAR_ALL
-                double PMC3  = events[5]; // CORE_TO_L2_CACHE_REQUESTS_MISSES
+                double PMC3  = events[5]; // DEMAND_DATA_CACHE_FILLS_ALL
                 double PMC4  = events[6]; // RETIRED_MISP_BRANCH_INSTR
-                double PMC5  = events[7]; // CYCLES_NO_RETIRE_LOAD_NOT_COMPLETE
+                double PMC5  = events[7]; // DISPATCH_STALLS_PER_SLOT_BACKEND
 
                 // Safety: Avoid division by zero
                 if (FIXC1 == 0) FIXC1 = 1.0;
                 if (FIXC2 == 0) FIXC2 = 1.0;
                 if (PMC0 == 0) PMC0 = 1.0;
 
+                // [CPI, Compute_Density, Mem_Boundness, Stall_Ratio, Branch_MPKI, Vector_Intensity]
                 CPI = FIXC1 / PMC0;
-                Math_Intensity = (PMC1 + PMC2) / FIXC1;
-                Stall_Ratio = PMC3 / PMC0;
-                System_BW_Proxy = (PMC3 * 64.0) / dt / 1.0e9;
+                Compute_Density = (PMC1 + PMC2) / FIXC1;
+                Mem_Boundness = PMC3 / PMC0;
+                Stall_Ratio = PMC5 / (6.0 * FIXC1);
                 Branch_MPKI = (1000.0 * PMC4) / PMC0;
-                GFLOPS_Approx = (PMC1 * 4.0 + PMC2) / dt / 1.0e9;
+                Vector_Intensity = PMC1 / (PMC1 + PMC2 + 1.0e-9);
                 Clock_Ratio = FIXC1 / FIXC2;
-                (void)PMC5;
             } else {
-                // Map array to named variables for clarity (Intel)
+                // Map array to named variables for clarity (Intel Sapphire Rapids)
                 double FIXC0 = events[0]; // INSTR_RETIRED
                 double FIXC1 = events[1]; // CLK_CORE
                 double FIXC2 = events[2]; // CLK_REF
-                double PMC0  = events[3]; // FP_512
-                double PMC1  = events[4]; // FP_256
-                double PMC2  = events[5]; // FP_SCALAR
-                double PMC3  = events[6]; // L2_LINES (BW)
-                double PMC4  = events[7]; // L3_STALLS
-                double PMC5  = events[8]; // BR_MISP
+                double FIXC3 = events[3]; // TOPDOWN_SLOTS
+                double PMC0  = events[4]; // BR_MISP_RETIRED_ALL_BRANCHES
+                double PMC1  = events[5]; // TOPDOWN_MEMORY_BOUND_SLOTS
+                double PMC2  = events[6]; // TOPDOWN_BACKEND_BOUND_SLOTS
+                double PMC3  = events[7]; // FP_ARITH_INST_RETIRED2_SCALAR
+                double PMC4  = events[8]; // FP_ARITH_INST_RETIRED2_VECTOR
 
                 // Safety: Avoid division by zero
                 if (FIXC0 == 0) FIXC0 = 1.0;
                 if (FIXC1 == 0) FIXC1 = 1.0;
                 if (FIXC2 == 0) FIXC2 = 1.0;
+                if (FIXC3 == 0) FIXC3 = 1.0;
 
                 CPI = FIXC1 / FIXC0;
-                Math_Intensity = (PMC0 * 8.0 + PMC1 * 4.0 + PMC2) / FIXC1;
-                Stall_Ratio = PMC4 / FIXC1;
-                System_BW_Proxy = (PMC3 * 64.0) / dt / 1.0e9;
-                Branch_MPKI = (1000.0 * PMC5) / FIXC0;
-                GFLOPS_Approx = (PMC0 * 8.0 + PMC1 * 4.0 + PMC2) / dt / 1.0e9;
+                Compute_Density = (PMC3 + PMC4) / FIXC0;
+                Mem_Boundness = PMC1 / FIXC3;
+                Stall_Ratio = PMC2 / FIXC3;
+                Branch_MPKI = (1000.0 * PMC0) / FIXC0;
+                Vector_Intensity = PMC4 / (PMC3 + PMC4 + 1.0e-9);
                 Clock_Ratio = FIXC1 / FIXC2;
             }
         }
         
         if (debug) {
             if (!use_metrics) {
-                double events[9];
-                for (i = 0; i < event_count; i++) {
-                    events[i] = perfmon_getLastResult(gid, i, monitor_thread_idx);
-                }
                 if (is_amd) {
                     printf("[RAW] FIXC1=%.0f FIXC2=%.0f PMC0=%.0f PMC1=%.0f PMC2=%.0f PMC3=%.0f PMC4=%.0f PMC5=%.0f\n",
                            events[0], events[1], events[2], events[3], events[4],
                            events[5], events[6], events[7]);
                 } else {
-                    printf("[RAW] FIXC0=%.0f FIXC1=%.0f FIXC2=%.0f PMC0=%.0f PMC1=%.0f PMC2=%.0f PMC3=%.0f PMC4=%.0f PMC5=%.0f\n",
+                    printf("[RAW] FIXC0=%.0f FIXC1=%.0f FIXC2=%.0f FIXC3=%.0f PMC0=%.0f PMC1=%.0f PMC2=%.0f PMC3=%.0f PMC4=%.0f\n",
                            events[0], events[1], events[2], events[3], events[4],
                            events[5], events[6], events[7], events[8]);
                 }
             }
-            printf("[DEBUG] Core %d | CPI: %.8f | MathInt: %.8f | Stall: %.8f | System_BW_Proxy: %.8f | Branch_MPKI: %.8f | GFLOPS: %.8f | Clock_Ratio: %.8f\n",
-                   monitor_cpu_id, CPI, Math_Intensity, Stall_Ratio, System_BW_Proxy,
-                   Branch_MPKI, GFLOPS_Approx, Clock_Ratio);
+            printf("[DEBUG] Core %d | CPI: %.8f | Compute_Density: %.8f | Mem_Boundness: %.8f | Stall_Ratio: %.8f | Branch_MPKI: %.8f | Vector_Intensity: %.8f | Clock_Ratio: %.8f\n",
+                   monitor_cpu_id, CPI, Compute_Density, Mem_Boundness, Stall_Ratio,
+                   Branch_MPKI, Vector_Intensity, Clock_Ratio);
         }
 
         // F. Call the ML Controller
-        apply_dvfs_policy(CPI, Math_Intensity, Stall_Ratio, System_BW_Proxy, Branch_MPKI, GFLOPS_Approx, Clock_Ratio);
+        // apply_dvfs_policy(CPI,
+        //                   Compute_Density,
+        //                   Stall_Ratio,
+        //                   Mem_Boundness,
+        //                   Branch_MPKI,
+        //                   Vector_Intensity,
+        //                   Clock_Ratio);
     }
 
     // --- 3. Cleanup ---
-    free(apic_ids);
     perfmon_finalize();
     affinity_finalize();
     numa_finalize();

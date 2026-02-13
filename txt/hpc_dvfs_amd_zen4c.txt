@@ -5,27 +5,30 @@ FIXC2 MAX_CPU_CLOCK
 PMC0  RETIRED_INSTRUCTIONS
 PMC1  RETIRED_SSE_AVX_FLOPS_ALL
 PMC2  RETIRED_FP_OPS_BY_TYPE_SCALAR_ALL
-PMC3  CORE_TO_L2_CACHE_REQUESTS_MISSES
+PMC3  DEMAND_DATA_CACHE_FILLS_ALL       # Memory pressure signal
 PMC4  RETIRED_MISP_BRANCH_INSTR
-PMC5  CYCLES_NO_RETIRE_LOAD_NOT_COMPLETE  # Keep this as a potential secondary stall signal, but PMC3 is primary
+PMC5  DISPATCH_STALLS_PER_SLOT_BACKEND
+
 METRICS
-Runtime [s] time
+# Efficiency baseline
 CPI FIXC1/PMC0
-# Common Feature 1: Math Intensity
-# (Vector uOps + Scalar uOps) / Cycles
-Math_Intensity (PMC1+PMC2)/FIXC1
-# Common Feature 2: Memory Stall Proxy
-# Using L2 Misses per Instruction as a proxy for latency/bandwidth pressure.
-# High L2 misses usually correlate with stalls.
-Stall_Ratio PMC3/PMC0
-# Common Feature 3: Bandwidth Proxy (Approximate GB/s)
-# Measures L2 Miss Requests, scaled by 64B per request.
-System_BW_Proxy PMC3*64/time/1.0E9
-# Common Feature 4: Bad Speculation (Misses Per Kilo-Instruction)
+
+# How much work is actually getting done?
+Compute_Density (PMC1+PMC2)/FIXC1
+
+# Memory wall pressure
+Mem_Boundness PMC3/PMC0
+
+# The signal to lower frequency (Wait Ratio)
+# Zen 4 has 6 dispatch slots per cycle. 
+# We divide by (6 * FIXC1) to get a 0.0 to 1.0 ratio.
+Stall_Ratio PMC5/(6*FIXC1)
+
+# Branch Penalty
 Branch_MPKI 1000*PMC4/PMC0
-# Common Feature 5: GFLOPS (Approximate)
-# Zen4 counts 512-bit instr as 2x 256-bit uOps.
-# So PMC1 effectively counts 256-bit chunks.
-GFLOPS_Approx (PMC1*4+PMC2)/time/1.0E9
-# Common Feature 6: Frequency State
+
+# Is it heavy AVX-512? (Critical for Zen 4 thermal/power management)
+Vector_Intensity PMC1/(PMC1+PMC2+1e-9)
+
+# Current Frequency State
 Clock_Ratio FIXC1/FIXC2
