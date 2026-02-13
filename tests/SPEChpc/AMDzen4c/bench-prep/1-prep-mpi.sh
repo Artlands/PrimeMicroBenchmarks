@@ -32,7 +32,7 @@ for benchmark in "${BENCHMARKS[@]}"; do
     --loose \
     --size ref \
     --tune base \
-    --config REPACSS_GPU \
+    --config REPACSS_CPU \
     --define model=mpi \
     --ranks "${RANK}" \
     "${benchmark}" \
