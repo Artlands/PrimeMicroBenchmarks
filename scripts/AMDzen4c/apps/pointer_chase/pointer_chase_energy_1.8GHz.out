@@ -1,4 +1,4 @@
-Detected CPU frequency: 1800 MHz
+Detected CPU frequency: 2250 MHz
 --------------------------------------------------------------------------------
 CPU name:	AMD EPYC 9754 128-Core Processor               
 CPU type:	AMD K19 (Zen4c) architecture
@@ -12,5 +12,5 @@ Pointer chase loop start
 Sink: 76124
 Pointer chase complete
 Loop iterations: 1000000000
-Loop time: 99.962362 seconds
+Loop time: 97.558494 seconds
 --------------------------------------------------------------------------------

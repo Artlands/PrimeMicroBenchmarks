@@ -11,5 +11,5 @@ SpMV warmup start
 SpMV loop start
 SpMV complete
 Loop iterations: 1000
-Loop time: 209.947097 seconds
+Loop time: 209.584975 seconds
 --------------------------------------------------------------------------------

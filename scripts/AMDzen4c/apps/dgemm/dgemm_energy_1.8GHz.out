@@ -11,5 +11,5 @@ DGEMM warmup start
 DGEMM loop start
 DGEMM complete
 Loop iterations: 250
-Loop time: 161.004180 seconds
+Loop time: 160.226147 seconds
 --------------------------------------------------------------------------------

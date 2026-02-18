@@ -6,12 +6,12 @@ CPU type:	AMD K19 (Zen4c) architecture
 CPU clock:	2.25 GHz
 --------------------------------------------------------------------------------
 # HWThreads: 0
-# GID|MetricsCount|CpuCount|Total runtime [s]|Runtime [s]|CPI|Math_Intensity|Stall_Ratio|System_BW_Proxy|Branch_MPKI|GFLOPS_Approx|Clock_Ratio
+# GID|MetricsCount|CpuCount|Total runtime [s]|CPI|Compute_Density|Mem_Boundness|Stall_Ratio|Branch_MPKI|Vector_Intensity|Clock_Ratio
 I-cache thrash start
 I-cache thrash warmup start
 I-cache thrash loop start
 7
 I-cache thrash complete
 Loop iterations: 1000000
-Loop time: 7.375957 seconds
+Loop time: 7.335313 seconds
 --------------------------------------------------------------------------------

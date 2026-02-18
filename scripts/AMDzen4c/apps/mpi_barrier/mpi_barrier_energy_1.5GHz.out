@@ -11,5 +11,5 @@ MPI barrier warmup start
 MPI barrier loop start
 MPI barrier complete
 Loop iterations: 30000000
-Loop time: 410.039969 seconds
+Loop time: 412.065185 seconds
 --------------------------------------------------------------------------------

@@ -13,16 +13,16 @@
 #include "model.h"
 #include "config_loader.h"
 
-#define predict_phase_level predict_phase_level_amdzen4c_edp
-#include "model_amdzen4c_edp.c"
-#undef predict_phase_level
-
 #define predict_phase_level predict_phase_level_amdzen4c_energy
 #include "model_amdzen4c_energy.c"
 #undef predict_phase_level
 
-#define predict_phase_level predict_phase_level_intelspr_edp
-#include "model_intelspr_edp.c"
+#define predict_phase_level predict_phase_level_amdzen4c_knn_energy
+#include "model_amdzen4c_knn_energy.c"
+#undef predict_phase_level
+
+#define predict_phase_level predict_phase_level_amdzen4c_rf_energy
+#include "model_amdzen4c_rf_energy.c"
 #undef predict_phase_level
 
 #define predict_phase_level predict_phase_level_intelspr_energy
@@ -127,10 +127,10 @@ static model_predict_fn_t get_model_fn(const char *name, int is_amd, const char 
     };
 
     static const struct model_entry models[] = {
-        {"amd_edp", predict_phase_level_amdzen4c_edp},
         {"amd_energy", predict_phase_level_amdzen4c_energy},
-        {"intel_edp", predict_phase_level_intelspr_edp},
-        {"intel_energy", predict_phase_level_intelspr_energy},
+        {"amd_knn_energy", predict_phase_level_amdzen4c_knn_energy},
+        {"amd_rf_energy", predict_phase_level_amdzen4c_rf_energy},
+        // {"intel_energy", predict_phase_level_intelspr_energy},
     };
 
     const char *default_name = is_amd ? "amd_energy" : "intel_energy";
@@ -265,11 +265,12 @@ int main(int argc, char* argv[]) {
     const char *selected_model_name = NULL;
     model_predict_fn_t selected_model = get_model_fn(model_name, is_amd, &selected_model_name);
     if (!selected_model) {
-        fprintf(stderr, "Unknown model '%s'. Valid options: amd_edp, amd_energy, intel_edp, intel_energy\n",
+        fprintf(stderr, "Unknown model '%s'. Valid options: amd_energy, amd_knn_energy, amd_rf_energy, intel_energy\n",
                 model_name ? model_name : "");
         return EXIT_FAILURE;
     }
     dvfs_set_model_predictor(selected_model);
+    dvfs_set_debug(debug);
     if (debug) {
         printf("[Main] Model selected: %s\n", selected_model_name);
     }
@@ -453,13 +454,12 @@ int main(int argc, char* argv[]) {
         }
 
         // F. Call the ML Controller
-        // apply_dvfs_policy(CPI,
-        //                   Compute_Density,
-        //                   Stall_Ratio,
-        //                   Mem_Boundness,
-        //                   Branch_MPKI,
-        //                   Vector_Intensity,
-        //                   Clock_Ratio);
+        apply_dvfs_policy(CPI,
+                          Compute_Density,
+                          Mem_Boundness,
+                          Stall_Ratio,
+                          Branch_MPKI,
+                          Vector_Intensity);
     }
 
     // --- 3. Cleanup ---

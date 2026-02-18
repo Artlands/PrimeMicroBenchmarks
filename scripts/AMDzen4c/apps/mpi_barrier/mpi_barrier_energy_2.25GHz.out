@@ -1,4 +1,4 @@
-Detected CPU frequency: 2250 MHz
+Detected CPU frequency: 2249 MHz
 --------------------------------------------------------------------------------
 CPU name:	AMD EPYC 9754 128-Core Processor               
 CPU type:	AMD K19 (Zen4c) architecture
@@ -11,5 +11,5 @@ MPI barrier warmup start
 MPI barrier loop start
 MPI barrier complete
 Loop iterations: 30000000
-Loop time: 335.268391 seconds
+Loop time: 325.757794 seconds
 --------------------------------------------------------------------------------

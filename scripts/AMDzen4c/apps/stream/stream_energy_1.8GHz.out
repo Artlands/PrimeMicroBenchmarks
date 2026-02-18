@@ -1,4 +1,4 @@
-Detected CPU frequency: 1800 MHz
+Detected CPU frequency: 1796 MHz
 --------------------------------------------------------------------------------
 CPU name:	AMD EPYC 9754 128-Core Processor               
 CPU type:	AMD K19 (Zen4c) architecture
@@ -11,5 +11,5 @@ STREAM warmup start
 STREAM loop start
 STREAM complete
 Loop iterations: 1500
-Loop time: 343.555520 seconds
+Loop time: 343.829746 seconds
 --------------------------------------------------------------------------------

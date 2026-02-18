@@ -1,0 +1,692 @@
+/mnt/SHARED-AREA/HPC-Benchmarks/SPEC/SPEC-HPC/SPEChpc/benchspec/HPC/613.soma_s/run/run_base_ref_gnu_mpi.0000
+Launching 613.soma with 256 MPI ranks
+--------------------------------------------------------------------------------
+CPU name:	AMD EPYC 9754 128-Core Processor               
+CPU type:	AMD K19 (Zen4c) architecture
+CPU clock:	2.25 GHz
+--------------------------------------------------------------------------------
+# HWThreads: 0|128
+# GID|MetricsCount|CpuCount|Total runtime [s]|Runtime (RDTSC) [s]|Runtime unhalted [s]|Clock [MHz]|CPI|Energy Core [J]|Power Core [W]|Energy L3 [J]|Power L3 [W]
+SOMA benchmark version based on tag 0.5.0 gitlab.com/InnocentBug/SOMA
+
+SOMA  Copyright (C) 2016-2017 Ludwig Schneider, Ulrich Welling, Marcel
+Langenberg, Fabien Leonforte, Juan Orozco and more. This program comes with
+ABSOLUTELY NO WARRANTY; see GNU Lesser General Public Licence v3 for details.
+This is free software, and you are welcome to redistribute it under certain
+conditions; see GNU Lesser General Public Licence v3 for details. 
+
+ WARNING this is a crippled version of SOMA it is not to be used for ANY
+scientific purpose save some very specialied benchmark tests. You may want to
+use the original SOMA version, which can be found at
+https://gitlab.com/InnocentBug/SOMA in the maint or master branch, or any
+tagged version.
+
+All 256 ranks use fixed seed 42.
+timesteps="400"
+rng-seed="42"
+npoly="25000000"
+gen-state-file
+system is system info not available with C std 201710.
+GIT version of SOMA is benchmark version based on tag 0.5.0 gitlab.com/InnocentBug/SOMA compiled on Jan 20 2026 10:24:19.
+MPI version: MPICH Version:      4.3.2
+MPICH Release date: Mon Oct  6 11:14:20 AM CDT 2025
+MPICH ABI:          17:2:5
+MPICH Device:       ch4:ucx
+MPICH configure:    --prefix=/opt/apps/nfs/spack-1.1.0/opt/spack/linux-zen4/mpich-4.3.2-mtnwtgmmuqjnlmy245rniniwzhw53vla --disable-maintainer-mode --disable-silent-rules --enable-shared --with-pm=no --enable-romio --without-ibverbs --enable-wrapper-rpath=yes --with-yaksa=/opt/apps/nfs/spack-1.1.0/opt/spack/linux-zen4/yaksa-0.4-76n3mhcnowc5xzq6t5kgywgpbn5qm5gk --without-ze --with-hwloc=/opt/apps/nfs/spack-1.1.0/opt/spack/linux-zen4/hwloc-2.12.2-oo2wlwhcfck3bxdike63urmbkdczuzrw --enable-fortran --with-slurm=yes --with-slurm-include=/opt/apps/nfs/spack-1.1.0/opt/spack/linux-zen4/slurm-25-05-1-1-szssjxpyrxiprreqgkuohifmbv5i6hc7/include --with-slurm-lib=/opt/apps/nfs/spack-1.1.0/opt/spack/linux-zen4/slurm-25-05-1-1-szssjxpyrxiprreqgkuohifmbv5i6hc7/lib --with-pmi=pmix --with-pmix=/opt/apps/nfs/spack-1.1.0/opt/spack/linux-zen4/pmix-6.0.0-p2fbfu4ie4i7ybalnsrlvujxfwznmw3n --without-cuda --without-hip --with-device=ch4:ucx --with-ucx=/opt/apps/nfs/spack-1.1.0/opt/spack/linux-zen4/ucx-1.19.0-giaytrydfalctkugb5cv2lo7ql6gy5dv --enable-libxml2 --with-datatype-engine=auto
+MPICH CC:           /opt/apps/nfs/spack-1.1.0/opt/spack/linux-zen4/compiler-wrapper-1.0-et3ejxhc3t5yoqbw74pqjv4izptvuj3q/libexec/spack/gcc/gcc     -O2
+MPICH CXX:          /opt/apps/nfs/spack-1.1.0/opt/spack/linux-zen4/compiler-wrapper-1.0-et3ejxhc3t5yoqbw74pqjv4izptvuj3q/libexec/spack/gcc/g++   -O2
+MPICH F77:          /opt/apps/nfs/spack-1.1.0/opt/spack/linux-zen4/compiler-wrapper-1.0-et3ejxhc3t5yoqbw74pqjv4izptvuj3q/libexec/spack/gcc/gfortran   -O2
+MPICH FC:           /opt/apps/nfs/spack-1.1.0/opt/spack/linux-zen4/compiler-wrapper-1.0-et3ejxhc3t5yoqbw74pqjv4izptvuj3q/libexec/spack/gcc/gfortran   -O2
+MPICH features:     threadcomm
+ 4.1
+INFO: At t= 0 particle_type test test passed
+INFO: At t= 0 area51 violation test passed
+INFO: At t= 0 area51 exact test passed
+Running for 17 [s] | TPS 0.494774 | steps-to-go: 396 | ETA: Wed Feb 18 15:52:18 2026
+Running for 28 [s] | TPS 0.303154 | steps-to-go: 393 | ETA: Wed Feb 18 16:00:45 2026
+Running for 38 [s] | TPS 0.28561 | steps-to-go: 390 | ETA: Wed Feb 18 16:02:04 2026
+Running for 49 [s] | TPS 0.28216 | steps-to-go: 387 | ETA: Wed Feb 18 16:02:21 2026
+Running for 60 [s] | TPS 0.284278 | steps-to-go: 384 | ETA: Wed Feb 18 16:02:11 2026
+Running for 70 [s] | TPS 0.280567 | steps-to-go: 381 | ETA: Wed Feb 18 16:02:28 2026
+Running for 81 [s] | TPS 0.287377 | steps-to-go: 378 | ETA: Wed Feb 18 16:01:57 2026
+Running for 91 [s] | TPS 0.281984 | steps-to-go: 375 | ETA: Wed Feb 18 16:02:21 2026
+Running for 102 [s] | TPS 0.283944 | steps-to-go: 372 | ETA: Wed Feb 18 16:02:13 2026
+Running for 113 [s] | TPS 0.282642 | steps-to-go: 369 | ETA: Wed Feb 18 16:02:19 2026
+Running for 123 [s] | TPS 0.284387 | steps-to-go: 366 | ETA: Wed Feb 18 16:02:10 2026
+Running for 134 [s] | TPS 0.283005 | steps-to-go: 363 | ETA: Wed Feb 18 16:02:17 2026
+Running for 144 [s] | TPS 0.281581 | steps-to-go: 360 | ETA: Wed Feb 18 16:02:23 2026
+Running for 155 [s] | TPS 0.284818 | steps-to-go: 357 | ETA: Wed Feb 18 16:02:09 2026
+Running for 166 [s] | TPS 0.280705 | steps-to-go: 354 | ETA: Wed Feb 18 16:02:28 2026
+Running for 176 [s] | TPS 0.28697 | steps-to-go: 351 | ETA: Wed Feb 18 16:02:00 2026
+Running for 187 [s] | TPS 0.282011 | steps-to-go: 348 | ETA: Wed Feb 18 16:02:21 2026
+Running for 197 [s] | TPS 0.283726 | steps-to-go: 345 | ETA: Wed Feb 18 16:02:13 2026
+Running for 208 [s] | TPS 0.282864 | steps-to-go: 342 | ETA: Wed Feb 18 16:02:18 2026
+Running for 218 [s] | TPS 0.284443 | steps-to-go: 339 | ETA: Wed Feb 18 16:02:10 2026
+Running for 229 [s] | TPS 0.283122 | steps-to-go: 336 | ETA: Wed Feb 18 16:02:16 2026
+Running for 240 [s] | TPS 0.284339 | steps-to-go: 333 | ETA: Wed Feb 18 16:02:12 2026
+Running for 250 [s] | TPS 0.283064 | steps-to-go: 330 | ETA: Wed Feb 18 16:02:16 2026
+Running for 261 [s] | TPS 0.281312 | steps-to-go: 327 | ETA: Wed Feb 18 16:02:24 2026
+Running for 271 [s] | TPS 0.284633 | steps-to-go: 324 | ETA: Wed Feb 18 16:02:10 2026
+Running for 282 [s] | TPS 0.280465 | steps-to-go: 321 | ETA: Wed Feb 18 16:02:27 2026
+Running for 292 [s] | TPS 0.287207 | steps-to-go: 318 | ETA: Wed Feb 18 16:02:00 2026
+Running for 303 [s] | TPS 0.281602 | steps-to-go: 315 | ETA: Wed Feb 18 16:02:22 2026
+Running for 314 [s] | TPS 0.287532 | steps-to-go: 312 | ETA: Wed Feb 18 16:02:00 2026
+Running for 324 [s] | TPS 0.28217 | steps-to-go: 309 | ETA: Wed Feb 18 16:02:20 2026
+Running for 335 [s] | TPS 0.284023 | steps-to-go: 306 | ETA: Wed Feb 18 16:02:13 2026
+Running for 345 [s] | TPS 0.282948 | steps-to-go: 303 | ETA: Wed Feb 18 16:02:16 2026
+Running for 356 [s] | TPS 0.281315 | steps-to-go: 300 | ETA: Wed Feb 18 16:02:23 2026
+Running for 367 [s] | TPS 0.284257 | steps-to-go: 297 | ETA: Wed Feb 18 16:02:12 2026
+Running for 377 [s] | TPS 0.282164 | steps-to-go: 294 | ETA: Wed Feb 18 16:02:19 2026
+Running for 388 [s] | TPS 0.284741 | steps-to-go: 291 | ETA: Wed Feb 18 16:02:10 2026
+Running for 398 [s] | TPS 0.280763 | steps-to-go: 288 | ETA: Wed Feb 18 16:02:24 2026
+Running for 409 [s] | TPS 0.287244 | steps-to-go: 285 | ETA: Wed Feb 18 16:02:02 2026
+Running for 420 [s] | TPS 0.281577 | steps-to-go: 282 | ETA: Wed Feb 18 16:02:22 2026
+Running for 430 [s] | TPS 0.287736 | steps-to-go: 279 | ETA: Wed Feb 18 16:02:00 2026
+Running for 441 [s] | TPS 0.282209 | steps-to-go: 276 | ETA: Wed Feb 18 16:02:19 2026
+Running for 451 [s] | TPS 0.283846 | steps-to-go: 273 | ETA: Wed Feb 18 16:02:13 2026
+Running for 462 [s] | TPS 0.283073 | steps-to-go: 270 | ETA: Wed Feb 18 16:02:16 2026
+Running for 472 [s] | TPS 0.28186 | steps-to-go: 267 | ETA: Wed Feb 18 16:02:20 2026
+Running for 483 [s] | TPS 0.284423 | steps-to-go: 264 | ETA: Wed Feb 18 16:02:12 2026
+Running for 494 [s] | TPS 0.282101 | steps-to-go: 261 | ETA: Wed Feb 18 16:02:20 2026
+Running for 504 [s] | TPS 0.28473 | steps-to-go: 258 | ETA: Wed Feb 18 16:02:11 2026
+Running for 515 [s] | TPS 0.28068 | steps-to-go: 255 | ETA: Wed Feb 18 16:02:24 2026
+Running for 525 [s] | TPS 0.287156 | steps-to-go: 252 | ETA: Wed Feb 18 16:02:03 2026
+Running for 536 [s] | TPS 0.282251 | steps-to-go: 249 | ETA: Wed Feb 18 16:02:19 2026
+Running for 546 [s] | TPS 0.283611 | steps-to-go: 246 | ETA: Wed Feb 18 16:02:14 2026
+Running for 557 [s] | TPS 0.282797 | steps-to-go: 243 | ETA: Wed Feb 18 16:02:17 2026
+Running for 568 [s] | TPS 0.281622 | steps-to-go: 240 | ETA: Wed Feb 18 16:02:21 2026
+Running for 578 [s] | TPS 0.284574 | steps-to-go: 237 | ETA: Wed Feb 18 16:02:11 2026
+Running for 589 [s] | TPS 0.280445 | steps-to-go: 234 | ETA: Wed Feb 18 16:02:24 2026
+Running for 599 [s] | TPS 0.287561 | steps-to-go: 231 | ETA: Wed Feb 18 16:02:03 2026
+Running for 610 [s] | TPS 0.281777 | steps-to-go: 228 | ETA: Wed Feb 18 16:02:20 2026
+Running for 621 [s] | TPS 0.283763 | steps-to-go: 225 | ETA: Wed Feb 18 16:02:14 2026
+Running for 631 [s] | TPS 0.282793 | steps-to-go: 222 | ETA: Wed Feb 18 16:02:17 2026
+Running for 642 [s] | TPS 0.281606 | steps-to-go: 219 | ETA: Wed Feb 18 16:02:20 2026
+Running for 652 [s] | TPS 0.2846 | steps-to-go: 216 | ETA: Wed Feb 18 16:02:11 2026
+Running for 663 [s] | TPS 0.282332 | steps-to-go: 213 | ETA: Wed Feb 18 16:02:18 2026
+Running for 674 [s] | TPS 0.284702 | steps-to-go: 210 | ETA: Wed Feb 18 16:02:12 2026
+Running for 684 [s] | TPS 0.280733 | steps-to-go: 207 | ETA: Wed Feb 18 16:02:22 2026
+Running for 695 [s] | TPS 0.287382 | steps-to-go: 204 | ETA: Wed Feb 18 16:02:05 2026
+Running for 705 [s] | TPS 0.282074 | steps-to-go: 201 | ETA: Wed Feb 18 16:02:18 2026
+Running for 716 [s] | TPS 0.284046 | steps-to-go: 198 | ETA: Wed Feb 18 16:02:14 2026
+Running for 727 [s] | TPS 0.283036 | steps-to-go: 195 | ETA: Wed Feb 18 16:02:16 2026
+Running for 737 [s] | TPS 0.281173 | steps-to-go: 192 | ETA: Wed Feb 18 16:02:20 2026
+Running for 748 [s] | TPS 0.284594 | steps-to-go: 189 | ETA: Wed Feb 18 16:02:13 2026
+Running for 758 [s] | TPS 0.280526 | steps-to-go: 186 | ETA: Wed Feb 18 16:02:22 2026
+Running for 769 [s] | TPS 0.287319 | steps-to-go: 183 | ETA: Wed Feb 18 16:02:06 2026
+Running for 780 [s] | TPS 0.282034 | steps-to-go: 180 | ETA: Wed Feb 18 16:02:19 2026
+Running for 790 [s] | TPS 0.283389 | steps-to-go: 177 | ETA: Wed Feb 18 16:02:15 2026
+Running for 801 [s] | TPS 0.282757 | steps-to-go: 174 | ETA: Wed Feb 18 16:02:17 2026
+Running for 811 [s] | TPS 0.281441 | steps-to-go: 171 | ETA: Wed Feb 18 16:02:19 2026
+Running for 822 [s] | TPS 0.284618 | steps-to-go: 168 | ETA: Wed Feb 18 16:02:13 2026
+Running for 833 [s] | TPS 0.280621 | steps-to-go: 165 | ETA: Wed Feb 18 16:02:21 2026
+Running for 843 [s] | TPS 0.287004 | steps-to-go: 162 | ETA: Wed Feb 18 16:02:08 2026
+Running for 854 [s] | TPS 0.281547 | steps-to-go: 159 | ETA: Wed Feb 18 16:02:19 2026
+Running for 864 [s] | TPS 0.283833 | steps-to-go: 156 | ETA: Wed Feb 18 16:02:14 2026
+Running for 875 [s] | TPS 0.282893 | steps-to-go: 153 | ETA: Wed Feb 18 16:02:16 2026
+Running for 885 [s] | TPS 0.281659 | steps-to-go: 150 | ETA: Wed Feb 18 16:02:18 2026
+Running for 896 [s] | TPS 0.284952 | steps-to-go: 147 | ETA: Wed Feb 18 16:02:12 2026
+Running for 907 [s] | TPS 0.282453 | steps-to-go: 144 | ETA: Wed Feb 18 16:02:17 2026
+Running for 917 [s] | TPS 0.284823 | steps-to-go: 141 | ETA: Wed Feb 18 16:02:13 2026
+Running for 928 [s] | TPS 0.280767 | steps-to-go: 138 | ETA: Wed Feb 18 16:02:20 2026
+Running for 938 [s] | TPS 0.287414 | steps-to-go: 135 | ETA: Wed Feb 18 16:02:08 2026
+Running for 949 [s] | TPS 0.281656 | steps-to-go: 132 | ETA: Wed Feb 18 16:02:18 2026
+Running for 959 [s] | TPS 0.28409 | steps-to-go: 129 | ETA: Wed Feb 18 16:02:14 2026
+Running for 970 [s] | TPS 0.282859 | steps-to-go: 126 | ETA: Wed Feb 18 16:02:16 2026
+Running for 981 [s] | TPS 0.28142 | steps-to-go: 123 | ETA: Wed Feb 18 16:02:19 2026
+Running for 991 [s] | TPS 0.284603 | steps-to-go: 120 | ETA: Wed Feb 18 16:02:13 2026
+Running for 1002 [s] | TPS 0.280643 | steps-to-go: 117 | ETA: Wed Feb 18 16:02:19 2026
+Running for 1012 [s] | TPS 0.287024 | steps-to-go: 114 | ETA: Wed Feb 18 16:02:10 2026
+Running for 1023 [s] | TPS 0.282245 | steps-to-go: 111 | ETA: Wed Feb 18 16:02:17 2026
+Running for 1034 [s] | TPS 0.283561 | steps-to-go: 108 | ETA: Wed Feb 18 16:02:15 2026
+Running for 1044 [s] | TPS 0.282842 | steps-to-go: 105 | ETA: Wed Feb 18 16:02:16 2026
+Running for 1055 [s] | TPS 0.281644 | steps-to-go: 102 | ETA: Wed Feb 18 16:02:18 2026
+Running for 1065 [s] | TPS 0.284623 | steps-to-go: 99 | ETA: Wed Feb 18 16:02:13 2026
+Running for 1076 [s] | TPS 0.280844 | steps-to-go: 96 | ETA: Wed Feb 18 16:02:18 2026
+Running for 1087 [s] | TPS 0.287558 | steps-to-go: 93 | ETA: Wed Feb 18 16:02:11 2026
+Running for 1097 [s] | TPS 0.281347 | steps-to-go: 90 | ETA: Wed Feb 18 16:02:17 2026
+Running for 1108 [s] | TPS 0.283758 | steps-to-go: 87 | ETA: Wed Feb 18 16:02:15 2026
+Running for 1118 [s] | TPS 0.282792 | steps-to-go: 84 | ETA: Wed Feb 18 16:02:16 2026
+Running for 1129 [s] | TPS 0.281627 | steps-to-go: 81 | ETA: Wed Feb 18 16:02:17 2026
+Running for 1140 [s] | TPS 0.284438 | steps-to-go: 78 | ETA: Wed Feb 18 16:02:15 2026
+Running for 1150 [s] | TPS 0.282071 | steps-to-go: 75 | ETA: Wed Feb 18 16:02:16 2026
+Running for 1161 [s] | TPS 0.284765 | steps-to-go: 72 | ETA: Wed Feb 18 16:02:14 2026
+Running for 1171 [s] | TPS 0.280533 | steps-to-go: 69 | ETA: Wed Feb 18 16:02:17 2026
+Running for 1182 [s] | TPS 0.287297 | steps-to-go: 66 | ETA: Wed Feb 18 16:02:12 2026
+Running for 1193 [s] | TPS 0.281997 | steps-to-go: 63 | ETA: Wed Feb 18 16:02:17 2026
+Running for 1203 [s] | TPS 0.283903 | steps-to-go: 60 | ETA: Wed Feb 18 16:02:15 2026
+Running for 1214 [s] | TPS 0.283087 | steps-to-go: 57 | ETA: Wed Feb 18 16:02:16 2026
+Running for 1224 [s] | TPS 0.281255 | steps-to-go: 54 | ETA: Wed Feb 18 16:02:16 2026
+Running for 1235 [s] | TPS 0.284828 | steps-to-go: 51 | ETA: Wed Feb 18 16:02:15 2026
+Running for 1246 [s] | TPS 0.280781 | steps-to-go: 48 | ETA: Wed Feb 18 16:02:17 2026
+Running for 1256 [s] | TPS 0.287268 | steps-to-go: 45 | ETA: Wed Feb 18 16:02:13 2026
+Running for 1267 [s] | TPS 0.281917 | steps-to-go: 42 | ETA: Wed Feb 18 16:02:16 2026
+Running for 1277 [s] | TPS 0.283445 | steps-to-go: 39 | ETA: Wed Feb 18 16:02:15 2026
+Running for 1288 [s] | TPS 0.282849 | steps-to-go: 36 | ETA: Wed Feb 18 16:02:16 2026
+Running for 1298 [s] | TPS 0.281511 | steps-to-go: 33 | ETA: Wed Feb 18 16:02:16 2026
+Running for 1309 [s] | TPS 0.284531 | steps-to-go: 30 | ETA: Wed Feb 18 16:02:15 2026
+Running for 1320 [s] | TPS 0.280571 | steps-to-go: 27 | ETA: Wed Feb 18 16:02:17 2026
+Running for 1330 [s] | TPS 0.287153 | steps-to-go: 24 | ETA: Wed Feb 18 16:02:14 2026
+Running for 1341 [s] | TPS 0.281842 | steps-to-go: 21 | ETA: Wed Feb 18 16:02:16 2026
+Running for 1351 [s] | TPS 0.283736 | steps-to-go: 18 | ETA: Wed Feb 18 16:02:15 2026
+Running for 1362 [s] | TPS 0.282916 | steps-to-go: 15 | ETA: Wed Feb 18 16:02:16 2026
+Running for 1373 [s] | TPS 0.281442 | steps-to-go: 12 | ETA: Wed Feb 18 16:02:16 2026
+Running for 1383 [s] | TPS 0.284385 | steps-to-go: 9 | ETA: Wed Feb 18 16:02:15 2026
+Running for 1394 [s] | TPS 0.280229 | steps-to-go: 6 | ETA: Wed Feb 18 16:02:16 2026
+Running for 1404 [s] | TPS 0.287205 | steps-to-go: 3 | ETA: Wed Feb 18 16:02:15 2026
+Running for 1415 [s] | TPS 0.281916 | steps-to-go: 0 | ETA: Wed Feb 18 16:02:16 2026
+State file generated
+Rank: 244 	 polymers 97656
+State file generated
+Rank: 135 	 polymers 97656
+State file generated
+Rank: 71 	 polymers 97656
+State file generated
+Rank: 254 	 polymers 97656
+State file generated
+Rank: 68 	 polymers 97656
+State file generated
+Rank: 58 	 polymers 97657
+State file generated
+Rank: 218 	 polymers 97656
+State file generated
+Rank: 105 	 polymers 97656
+State file generated
+Rank: 199 	 polymers 97656
+State file generated
+Rank: 57 	 polymers 97657
+State file generated
+Rank: 155 	 polymers 97656
+State file generated
+Rank: 238 	 polymers 97656
+State file generated
+Rank: 245 	 polymers 97656
+State file generated
+Rank: 156 	 polymers 97656
+State file generated
+Rank: 226 	 polymers 97656
+State file generated
+Rank: 25 	 polymers 97657
+State file generated
+Rank: 93 	 polymers 97656
+State file generated
+Rank: 118 	 polymers 97656
+State file generated
+Rank: 176 	 polymers 97656
+State file generated
+Rank: 234 	 polymers 97656
+State file generated
+Rank: 237 	 polymers 97656
+State file generated
+Rank: 252 	 polymers 97656
+State file generated
+Rank: 115 	 polymers 97656
+State file generated
+Rank: 153 	 polymers 97656
+State file generated
+Rank: 154 	 polymers 97656
+State file generated
+Rank: 177 	 polymers 97656
+State file generated
+Rank: 200 	 polymers 97656
+State file generated
+Rank: 212 	 polymers 97656
+State file generated
+Rank: 233 	 polymers 97656
+State file generated
+Rank: 243 	 polymers 97656
+State file generated
+Rank: 10 	 polymers 97657
+State file generated
+Rank: 76 	 polymers 97656
+State file generated
+Rank: 128 	 polymers 97656
+State file generated
+Rank: 138 	 polymers 97656
+State file generated
+Rank: 139 	 polymers 97656
+State file generated
+Rank: 140 	 polymers 97656
+State file generated
+Rank: 146 	 polymers 97656
+State file generated
+Rank: 149 	 polymers 97656
+State file generated
+Rank: 150 	 polymers 97656
+State file generated
+Rank: 184 	 polymers 97656
+State file generated
+Rank: 185 	 polymers 97656
+State file generated
+Rank: 204 	 polymers 97656
+State file generated
+Rank: 209 	 polymers 97656
+State file generated
+Rank: 210 	 polymers 97656
+State file generated
+Rank: 216 	 polymers 97656
+State file generated
+Rank: 222 	 polymers 97656
+State file generated
+Rank: 249 	 polymers 97656
+State file generated
+Rank: 250 	 polymers 97656
+State file generated
+Rank: 251 	 polymers 97656
+INFO: At t= 400 area51 violation test passed
+INFO: At t= 400 area51 exact test passed
+State file generated
+Rank: 0 	 polymers 97657
+State file generated
+Rank: 70 	 polymers 97656
+State file generated
+Rank: 213 	 polymers 97656
+State file generated
+Rank: 228 	 polymers 97656
+State file generated
+Rank: 231 	 polymers 97656
+State file generated
+Rank: 242 	 polymers 97656
+State file generated
+Rank: 248 	 polymers 97656
+State file generated
+Rank: 253 	 polymers 97656
+State file generated
+Rank: 9 	 polymers 97657
+State file generated
+Rank: 98 	 polymers 97656
+State file generated
+Rank: 151 	 polymers 97656
+State file generated
+Rank: 83 	 polymers 97656
+State file generated
+Rank: 173 	 polymers 97656
+State file generated
+Rank: 147 	 polymers 97656
+State file generated
+Rank: 178 	 polymers 97656
+State file generated
+Rank: 158 	 polymers 97656
+State file generated
+Rank: 229 	 polymers 97656
+State file generated
+Rank: 142 	 polymers 97656
+State file generated
+Rank: 159 	 polymers 97656
+State file generated
+Rank: 215 	 polymers 97656
+State file generated
+Rank: 11 	 polymers 97657
+State file generated
+Rank: 21 	 polymers 97657
+State file generated
+Rank: 22 	 polymers 97657
+State file generated
+Rank: 230 	 polymers 97656
+State file generated
+Rank: 236 	 polymers 97656
+State file generated
+Rank: 51 	 polymers 97657
+State file generated
+Rank: 16 	 polymers 97657
+State file generated
+Rank: 183 	 polymers 97656
+State file generated
+Rank: 189 	 polymers 97656
+State file generated
+Rank: 197 	 polymers 97656
+State file generated
+Rank: 133 	 polymers 97656
+State file generated
+Rank: 211 	 polymers 97656
+State file generated
+Rank: 129 	 polymers 97656
+State file generated
+Rank: 180 	 polymers 97656
+State file generated
+Rank: 187 	 polymers 97656
+State file generated
+Rank: 111 	 polymers 97656
+State file generated
+Rank: 136 	 polymers 97656
+State file generated
+Rank: 232 	 polymers 97656
+State file generated
+Rank: 49 	 polymers 97657
+State file generated
+Rank: 207 	 polymers 97656
+State file generated
+Rank: 192 	 polymers 97656
+State file generated
+Rank: 219 	 polymers 97656
+State file generated
+Rank: 91 	 polymers 97656
+State file generated
+Rank: 186 	 polymers 97656
+State file generated
+Rank: 235 	 polymers 97656
+State file generated
+Rank: 145 	 polymers 97656
+State file generated
+Rank: 164 	 polymers 97656
+State file generated
+Rank: 157 	 polymers 97656
+State file generated
+Rank: 137 	 polymers 97656
+State file generated
+Rank: 14 	 polymers 97657
+State file generated
+Rank: 53 	 polymers 97657
+State file generated
+Rank: 79 	 polymers 97656
+State file generated
+Rank: 165 	 polymers 97656
+State file generated
+Rank: 190 	 polymers 97656
+State file generated
+Rank: 134 	 polymers 97656
+State file generated
+Rank: 224 	 polymers 97656
+State file generated
+Rank: 175 	 polymers 97656
+State file generated
+Rank: 123 	 polymers 97656
+State file generated
+Rank: 195 	 polymers 97656
+State file generated
+Rank: 75 	 polymers 97656
+State file generated
+Rank: 247 	 polymers 97656
+State file generated
+Rank: 131 	 polymers 97656
+State file generated
+Rank: 103 	 polymers 97656
+State file generated
+Rank: 181 	 polymers 97656
+State file generated
+Rank: 221 	 polymers 97656
+State file generated
+Rank: 163 	 polymers 97656
+State file generated
+Rank: 191 	 polymers 97656
+State file generated
+Rank: 240 	 polymers 97656
+State file generated
+Rank: 72 	 polymers 97656
+State file generated
+Rank: 208 	 polymers 97656
+State file generated
+Rank: 55 	 polymers 97657
+State file generated
+Rank: 44 	 polymers 97657
+State file generated
+Rank: 112 	 polymers 97656
+State file generated
+Rank: 170 	 polymers 97656
+State file generated
+Rank: 246 	 polymers 97656
+State file generated
+Rank: 40 	 polymers 97657
+State file generated
+Rank: 169 	 polymers 97656
+State file generated
+Rank: 73 	 polymers 97656
+State file generated
+Rank: 162 	 polymers 97656
+State file generated
+Rank: 152 	 polymers 97656
+State file generated
+Rank: 143 	 polymers 97656
+State file generated
+Rank: 56 	 polymers 97657
+State file generated
+Rank: 220 	 polymers 97656
+State file generated
+Rank: 26 	 polymers 97657
+State file generated
+Rank: 206 	 polymers 97656
+State file generated
+Rank: 42 	 polymers 97657
+State file generated
+Rank: 130 	 polymers 97656
+State file generated
+Rank: 78 	 polymers 97656
+State file generated
+Rank: 113 	 polymers 97656
+State file generated
+Rank: 160 	 polymers 97656
+State file generated
+Rank: 241 	 polymers 97656
+State file generated
+Rank: 116 	 polymers 97656
+State file generated
+Rank: 77 	 polymers 97656
+State file generated
+Rank: 193 	 polymers 97656
+State file generated
+Rank: 29 	 polymers 97657
+State file generated
+Rank: 217 	 polymers 97656
+State file generated
+Rank: 5 	 polymers 97657
+State file generated
+Rank: 52 	 polymers 97657
+State file generated
+Rank: 95 	 polymers 97656
+State file generated
+Rank: 255 	 polymers 97656
+State file generated
+Rank: 4 	 polymers 97657
+State file generated
+Rank: 107 	 polymers 97656
+State file generated
+Rank: 168 	 polymers 97656
+State file generated
+Rank: 214 	 polymers 97656
+State file generated
+Rank: 33 	 polymers 97657
+State file generated
+Rank: 37 	 polymers 97657
+State file generated
+Rank: 122 	 polymers 97656
+State file generated
+Rank: 65 	 polymers 97656
+State file generated
+Rank: 100 	 polymers 97656
+State file generated
+Rank: 161 	 polymers 97656
+State file generated
+Rank: 54 	 polymers 97657
+State file generated
+Rank: 86 	 polymers 97656
+State file generated
+Rank: 45 	 polymers 97657
+State file generated
+Rank: 7 	 polymers 97657
+State file generated
+Rank: 66 	 polymers 97656
+State file generated
+Rank: 223 	 polymers 97656
+State file generated
+Rank: 31 	 polymers 97657
+State file generated
+Rank: 148 	 polymers 97656
+State file generated
+Rank: 166 	 polymers 97656
+State file generated
+Rank: 144 	 polymers 97656
+State file generated
+Rank: 179 	 polymers 97656
+State file generated
+Rank: 225 	 polymers 97656
+State file generated
+Rank: 6 	 polymers 97657
+State file generated
+Rank: 171 	 polymers 97656
+State file generated
+Rank: 203 	 polymers 97656
+State file generated
+Rank: 109 	 polymers 97656
+State file generated
+Rank: 108 	 polymers 97656
+State file generated
+Rank: 74 	 polymers 97656
+State file generated
+Rank: 43 	 polymers 97657
+State file generated
+Rank: 127 	 polymers 97656
+State file generated
+Rank: 63 	 polymers 97657
+State file generated
+Rank: 227 	 polymers 97656
+State file generated
+Rank: 62 	 polymers 97657
+State file generated
+Rank: 99 	 polymers 97656
+State file generated
+Rank: 92 	 polymers 97656
+State file generated
+Rank: 20 	 polymers 97657
+State file generated
+Rank: 182 	 polymers 97656
+State file generated
+Rank: 41 	 polymers 97657
+State file generated
+Rank: 8 	 polymers 97657
+State file generated
+Rank: 69 	 polymers 97656
+State file generated
+Rank: 106 	 polymers 97656
+State file generated
+Rank: 50 	 polymers 97657
+State file generated
+Rank: 90 	 polymers 97656
+State file generated
+Rank: 30 	 polymers 97657
+State file generated
+Rank: 102 	 polymers 97656
+State file generated
+Rank: 126 	 polymers 97656
+State file generated
+Rank: 124 	 polymers 97656
+State file generated
+Rank: 17 	 polymers 97657
+State file generated
+Rank: 27 	 polymers 97657
+State file generated
+Rank: 19 	 polymers 97657
+State file generated
+Rank: 125 	 polymers 97656
+State file generated
+Rank: 59 	 polymers 97657
+State file generated
+Rank: 117 	 polymers 97656
+State file generated
+Rank: 81 	 polymers 97656
+State file generated
+Rank: 80 	 polymers 97656
+State file generated
+Rank: 82 	 polymers 97656
+State file generated
+Rank: 87 	 polymers 97656
+State file generated
+Rank: 1 	 polymers 97657
+State file generated
+Rank: 141 	 polymers 97656
+State file generated
+Rank: 39 	 polymers 97657
+State file generated
+Rank: 15 	 polymers 97657
+State file generated
+Rank: 2 	 polymers 97657
+State file generated
+Rank: 89 	 polymers 97656
+State file generated
+Rank: 32 	 polymers 97657
+State file generated
+Rank: 38 	 polymers 97657
+State file generated
+Rank: 174 	 polymers 97656
+State file generated
+Rank: 84 	 polymers 97656
+State file generated
+Rank: 201 	 polymers 97656
+State file generated
+Rank: 46 	 polymers 97657
+State file generated
+Rank: 239 	 polymers 97656
+State file generated
+Rank: 60 	 polymers 97657
+State file generated
+Rank: 119 	 polymers 97656
+State file generated
+Rank: 110 	 polymers 97656
+State file generated
+Rank: 132 	 polymers 97656
+State file generated
+Rank: 36 	 polymers 97657
+State file generated
+Rank: 198 	 polymers 97656
+State file generated
+Rank: 35 	 polymers 97657
+State file generated
+Rank: 13 	 polymers 97657
+State file generated
+Rank: 28 	 polymers 97657
+State file generated
+Rank: 188 	 polymers 97656
+State file generated
+Rank: 85 	 polymers 97656
+State file generated
+Rank: 61 	 polymers 97657
+State file generated
+Rank: 104 	 polymers 97656
+State file generated
+Rank: 3 	 polymers 97657
+State file generated
+Rank: 24 	 polymers 97657
+State file generated
+Rank: 12 	 polymers 97657
+State file generated
+Rank: 202 	 polymers 97656
+State file generated
+Rank: 172 	 polymers 97656
+State file generated
+Rank: 64 	 polymers 97656
+State file generated
+Rank: 48 	 polymers 97657
+State file generated
+Rank: 47 	 polymers 97657
+State file generated
+Rank: 67 	 polymers 97656
+State file generated
+Rank: 114 	 polymers 97656
+State file generated
+Rank: 101 	 polymers 97656
+State file generated
+Rank: 194 	 polymers 97656
+State file generated
+Rank: 196 	 polymers 97656
+State file generated
+Rank: 205 	 polymers 97656
+State file generated
+Rank: 167 	 polymers 97656
+State file generated
+Rank: 88 	 polymers 97656
+State file generated
+Rank: 96 	 polymers 97656
+State file generated
+Rank: 97 	 polymers 97656
+State file generated
+Rank: 121 	 polymers 97656
+State file generated
+Rank: 18 	 polymers 97657
+State file generated
+Rank: 34 	 polymers 97657
+State file generated
+Rank: 23 	 polymers 97657
+State file generated
+Rank: 94 	 polymers 97656
+State file generated
+Rank: 120 	 polymers 97656
+--------------------------------------------------------------------------------

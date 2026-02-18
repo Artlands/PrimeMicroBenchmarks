@@ -9,11 +9,10 @@
  * Returns: FREQ_LEVEL_LOW, FREQ_LEVEL_MED, or FREQ_LEVEL_HIGH
  */
 FreqLevel predict_phase_level(double CPI, 
-                              double Math_Intensity, 
+                              double Compute_Density, 
+                              double Mem_Boundness, 
                               double Stall_Ratio, 
-                              double System_BW_Proxy, 
                               double Branch_MPKI, 
-                              double GFLOPS_Approx, 
-                              double Clock_Ratio);
+                              double Vector_Intensity);
 
 #endif // MODEL_H

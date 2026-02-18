@@ -6,12 +6,12 @@ CPU type:	AMD K19 (Zen4c) architecture
 CPU clock:	2.25 GHz
 --------------------------------------------------------------------------------
 # HWThreads: 0
-# GID|MetricsCount|CpuCount|Total runtime [s]|Runtime [s]|CPI|Math_Intensity|Stall_Ratio|System_BW_Proxy|Branch_MPKI|GFLOPS_Approx|Clock_Ratio
+# GID|MetricsCount|CpuCount|Total runtime [s]|CPI|Compute_Density|Mem_Boundness|Stall_Ratio|Branch_MPKI|Vector_Intensity|Clock_Ratio
 Tree walk start
 Tree walk warmup start
 Tree walk loop start
 Searches completed. Found: 37431
 Tree walk complete
 Loop iterations: 80000000
-Loop time: 85.094851 seconds
+Loop time: 86.311021 seconds
 --------------------------------------------------------------------------------

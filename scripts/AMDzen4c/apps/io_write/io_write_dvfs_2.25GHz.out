@@ -6,11 +6,11 @@ CPU type:	AMD K19 (Zen4c) architecture
 CPU clock:	2.25 GHz
 --------------------------------------------------------------------------------
 # HWThreads: 0
-# GID|MetricsCount|CpuCount|Total runtime [s]|Runtime [s]|CPI|Math_Intensity|Stall_Ratio|System_BW_Proxy|Branch_MPKI|GFLOPS_Approx|Clock_Ratio
+# GID|MetricsCount|CpuCount|Total runtime [s]|CPI|Compute_Density|Mem_Boundness|Stall_Ratio|Branch_MPKI|Vector_Intensity|Clock_Ratio
 I/O write start
 I/O write warmup start
 I/O write loop start
 I/O write complete
 Loop iterations: 10
-Loop time: 796.111681 seconds
+Loop time: 796.577067 seconds
 --------------------------------------------------------------------------------

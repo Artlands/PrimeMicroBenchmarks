@@ -1,15 +1,15 @@
-Detected CPU frequency: 1800 MHz
+Detected CPU frequency: 1799 MHz
 --------------------------------------------------------------------------------
 CPU name:	AMD EPYC 9754 128-Core Processor               
 CPU type:	AMD K19 (Zen4c) architecture
 CPU clock:	2.25 GHz
 --------------------------------------------------------------------------------
 # HWThreads: 0
-# GID|MetricsCount|CpuCount|Total runtime [s]|Runtime [s]|CPI|Math_Intensity|Stall_Ratio|System_BW_Proxy|Branch_MPKI|GFLOPS_Approx|Clock_Ratio
+# GID|MetricsCount|CpuCount|Total runtime [s]|CPI|Compute_Density|Mem_Boundness|Stall_Ratio|Branch_MPKI|Vector_Intensity|Clock_Ratio
 L3 stencil start
 L3 stencil warmup start
 L3 stencil loop start
 L3 stencil complete
 Loop iterations: 5000000
-Loop time: 602.448601 seconds
+Loop time: 603.265093 seconds
 --------------------------------------------------------------------------------

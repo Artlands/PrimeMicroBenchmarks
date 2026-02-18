@@ -6,12 +6,12 @@ CPU type:	AMD K19 (Zen4c) architecture
 CPU clock:	2.25 GHz
 --------------------------------------------------------------------------------
 # HWThreads: 0
-# GID|MetricsCount|CpuCount|Total runtime [s]|Runtime [s]|CPI|Math_Intensity|Stall_Ratio|System_BW_Proxy|Branch_MPKI|GFLOPS_Approx|Clock_Ratio
+# GID|MetricsCount|CpuCount|Total runtime [s]|CPI|Compute_Density|Mem_Boundness|Stall_Ratio|Branch_MPKI|Vector_Intensity|Clock_Ratio
 Pointer chase start
 Pointer chase warmup start
 Pointer chase loop start
 Sink: 76124
 Pointer chase complete
 Loop iterations: 1000000000
-Loop time: 96.702272 seconds
+Loop time: 97.143863 seconds
 --------------------------------------------------------------------------------

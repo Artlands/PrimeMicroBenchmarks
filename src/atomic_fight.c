@@ -14,7 +14,7 @@ int main(int argc, char **argv) {
 
     unsigned long long warmup_iters = bench_parse_warmup_iterations(argc, argv, 100000ULL);
     long shared_counter = 0;
-    unsigned long long iterations = bench_parse_iterations(argc, argv, 40000000ULL);
+    unsigned long long iterations = bench_parse_iterations(argc, argv, 10000000ULL);
 
     if (warmup_iters > 0ULL) {
 

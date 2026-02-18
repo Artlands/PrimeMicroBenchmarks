@@ -11,5 +11,5 @@ I/O write warmup start
 I/O write loop start
 I/O write complete
 Loop iterations: 10
-Loop time: 780.940574 seconds
+Loop time: 110.174400 seconds
 --------------------------------------------------------------------------------

@@ -1,4 +1,4 @@
-Detected CPU frequency: 1800 MHz
+Detected CPU frequency: 1799 MHz
 --------------------------------------------------------------------------------
 CPU name:	AMD EPYC 9754 128-Core Processor               
 CPU type:	AMD K19 (Zen4c) architecture
@@ -12,5 +12,5 @@ Branch mispredict loop start
 Sum: 957725518000
 Branch mispredict complete
 Loop iterations: 1000
-Loop time: 71.362196 seconds
+Loop time: 71.549252 seconds
 --------------------------------------------------------------------------------

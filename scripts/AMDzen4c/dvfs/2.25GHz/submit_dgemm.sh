@@ -3,7 +3,7 @@
 #SBATCH -N 1
 #SBATCH --partition=zen4
 #SBATCH --reservation=cpufreq
-#SBATCH --nodelist=rpc-97-[1-20]
+#SBATCH --nodelist=rpc-97-[10-20]
 #SBATCH --ntasks-per-node=256
 #SBATCH --exclusive
 #SBATCH --time=2:00:00

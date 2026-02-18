@@ -5,12 +5,12 @@ CPU type:	AMD K19 (Zen4c) architecture
 CPU clock:	2.25 GHz
 --------------------------------------------------------------------------------
 # HWThreads: 0
-# GID|MetricsCount|CpuCount|Total runtime [s]|Runtime [s]|CPI|Math_Intensity|Stall_Ratio|System_BW_Proxy|Branch_MPKI|GFLOPS_Approx|Clock_Ratio
+# GID|MetricsCount|CpuCount|Total runtime [s]|CPI|Compute_Density|Mem_Boundness|Stall_Ratio|Branch_MPKI|Vector_Intensity|Clock_Ratio
 Atomic fight start
 Atomic fight warmup start
 Atomic fight loop start
-Final Count: 10240000000
+Final Count: 2560000000
 Atomic fight complete
-Loop iterations: 10240000000
-Loop time: 348.242663 seconds
+Loop iterations: 2560000000
+Loop time: 81.336169 seconds
 --------------------------------------------------------------------------------

@@ -1,8 +1,10 @@
 #!/usr/bin/env python3
 import argparse
+import json
 import os
 import re
 import shutil
+from collections import defaultdict
 from pathlib import Path
 
 
@@ -31,6 +33,13 @@ def collect_files(base_dir: Path, group: str, freq: str) -> dict:
 
 def app_name_from_file(path: Path) -> str:
     return path.name.split(".", 1)[0]
+
+
+def parse_job_id_from_out(path: Path) -> int | None:
+    match = re.match(r"^[^.]+\.(\d+)\.out$", path.name)
+    if not match:
+        return None
+    return int(match.group(1))
 
 
 def ensure_dir(path: Path) -> None:
@@ -92,6 +101,10 @@ def main() -> int:
         print("No --freq provided. Nothing to do.")
         return 1
 
+    job_ids_by_app = defaultdict(
+        lambda: {"dvfs": defaultdict(list), "energy": defaultdict(list)}
+    )
+
     for group in args.groups:
         for freq in args.freq:
             files = collect_files(base_dir, group, freq)
@@ -102,6 +115,9 @@ def main() -> int:
             label_freq = normalize_freq(freq)
             for out_file in files["out"]:
                 app = app_name_from_file(out_file)
+                job_id = parse_job_id_from_out(out_file)
+                if job_id is not None and group in ("dvfs", "energy"):
+                    job_ids_by_app[app][group][label_freq].append(job_id)
                 dest = apps_dir / app / f"{app}_{group}_{label_freq}.out"
                 action = "MOVE" if args.move else "COPY"
                 print(f"{action} {out_file} -> {dest}")
@@ -115,6 +131,22 @@ def main() -> int:
                 print(f"{action} {prof_file} -> {dest}")
                 if not args.dry_run:
                     copy_or_move(prof_file, dest, args.move)
+
+    for app, groups in sorted(job_ids_by_app.items()):
+        output = {}
+        for group in ("dvfs", "energy"):
+            freq_map = {}
+            for freq, ids in sorted(groups[group].items()):
+                freq_map[freq] = sorted(set(ids))
+            output[group] = freq_map
+
+        json_path = apps_dir / app / f"{app}_job_ids.json"
+        ensure_dir(json_path.parent)
+        print(f"WRITE {json_path}")
+        if not args.dry_run:
+            with json_path.open("w", encoding="utf-8") as f:
+                json.dump(output, f, indent=2, sort_keys=True)
+                f.write("\n")
 
     return 0
 

@@ -11,5 +11,5 @@ MPI bandwidth warmup start
 MPI bandwidth loop start
 MPI bandwidth complete
 Loop iterations: 20000
-Loop time: 535.004242 seconds
+Loop time: 534.540202 seconds
 --------------------------------------------------------------------------------

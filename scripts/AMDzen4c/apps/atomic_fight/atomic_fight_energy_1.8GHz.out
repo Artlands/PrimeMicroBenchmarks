@@ -9,8 +9,8 @@ CPU clock:	2.25 GHz
 Atomic fight start
 Atomic fight warmup start
 Atomic fight loop start
-Final Count: 10240000000
+Final Count: 2560000000
 Atomic fight complete
-Loop iterations: 10240000000
-Loop time: 133.301295 seconds
+Loop iterations: 2560000000
+Loop time: 82.896579 seconds
 --------------------------------------------------------------------------------

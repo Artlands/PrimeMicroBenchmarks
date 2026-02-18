@@ -1,4 +1,4 @@
-Detected CPU frequency: 2250 MHz
+Detected CPU frequency: 2249 MHz
 --------------------------------------------------------------------------------
 CPU name:	AMD EPYC 9754 128-Core Processor               
 CPU type:	AMD K19 (Zen4c) architecture
@@ -11,5 +11,5 @@ FFT mix warmup start
 FFT mix loop start
 FFT mix complete
 Loop iterations: 15000
-Loop time: 66.453474 seconds
+Loop time: 66.189290 seconds
 --------------------------------------------------------------------------------

@@ -1,4 +1,4 @@
-Detected CPU frequency: 1500 MHz
+Detected CPU frequency: 1499 MHz
 --------------------------------------------------------------------------------
 CPU name:	AMD EPYC 9754 128-Core Processor               
 CPU type:	AMD K19 (Zen4c) architecture
@@ -11,5 +11,5 @@ SpMV warmup start
 SpMV loop start
 SpMV complete
 Loop iterations: 1000
-Loop time: 214.561981 seconds
+Loop time: 213.803276 seconds
 --------------------------------------------------------------------------------

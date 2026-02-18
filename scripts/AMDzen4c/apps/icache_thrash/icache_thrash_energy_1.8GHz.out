@@ -1,4 +1,4 @@
-Detected CPU frequency: 1800 MHz
+Detected CPU frequency: 1791 MHz
 --------------------------------------------------------------------------------
 CPU name:	AMD EPYC 9754 128-Core Processor               
 CPU type:	AMD K19 (Zen4c) architecture
@@ -12,5 +12,5 @@ I-cache thrash loop start
 7
 I-cache thrash complete
 Loop iterations: 1000000
-Loop time: 9.153323 seconds
+Loop time: 9.114705 seconds
 --------------------------------------------------------------------------------
