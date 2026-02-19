@@ -35,6 +35,7 @@
 
 // Define the CPU Core to run the controller on.
 #define CONTROLLER_CPU_ID 0
+#define CONSENSUS_WINDOW 10
 
 // Define the Event Strings based on LIKWID perfgroups.
 // Note: Ensure these event names are exact matches for the specific architecture.
@@ -159,7 +160,7 @@ static void handle_signal(int sig) {
 int main(int argc, char* argv[]) {
     setvbuf(stdout, NULL, _IOLBF, 0);
     int i, gid;
-    double time_sec = 0.5; // 500ms
+    double time_sec = 1.0; // 1000ms consensus window by default
     int monitor_cpu_id = MONITOR_CPU_ID;
     int controller_cpu_id = CONTROLLER_CPU_ID;
     int debug = 0;
@@ -328,8 +329,12 @@ int main(int argc, char* argv[]) {
         fprintf(stderr, "Group metrics not available, falling back to raw counters\n");
     }
 
-    printf("[Main] DVFS Controller Started. Monitoring Core %d every %.1f s...\n",
-           monitor_cpu_id, time_sec);
+    double sample_sec = time_sec / (double)CONSENSUS_WINDOW;
+    if (sample_sec <= 0.0) {
+        sample_sec = 0.1;
+    }
+    printf("[Main] DVFS Controller Started. Monitoring Core %d every %.3f s (%d slices per %.3f s window)...\n",
+           monitor_cpu_id, sample_sec, CONSENSUS_WINDOW, time_sec);
 
     signal(SIGINT, handle_signal);
     signal(SIGTERM, handle_signal);
@@ -344,7 +349,7 @@ int main(int argc, char* argv[]) {
         }
 
         // B. Wait for the sampling interval
-        usleep((useconds_t)(time_sec * 1000000));
+        usleep((useconds_t)(sample_sec * 1000000));
 
         // C. Stop Counting
         ret = perfmon_stopCounters();

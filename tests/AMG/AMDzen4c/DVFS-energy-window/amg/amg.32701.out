@@ -1,0 +1,56 @@
+Launching amg with 256 MPI ranks
+--------------------------------------------------------------------------------
+CPU name:	AMD EPYC 9754 128-Core Processor               
+CPU type:	AMD K19 (Zen4c) architecture
+CPU clock:	2.25 GHz
+--------------------------------------------------------------------------------
+# HWThreads: 0|128
+# GID|MetricsCount|CpuCount|Total runtime [s]|Runtime (RDTSC) [s]|Runtime unhalted [s]|Clock [MHz]|CPI|Energy Core [J]|Power Core [W]|Energy L3 [J]|Power L3 [W]
+Running with these driver parameters:
+  solver ID    = 3
+
+  Laplacian_27pt:
+    (Nx, Ny, Nz) = (1024, 1024, 256)
+    (Px, Py, Pz) = (8, 8, 4)
+
+=============================================
+Generate Matrix:
+=============================================
+Spatial Operator:
+  wall clock time = 1.956534 seconds
+  wall MFLOPS     = 0.000000
+  cpu clock time  = 1.935312 seconds
+  cpu MFLOPS      = 0.000000
+
+  RHS vector has unit components
+  Initial guess is 0
+=============================================
+IJ Vector Setup:
+=============================================
+RHS and Initial Guess:
+  wall clock time = 0.043208 seconds
+  wall MFLOPS     = 0.000000
+  cpu clock time  = 0.042722 seconds
+  cpu MFLOPS      = 0.000000
+
+=============================================
+Problem 2: Cumulative AMG-GMRES Solve Time:
+=============================================
+GMRES Solve:
+  wall clock time = 497.701841 seconds
+  wall MFLOPS     = 0.000000
+  cpu clock time  = 492.299413 seconds
+  cpu MFLOPS      = 0.000000
+
+
+No. of Time Steps = 6
+Cum. No. of Iterations = 215
+Final Relative Residual Norm = 9.686354e-14
+
+
+nnz AP * (Iterations + time_steps) / Total Time: 
+
+Figure of Merit (FOM_2): 3.503938e+09
+
+
+--------------------------------------------------------------------------------

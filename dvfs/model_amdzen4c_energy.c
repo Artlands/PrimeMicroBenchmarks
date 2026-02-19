@@ -3,6 +3,8 @@
 #include <stdlib.h>
 
 FreqLevel predict_phase_level(double CPI, double Compute_Density, double Mem_Boundness, double Stall_Ratio, double Branch_MPKI, double Vector_Intensity) {
+    (void)CPI;
+    (void)Vector_Intensity;
     if (Compute_Density <= 5.402331) {
         if (Branch_MPKI <= 0.135086) {
             if (Stall_Ratio <= 0.022998) {
