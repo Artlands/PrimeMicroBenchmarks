@@ -1,209 +1,237 @@
-/*
- * mpi_pattern_app.c
- * MPI proxy to exercise DVFS controller with clear phases.
- * Build with -DTARGET_DEFAULT="energy" or "edp".
- */
-
 #include <mpi.h>
+#include <math.h>
+#include <stdint.h>
 #include <stdio.h>
 #include <stdlib.h>
 #include <string.h>
-#include <time.h>
-#include <unistd.h>
 
-#ifndef TARGET_DEFAULT
-#define TARGET_DEFAULT "energy"
-#endif
+#define DEFAULT_PHASE_REPEATS 4
+#define DEFAULT_COMPUTE_ITERS 15000000ULL
+#define DEFAULT_MEMORY_ITERS 12
+#define DEFAULT_COMM_ITERS 1200
+#define DEFAULT_SYNC_ITERS 8000
+#define DEFAULT_MEM_MB 96
+#define DEFAULT_MSG_KB 512
 
-typedef struct node {
-    struct node *next;
-    int pad[15];
-} Node;
-
-static double now_sec(void) {
-    struct timespec ts;
-    clock_gettime(CLOCK_MONOTONIC, &ts);
-    return (double)ts.tv_sec + (double)ts.tv_nsec / 1.0e9;
+static void fill_array(double *a, size_t n, double seed) {
+    for (size_t i = 0; i < n; ++i) {
+        a[i] = seed + (double)(i % 97) * 0.001;
+    }
 }
 
-static const char *expect_label(const char *target, const char *phase,
-                                const char *expect_compute,
-                                const char *expect_memory,
-                                const char *expect_comm,
-                                const char *expect_idle) {
-    if (strcmp(phase, "COMPUTE") == 0) return expect_compute;
-    if (strcmp(phase, "MEMORY") == 0) return expect_memory;
-    if (strcmp(phase, "COMM") == 0) return expect_comm;
-    if (strcmp(phase, "IDLE") == 0) return expect_idle;
-    return target;
-}
+static double run_compute_phase(unsigned long long iters, int rank) {
+    double x = 1.0 + rank * 0.01;
+    double y = 0.5 + rank * 0.02;
+    double acc = 0.0;
 
-static void phase_compute(double *A, double *B, double *C, int n, double seconds) {
-    double start = now_sec();
-    while (now_sec() - start < seconds) {
-        for (int i = 0; i < n; i++) {
-            for (int j = 0; j < n; j++) {
-                double sum = 0.0;
-                for (int k = 0; k < n; k++) {
-                    sum += A[i * n + k] * B[k * n + j];
-                }
-                C[i * n + j] = sum;
-            }
+    for (unsigned long long i = 0; i < iters; ++i) {
+        x = x * 1.0000001192092896 + 0.00000001;
+        y = y * 0.9999998807907104 + 0.00000002;
+        acc += x * y + sqrt(x + 1.0);
+        if ((i & 1023ULL) == 0ULL) {
+            x += acc * 1e-15;
+            y += acc * 1e-16;
         }
     }
+
+    return acc;
 }
 
-static void phase_memory(Node *pool, long long steps) {
-    Node *p = pool;
-    for (long long i = 0; i < steps; i++) {
-        p = p->next;
-    }
-    if (p == NULL) {
-        printf("unreachable\n");
-    }
-}
+static double run_memory_phase(double *a, double *b, size_t n, int passes) {
+    const size_t stride = 8;
+    double acc = 0.0;
 
-static void phase_comm(double seconds, int comm_iters) {
-    double start = now_sec();
-    double send_buf = 1.0;
-    double recv_buf = 0.0;
-    while (now_sec() - start < seconds) {
-        for (int i = 0; i < comm_iters; i++) {
-            MPI_Allreduce(&send_buf, &recv_buf, 1, MPI_DOUBLE, MPI_SUM, MPI_COMM_WORLD);
+    for (int p = 0; p < passes; ++p) {
+        for (size_t i = 0; i < n; i += stride) {
+            b[i] = b[i] * 1.0000001 + a[i] * 0.9999999 + (double)p;
+            a[i] = a[i] + b[i] * 0.5;
+            acc += a[i] * 1e-12;
         }
+    }
+
+    return acc;
+}
+
+static double run_comm_phase(double *buf, int count, int rounds, int rank, int size) {
+    int left = (rank - 1 + size) % size;
+    int right = (rank + 1) % size;
+    double acc = 0.0;
+
+    for (int r = 0; r < rounds; ++r) {
+        for (int i = 0; i < count; ++i) {
+            buf[i] = rank + r * 0.001 + i * 1e-6;
+        }
+
+        MPI_Sendrecv_replace(buf, count, MPI_DOUBLE, right, 100, left, 100, MPI_COMM_WORLD, MPI_STATUS_IGNORE);
+
+        for (int i = 0; i < count; i += 32) {
+            acc += buf[i] * 1e-9;
+        }
+    }
+
+    return acc;
+}
+
+static void run_sync_phase(int rounds) {
+    for (int i = 0; i < rounds; ++i) {
         MPI_Barrier(MPI_COMM_WORLD);
     }
 }
 
-static void phase_idle(double seconds) {
-    usleep((useconds_t)(seconds * 1000000.0));
+static int get_arg_int(int argc, char **argv, const char *name, int default_value) {
+    for (int i = 1; i + 1 < argc; ++i) {
+        if (strcmp(argv[i], name) == 0) {
+            return atoi(argv[i + 1]);
+        }
+    }
+    return default_value;
+}
+
+static unsigned long long get_arg_ull(int argc, char **argv, const char *name, unsigned long long default_value) {
+    for (int i = 1; i + 1 < argc; ++i) {
+        if (strcmp(argv[i], name) == 0) {
+            return strtoull(argv[i + 1], NULL, 10);
+        }
+    }
+    return default_value;
+}
+
+static void print_usage(const char *prog) {
+    fprintf(stderr,
+            "Usage: %s [options]\n"
+            "  --phase-repeats N      default %d\n"
+            "  --compute-iters N      default %llu\n"
+            "  --memory-passes N      default %d\n"
+            "  --mem-mb N             default %d\n"
+            "  --comm-rounds N        default %d\n"
+            "  --msg-kb N             default %d\n"
+            "  --sync-rounds N        default %d\n",
+            prog,
+            DEFAULT_PHASE_REPEATS,
+            (unsigned long long)DEFAULT_COMPUTE_ITERS,
+            DEFAULT_MEMORY_ITERS,
+            DEFAULT_MEM_MB,
+            DEFAULT_COMM_ITERS,
+            DEFAULT_MSG_KB,
+            DEFAULT_SYNC_ITERS);
 }
 
 int main(int argc, char **argv) {
-    int rank, size;
-    int iterations = 3;
-    int matrix_n = 256;
-    long long ll_bytes = 64LL * 1024 * 1024;
-    long long mem_steps = 200000000;
-    double phase_sec = 2.0;
-    int comm_iters = 1000;
-    const char *target = TARGET_DEFAULT;
-    const char *expect_compute = "HighFreq";
-    const char *expect_memory = "MedFreq";
-    const char *expect_comm = "LowFreq";
-    const char *expect_idle = "LowFreq";
-
-    for (int i = 1; i < argc; i++) {
-        if (strcmp(argv[i], "--iterations") == 0 && i + 1 < argc) {
-            iterations = atoi(argv[++i]);
-        } else if (strcmp(argv[i], "--matrix-n") == 0 && i + 1 < argc) {
-            matrix_n = atoi(argv[++i]);
-        } else if (strcmp(argv[i], "--ll-bytes") == 0 && i + 1 < argc) {
-            ll_bytes = atoll(argv[++i]);
-        } else if (strcmp(argv[i], "--mem-steps") == 0 && i + 1 < argc) {
-            mem_steps = atoll(argv[++i]);
-        } else if (strcmp(argv[i], "--phase-sec") == 0 && i + 1 < argc) {
-            phase_sec = atof(argv[++i]);
-        } else if (strcmp(argv[i], "--comm-iters") == 0 && i + 1 < argc) {
-            comm_iters = atoi(argv[++i]);
-        } else if (strcmp(argv[i], "--target") == 0 && i + 1 < argc) {
-            target = argv[++i];
-        } else if (strcmp(argv[i], "--expect-compute") == 0 && i + 1 < argc) {
-            expect_compute = argv[++i];
-        } else if (strcmp(argv[i], "--expect-memory") == 0 && i + 1 < argc) {
-            expect_memory = argv[++i];
-        } else if (strcmp(argv[i], "--expect-comm") == 0 && i + 1 < argc) {
-            expect_comm = argv[++i];
-        } else if (strcmp(argv[i], "--expect-idle") == 0 && i + 1 < argc) {
-            expect_idle = argv[++i];
-        }
-    }
-
     MPI_Init(&argc, &argv);
+
+    int rank = 0;
+    int size = 1;
     MPI_Comm_rank(MPI_COMM_WORLD, &rank);
     MPI_Comm_size(MPI_COMM_WORLD, &size);
-    setvbuf(stdout, NULL, _IONBF, 0);
 
-    if (rank == 0) {
-        printf("[MPI] size=%d target=%s iterations=%d phase_sec=%.2f\n",
-               size, target, iterations, phase_sec);
-    }
-
-    double *A = malloc((size_t)matrix_n * matrix_n * sizeof(double));
-    double *B = malloc((size_t)matrix_n * matrix_n * sizeof(double));
-    double *C = malloc((size_t)matrix_n * matrix_n * sizeof(double));
-    if (!A || !B || !C) {
+    if (size < 2) {
         if (rank == 0) {
-            fprintf(stderr, "Failed to allocate matrices\n");
+            fprintf(stderr, "This benchmark expects at least 2 MPI ranks.\n");
         }
-        MPI_Abort(MPI_COMM_WORLD, 1);
-    }
-    for (int i = 0; i < matrix_n * matrix_n; i++) {
-        A[i] = 1.0;
-        B[i] = 0.5;
-        C[i] = 0.0;
+        MPI_Finalize();
+        return 1;
     }
 
-    int num_nodes = (int)(ll_bytes / (long long)sizeof(Node));
-    if (num_nodes < 2) {
-        num_nodes = 2;
-    }
-    Node *pool = malloc((size_t)num_nodes * sizeof(Node));
-    if (!pool) {
-        if (rank == 0) {
-            fprintf(stderr, "Failed to allocate linked list pool\n");
+    for (int i = 1; i < argc; ++i) {
+        if (strcmp(argv[i], "--help") == 0 || strcmp(argv[i], "-h") == 0) {
+            if (rank == 0) {
+                print_usage(argv[0]);
+            }
+            MPI_Finalize();
+            return 0;
         }
-        MPI_Abort(MPI_COMM_WORLD, 1);
     }
-    for (int i = 0; i < num_nodes - 1; i++) {
-        pool[i].next = &pool[i + 1];
+
+    int phase_repeats = get_arg_int(argc, argv, "--phase-repeats", DEFAULT_PHASE_REPEATS);
+    unsigned long long compute_iters = get_arg_ull(argc, argv, "--compute-iters", DEFAULT_COMPUTE_ITERS);
+    int memory_passes = get_arg_int(argc, argv, "--memory-passes", DEFAULT_MEMORY_ITERS);
+    int mem_mb = get_arg_int(argc, argv, "--mem-mb", DEFAULT_MEM_MB);
+    int comm_rounds = get_arg_int(argc, argv, "--comm-rounds", DEFAULT_COMM_ITERS);
+    int msg_kb = get_arg_int(argc, argv, "--msg-kb", DEFAULT_MSG_KB);
+    int sync_rounds = get_arg_int(argc, argv, "--sync-rounds", DEFAULT_SYNC_ITERS);
+
+    size_t mem_bytes = (size_t)mem_mb * 1024ULL * 1024ULL;
+    size_t mem_elems = mem_bytes / sizeof(double);
+    int msg_elems = (msg_kb * 1024) / (int)sizeof(double);
+
+    double *a = (double *)malloc(mem_elems * sizeof(double));
+    double *b = (double *)malloc(mem_elems * sizeof(double));
+    double *msg = (double *)malloc((size_t)msg_elems * sizeof(double));
+
+    if (!a || !b || !msg) {
+        fprintf(stderr, "Rank %d failed to allocate buffers.\n", rank);
+        free(a);
+        free(b);
+        free(msg);
+        MPI_Finalize();
+        return 2;
     }
-    pool[num_nodes - 1].next = &pool[0];
-    srand(42);
-    for (int i = 0; i < num_nodes; i++) {
-        int swap_idx = rand() % num_nodes;
-        Node *tmp = pool[i].next;
-        pool[i].next = pool[swap_idx].next;
-        pool[swap_idx].next = tmp;
-    }
+
+    fill_array(a, mem_elems, 1.0 + rank);
+    fill_array(b, mem_elems, 2.0 + rank);
 
     MPI_Barrier(MPI_COMM_WORLD);
+    double t0 = MPI_Wtime();
 
-    for (int iter = 0; iter < iterations; iter++) {
-        if (rank == 0) {
-            printf("\n[APP] ITERATION %d\n", iter);
-            printf("[APP] PHASE COMPUTE expected=%s\n",
-                   expect_label(target, "COMPUTE", expect_compute, expect_memory, expect_comm, expect_idle));
-        }
-        phase_compute(A, B, C, matrix_n, phase_sec);
-        MPI_Barrier(MPI_COMM_WORLD);
-
-        if (rank == 0) {
-            printf("[APP] PHASE MEMORY expected=%s\n",
-                   expect_label(target, "MEMORY", expect_compute, expect_memory, expect_comm, expect_idle));
-        }
-        phase_memory(pool, mem_steps);
-        MPI_Barrier(MPI_COMM_WORLD);
-
-        if (rank == 0) {
-            printf("[APP] PHASE COMM expected=%s\n",
-                   expect_label(target, "COMM", expect_compute, expect_memory, expect_comm, expect_idle));
-        }
-        phase_comm(phase_sec, comm_iters);
-        MPI_Barrier(MPI_COMM_WORLD);
-
-        if (rank == 0) {
-            printf("[APP] PHASE IDLE expected=%s\n",
-                   expect_label(target, "IDLE", expect_compute, expect_memory, expect_comm, expect_idle));
-        }
-        phase_idle(phase_sec);
-        MPI_Barrier(MPI_COMM_WORLD);
+    if (rank == 0) {
+        printf("mpi_pattern_app start ranks=%d phase_repeats=%d\n", size, phase_repeats);
+        printf("config: compute_iters=%llu memory_passes=%d mem_mb=%d comm_rounds=%d msg_kb=%d sync_rounds=%d\n",
+               compute_iters, memory_passes, mem_mb, comm_rounds, msg_kb, sync_rounds);
     }
 
-    free(A);
-    free(B);
-    free(C);
-    free(pool);
+    double sink = 0.0;
+    for (int p = 0; p < phase_repeats; ++p) {
+        double ts = MPI_Wtime();
+        if (rank == 0) {
+            printf("PHASE_START cycle=%d type=compute t=%.6f\n", p, ts - t0);
+        }
+        sink += run_compute_phase(compute_iters, rank);
+        MPI_Barrier(MPI_COMM_WORLD);
+        if (rank == 0) {
+            printf("PHASE_END cycle=%d type=compute t=%.6f\n", p, MPI_Wtime() - t0);
+        }
+
+        ts = MPI_Wtime();
+        if (rank == 0) {
+            printf("PHASE_START cycle=%d type=memory t=%.6f\n", p, ts - t0);
+        }
+        sink += run_memory_phase(a, b, mem_elems, memory_passes);
+        MPI_Barrier(MPI_COMM_WORLD);
+        if (rank == 0) {
+            printf("PHASE_END cycle=%d type=memory t=%.6f\n", p, MPI_Wtime() - t0);
+        }
+
+        ts = MPI_Wtime();
+        if (rank == 0) {
+            printf("PHASE_START cycle=%d type=comm t=%.6f\n", p, ts - t0);
+        }
+        sink += run_comm_phase(msg, msg_elems, comm_rounds, rank, size);
+        MPI_Barrier(MPI_COMM_WORLD);
+        if (rank == 0) {
+            printf("PHASE_END cycle=%d type=comm t=%.6f\n", p, MPI_Wtime() - t0);
+        }
+
+        ts = MPI_Wtime();
+        if (rank == 0) {
+            printf("PHASE_START cycle=%d type=sync t=%.6f\n", p, ts - t0);
+        }
+        run_sync_phase(sync_rounds);
+        if (rank == 0) {
+            printf("PHASE_END cycle=%d type=sync t=%.6f\n", p, MPI_Wtime() - t0);
+        }
+    }
+
+    double local_sink = sink;
+    double global_sink = 0.0;
+    MPI_Reduce(&local_sink, &global_sink, 1, MPI_DOUBLE, MPI_SUM, 0, MPI_COMM_WORLD);
+
+    if (rank == 0) {
+        printf("mpi_pattern_app done total_time=%.6f checksum=%0.12e\n", MPI_Wtime() - t0, global_sink);
+    }
+
+    free(a);
+    free(b);
+    free(msg);
     MPI_Finalize();
     return 0;
 }

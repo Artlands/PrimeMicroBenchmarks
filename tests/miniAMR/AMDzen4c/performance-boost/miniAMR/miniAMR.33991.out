@@ -1,0 +1,3703 @@
+Launching miniAMR with 256 MPI ranks
+--------------------------------------------------------------------------------
+CPU name:	AMD EPYC 9754 128-Core Processor               
+CPU type:	AMD K19 (Zen4c) architecture
+CPU clock:	2.25 GHz
+--------------------------------------------------------------------------------
+# HWThreads: 0|128
+# GID|MetricsCount|CpuCount|Total runtime [s]|Runtime (RDTSC) [s]|Runtime unhalted [s]|Clock [MHz]|CPI|Energy Core [J]|Power Core [W]|Energy L3 [J]|Power L3 [W]
+Number of blocks at level 0 at timestep 0 is 256
+Number of blocks at level 1 at timestep 0 is 0
+Number of blocks at level 2 at timestep 0 is 0
+Number of blocks at level 3 at timestep 0 is 0
+Number of blocks at level 4 at timestep 0 is 0
+Total number of blocks at timestep 0 is 256
+comm partners x ave   1.75 min 1 max 2
+comm partners y ave   1.75 min 1 max 2
+comm partners z ave   1.50 min 1 max 2
+comm partners total ave   5.00 min 3 max 6
+comm partners unique ave   5.00 min 3 max 6
+
+Timestep 1 time 0.000000 delta 1.000000
+Timestep 2 time 1.000000 delta 1.000000
+Timestep 3 time 2.000000 delta 1.000000
+Timestep 4 time 3.000000 delta 1.000000
+Timestep 5 time 4.000000 delta 1.000000
+Number of blocks at level 0 at timestep 5 is 256
+Number of blocks at level 1 at timestep 5 is 0
+Number of blocks at level 2 at timestep 5 is 0
+Number of blocks at level 3 at timestep 5 is 0
+Number of blocks at level 4 at timestep 5 is 0
+Total number of blocks at timestep 5 is 256
+comm partners x ave   1.75 min 1 max 2
+comm partners y ave   1.75 min 1 max 2
+comm partners z ave   1.50 min 1 max 2
+comm partners total ave   5.00 min 3 max 6
+comm partners unique ave   5.00 min 3 max 6
+
+Timestep 6 time 5.000000 delta 1.000000
+Timestep 7 time 6.000000 delta 1.000000
+Timestep 8 time 7.000000 delta 1.000000
+Timestep 9 time 8.000000 delta 1.000000
+Timestep 10 time 9.000000 delta 1.000000
+Number of blocks at level 0 at timestep 10 is 256
+Number of blocks at level 1 at timestep 10 is 0
+Number of blocks at level 2 at timestep 10 is 0
+Number of blocks at level 3 at timestep 10 is 0
+Number of blocks at level 4 at timestep 10 is 0
+Total number of blocks at timestep 10 is 256
+comm partners x ave   1.75 min 1 max 2
+comm partners y ave   1.75 min 1 max 2
+comm partners z ave   1.50 min 1 max 2
+comm partners total ave   5.00 min 3 max 6
+comm partners unique ave   5.00 min 3 max 6
+
+Timestep 11 time 10.000000 delta 1.000000
+Timestep 12 time 11.000000 delta 1.000000
+Timestep 13 time 12.000000 delta 1.000000
+Timestep 14 time 13.000000 delta 1.000000
+Timestep 15 time 14.000000 delta 1.000000
+Number of blocks at level 0 at timestep 15 is 256
+Number of blocks at level 1 at timestep 15 is 0
+Number of blocks at level 2 at timestep 15 is 0
+Number of blocks at level 3 at timestep 15 is 0
+Number of blocks at level 4 at timestep 15 is 0
+Total number of blocks at timestep 15 is 256
+comm partners x ave   1.75 min 1 max 2
+comm partners y ave   1.75 min 1 max 2
+comm partners z ave   1.50 min 1 max 2
+comm partners total ave   5.00 min 3 max 6
+comm partners unique ave   5.00 min 3 max 6
+
+Timestep 16 time 15.000000 delta 1.000000
+Timestep 17 time 16.000000 delta 1.000000
+Timestep 18 time 17.000000 delta 1.000000
+Timestep 19 time 18.000000 delta 1.000000
+Timestep 20 time 19.000000 delta 1.000000
+Number of blocks at level 0 at timestep 20 is 256
+Number of blocks at level 1 at timestep 20 is 0
+Number of blocks at level 2 at timestep 20 is 0
+Number of blocks at level 3 at timestep 20 is 0
+Number of blocks at level 4 at timestep 20 is 0
+Total number of blocks at timestep 20 is 256
+comm partners x ave   1.75 min 1 max 2
+comm partners y ave   1.75 min 1 max 2
+comm partners z ave   1.50 min 1 max 2
+comm partners total ave   5.00 min 3 max 6
+comm partners unique ave   5.00 min 3 max 6
+
+Timestep 21 time 20.000000 delta 1.000000
+Timestep 22 time 21.000000 delta 1.000000
+Timestep 23 time 22.000000 delta 1.000000
+Timestep 24 time 23.000000 delta 1.000000
+Timestep 25 time 24.000000 delta 1.000000
+Number of blocks at level 0 at timestep 25 is 256
+Number of blocks at level 1 at timestep 25 is 0
+Number of blocks at level 2 at timestep 25 is 0
+Number of blocks at level 3 at timestep 25 is 0
+Number of blocks at level 4 at timestep 25 is 0
+Total number of blocks at timestep 25 is 256
+comm partners x ave   1.75 min 1 max 2
+comm partners y ave   1.75 min 1 max 2
+comm partners z ave   1.50 min 1 max 2
+comm partners total ave   5.00 min 3 max 6
+comm partners unique ave   5.00 min 3 max 6
+
+Timestep 26 time 25.000000 delta 1.000000
+Timestep 27 time 26.000000 delta 1.000000
+Timestep 28 time 27.000000 delta 1.000000
+Timestep 29 time 28.000000 delta 1.000000
+Timestep 30 time 29.000000 delta 1.000000
+Number of blocks at level 0 at timestep 30 is 256
+Number of blocks at level 1 at timestep 30 is 0
+Number of blocks at level 2 at timestep 30 is 0
+Number of blocks at level 3 at timestep 30 is 0
+Number of blocks at level 4 at timestep 30 is 0
+Total number of blocks at timestep 30 is 256
+comm partners x ave   1.75 min 1 max 2
+comm partners y ave   1.75 min 1 max 2
+comm partners z ave   1.50 min 1 max 2
+comm partners total ave   5.00 min 3 max 6
+comm partners unique ave   5.00 min 3 max 6
+
+Timestep 31 time 30.000000 delta 1.000000
+Timestep 32 time 31.000000 delta 1.000000
+Timestep 33 time 32.000000 delta 1.000000
+Timestep 34 time 33.000000 delta 1.000000
+Timestep 35 time 34.000000 delta 1.000000
+Number of blocks at level 0 at timestep 35 is 256
+Number of blocks at level 1 at timestep 35 is 0
+Number of blocks at level 2 at timestep 35 is 0
+Number of blocks at level 3 at timestep 35 is 0
+Number of blocks at level 4 at timestep 35 is 0
+Total number of blocks at timestep 35 is 256
+comm partners x ave   1.75 min 1 max 2
+comm partners y ave   1.75 min 1 max 2
+comm partners z ave   1.50 min 1 max 2
+comm partners total ave   5.00 min 3 max 6
+comm partners unique ave   5.00 min 3 max 6
+
+Timestep 36 time 35.000000 delta 1.000000
+Timestep 37 time 36.000000 delta 1.000000
+Timestep 38 time 37.000000 delta 1.000000
+Timestep 39 time 38.000000 delta 1.000000
+Timestep 40 time 39.000000 delta 1.000000
+Number of blocks at level 0 at timestep 40 is 256
+Number of blocks at level 1 at timestep 40 is 0
+Number of blocks at level 2 at timestep 40 is 0
+Number of blocks at level 3 at timestep 40 is 0
+Number of blocks at level 4 at timestep 40 is 0
+Total number of blocks at timestep 40 is 256
+comm partners x ave   1.75 min 1 max 2
+comm partners y ave   1.75 min 1 max 2
+comm partners z ave   1.50 min 1 max 2
+comm partners total ave   5.00 min 3 max 6
+comm partners unique ave   5.00 min 3 max 6
+
+Timestep 41 time 40.000000 delta 1.000000
+Timestep 42 time 41.000000 delta 1.000000
+Timestep 43 time 42.000000 delta 1.000000
+Timestep 44 time 43.000000 delta 1.000000
+Timestep 45 time 44.000000 delta 1.000000
+Number of blocks at level 0 at timestep 45 is 256
+Number of blocks at level 1 at timestep 45 is 0
+Number of blocks at level 2 at timestep 45 is 0
+Number of blocks at level 3 at timestep 45 is 0
+Number of blocks at level 4 at timestep 45 is 0
+Total number of blocks at timestep 45 is 256
+comm partners x ave   1.75 min 1 max 2
+comm partners y ave   1.75 min 1 max 2
+comm partners z ave   1.50 min 1 max 2
+comm partners total ave   5.00 min 3 max 6
+comm partners unique ave   5.00 min 3 max 6
+
+Timestep 46 time 45.000000 delta 1.000000
+Timestep 47 time 46.000000 delta 1.000000
+Timestep 48 time 47.000000 delta 1.000000
+Timestep 49 time 48.000000 delta 1.000000
+Timestep 50 time 49.000000 delta 1.000000
+Number of blocks at level 0 at timestep 50 is 256
+Number of blocks at level 1 at timestep 50 is 0
+Number of blocks at level 2 at timestep 50 is 0
+Number of blocks at level 3 at timestep 50 is 0
+Number of blocks at level 4 at timestep 50 is 0
+Total number of blocks at timestep 50 is 256
+comm partners x ave   1.75 min 1 max 2
+comm partners y ave   1.75 min 1 max 2
+comm partners z ave   1.50 min 1 max 2
+comm partners total ave   5.00 min 3 max 6
+comm partners unique ave   5.00 min 3 max 6
+
+Timestep 51 time 50.000000 delta 1.000000
+Timestep 52 time 51.000000 delta 1.000000
+Timestep 53 time 52.000000 delta 1.000000
+Timestep 54 time 53.000000 delta 1.000000
+Timestep 55 time 54.000000 delta 1.000000
+Number of blocks at level 0 at timestep 55 is 256
+Number of blocks at level 1 at timestep 55 is 0
+Number of blocks at level 2 at timestep 55 is 0
+Number of blocks at level 3 at timestep 55 is 0
+Number of blocks at level 4 at timestep 55 is 0
+Total number of blocks at timestep 55 is 256
+comm partners x ave   1.75 min 1 max 2
+comm partners y ave   1.75 min 1 max 2
+comm partners z ave   1.50 min 1 max 2
+comm partners total ave   5.00 min 3 max 6
+comm partners unique ave   5.00 min 3 max 6
+
+Timestep 56 time 55.000000 delta 1.000000
+Timestep 57 time 56.000000 delta 1.000000
+Timestep 58 time 57.000000 delta 1.000000
+Timestep 59 time 58.000000 delta 1.000000
+Timestep 60 time 59.000000 delta 1.000000
+Number of blocks at level 0 at timestep 60 is 256
+Number of blocks at level 1 at timestep 60 is 0
+Number of blocks at level 2 at timestep 60 is 0
+Number of blocks at level 3 at timestep 60 is 0
+Number of blocks at level 4 at timestep 60 is 0
+Total number of blocks at timestep 60 is 256
+comm partners x ave   1.75 min 1 max 2
+comm partners y ave   1.75 min 1 max 2
+comm partners z ave   1.50 min 1 max 2
+comm partners total ave   5.00 min 3 max 6
+comm partners unique ave   5.00 min 3 max 6
+
+Timestep 61 time 60.000000 delta 1.000000
+Timestep 62 time 61.000000 delta 1.000000
+Timestep 63 time 62.000000 delta 1.000000
+Timestep 64 time 63.000000 delta 1.000000
+Timestep 65 time 64.000000 delta 1.000000
+Number of blocks at level 0 at timestep 65 is 256
+Number of blocks at level 1 at timestep 65 is 0
+Number of blocks at level 2 at timestep 65 is 0
+Number of blocks at level 3 at timestep 65 is 0
+Number of blocks at level 4 at timestep 65 is 0
+Total number of blocks at timestep 65 is 256
+comm partners x ave   1.75 min 1 max 2
+comm partners y ave   1.75 min 1 max 2
+comm partners z ave   1.50 min 1 max 2
+comm partners total ave   5.00 min 3 max 6
+comm partners unique ave   5.00 min 3 max 6
+
+Timestep 66 time 65.000000 delta 1.000000
+Timestep 67 time 66.000000 delta 1.000000
+Timestep 68 time 67.000000 delta 1.000000
+Timestep 69 time 68.000000 delta 1.000000
+Timestep 70 time 69.000000 delta 1.000000
+Number of blocks at level 0 at timestep 70 is 256
+Number of blocks at level 1 at timestep 70 is 0
+Number of blocks at level 2 at timestep 70 is 0
+Number of blocks at level 3 at timestep 70 is 0
+Number of blocks at level 4 at timestep 70 is 0
+Total number of blocks at timestep 70 is 256
+comm partners x ave   1.75 min 1 max 2
+comm partners y ave   1.75 min 1 max 2
+comm partners z ave   1.50 min 1 max 2
+comm partners total ave   5.00 min 3 max 6
+comm partners unique ave   5.00 min 3 max 6
+
+Timestep 71 time 70.000000 delta 1.000000
+Timestep 72 time 71.000000 delta 1.000000
+Timestep 73 time 72.000000 delta 1.000000
+Timestep 74 time 73.000000 delta 1.000000
+Timestep 75 time 74.000000 delta 1.000000
+Number of blocks at level 0 at timestep 75 is 256
+Number of blocks at level 1 at timestep 75 is 0
+Number of blocks at level 2 at timestep 75 is 0
+Number of blocks at level 3 at timestep 75 is 0
+Number of blocks at level 4 at timestep 75 is 0
+Total number of blocks at timestep 75 is 256
+comm partners x ave   1.75 min 1 max 2
+comm partners y ave   1.75 min 1 max 2
+comm partners z ave   1.50 min 1 max 2
+comm partners total ave   5.00 min 3 max 6
+comm partners unique ave   5.00 min 3 max 6
+
+Timestep 76 time 75.000000 delta 1.000000
+Timestep 77 time 76.000000 delta 1.000000
+Timestep 78 time 77.000000 delta 1.000000
+Timestep 79 time 78.000000 delta 1.000000
+Timestep 80 time 79.000000 delta 1.000000
+Number of blocks at level 0 at timestep 80 is 256
+Number of blocks at level 1 at timestep 80 is 0
+Number of blocks at level 2 at timestep 80 is 0
+Number of blocks at level 3 at timestep 80 is 0
+Number of blocks at level 4 at timestep 80 is 0
+Total number of blocks at timestep 80 is 256
+comm partners x ave   1.75 min 1 max 2
+comm partners y ave   1.75 min 1 max 2
+comm partners z ave   1.50 min 1 max 2
+comm partners total ave   5.00 min 3 max 6
+comm partners unique ave   5.00 min 3 max 6
+
+Timestep 81 time 80.000000 delta 1.000000
+Timestep 82 time 81.000000 delta 1.000000
+Timestep 83 time 82.000000 delta 1.000000
+Timestep 84 time 83.000000 delta 1.000000
+Timestep 85 time 84.000000 delta 1.000000
+Number of blocks at level 0 at timestep 85 is 256
+Number of blocks at level 1 at timestep 85 is 0
+Number of blocks at level 2 at timestep 85 is 0
+Number of blocks at level 3 at timestep 85 is 0
+Number of blocks at level 4 at timestep 85 is 0
+Total number of blocks at timestep 85 is 256
+comm partners x ave   1.75 min 1 max 2
+comm partners y ave   1.75 min 1 max 2
+comm partners z ave   1.50 min 1 max 2
+comm partners total ave   5.00 min 3 max 6
+comm partners unique ave   5.00 min 3 max 6
+
+Timestep 86 time 85.000000 delta 1.000000
+Timestep 87 time 86.000000 delta 1.000000
+Timestep 88 time 87.000000 delta 1.000000
+Timestep 89 time 88.000000 delta 1.000000
+Timestep 90 time 89.000000 delta 1.000000
+Number of blocks at level 0 at timestep 90 is 256
+Number of blocks at level 1 at timestep 90 is 0
+Number of blocks at level 2 at timestep 90 is 0
+Number of blocks at level 3 at timestep 90 is 0
+Number of blocks at level 4 at timestep 90 is 0
+Total number of blocks at timestep 90 is 256
+comm partners x ave   1.75 min 1 max 2
+comm partners y ave   1.75 min 1 max 2
+comm partners z ave   1.50 min 1 max 2
+comm partners total ave   5.00 min 3 max 6
+comm partners unique ave   5.00 min 3 max 6
+
+Timestep 91 time 90.000000 delta 1.000000
+Timestep 92 time 91.000000 delta 1.000000
+Timestep 93 time 92.000000 delta 1.000000
+Timestep 94 time 93.000000 delta 1.000000
+Timestep 95 time 94.000000 delta 1.000000
+Number of blocks at level 0 at timestep 95 is 256
+Number of blocks at level 1 at timestep 95 is 0
+Number of blocks at level 2 at timestep 95 is 0
+Number of blocks at level 3 at timestep 95 is 0
+Number of blocks at level 4 at timestep 95 is 0
+Total number of blocks at timestep 95 is 256
+comm partners x ave   1.75 min 1 max 2
+comm partners y ave   1.75 min 1 max 2
+comm partners z ave   1.50 min 1 max 2
+comm partners total ave   5.00 min 3 max 6
+comm partners unique ave   5.00 min 3 max 6
+
+Timestep 96 time 95.000000 delta 1.000000
+Timestep 97 time 96.000000 delta 1.000000
+Timestep 98 time 97.000000 delta 1.000000
+Timestep 99 time 98.000000 delta 1.000000
+Timestep 100 time 99.000000 delta 1.000000
+Number of blocks at level 0 at timestep 100 is 256
+Number of blocks at level 1 at timestep 100 is 0
+Number of blocks at level 2 at timestep 100 is 0
+Number of blocks at level 3 at timestep 100 is 0
+Number of blocks at level 4 at timestep 100 is 0
+Total number of blocks at timestep 100 is 256
+comm partners x ave   1.75 min 1 max 2
+comm partners y ave   1.75 min 1 max 2
+comm partners z ave   1.50 min 1 max 2
+comm partners total ave   5.00 min 3 max 6
+comm partners unique ave   5.00 min 3 max 6
+
+Timestep 101 time 100.000000 delta 1.000000
+Timestep 102 time 101.000000 delta 1.000000
+Timestep 103 time 102.000000 delta 1.000000
+Timestep 104 time 103.000000 delta 1.000000
+Timestep 105 time 104.000000 delta 1.000000
+Number of blocks at level 0 at timestep 105 is 256
+Number of blocks at level 1 at timestep 105 is 0
+Number of blocks at level 2 at timestep 105 is 0
+Number of blocks at level 3 at timestep 105 is 0
+Number of blocks at level 4 at timestep 105 is 0
+Total number of blocks at timestep 105 is 256
+comm partners x ave   1.75 min 1 max 2
+comm partners y ave   1.75 min 1 max 2
+comm partners z ave   1.50 min 1 max 2
+comm partners total ave   5.00 min 3 max 6
+comm partners unique ave   5.00 min 3 max 6
+
+Timestep 106 time 105.000000 delta 1.000000
+Timestep 107 time 106.000000 delta 1.000000
+Timestep 108 time 107.000000 delta 1.000000
+Timestep 109 time 108.000000 delta 1.000000
+Timestep 110 time 109.000000 delta 1.000000
+Number of blocks at level 0 at timestep 110 is 256
+Number of blocks at level 1 at timestep 110 is 0
+Number of blocks at level 2 at timestep 110 is 0
+Number of blocks at level 3 at timestep 110 is 0
+Number of blocks at level 4 at timestep 110 is 0
+Total number of blocks at timestep 110 is 256
+comm partners x ave   1.75 min 1 max 2
+comm partners y ave   1.75 min 1 max 2
+comm partners z ave   1.50 min 1 max 2
+comm partners total ave   5.00 min 3 max 6
+comm partners unique ave   5.00 min 3 max 6
+
+Timestep 111 time 110.000000 delta 1.000000
+Timestep 112 time 111.000000 delta 1.000000
+Timestep 113 time 112.000000 delta 1.000000
+Timestep 114 time 113.000000 delta 1.000000
+Timestep 115 time 114.000000 delta 1.000000
+Number of blocks at level 0 at timestep 115 is 256
+Number of blocks at level 1 at timestep 115 is 0
+Number of blocks at level 2 at timestep 115 is 0
+Number of blocks at level 3 at timestep 115 is 0
+Number of blocks at level 4 at timestep 115 is 0
+Total number of blocks at timestep 115 is 256
+comm partners x ave   1.75 min 1 max 2
+comm partners y ave   1.75 min 1 max 2
+comm partners z ave   1.50 min 1 max 2
+comm partners total ave   5.00 min 3 max 6
+comm partners unique ave   5.00 min 3 max 6
+
+Timestep 116 time 115.000000 delta 1.000000
+Timestep 117 time 116.000000 delta 1.000000
+Timestep 118 time 117.000000 delta 1.000000
+Timestep 119 time 118.000000 delta 1.000000
+Timestep 120 time 119.000000 delta 1.000000
+Number of blocks at level 0 at timestep 120 is 256
+Number of blocks at level 1 at timestep 120 is 0
+Number of blocks at level 2 at timestep 120 is 0
+Number of blocks at level 3 at timestep 120 is 0
+Number of blocks at level 4 at timestep 120 is 0
+Total number of blocks at timestep 120 is 256
+comm partners x ave   1.75 min 1 max 2
+comm partners y ave   1.75 min 1 max 2
+comm partners z ave   1.50 min 1 max 2
+comm partners total ave   5.00 min 3 max 6
+comm partners unique ave   5.00 min 3 max 6
+
+Timestep 121 time 120.000000 delta 1.000000
+Timestep 122 time 121.000000 delta 1.000000
+Timestep 123 time 122.000000 delta 1.000000
+Timestep 124 time 123.000000 delta 1.000000
+Timestep 125 time 124.000000 delta 1.000000
+Number of blocks at level 0 at timestep 125 is 256
+Number of blocks at level 1 at timestep 125 is 0
+Number of blocks at level 2 at timestep 125 is 0
+Number of blocks at level 3 at timestep 125 is 0
+Number of blocks at level 4 at timestep 125 is 0
+Total number of blocks at timestep 125 is 256
+comm partners x ave   1.75 min 1 max 2
+comm partners y ave   1.75 min 1 max 2
+comm partners z ave   1.50 min 1 max 2
+comm partners total ave   5.00 min 3 max 6
+comm partners unique ave   5.00 min 3 max 6
+
+Timestep 126 time 125.000000 delta 1.000000
+Timestep 127 time 126.000000 delta 1.000000
+Timestep 128 time 127.000000 delta 1.000000
+Timestep 129 time 128.000000 delta 1.000000
+Timestep 130 time 129.000000 delta 1.000000
+Number of blocks at level 0 at timestep 130 is 256
+Number of blocks at level 1 at timestep 130 is 0
+Number of blocks at level 2 at timestep 130 is 0
+Number of blocks at level 3 at timestep 130 is 0
+Number of blocks at level 4 at timestep 130 is 0
+Total number of blocks at timestep 130 is 256
+comm partners x ave   1.75 min 1 max 2
+comm partners y ave   1.75 min 1 max 2
+comm partners z ave   1.50 min 1 max 2
+comm partners total ave   5.00 min 3 max 6
+comm partners unique ave   5.00 min 3 max 6
+
+Timestep 131 time 130.000000 delta 1.000000
+Timestep 132 time 131.000000 delta 1.000000
+Timestep 133 time 132.000000 delta 1.000000
+Timestep 134 time 133.000000 delta 1.000000
+Timestep 135 time 134.000000 delta 1.000000
+Number of blocks at level 0 at timestep 135 is 256
+Number of blocks at level 1 at timestep 135 is 0
+Number of blocks at level 2 at timestep 135 is 0
+Number of blocks at level 3 at timestep 135 is 0
+Number of blocks at level 4 at timestep 135 is 0
+Total number of blocks at timestep 135 is 256
+comm partners x ave   1.75 min 1 max 2
+comm partners y ave   1.75 min 1 max 2
+comm partners z ave   1.50 min 1 max 2
+comm partners total ave   5.00 min 3 max 6
+comm partners unique ave   5.00 min 3 max 6
+
+Timestep 136 time 135.000000 delta 1.000000
+Timestep 137 time 136.000000 delta 1.000000
+Timestep 138 time 137.000000 delta 1.000000
+Timestep 139 time 138.000000 delta 1.000000
+Timestep 140 time 139.000000 delta 1.000000
+Number of blocks at level 0 at timestep 140 is 256
+Number of blocks at level 1 at timestep 140 is 0
+Number of blocks at level 2 at timestep 140 is 0
+Number of blocks at level 3 at timestep 140 is 0
+Number of blocks at level 4 at timestep 140 is 0
+Total number of blocks at timestep 140 is 256
+comm partners x ave   1.75 min 1 max 2
+comm partners y ave   1.75 min 1 max 2
+comm partners z ave   1.50 min 1 max 2
+comm partners total ave   5.00 min 3 max 6
+comm partners unique ave   5.00 min 3 max 6
+
+Timestep 141 time 140.000000 delta 1.000000
+Timestep 142 time 141.000000 delta 1.000000
+Timestep 143 time 142.000000 delta 1.000000
+Timestep 144 time 143.000000 delta 1.000000
+Timestep 145 time 144.000000 delta 1.000000
+Number of blocks at level 0 at timestep 145 is 256
+Number of blocks at level 1 at timestep 145 is 0
+Number of blocks at level 2 at timestep 145 is 0
+Number of blocks at level 3 at timestep 145 is 0
+Number of blocks at level 4 at timestep 145 is 0
+Total number of blocks at timestep 145 is 256
+comm partners x ave   1.75 min 1 max 2
+comm partners y ave   1.75 min 1 max 2
+comm partners z ave   1.50 min 1 max 2
+comm partners total ave   5.00 min 3 max 6
+comm partners unique ave   5.00 min 3 max 6
+
+Timestep 146 time 145.000000 delta 1.000000
+Timestep 147 time 146.000000 delta 1.000000
+Timestep 148 time 147.000000 delta 1.000000
+Timestep 149 time 148.000000 delta 1.000000
+Timestep 150 time 149.000000 delta 1.000000
+Number of blocks at level 0 at timestep 150 is 256
+Number of blocks at level 1 at timestep 150 is 0
+Number of blocks at level 2 at timestep 150 is 0
+Number of blocks at level 3 at timestep 150 is 0
+Number of blocks at level 4 at timestep 150 is 0
+Total number of blocks at timestep 150 is 256
+comm partners x ave   1.75 min 1 max 2
+comm partners y ave   1.75 min 1 max 2
+comm partners z ave   1.50 min 1 max 2
+comm partners total ave   5.00 min 3 max 6
+comm partners unique ave   5.00 min 3 max 6
+
+Timestep 151 time 150.000000 delta 1.000000
+Timestep 152 time 151.000000 delta 1.000000
+Timestep 153 time 152.000000 delta 1.000000
+Timestep 154 time 153.000000 delta 1.000000
+Timestep 155 time 154.000000 delta 1.000000
+Number of blocks at level 0 at timestep 155 is 256
+Number of blocks at level 1 at timestep 155 is 0
+Number of blocks at level 2 at timestep 155 is 0
+Number of blocks at level 3 at timestep 155 is 0
+Number of blocks at level 4 at timestep 155 is 0
+Total number of blocks at timestep 155 is 256
+comm partners x ave   1.75 min 1 max 2
+comm partners y ave   1.75 min 1 max 2
+comm partners z ave   1.50 min 1 max 2
+comm partners total ave   5.00 min 3 max 6
+comm partners unique ave   5.00 min 3 max 6
+
+Timestep 156 time 155.000000 delta 1.000000
+Timestep 157 time 156.000000 delta 1.000000
+Timestep 158 time 157.000000 delta 1.000000
+Timestep 159 time 158.000000 delta 1.000000
+Timestep 160 time 159.000000 delta 1.000000
+Number of blocks at level 0 at timestep 160 is 256
+Number of blocks at level 1 at timestep 160 is 0
+Number of blocks at level 2 at timestep 160 is 0
+Number of blocks at level 3 at timestep 160 is 0
+Number of blocks at level 4 at timestep 160 is 0
+Total number of blocks at timestep 160 is 256
+comm partners x ave   1.75 min 1 max 2
+comm partners y ave   1.75 min 1 max 2
+comm partners z ave   1.50 min 1 max 2
+comm partners total ave   5.00 min 3 max 6
+comm partners unique ave   5.00 min 3 max 6
+
+Timestep 161 time 160.000000 delta 1.000000
+Timestep 162 time 161.000000 delta 1.000000
+Timestep 163 time 162.000000 delta 1.000000
+Timestep 164 time 163.000000 delta 1.000000
+Timestep 165 time 164.000000 delta 1.000000
+Number of blocks at level 0 at timestep 165 is 256
+Number of blocks at level 1 at timestep 165 is 0
+Number of blocks at level 2 at timestep 165 is 0
+Number of blocks at level 3 at timestep 165 is 0
+Number of blocks at level 4 at timestep 165 is 0
+Total number of blocks at timestep 165 is 256
+comm partners x ave   1.75 min 1 max 2
+comm partners y ave   1.75 min 1 max 2
+comm partners z ave   1.50 min 1 max 2
+comm partners total ave   5.00 min 3 max 6
+comm partners unique ave   5.00 min 3 max 6
+
+Timestep 166 time 165.000000 delta 1.000000
+Timestep 167 time 166.000000 delta 1.000000
+Timestep 168 time 167.000000 delta 1.000000
+Timestep 169 time 168.000000 delta 1.000000
+Timestep 170 time 169.000000 delta 1.000000
+Number of blocks at level 0 at timestep 170 is 256
+Number of blocks at level 1 at timestep 170 is 0
+Number of blocks at level 2 at timestep 170 is 0
+Number of blocks at level 3 at timestep 170 is 0
+Number of blocks at level 4 at timestep 170 is 0
+Total number of blocks at timestep 170 is 256
+comm partners x ave   1.75 min 1 max 2
+comm partners y ave   1.75 min 1 max 2
+comm partners z ave   1.50 min 1 max 2
+comm partners total ave   5.00 min 3 max 6
+comm partners unique ave   5.00 min 3 max 6
+
+Timestep 171 time 170.000000 delta 1.000000
+Timestep 172 time 171.000000 delta 1.000000
+Timestep 173 time 172.000000 delta 1.000000
+Timestep 174 time 173.000000 delta 1.000000
+Timestep 175 time 174.000000 delta 1.000000
+Number of blocks at level 0 at timestep 175 is 256
+Number of blocks at level 1 at timestep 175 is 0
+Number of blocks at level 2 at timestep 175 is 0
+Number of blocks at level 3 at timestep 175 is 0
+Number of blocks at level 4 at timestep 175 is 0
+Total number of blocks at timestep 175 is 256
+comm partners x ave   1.75 min 1 max 2
+comm partners y ave   1.75 min 1 max 2
+comm partners z ave   1.50 min 1 max 2
+comm partners total ave   5.00 min 3 max 6
+comm partners unique ave   5.00 min 3 max 6
+
+Timestep 176 time 175.000000 delta 1.000000
+Timestep 177 time 176.000000 delta 1.000000
+Timestep 178 time 177.000000 delta 1.000000
+Timestep 179 time 178.000000 delta 1.000000
+Timestep 180 time 179.000000 delta 1.000000
+Number of blocks at level 0 at timestep 180 is 256
+Number of blocks at level 1 at timestep 180 is 0
+Number of blocks at level 2 at timestep 180 is 0
+Number of blocks at level 3 at timestep 180 is 0
+Number of blocks at level 4 at timestep 180 is 0
+Total number of blocks at timestep 180 is 256
+comm partners x ave   1.75 min 1 max 2
+comm partners y ave   1.75 min 1 max 2
+comm partners z ave   1.50 min 1 max 2
+comm partners total ave   5.00 min 3 max 6
+comm partners unique ave   5.00 min 3 max 6
+
+Timestep 181 time 180.000000 delta 1.000000
+Timestep 182 time 181.000000 delta 1.000000
+Timestep 183 time 182.000000 delta 1.000000
+Timestep 184 time 183.000000 delta 1.000000
+Timestep 185 time 184.000000 delta 1.000000
+Number of blocks at level 0 at timestep 185 is 256
+Number of blocks at level 1 at timestep 185 is 0
+Number of blocks at level 2 at timestep 185 is 0
+Number of blocks at level 3 at timestep 185 is 0
+Number of blocks at level 4 at timestep 185 is 0
+Total number of blocks at timestep 185 is 256
+comm partners x ave   1.75 min 1 max 2
+comm partners y ave   1.75 min 1 max 2
+comm partners z ave   1.50 min 1 max 2
+comm partners total ave   5.00 min 3 max 6
+comm partners unique ave   5.00 min 3 max 6
+
+Timestep 186 time 185.000000 delta 1.000000
+Timestep 187 time 186.000000 delta 1.000000
+Timestep 188 time 187.000000 delta 1.000000
+Timestep 189 time 188.000000 delta 1.000000
+Timestep 190 time 189.000000 delta 1.000000
+Number of blocks at level 0 at timestep 190 is 256
+Number of blocks at level 1 at timestep 190 is 0
+Number of blocks at level 2 at timestep 190 is 0
+Number of blocks at level 3 at timestep 190 is 0
+Number of blocks at level 4 at timestep 190 is 0
+Total number of blocks at timestep 190 is 256
+comm partners x ave   1.75 min 1 max 2
+comm partners y ave   1.75 min 1 max 2
+comm partners z ave   1.50 min 1 max 2
+comm partners total ave   5.00 min 3 max 6
+comm partners unique ave   5.00 min 3 max 6
+
+Timestep 191 time 190.000000 delta 1.000000
+Timestep 192 time 191.000000 delta 1.000000
+Timestep 193 time 192.000000 delta 1.000000
+Timestep 194 time 193.000000 delta 1.000000
+Timestep 195 time 194.000000 delta 1.000000
+Number of blocks at level 0 at timestep 195 is 256
+Number of blocks at level 1 at timestep 195 is 0
+Number of blocks at level 2 at timestep 195 is 0
+Number of blocks at level 3 at timestep 195 is 0
+Number of blocks at level 4 at timestep 195 is 0
+Total number of blocks at timestep 195 is 256
+comm partners x ave   1.75 min 1 max 2
+comm partners y ave   1.75 min 1 max 2
+comm partners z ave   1.50 min 1 max 2
+comm partners total ave   5.00 min 3 max 6
+comm partners unique ave   5.00 min 3 max 6
+
+Timestep 196 time 195.000000 delta 1.000000
+Timestep 197 time 196.000000 delta 1.000000
+Timestep 198 time 197.000000 delta 1.000000
+Timestep 199 time 198.000000 delta 1.000000
+Timestep 200 time 199.000000 delta 1.000000
+Number of blocks at level 0 at timestep 200 is 256
+Number of blocks at level 1 at timestep 200 is 0
+Number of blocks at level 2 at timestep 200 is 0
+Number of blocks at level 3 at timestep 200 is 0
+Number of blocks at level 4 at timestep 200 is 0
+Total number of blocks at timestep 200 is 256
+comm partners x ave   1.75 min 1 max 2
+comm partners y ave   1.75 min 1 max 2
+comm partners z ave   1.50 min 1 max 2
+comm partners total ave   5.00 min 3 max 6
+comm partners unique ave   5.00 min 3 max 6
+
+Timestep 201 time 200.000000 delta 1.000000
+Timestep 202 time 201.000000 delta 1.000000
+Timestep 203 time 202.000000 delta 1.000000
+Timestep 204 time 203.000000 delta 1.000000
+Timestep 205 time 204.000000 delta 1.000000
+Number of blocks at level 0 at timestep 205 is 256
+Number of blocks at level 1 at timestep 205 is 0
+Number of blocks at level 2 at timestep 205 is 0
+Number of blocks at level 3 at timestep 205 is 0
+Number of blocks at level 4 at timestep 205 is 0
+Total number of blocks at timestep 205 is 256
+comm partners x ave   1.75 min 1 max 2
+comm partners y ave   1.75 min 1 max 2
+comm partners z ave   1.50 min 1 max 2
+comm partners total ave   5.00 min 3 max 6
+comm partners unique ave   5.00 min 3 max 6
+
+Timestep 206 time 205.000000 delta 1.000000
+Timestep 207 time 206.000000 delta 1.000000
+Timestep 208 time 207.000000 delta 1.000000
+Timestep 209 time 208.000000 delta 1.000000
+Timestep 210 time 209.000000 delta 1.000000
+Number of blocks at level 0 at timestep 210 is 256
+Number of blocks at level 1 at timestep 210 is 0
+Number of blocks at level 2 at timestep 210 is 0
+Number of blocks at level 3 at timestep 210 is 0
+Number of blocks at level 4 at timestep 210 is 0
+Total number of blocks at timestep 210 is 256
+comm partners x ave   1.75 min 1 max 2
+comm partners y ave   1.75 min 1 max 2
+comm partners z ave   1.50 min 1 max 2
+comm partners total ave   5.00 min 3 max 6
+comm partners unique ave   5.00 min 3 max 6
+
+Timestep 211 time 210.000000 delta 1.000000
+Timestep 212 time 211.000000 delta 1.000000
+Timestep 213 time 212.000000 delta 1.000000
+Timestep 214 time 213.000000 delta 1.000000
+Timestep 215 time 214.000000 delta 1.000000
+Number of blocks at level 0 at timestep 215 is 256
+Number of blocks at level 1 at timestep 215 is 0
+Number of blocks at level 2 at timestep 215 is 0
+Number of blocks at level 3 at timestep 215 is 0
+Number of blocks at level 4 at timestep 215 is 0
+Total number of blocks at timestep 215 is 256
+comm partners x ave   1.75 min 1 max 2
+comm partners y ave   1.75 min 1 max 2
+comm partners z ave   1.50 min 1 max 2
+comm partners total ave   5.00 min 3 max 6
+comm partners unique ave   5.00 min 3 max 6
+
+Timestep 216 time 215.000000 delta 1.000000
+Timestep 217 time 216.000000 delta 1.000000
+Timestep 218 time 217.000000 delta 1.000000
+Timestep 219 time 218.000000 delta 1.000000
+Timestep 220 time 219.000000 delta 1.000000
+Number of blocks at level 0 at timestep 220 is 256
+Number of blocks at level 1 at timestep 220 is 0
+Number of blocks at level 2 at timestep 220 is 0
+Number of blocks at level 3 at timestep 220 is 0
+Number of blocks at level 4 at timestep 220 is 0
+Total number of blocks at timestep 220 is 256
+comm partners x ave   1.75 min 1 max 2
+comm partners y ave   1.75 min 1 max 2
+comm partners z ave   1.50 min 1 max 2
+comm partners total ave   5.00 min 3 max 6
+comm partners unique ave   5.00 min 3 max 6
+
+Timestep 221 time 220.000000 delta 1.000000
+Timestep 222 time 221.000000 delta 1.000000
+Timestep 223 time 222.000000 delta 1.000000
+Timestep 224 time 223.000000 delta 1.000000
+Timestep 225 time 224.000000 delta 1.000000
+Number of blocks at level 0 at timestep 225 is 256
+Number of blocks at level 1 at timestep 225 is 0
+Number of blocks at level 2 at timestep 225 is 0
+Number of blocks at level 3 at timestep 225 is 0
+Number of blocks at level 4 at timestep 225 is 0
+Total number of blocks at timestep 225 is 256
+comm partners x ave   1.75 min 1 max 2
+comm partners y ave   1.75 min 1 max 2
+comm partners z ave   1.50 min 1 max 2
+comm partners total ave   5.00 min 3 max 6
+comm partners unique ave   5.00 min 3 max 6
+
+Timestep 226 time 225.000000 delta 1.000000
+Timestep 227 time 226.000000 delta 1.000000
+Timestep 228 time 227.000000 delta 1.000000
+Timestep 229 time 228.000000 delta 1.000000
+Timestep 230 time 229.000000 delta 1.000000
+Number of blocks at level 0 at timestep 230 is 256
+Number of blocks at level 1 at timestep 230 is 0
+Number of blocks at level 2 at timestep 230 is 0
+Number of blocks at level 3 at timestep 230 is 0
+Number of blocks at level 4 at timestep 230 is 0
+Total number of blocks at timestep 230 is 256
+comm partners x ave   1.75 min 1 max 2
+comm partners y ave   1.75 min 1 max 2
+comm partners z ave   1.50 min 1 max 2
+comm partners total ave   5.00 min 3 max 6
+comm partners unique ave   5.00 min 3 max 6
+
+Timestep 231 time 230.000000 delta 1.000000
+Timestep 232 time 231.000000 delta 1.000000
+Timestep 233 time 232.000000 delta 1.000000
+Timestep 234 time 233.000000 delta 1.000000
+Timestep 235 time 234.000000 delta 1.000000
+Number of blocks at level 0 at timestep 235 is 256
+Number of blocks at level 1 at timestep 235 is 0
+Number of blocks at level 2 at timestep 235 is 0
+Number of blocks at level 3 at timestep 235 is 0
+Number of blocks at level 4 at timestep 235 is 0
+Total number of blocks at timestep 235 is 256
+comm partners x ave   1.75 min 1 max 2
+comm partners y ave   1.75 min 1 max 2
+comm partners z ave   1.50 min 1 max 2
+comm partners total ave   5.00 min 3 max 6
+comm partners unique ave   5.00 min 3 max 6
+
+Timestep 236 time 235.000000 delta 1.000000
+Timestep 237 time 236.000000 delta 1.000000
+Timestep 238 time 237.000000 delta 1.000000
+Timestep 239 time 238.000000 delta 1.000000
+Timestep 240 time 239.000000 delta 1.000000
+Number of blocks at level 0 at timestep 240 is 256
+Number of blocks at level 1 at timestep 240 is 0
+Number of blocks at level 2 at timestep 240 is 0
+Number of blocks at level 3 at timestep 240 is 0
+Number of blocks at level 4 at timestep 240 is 0
+Total number of blocks at timestep 240 is 256
+comm partners x ave   1.75 min 1 max 2
+comm partners y ave   1.75 min 1 max 2
+comm partners z ave   1.50 min 1 max 2
+comm partners total ave   5.00 min 3 max 6
+comm partners unique ave   5.00 min 3 max 6
+
+Timestep 241 time 240.000000 delta 1.000000
+Timestep 242 time 241.000000 delta 1.000000
+Timestep 243 time 242.000000 delta 1.000000
+Timestep 244 time 243.000000 delta 1.000000
+Timestep 245 time 244.000000 delta 1.000000
+Number of blocks at level 0 at timestep 245 is 256
+Number of blocks at level 1 at timestep 245 is 0
+Number of blocks at level 2 at timestep 245 is 0
+Number of blocks at level 3 at timestep 245 is 0
+Number of blocks at level 4 at timestep 245 is 0
+Total number of blocks at timestep 245 is 256
+comm partners x ave   1.75 min 1 max 2
+comm partners y ave   1.75 min 1 max 2
+comm partners z ave   1.50 min 1 max 2
+comm partners total ave   5.00 min 3 max 6
+comm partners unique ave   5.00 min 3 max 6
+
+Timestep 246 time 245.000000 delta 1.000000
+Timestep 247 time 246.000000 delta 1.000000
+Timestep 248 time 247.000000 delta 1.000000
+Timestep 249 time 248.000000 delta 1.000000
+Timestep 250 time 249.000000 delta 1.000000
+Number of blocks at level 0 at timestep 250 is 256
+Number of blocks at level 1 at timestep 250 is 0
+Number of blocks at level 2 at timestep 250 is 0
+Number of blocks at level 3 at timestep 250 is 0
+Number of blocks at level 4 at timestep 250 is 0
+Total number of blocks at timestep 250 is 256
+comm partners x ave   1.75 min 1 max 2
+comm partners y ave   1.75 min 1 max 2
+comm partners z ave   1.50 min 1 max 2
+comm partners total ave   5.00 min 3 max 6
+comm partners unique ave   5.00 min 3 max 6
+
+Timestep 251 time 250.000000 delta 1.000000
+Timestep 252 time 251.000000 delta 1.000000
+Timestep 253 time 252.000000 delta 1.000000
+Timestep 254 time 253.000000 delta 1.000000
+Timestep 255 time 254.000000 delta 1.000000
+Number of blocks at level 0 at timestep 255 is 256
+Number of blocks at level 1 at timestep 255 is 0
+Number of blocks at level 2 at timestep 255 is 0
+Number of blocks at level 3 at timestep 255 is 0
+Number of blocks at level 4 at timestep 255 is 0
+Total number of blocks at timestep 255 is 256
+comm partners x ave   1.75 min 1 max 2
+comm partners y ave   1.75 min 1 max 2
+comm partners z ave   1.50 min 1 max 2
+comm partners total ave   5.00 min 3 max 6
+comm partners unique ave   5.00 min 3 max 6
+
+Timestep 256 time 255.000000 delta 1.000000
+Timestep 257 time 256.000000 delta 1.000000
+Timestep 258 time 257.000000 delta 1.000000
+Timestep 259 time 258.000000 delta 1.000000
+Timestep 260 time 259.000000 delta 1.000000
+Number of blocks at level 0 at timestep 260 is 256
+Number of blocks at level 1 at timestep 260 is 0
+Number of blocks at level 2 at timestep 260 is 0
+Number of blocks at level 3 at timestep 260 is 0
+Number of blocks at level 4 at timestep 260 is 0
+Total number of blocks at timestep 260 is 256
+comm partners x ave   1.75 min 1 max 2
+comm partners y ave   1.75 min 1 max 2
+comm partners z ave   1.50 min 1 max 2
+comm partners total ave   5.00 min 3 max 6
+comm partners unique ave   5.00 min 3 max 6
+
+Timestep 261 time 260.000000 delta 1.000000
+Timestep 262 time 261.000000 delta 1.000000
+Timestep 263 time 262.000000 delta 1.000000
+Timestep 264 time 263.000000 delta 1.000000
+Timestep 265 time 264.000000 delta 1.000000
+Number of blocks at level 0 at timestep 265 is 256
+Number of blocks at level 1 at timestep 265 is 0
+Number of blocks at level 2 at timestep 265 is 0
+Number of blocks at level 3 at timestep 265 is 0
+Number of blocks at level 4 at timestep 265 is 0
+Total number of blocks at timestep 265 is 256
+comm partners x ave   1.75 min 1 max 2
+comm partners y ave   1.75 min 1 max 2
+comm partners z ave   1.50 min 1 max 2
+comm partners total ave   5.00 min 3 max 6
+comm partners unique ave   5.00 min 3 max 6
+
+Timestep 266 time 265.000000 delta 1.000000
+Timestep 267 time 266.000000 delta 1.000000
+Timestep 268 time 267.000000 delta 1.000000
+Timestep 269 time 268.000000 delta 1.000000
+Timestep 270 time 269.000000 delta 1.000000
+Number of blocks at level 0 at timestep 270 is 256
+Number of blocks at level 1 at timestep 270 is 0
+Number of blocks at level 2 at timestep 270 is 0
+Number of blocks at level 3 at timestep 270 is 0
+Number of blocks at level 4 at timestep 270 is 0
+Total number of blocks at timestep 270 is 256
+comm partners x ave   1.75 min 1 max 2
+comm partners y ave   1.75 min 1 max 2
+comm partners z ave   1.50 min 1 max 2
+comm partners total ave   5.00 min 3 max 6
+comm partners unique ave   5.00 min 3 max 6
+
+Timestep 271 time 270.000000 delta 1.000000
+Timestep 272 time 271.000000 delta 1.000000
+Timestep 273 time 272.000000 delta 1.000000
+Timestep 274 time 273.000000 delta 1.000000
+Timestep 275 time 274.000000 delta 1.000000
+Number of blocks at level 0 at timestep 275 is 256
+Number of blocks at level 1 at timestep 275 is 0
+Number of blocks at level 2 at timestep 275 is 0
+Number of blocks at level 3 at timestep 275 is 0
+Number of blocks at level 4 at timestep 275 is 0
+Total number of blocks at timestep 275 is 256
+comm partners x ave   1.75 min 1 max 2
+comm partners y ave   1.75 min 1 max 2
+comm partners z ave   1.50 min 1 max 2
+comm partners total ave   5.00 min 3 max 6
+comm partners unique ave   5.00 min 3 max 6
+
+Timestep 276 time 275.000000 delta 1.000000
+Timestep 277 time 276.000000 delta 1.000000
+Timestep 278 time 277.000000 delta 1.000000
+Timestep 279 time 278.000000 delta 1.000000
+Timestep 280 time 279.000000 delta 1.000000
+Number of blocks at level 0 at timestep 280 is 256
+Number of blocks at level 1 at timestep 280 is 0
+Number of blocks at level 2 at timestep 280 is 0
+Number of blocks at level 3 at timestep 280 is 0
+Number of blocks at level 4 at timestep 280 is 0
+Total number of blocks at timestep 280 is 256
+comm partners x ave   1.75 min 1 max 2
+comm partners y ave   1.75 min 1 max 2
+comm partners z ave   1.50 min 1 max 2
+comm partners total ave   5.00 min 3 max 6
+comm partners unique ave   5.00 min 3 max 6
+
+Timestep 281 time 280.000000 delta 1.000000
+Timestep 282 time 281.000000 delta 1.000000
+Timestep 283 time 282.000000 delta 1.000000
+Timestep 284 time 283.000000 delta 1.000000
+Timestep 285 time 284.000000 delta 1.000000
+Number of blocks at level 0 at timestep 285 is 256
+Number of blocks at level 1 at timestep 285 is 0
+Number of blocks at level 2 at timestep 285 is 0
+Number of blocks at level 3 at timestep 285 is 0
+Number of blocks at level 4 at timestep 285 is 0
+Total number of blocks at timestep 285 is 256
+comm partners x ave   1.75 min 1 max 2
+comm partners y ave   1.75 min 1 max 2
+comm partners z ave   1.50 min 1 max 2
+comm partners total ave   5.00 min 3 max 6
+comm partners unique ave   5.00 min 3 max 6
+
+Timestep 286 time 285.000000 delta 1.000000
+Timestep 287 time 286.000000 delta 1.000000
+Timestep 288 time 287.000000 delta 1.000000
+Timestep 289 time 288.000000 delta 1.000000
+Timestep 290 time 289.000000 delta 1.000000
+Number of blocks at level 0 at timestep 290 is 256
+Number of blocks at level 1 at timestep 290 is 0
+Number of blocks at level 2 at timestep 290 is 0
+Number of blocks at level 3 at timestep 290 is 0
+Number of blocks at level 4 at timestep 290 is 0
+Total number of blocks at timestep 290 is 256
+comm partners x ave   1.75 min 1 max 2
+comm partners y ave   1.75 min 1 max 2
+comm partners z ave   1.50 min 1 max 2
+comm partners total ave   5.00 min 3 max 6
+comm partners unique ave   5.00 min 3 max 6
+
+Timestep 291 time 290.000000 delta 1.000000
+Timestep 292 time 291.000000 delta 1.000000
+Timestep 293 time 292.000000 delta 1.000000
+Timestep 294 time 293.000000 delta 1.000000
+Timestep 295 time 294.000000 delta 1.000000
+Number of blocks at level 0 at timestep 295 is 256
+Number of blocks at level 1 at timestep 295 is 0
+Number of blocks at level 2 at timestep 295 is 0
+Number of blocks at level 3 at timestep 295 is 0
+Number of blocks at level 4 at timestep 295 is 0
+Total number of blocks at timestep 295 is 256
+comm partners x ave   1.75 min 1 max 2
+comm partners y ave   1.75 min 1 max 2
+comm partners z ave   1.50 min 1 max 2
+comm partners total ave   5.00 min 3 max 6
+comm partners unique ave   5.00 min 3 max 6
+
+Timestep 296 time 295.000000 delta 1.000000
+Timestep 297 time 296.000000 delta 1.000000
+Timestep 298 time 297.000000 delta 1.000000
+Timestep 299 time 298.000000 delta 1.000000
+Timestep 300 time 299.000000 delta 1.000000
+Number of blocks at level 0 at timestep 300 is 256
+Number of blocks at level 1 at timestep 300 is 0
+Number of blocks at level 2 at timestep 300 is 0
+Number of blocks at level 3 at timestep 300 is 0
+Number of blocks at level 4 at timestep 300 is 0
+Total number of blocks at timestep 300 is 256
+comm partners x ave   1.75 min 1 max 2
+comm partners y ave   1.75 min 1 max 2
+comm partners z ave   1.50 min 1 max 2
+comm partners total ave   5.00 min 3 max 6
+comm partners unique ave   5.00 min 3 max 6
+
+Timestep 301 time 300.000000 delta 1.000000
+Timestep 302 time 301.000000 delta 1.000000
+Timestep 303 time 302.000000 delta 1.000000
+Timestep 304 time 303.000000 delta 1.000000
+Timestep 305 time 304.000000 delta 1.000000
+Number of blocks at level 0 at timestep 305 is 256
+Number of blocks at level 1 at timestep 305 is 0
+Number of blocks at level 2 at timestep 305 is 0
+Number of blocks at level 3 at timestep 305 is 0
+Number of blocks at level 4 at timestep 305 is 0
+Total number of blocks at timestep 305 is 256
+comm partners x ave   1.75 min 1 max 2
+comm partners y ave   1.75 min 1 max 2
+comm partners z ave   1.50 min 1 max 2
+comm partners total ave   5.00 min 3 max 6
+comm partners unique ave   5.00 min 3 max 6
+
+Timestep 306 time 305.000000 delta 1.000000
+Timestep 307 time 306.000000 delta 1.000000
+Timestep 308 time 307.000000 delta 1.000000
+Timestep 309 time 308.000000 delta 1.000000
+Timestep 310 time 309.000000 delta 1.000000
+Number of blocks at level 0 at timestep 310 is 256
+Number of blocks at level 1 at timestep 310 is 0
+Number of blocks at level 2 at timestep 310 is 0
+Number of blocks at level 3 at timestep 310 is 0
+Number of blocks at level 4 at timestep 310 is 0
+Total number of blocks at timestep 310 is 256
+comm partners x ave   1.75 min 1 max 2
+comm partners y ave   1.75 min 1 max 2
+comm partners z ave   1.50 min 1 max 2
+comm partners total ave   5.00 min 3 max 6
+comm partners unique ave   5.00 min 3 max 6
+
+Timestep 311 time 310.000000 delta 1.000000
+Timestep 312 time 311.000000 delta 1.000000
+Timestep 313 time 312.000000 delta 1.000000
+Timestep 314 time 313.000000 delta 1.000000
+Timestep 315 time 314.000000 delta 1.000000
+Number of blocks at level 0 at timestep 315 is 256
+Number of blocks at level 1 at timestep 315 is 0
+Number of blocks at level 2 at timestep 315 is 0
+Number of blocks at level 3 at timestep 315 is 0
+Number of blocks at level 4 at timestep 315 is 0
+Total number of blocks at timestep 315 is 256
+comm partners x ave   1.75 min 1 max 2
+comm partners y ave   1.75 min 1 max 2
+comm partners z ave   1.50 min 1 max 2
+comm partners total ave   5.00 min 3 max 6
+comm partners unique ave   5.00 min 3 max 6
+
+Timestep 316 time 315.000000 delta 1.000000
+Timestep 317 time 316.000000 delta 1.000000
+Timestep 318 time 317.000000 delta 1.000000
+Timestep 319 time 318.000000 delta 1.000000
+Timestep 320 time 319.000000 delta 1.000000
+Number of blocks at level 0 at timestep 320 is 256
+Number of blocks at level 1 at timestep 320 is 0
+Number of blocks at level 2 at timestep 320 is 0
+Number of blocks at level 3 at timestep 320 is 0
+Number of blocks at level 4 at timestep 320 is 0
+Total number of blocks at timestep 320 is 256
+comm partners x ave   1.75 min 1 max 2
+comm partners y ave   1.75 min 1 max 2
+comm partners z ave   1.50 min 1 max 2
+comm partners total ave   5.00 min 3 max 6
+comm partners unique ave   5.00 min 3 max 6
+
+Timestep 321 time 320.000000 delta 1.000000
+Timestep 322 time 321.000000 delta 1.000000
+Timestep 323 time 322.000000 delta 1.000000
+Timestep 324 time 323.000000 delta 1.000000
+Timestep 325 time 324.000000 delta 1.000000
+Number of blocks at level 0 at timestep 325 is 256
+Number of blocks at level 1 at timestep 325 is 0
+Number of blocks at level 2 at timestep 325 is 0
+Number of blocks at level 3 at timestep 325 is 0
+Number of blocks at level 4 at timestep 325 is 0
+Total number of blocks at timestep 325 is 256
+comm partners x ave   1.75 min 1 max 2
+comm partners y ave   1.75 min 1 max 2
+comm partners z ave   1.50 min 1 max 2
+comm partners total ave   5.00 min 3 max 6
+comm partners unique ave   5.00 min 3 max 6
+
+Timestep 326 time 325.000000 delta 1.000000
+Timestep 327 time 326.000000 delta 1.000000
+Timestep 328 time 327.000000 delta 1.000000
+Timestep 329 time 328.000000 delta 1.000000
+Timestep 330 time 329.000000 delta 1.000000
+Number of blocks at level 0 at timestep 330 is 256
+Number of blocks at level 1 at timestep 330 is 0
+Number of blocks at level 2 at timestep 330 is 0
+Number of blocks at level 3 at timestep 330 is 0
+Number of blocks at level 4 at timestep 330 is 0
+Total number of blocks at timestep 330 is 256
+comm partners x ave   1.75 min 1 max 2
+comm partners y ave   1.75 min 1 max 2
+comm partners z ave   1.50 min 1 max 2
+comm partners total ave   5.00 min 3 max 6
+comm partners unique ave   5.00 min 3 max 6
+
+Timestep 331 time 330.000000 delta 1.000000
+Timestep 332 time 331.000000 delta 1.000000
+Timestep 333 time 332.000000 delta 1.000000
+Timestep 334 time 333.000000 delta 1.000000
+Timestep 335 time 334.000000 delta 1.000000
+Number of blocks at level 0 at timestep 335 is 256
+Number of blocks at level 1 at timestep 335 is 0
+Number of blocks at level 2 at timestep 335 is 0
+Number of blocks at level 3 at timestep 335 is 0
+Number of blocks at level 4 at timestep 335 is 0
+Total number of blocks at timestep 335 is 256
+comm partners x ave   1.75 min 1 max 2
+comm partners y ave   1.75 min 1 max 2
+comm partners z ave   1.50 min 1 max 2
+comm partners total ave   5.00 min 3 max 6
+comm partners unique ave   5.00 min 3 max 6
+
+Timestep 336 time 335.000000 delta 1.000000
+Timestep 337 time 336.000000 delta 1.000000
+Timestep 338 time 337.000000 delta 1.000000
+Timestep 339 time 338.000000 delta 1.000000
+Timestep 340 time 339.000000 delta 1.000000
+Number of blocks at level 0 at timestep 340 is 256
+Number of blocks at level 1 at timestep 340 is 0
+Number of blocks at level 2 at timestep 340 is 0
+Number of blocks at level 3 at timestep 340 is 0
+Number of blocks at level 4 at timestep 340 is 0
+Total number of blocks at timestep 340 is 256
+comm partners x ave   1.75 min 1 max 2
+comm partners y ave   1.75 min 1 max 2
+comm partners z ave   1.50 min 1 max 2
+comm partners total ave   5.00 min 3 max 6
+comm partners unique ave   5.00 min 3 max 6
+
+Timestep 341 time 340.000000 delta 1.000000
+Timestep 342 time 341.000000 delta 1.000000
+Timestep 343 time 342.000000 delta 1.000000
+Timestep 344 time 343.000000 delta 1.000000
+Timestep 345 time 344.000000 delta 1.000000
+Number of blocks at level 0 at timestep 345 is 256
+Number of blocks at level 1 at timestep 345 is 0
+Number of blocks at level 2 at timestep 345 is 0
+Number of blocks at level 3 at timestep 345 is 0
+Number of blocks at level 4 at timestep 345 is 0
+Total number of blocks at timestep 345 is 256
+comm partners x ave   1.75 min 1 max 2
+comm partners y ave   1.75 min 1 max 2
+comm partners z ave   1.50 min 1 max 2
+comm partners total ave   5.00 min 3 max 6
+comm partners unique ave   5.00 min 3 max 6
+
+Timestep 346 time 345.000000 delta 1.000000
+Timestep 347 time 346.000000 delta 1.000000
+Timestep 348 time 347.000000 delta 1.000000
+Timestep 349 time 348.000000 delta 1.000000
+Timestep 350 time 349.000000 delta 1.000000
+Number of blocks at level 0 at timestep 350 is 256
+Number of blocks at level 1 at timestep 350 is 0
+Number of blocks at level 2 at timestep 350 is 0
+Number of blocks at level 3 at timestep 350 is 0
+Number of blocks at level 4 at timestep 350 is 0
+Total number of blocks at timestep 350 is 256
+comm partners x ave   1.75 min 1 max 2
+comm partners y ave   1.75 min 1 max 2
+comm partners z ave   1.50 min 1 max 2
+comm partners total ave   5.00 min 3 max 6
+comm partners unique ave   5.00 min 3 max 6
+
+Timestep 351 time 350.000000 delta 1.000000
+Timestep 352 time 351.000000 delta 1.000000
+Timestep 353 time 352.000000 delta 1.000000
+Timestep 354 time 353.000000 delta 1.000000
+Timestep 355 time 354.000000 delta 1.000000
+Number of blocks at level 0 at timestep 355 is 256
+Number of blocks at level 1 at timestep 355 is 0
+Number of blocks at level 2 at timestep 355 is 0
+Number of blocks at level 3 at timestep 355 is 0
+Number of blocks at level 4 at timestep 355 is 0
+Total number of blocks at timestep 355 is 256
+comm partners x ave   1.75 min 1 max 2
+comm partners y ave   1.75 min 1 max 2
+comm partners z ave   1.50 min 1 max 2
+comm partners total ave   5.00 min 3 max 6
+comm partners unique ave   5.00 min 3 max 6
+
+Timestep 356 time 355.000000 delta 1.000000
+Timestep 357 time 356.000000 delta 1.000000
+Timestep 358 time 357.000000 delta 1.000000
+Timestep 359 time 358.000000 delta 1.000000
+Timestep 360 time 359.000000 delta 1.000000
+Number of blocks at level 0 at timestep 360 is 256
+Number of blocks at level 1 at timestep 360 is 0
+Number of blocks at level 2 at timestep 360 is 0
+Number of blocks at level 3 at timestep 360 is 0
+Number of blocks at level 4 at timestep 360 is 0
+Total number of blocks at timestep 360 is 256
+comm partners x ave   1.75 min 1 max 2
+comm partners y ave   1.75 min 1 max 2
+comm partners z ave   1.50 min 1 max 2
+comm partners total ave   5.00 min 3 max 6
+comm partners unique ave   5.00 min 3 max 6
+
+Timestep 361 time 360.000000 delta 1.000000
+Timestep 362 time 361.000000 delta 1.000000
+Timestep 363 time 362.000000 delta 1.000000
+Timestep 364 time 363.000000 delta 1.000000
+Timestep 365 time 364.000000 delta 1.000000
+Number of blocks at level 0 at timestep 365 is 256
+Number of blocks at level 1 at timestep 365 is 0
+Number of blocks at level 2 at timestep 365 is 0
+Number of blocks at level 3 at timestep 365 is 0
+Number of blocks at level 4 at timestep 365 is 0
+Total number of blocks at timestep 365 is 256
+comm partners x ave   1.75 min 1 max 2
+comm partners y ave   1.75 min 1 max 2
+comm partners z ave   1.50 min 1 max 2
+comm partners total ave   5.00 min 3 max 6
+comm partners unique ave   5.00 min 3 max 6
+
+Timestep 366 time 365.000000 delta 1.000000
+Timestep 367 time 366.000000 delta 1.000000
+Timestep 368 time 367.000000 delta 1.000000
+Timestep 369 time 368.000000 delta 1.000000
+Timestep 370 time 369.000000 delta 1.000000
+Number of blocks at level 0 at timestep 370 is 256
+Number of blocks at level 1 at timestep 370 is 0
+Number of blocks at level 2 at timestep 370 is 0
+Number of blocks at level 3 at timestep 370 is 0
+Number of blocks at level 4 at timestep 370 is 0
+Total number of blocks at timestep 370 is 256
+comm partners x ave   1.75 min 1 max 2
+comm partners y ave   1.75 min 1 max 2
+comm partners z ave   1.50 min 1 max 2
+comm partners total ave   5.00 min 3 max 6
+comm partners unique ave   5.00 min 3 max 6
+
+Timestep 371 time 370.000000 delta 1.000000
+Timestep 372 time 371.000000 delta 1.000000
+Timestep 373 time 372.000000 delta 1.000000
+Timestep 374 time 373.000000 delta 1.000000
+Timestep 375 time 374.000000 delta 1.000000
+Number of blocks at level 0 at timestep 375 is 256
+Number of blocks at level 1 at timestep 375 is 0
+Number of blocks at level 2 at timestep 375 is 0
+Number of blocks at level 3 at timestep 375 is 0
+Number of blocks at level 4 at timestep 375 is 0
+Total number of blocks at timestep 375 is 256
+comm partners x ave   1.75 min 1 max 2
+comm partners y ave   1.75 min 1 max 2
+comm partners z ave   1.50 min 1 max 2
+comm partners total ave   5.00 min 3 max 6
+comm partners unique ave   5.00 min 3 max 6
+
+Timestep 376 time 375.000000 delta 1.000000
+Timestep 377 time 376.000000 delta 1.000000
+Timestep 378 time 377.000000 delta 1.000000
+Timestep 379 time 378.000000 delta 1.000000
+Timestep 380 time 379.000000 delta 1.000000
+Number of blocks at level 0 at timestep 380 is 256
+Number of blocks at level 1 at timestep 380 is 0
+Number of blocks at level 2 at timestep 380 is 0
+Number of blocks at level 3 at timestep 380 is 0
+Number of blocks at level 4 at timestep 380 is 0
+Total number of blocks at timestep 380 is 256
+comm partners x ave   1.75 min 1 max 2
+comm partners y ave   1.75 min 1 max 2
+comm partners z ave   1.50 min 1 max 2
+comm partners total ave   5.00 min 3 max 6
+comm partners unique ave   5.00 min 3 max 6
+
+Timestep 381 time 380.000000 delta 1.000000
+Timestep 382 time 381.000000 delta 1.000000
+Timestep 383 time 382.000000 delta 1.000000
+Timestep 384 time 383.000000 delta 1.000000
+Timestep 385 time 384.000000 delta 1.000000
+Number of blocks at level 0 at timestep 385 is 256
+Number of blocks at level 1 at timestep 385 is 0
+Number of blocks at level 2 at timestep 385 is 0
+Number of blocks at level 3 at timestep 385 is 0
+Number of blocks at level 4 at timestep 385 is 0
+Total number of blocks at timestep 385 is 256
+comm partners x ave   1.75 min 1 max 2
+comm partners y ave   1.75 min 1 max 2
+comm partners z ave   1.50 min 1 max 2
+comm partners total ave   5.00 min 3 max 6
+comm partners unique ave   5.00 min 3 max 6
+
+Timestep 386 time 385.000000 delta 1.000000
+Timestep 387 time 386.000000 delta 1.000000
+Timestep 388 time 387.000000 delta 1.000000
+Timestep 389 time 388.000000 delta 1.000000
+Timestep 390 time 389.000000 delta 1.000000
+Number of blocks at level 0 at timestep 390 is 256
+Number of blocks at level 1 at timestep 390 is 0
+Number of blocks at level 2 at timestep 390 is 0
+Number of blocks at level 3 at timestep 390 is 0
+Number of blocks at level 4 at timestep 390 is 0
+Total number of blocks at timestep 390 is 256
+comm partners x ave   1.75 min 1 max 2
+comm partners y ave   1.75 min 1 max 2
+comm partners z ave   1.50 min 1 max 2
+comm partners total ave   5.00 min 3 max 6
+comm partners unique ave   5.00 min 3 max 6
+
+Timestep 391 time 390.000000 delta 1.000000
+Timestep 392 time 391.000000 delta 1.000000
+Timestep 393 time 392.000000 delta 1.000000
+Timestep 394 time 393.000000 delta 1.000000
+Timestep 395 time 394.000000 delta 1.000000
+Number of blocks at level 0 at timestep 395 is 256
+Number of blocks at level 1 at timestep 395 is 0
+Number of blocks at level 2 at timestep 395 is 0
+Number of blocks at level 3 at timestep 395 is 0
+Number of blocks at level 4 at timestep 395 is 0
+Total number of blocks at timestep 395 is 256
+comm partners x ave   1.75 min 1 max 2
+comm partners y ave   1.75 min 1 max 2
+comm partners z ave   1.50 min 1 max 2
+comm partners total ave   5.00 min 3 max 6
+comm partners unique ave   5.00 min 3 max 6
+
+Timestep 396 time 395.000000 delta 1.000000
+Timestep 397 time 396.000000 delta 1.000000
+Timestep 398 time 397.000000 delta 1.000000
+Timestep 399 time 398.000000 delta 1.000000
+Timestep 400 time 399.000000 delta 1.000000
+Number of blocks at level 0 at timestep 400 is 256
+Number of blocks at level 1 at timestep 400 is 0
+Number of blocks at level 2 at timestep 400 is 0
+Number of blocks at level 3 at timestep 400 is 0
+Number of blocks at level 4 at timestep 400 is 0
+Total number of blocks at timestep 400 is 256
+comm partners x ave   1.75 min 1 max 2
+comm partners y ave   1.75 min 1 max 2
+comm partners z ave   1.50 min 1 max 2
+comm partners total ave   5.00 min 3 max 6
+comm partners unique ave   5.00 min 3 max 6
+
+Timestep 401 time 400.000000 delta 1.000000
+Timestep 402 time 401.000000 delta 1.000000
+Timestep 403 time 402.000000 delta 1.000000
+Timestep 404 time 403.000000 delta 1.000000
+Timestep 405 time 404.000000 delta 1.000000
+Number of blocks at level 0 at timestep 405 is 256
+Number of blocks at level 1 at timestep 405 is 0
+Number of blocks at level 2 at timestep 405 is 0
+Number of blocks at level 3 at timestep 405 is 0
+Number of blocks at level 4 at timestep 405 is 0
+Total number of blocks at timestep 405 is 256
+comm partners x ave   1.75 min 1 max 2
+comm partners y ave   1.75 min 1 max 2
+comm partners z ave   1.50 min 1 max 2
+comm partners total ave   5.00 min 3 max 6
+comm partners unique ave   5.00 min 3 max 6
+
+Timestep 406 time 405.000000 delta 1.000000
+Timestep 407 time 406.000000 delta 1.000000
+Timestep 408 time 407.000000 delta 1.000000
+Timestep 409 time 408.000000 delta 1.000000
+Timestep 410 time 409.000000 delta 1.000000
+Number of blocks at level 0 at timestep 410 is 256
+Number of blocks at level 1 at timestep 410 is 0
+Number of blocks at level 2 at timestep 410 is 0
+Number of blocks at level 3 at timestep 410 is 0
+Number of blocks at level 4 at timestep 410 is 0
+Total number of blocks at timestep 410 is 256
+comm partners x ave   1.75 min 1 max 2
+comm partners y ave   1.75 min 1 max 2
+comm partners z ave   1.50 min 1 max 2
+comm partners total ave   5.00 min 3 max 6
+comm partners unique ave   5.00 min 3 max 6
+
+Timestep 411 time 410.000000 delta 1.000000
+Timestep 412 time 411.000000 delta 1.000000
+Timestep 413 time 412.000000 delta 1.000000
+Timestep 414 time 413.000000 delta 1.000000
+Timestep 415 time 414.000000 delta 1.000000
+Number of blocks at level 0 at timestep 415 is 256
+Number of blocks at level 1 at timestep 415 is 0
+Number of blocks at level 2 at timestep 415 is 0
+Number of blocks at level 3 at timestep 415 is 0
+Number of blocks at level 4 at timestep 415 is 0
+Total number of blocks at timestep 415 is 256
+comm partners x ave   1.75 min 1 max 2
+comm partners y ave   1.75 min 1 max 2
+comm partners z ave   1.50 min 1 max 2
+comm partners total ave   5.00 min 3 max 6
+comm partners unique ave   5.00 min 3 max 6
+
+Timestep 416 time 415.000000 delta 1.000000
+Timestep 417 time 416.000000 delta 1.000000
+Timestep 418 time 417.000000 delta 1.000000
+Timestep 419 time 418.000000 delta 1.000000
+Timestep 420 time 419.000000 delta 1.000000
+Number of blocks at level 0 at timestep 420 is 256
+Number of blocks at level 1 at timestep 420 is 0
+Number of blocks at level 2 at timestep 420 is 0
+Number of blocks at level 3 at timestep 420 is 0
+Number of blocks at level 4 at timestep 420 is 0
+Total number of blocks at timestep 420 is 256
+comm partners x ave   1.75 min 1 max 2
+comm partners y ave   1.75 min 1 max 2
+comm partners z ave   1.50 min 1 max 2
+comm partners total ave   5.00 min 3 max 6
+comm partners unique ave   5.00 min 3 max 6
+
+Timestep 421 time 420.000000 delta 1.000000
+Timestep 422 time 421.000000 delta 1.000000
+Timestep 423 time 422.000000 delta 1.000000
+Timestep 424 time 423.000000 delta 1.000000
+Timestep 425 time 424.000000 delta 1.000000
+Number of blocks at level 0 at timestep 425 is 256
+Number of blocks at level 1 at timestep 425 is 0
+Number of blocks at level 2 at timestep 425 is 0
+Number of blocks at level 3 at timestep 425 is 0
+Number of blocks at level 4 at timestep 425 is 0
+Total number of blocks at timestep 425 is 256
+comm partners x ave   1.75 min 1 max 2
+comm partners y ave   1.75 min 1 max 2
+comm partners z ave   1.50 min 1 max 2
+comm partners total ave   5.00 min 3 max 6
+comm partners unique ave   5.00 min 3 max 6
+
+Timestep 426 time 425.000000 delta 1.000000
+Timestep 427 time 426.000000 delta 1.000000
+Timestep 428 time 427.000000 delta 1.000000
+Timestep 429 time 428.000000 delta 1.000000
+Timestep 430 time 429.000000 delta 1.000000
+Number of blocks at level 0 at timestep 430 is 256
+Number of blocks at level 1 at timestep 430 is 0
+Number of blocks at level 2 at timestep 430 is 0
+Number of blocks at level 3 at timestep 430 is 0
+Number of blocks at level 4 at timestep 430 is 0
+Total number of blocks at timestep 430 is 256
+comm partners x ave   1.75 min 1 max 2
+comm partners y ave   1.75 min 1 max 2
+comm partners z ave   1.50 min 1 max 2
+comm partners total ave   5.00 min 3 max 6
+comm partners unique ave   5.00 min 3 max 6
+
+Timestep 431 time 430.000000 delta 1.000000
+Timestep 432 time 431.000000 delta 1.000000
+Timestep 433 time 432.000000 delta 1.000000
+Timestep 434 time 433.000000 delta 1.000000
+Timestep 435 time 434.000000 delta 1.000000
+Number of blocks at level 0 at timestep 435 is 256
+Number of blocks at level 1 at timestep 435 is 0
+Number of blocks at level 2 at timestep 435 is 0
+Number of blocks at level 3 at timestep 435 is 0
+Number of blocks at level 4 at timestep 435 is 0
+Total number of blocks at timestep 435 is 256
+comm partners x ave   1.75 min 1 max 2
+comm partners y ave   1.75 min 1 max 2
+comm partners z ave   1.50 min 1 max 2
+comm partners total ave   5.00 min 3 max 6
+comm partners unique ave   5.00 min 3 max 6
+
+Timestep 436 time 435.000000 delta 1.000000
+Timestep 437 time 436.000000 delta 1.000000
+Timestep 438 time 437.000000 delta 1.000000
+Timestep 439 time 438.000000 delta 1.000000
+Timestep 440 time 439.000000 delta 1.000000
+Number of blocks at level 0 at timestep 440 is 256
+Number of blocks at level 1 at timestep 440 is 0
+Number of blocks at level 2 at timestep 440 is 0
+Number of blocks at level 3 at timestep 440 is 0
+Number of blocks at level 4 at timestep 440 is 0
+Total number of blocks at timestep 440 is 256
+comm partners x ave   1.75 min 1 max 2
+comm partners y ave   1.75 min 1 max 2
+comm partners z ave   1.50 min 1 max 2
+comm partners total ave   5.00 min 3 max 6
+comm partners unique ave   5.00 min 3 max 6
+
+Timestep 441 time 440.000000 delta 1.000000
+Timestep 442 time 441.000000 delta 1.000000
+Timestep 443 time 442.000000 delta 1.000000
+Timestep 444 time 443.000000 delta 1.000000
+Timestep 445 time 444.000000 delta 1.000000
+Number of blocks at level 0 at timestep 445 is 256
+Number of blocks at level 1 at timestep 445 is 0
+Number of blocks at level 2 at timestep 445 is 0
+Number of blocks at level 3 at timestep 445 is 0
+Number of blocks at level 4 at timestep 445 is 0
+Total number of blocks at timestep 445 is 256
+comm partners x ave   1.75 min 1 max 2
+comm partners y ave   1.75 min 1 max 2
+comm partners z ave   1.50 min 1 max 2
+comm partners total ave   5.00 min 3 max 6
+comm partners unique ave   5.00 min 3 max 6
+
+Timestep 446 time 445.000000 delta 1.000000
+Timestep 447 time 446.000000 delta 1.000000
+Timestep 448 time 447.000000 delta 1.000000
+Timestep 449 time 448.000000 delta 1.000000
+Timestep 450 time 449.000000 delta 1.000000
+Number of blocks at level 0 at timestep 450 is 256
+Number of blocks at level 1 at timestep 450 is 0
+Number of blocks at level 2 at timestep 450 is 0
+Number of blocks at level 3 at timestep 450 is 0
+Number of blocks at level 4 at timestep 450 is 0
+Total number of blocks at timestep 450 is 256
+comm partners x ave   1.75 min 1 max 2
+comm partners y ave   1.75 min 1 max 2
+comm partners z ave   1.50 min 1 max 2
+comm partners total ave   5.00 min 3 max 6
+comm partners unique ave   5.00 min 3 max 6
+
+Timestep 451 time 450.000000 delta 1.000000
+Timestep 452 time 451.000000 delta 1.000000
+Timestep 453 time 452.000000 delta 1.000000
+Timestep 454 time 453.000000 delta 1.000000
+Timestep 455 time 454.000000 delta 1.000000
+Number of blocks at level 0 at timestep 455 is 256
+Number of blocks at level 1 at timestep 455 is 0
+Number of blocks at level 2 at timestep 455 is 0
+Number of blocks at level 3 at timestep 455 is 0
+Number of blocks at level 4 at timestep 455 is 0
+Total number of blocks at timestep 455 is 256
+comm partners x ave   1.75 min 1 max 2
+comm partners y ave   1.75 min 1 max 2
+comm partners z ave   1.50 min 1 max 2
+comm partners total ave   5.00 min 3 max 6
+comm partners unique ave   5.00 min 3 max 6
+
+Timestep 456 time 455.000000 delta 1.000000
+Timestep 457 time 456.000000 delta 1.000000
+Timestep 458 time 457.000000 delta 1.000000
+Timestep 459 time 458.000000 delta 1.000000
+Timestep 460 time 459.000000 delta 1.000000
+Number of blocks at level 0 at timestep 460 is 256
+Number of blocks at level 1 at timestep 460 is 0
+Number of blocks at level 2 at timestep 460 is 0
+Number of blocks at level 3 at timestep 460 is 0
+Number of blocks at level 4 at timestep 460 is 0
+Total number of blocks at timestep 460 is 256
+comm partners x ave   1.75 min 1 max 2
+comm partners y ave   1.75 min 1 max 2
+comm partners z ave   1.50 min 1 max 2
+comm partners total ave   5.00 min 3 max 6
+comm partners unique ave   5.00 min 3 max 6
+
+Timestep 461 time 460.000000 delta 1.000000
+Timestep 462 time 461.000000 delta 1.000000
+Timestep 463 time 462.000000 delta 1.000000
+Timestep 464 time 463.000000 delta 1.000000
+Timestep 465 time 464.000000 delta 1.000000
+Number of blocks at level 0 at timestep 465 is 256
+Number of blocks at level 1 at timestep 465 is 0
+Number of blocks at level 2 at timestep 465 is 0
+Number of blocks at level 3 at timestep 465 is 0
+Number of blocks at level 4 at timestep 465 is 0
+Total number of blocks at timestep 465 is 256
+comm partners x ave   1.75 min 1 max 2
+comm partners y ave   1.75 min 1 max 2
+comm partners z ave   1.50 min 1 max 2
+comm partners total ave   5.00 min 3 max 6
+comm partners unique ave   5.00 min 3 max 6
+
+Timestep 466 time 465.000000 delta 1.000000
+Timestep 467 time 466.000000 delta 1.000000
+Timestep 468 time 467.000000 delta 1.000000
+Timestep 469 time 468.000000 delta 1.000000
+Timestep 470 time 469.000000 delta 1.000000
+Number of blocks at level 0 at timestep 470 is 256
+Number of blocks at level 1 at timestep 470 is 0
+Number of blocks at level 2 at timestep 470 is 0
+Number of blocks at level 3 at timestep 470 is 0
+Number of blocks at level 4 at timestep 470 is 0
+Total number of blocks at timestep 470 is 256
+comm partners x ave   1.75 min 1 max 2
+comm partners y ave   1.75 min 1 max 2
+comm partners z ave   1.50 min 1 max 2
+comm partners total ave   5.00 min 3 max 6
+comm partners unique ave   5.00 min 3 max 6
+
+Timestep 471 time 470.000000 delta 1.000000
+Timestep 472 time 471.000000 delta 1.000000
+Timestep 473 time 472.000000 delta 1.000000
+Timestep 474 time 473.000000 delta 1.000000
+Timestep 475 time 474.000000 delta 1.000000
+Number of blocks at level 0 at timestep 475 is 256
+Number of blocks at level 1 at timestep 475 is 0
+Number of blocks at level 2 at timestep 475 is 0
+Number of blocks at level 3 at timestep 475 is 0
+Number of blocks at level 4 at timestep 475 is 0
+Total number of blocks at timestep 475 is 256
+comm partners x ave   1.75 min 1 max 2
+comm partners y ave   1.75 min 1 max 2
+comm partners z ave   1.50 min 1 max 2
+comm partners total ave   5.00 min 3 max 6
+comm partners unique ave   5.00 min 3 max 6
+
+Timestep 476 time 475.000000 delta 1.000000
+Timestep 477 time 476.000000 delta 1.000000
+Timestep 478 time 477.000000 delta 1.000000
+Timestep 479 time 478.000000 delta 1.000000
+Timestep 480 time 479.000000 delta 1.000000
+Number of blocks at level 0 at timestep 480 is 256
+Number of blocks at level 1 at timestep 480 is 0
+Number of blocks at level 2 at timestep 480 is 0
+Number of blocks at level 3 at timestep 480 is 0
+Number of blocks at level 4 at timestep 480 is 0
+Total number of blocks at timestep 480 is 256
+comm partners x ave   1.75 min 1 max 2
+comm partners y ave   1.75 min 1 max 2
+comm partners z ave   1.50 min 1 max 2
+comm partners total ave   5.00 min 3 max 6
+comm partners unique ave   5.00 min 3 max 6
+
+Timestep 481 time 480.000000 delta 1.000000
+Timestep 482 time 481.000000 delta 1.000000
+Timestep 483 time 482.000000 delta 1.000000
+Timestep 484 time 483.000000 delta 1.000000
+Timestep 485 time 484.000000 delta 1.000000
+Number of blocks at level 0 at timestep 485 is 256
+Number of blocks at level 1 at timestep 485 is 0
+Number of blocks at level 2 at timestep 485 is 0
+Number of blocks at level 3 at timestep 485 is 0
+Number of blocks at level 4 at timestep 485 is 0
+Total number of blocks at timestep 485 is 256
+comm partners x ave   1.75 min 1 max 2
+comm partners y ave   1.75 min 1 max 2
+comm partners z ave   1.50 min 1 max 2
+comm partners total ave   5.00 min 3 max 6
+comm partners unique ave   5.00 min 3 max 6
+
+Timestep 486 time 485.000000 delta 1.000000
+Timestep 487 time 486.000000 delta 1.000000
+Timestep 488 time 487.000000 delta 1.000000
+Timestep 489 time 488.000000 delta 1.000000
+Timestep 490 time 489.000000 delta 1.000000
+Number of blocks at level 0 at timestep 490 is 256
+Number of blocks at level 1 at timestep 490 is 0
+Number of blocks at level 2 at timestep 490 is 0
+Number of blocks at level 3 at timestep 490 is 0
+Number of blocks at level 4 at timestep 490 is 0
+Total number of blocks at timestep 490 is 256
+comm partners x ave   1.75 min 1 max 2
+comm partners y ave   1.75 min 1 max 2
+comm partners z ave   1.50 min 1 max 2
+comm partners total ave   5.00 min 3 max 6
+comm partners unique ave   5.00 min 3 max 6
+
+Timestep 491 time 490.000000 delta 1.000000
+Timestep 492 time 491.000000 delta 1.000000
+Timestep 493 time 492.000000 delta 1.000000
+Timestep 494 time 493.000000 delta 1.000000
+Timestep 495 time 494.000000 delta 1.000000
+Number of blocks at level 0 at timestep 495 is 256
+Number of blocks at level 1 at timestep 495 is 0
+Number of blocks at level 2 at timestep 495 is 0
+Number of blocks at level 3 at timestep 495 is 0
+Number of blocks at level 4 at timestep 495 is 0
+Total number of blocks at timestep 495 is 256
+comm partners x ave   1.75 min 1 max 2
+comm partners y ave   1.75 min 1 max 2
+comm partners z ave   1.50 min 1 max 2
+comm partners total ave   5.00 min 3 max 6
+comm partners unique ave   5.00 min 3 max 6
+
+Timestep 496 time 495.000000 delta 1.000000
+Timestep 497 time 496.000000 delta 1.000000
+Timestep 498 time 497.000000 delta 1.000000
+Timestep 499 time 498.000000 delta 1.000000
+Timestep 500 time 499.000000 delta 1.000000
+Number of blocks at level 0 at timestep 500 is 256
+Number of blocks at level 1 at timestep 500 is 0
+Number of blocks at level 2 at timestep 500 is 0
+Number of blocks at level 3 at timestep 500 is 0
+Number of blocks at level 4 at timestep 500 is 0
+Total number of blocks at timestep 500 is 256
+comm partners x ave   1.75 min 1 max 2
+comm partners y ave   1.75 min 1 max 2
+comm partners z ave   1.50 min 1 max 2
+comm partners total ave   5.00 min 3 max 6
+comm partners unique ave   5.00 min 3 max 6
+
+Timestep 501 time 500.000000 delta 1.000000
+Timestep 502 time 501.000000 delta 1.000000
+Timestep 503 time 502.000000 delta 1.000000
+Timestep 504 time 503.000000 delta 1.000000
+Timestep 505 time 504.000000 delta 1.000000
+Number of blocks at level 0 at timestep 505 is 256
+Number of blocks at level 1 at timestep 505 is 0
+Number of blocks at level 2 at timestep 505 is 0
+Number of blocks at level 3 at timestep 505 is 0
+Number of blocks at level 4 at timestep 505 is 0
+Total number of blocks at timestep 505 is 256
+comm partners x ave   1.75 min 1 max 2
+comm partners y ave   1.75 min 1 max 2
+comm partners z ave   1.50 min 1 max 2
+comm partners total ave   5.00 min 3 max 6
+comm partners unique ave   5.00 min 3 max 6
+
+Timestep 506 time 505.000000 delta 1.000000
+Timestep 507 time 506.000000 delta 1.000000
+Timestep 508 time 507.000000 delta 1.000000
+Timestep 509 time 508.000000 delta 1.000000
+Timestep 510 time 509.000000 delta 1.000000
+Number of blocks at level 0 at timestep 510 is 256
+Number of blocks at level 1 at timestep 510 is 0
+Number of blocks at level 2 at timestep 510 is 0
+Number of blocks at level 3 at timestep 510 is 0
+Number of blocks at level 4 at timestep 510 is 0
+Total number of blocks at timestep 510 is 256
+comm partners x ave   1.75 min 1 max 2
+comm partners y ave   1.75 min 1 max 2
+comm partners z ave   1.50 min 1 max 2
+comm partners total ave   5.00 min 3 max 6
+comm partners unique ave   5.00 min 3 max 6
+
+Timestep 511 time 510.000000 delta 1.000000
+Timestep 512 time 511.000000 delta 1.000000
+Timestep 513 time 512.000000 delta 1.000000
+Timestep 514 time 513.000000 delta 1.000000
+Timestep 515 time 514.000000 delta 1.000000
+Number of blocks at level 0 at timestep 515 is 256
+Number of blocks at level 1 at timestep 515 is 0
+Number of blocks at level 2 at timestep 515 is 0
+Number of blocks at level 3 at timestep 515 is 0
+Number of blocks at level 4 at timestep 515 is 0
+Total number of blocks at timestep 515 is 256
+comm partners x ave   1.75 min 1 max 2
+comm partners y ave   1.75 min 1 max 2
+comm partners z ave   1.50 min 1 max 2
+comm partners total ave   5.00 min 3 max 6
+comm partners unique ave   5.00 min 3 max 6
+
+Timestep 516 time 515.000000 delta 1.000000
+Timestep 517 time 516.000000 delta 1.000000
+Timestep 518 time 517.000000 delta 1.000000
+Timestep 519 time 518.000000 delta 1.000000
+Timestep 520 time 519.000000 delta 1.000000
+Number of blocks at level 0 at timestep 520 is 256
+Number of blocks at level 1 at timestep 520 is 0
+Number of blocks at level 2 at timestep 520 is 0
+Number of blocks at level 3 at timestep 520 is 0
+Number of blocks at level 4 at timestep 520 is 0
+Total number of blocks at timestep 520 is 256
+comm partners x ave   1.75 min 1 max 2
+comm partners y ave   1.75 min 1 max 2
+comm partners z ave   1.50 min 1 max 2
+comm partners total ave   5.00 min 3 max 6
+comm partners unique ave   5.00 min 3 max 6
+
+Timestep 521 time 520.000000 delta 1.000000
+Timestep 522 time 521.000000 delta 1.000000
+Timestep 523 time 522.000000 delta 1.000000
+Timestep 524 time 523.000000 delta 1.000000
+Timestep 525 time 524.000000 delta 1.000000
+Number of blocks at level 0 at timestep 525 is 256
+Number of blocks at level 1 at timestep 525 is 0
+Number of blocks at level 2 at timestep 525 is 0
+Number of blocks at level 3 at timestep 525 is 0
+Number of blocks at level 4 at timestep 525 is 0
+Total number of blocks at timestep 525 is 256
+comm partners x ave   1.75 min 1 max 2
+comm partners y ave   1.75 min 1 max 2
+comm partners z ave   1.50 min 1 max 2
+comm partners total ave   5.00 min 3 max 6
+comm partners unique ave   5.00 min 3 max 6
+
+Timestep 526 time 525.000000 delta 1.000000
+Timestep 527 time 526.000000 delta 1.000000
+Timestep 528 time 527.000000 delta 1.000000
+Timestep 529 time 528.000000 delta 1.000000
+Timestep 530 time 529.000000 delta 1.000000
+Number of blocks at level 0 at timestep 530 is 256
+Number of blocks at level 1 at timestep 530 is 0
+Number of blocks at level 2 at timestep 530 is 0
+Number of blocks at level 3 at timestep 530 is 0
+Number of blocks at level 4 at timestep 530 is 0
+Total number of blocks at timestep 530 is 256
+comm partners x ave   1.75 min 1 max 2
+comm partners y ave   1.75 min 1 max 2
+comm partners z ave   1.50 min 1 max 2
+comm partners total ave   5.00 min 3 max 6
+comm partners unique ave   5.00 min 3 max 6
+
+Timestep 531 time 530.000000 delta 1.000000
+Timestep 532 time 531.000000 delta 1.000000
+Timestep 533 time 532.000000 delta 1.000000
+Timestep 534 time 533.000000 delta 1.000000
+Timestep 535 time 534.000000 delta 1.000000
+Number of blocks at level 0 at timestep 535 is 256
+Number of blocks at level 1 at timestep 535 is 0
+Number of blocks at level 2 at timestep 535 is 0
+Number of blocks at level 3 at timestep 535 is 0
+Number of blocks at level 4 at timestep 535 is 0
+Total number of blocks at timestep 535 is 256
+comm partners x ave   1.75 min 1 max 2
+comm partners y ave   1.75 min 1 max 2
+comm partners z ave   1.50 min 1 max 2
+comm partners total ave   5.00 min 3 max 6
+comm partners unique ave   5.00 min 3 max 6
+
+Timestep 536 time 535.000000 delta 1.000000
+Timestep 537 time 536.000000 delta 1.000000
+Timestep 538 time 537.000000 delta 1.000000
+Timestep 539 time 538.000000 delta 1.000000
+Timestep 540 time 539.000000 delta 1.000000
+Number of blocks at level 0 at timestep 540 is 256
+Number of blocks at level 1 at timestep 540 is 0
+Number of blocks at level 2 at timestep 540 is 0
+Number of blocks at level 3 at timestep 540 is 0
+Number of blocks at level 4 at timestep 540 is 0
+Total number of blocks at timestep 540 is 256
+comm partners x ave   1.75 min 1 max 2
+comm partners y ave   1.75 min 1 max 2
+comm partners z ave   1.50 min 1 max 2
+comm partners total ave   5.00 min 3 max 6
+comm partners unique ave   5.00 min 3 max 6
+
+Timestep 541 time 540.000000 delta 1.000000
+Timestep 542 time 541.000000 delta 1.000000
+Timestep 543 time 542.000000 delta 1.000000
+Timestep 544 time 543.000000 delta 1.000000
+Timestep 545 time 544.000000 delta 1.000000
+Number of blocks at level 0 at timestep 545 is 256
+Number of blocks at level 1 at timestep 545 is 0
+Number of blocks at level 2 at timestep 545 is 0
+Number of blocks at level 3 at timestep 545 is 0
+Number of blocks at level 4 at timestep 545 is 0
+Total number of blocks at timestep 545 is 256
+comm partners x ave   1.75 min 1 max 2
+comm partners y ave   1.75 min 1 max 2
+comm partners z ave   1.50 min 1 max 2
+comm partners total ave   5.00 min 3 max 6
+comm partners unique ave   5.00 min 3 max 6
+
+Timestep 546 time 545.000000 delta 1.000000
+Timestep 547 time 546.000000 delta 1.000000
+Timestep 548 time 547.000000 delta 1.000000
+Timestep 549 time 548.000000 delta 1.000000
+Timestep 550 time 549.000000 delta 1.000000
+Number of blocks at level 0 at timestep 550 is 256
+Number of blocks at level 1 at timestep 550 is 0
+Number of blocks at level 2 at timestep 550 is 0
+Number of blocks at level 3 at timestep 550 is 0
+Number of blocks at level 4 at timestep 550 is 0
+Total number of blocks at timestep 550 is 256
+comm partners x ave   1.75 min 1 max 2
+comm partners y ave   1.75 min 1 max 2
+comm partners z ave   1.50 min 1 max 2
+comm partners total ave   5.00 min 3 max 6
+comm partners unique ave   5.00 min 3 max 6
+
+Timestep 551 time 550.000000 delta 1.000000
+Timestep 552 time 551.000000 delta 1.000000
+Timestep 553 time 552.000000 delta 1.000000
+Timestep 554 time 553.000000 delta 1.000000
+Timestep 555 time 554.000000 delta 1.000000
+Number of blocks at level 0 at timestep 555 is 256
+Number of blocks at level 1 at timestep 555 is 0
+Number of blocks at level 2 at timestep 555 is 0
+Number of blocks at level 3 at timestep 555 is 0
+Number of blocks at level 4 at timestep 555 is 0
+Total number of blocks at timestep 555 is 256
+comm partners x ave   1.75 min 1 max 2
+comm partners y ave   1.75 min 1 max 2
+comm partners z ave   1.50 min 1 max 2
+comm partners total ave   5.00 min 3 max 6
+comm partners unique ave   5.00 min 3 max 6
+
+Timestep 556 time 555.000000 delta 1.000000
+Timestep 557 time 556.000000 delta 1.000000
+Timestep 558 time 557.000000 delta 1.000000
+Timestep 559 time 558.000000 delta 1.000000
+Timestep 560 time 559.000000 delta 1.000000
+Number of blocks at level 0 at timestep 560 is 256
+Number of blocks at level 1 at timestep 560 is 0
+Number of blocks at level 2 at timestep 560 is 0
+Number of blocks at level 3 at timestep 560 is 0
+Number of blocks at level 4 at timestep 560 is 0
+Total number of blocks at timestep 560 is 256
+comm partners x ave   1.75 min 1 max 2
+comm partners y ave   1.75 min 1 max 2
+comm partners z ave   1.50 min 1 max 2
+comm partners total ave   5.00 min 3 max 6
+comm partners unique ave   5.00 min 3 max 6
+
+Timestep 561 time 560.000000 delta 1.000000
+Timestep 562 time 561.000000 delta 1.000000
+Timestep 563 time 562.000000 delta 1.000000
+Timestep 564 time 563.000000 delta 1.000000
+Timestep 565 time 564.000000 delta 1.000000
+Number of blocks at level 0 at timestep 565 is 256
+Number of blocks at level 1 at timestep 565 is 0
+Number of blocks at level 2 at timestep 565 is 0
+Number of blocks at level 3 at timestep 565 is 0
+Number of blocks at level 4 at timestep 565 is 0
+Total number of blocks at timestep 565 is 256
+comm partners x ave   1.75 min 1 max 2
+comm partners y ave   1.75 min 1 max 2
+comm partners z ave   1.50 min 1 max 2
+comm partners total ave   5.00 min 3 max 6
+comm partners unique ave   5.00 min 3 max 6
+
+Timestep 566 time 565.000000 delta 1.000000
+Timestep 567 time 566.000000 delta 1.000000
+Timestep 568 time 567.000000 delta 1.000000
+Timestep 569 time 568.000000 delta 1.000000
+Timestep 570 time 569.000000 delta 1.000000
+Number of blocks at level 0 at timestep 570 is 256
+Number of blocks at level 1 at timestep 570 is 0
+Number of blocks at level 2 at timestep 570 is 0
+Number of blocks at level 3 at timestep 570 is 0
+Number of blocks at level 4 at timestep 570 is 0
+Total number of blocks at timestep 570 is 256
+comm partners x ave   1.75 min 1 max 2
+comm partners y ave   1.75 min 1 max 2
+comm partners z ave   1.50 min 1 max 2
+comm partners total ave   5.00 min 3 max 6
+comm partners unique ave   5.00 min 3 max 6
+
+Timestep 571 time 570.000000 delta 1.000000
+Timestep 572 time 571.000000 delta 1.000000
+Timestep 573 time 572.000000 delta 1.000000
+Timestep 574 time 573.000000 delta 1.000000
+Timestep 575 time 574.000000 delta 1.000000
+Number of blocks at level 0 at timestep 575 is 256
+Number of blocks at level 1 at timestep 575 is 0
+Number of blocks at level 2 at timestep 575 is 0
+Number of blocks at level 3 at timestep 575 is 0
+Number of blocks at level 4 at timestep 575 is 0
+Total number of blocks at timestep 575 is 256
+comm partners x ave   1.75 min 1 max 2
+comm partners y ave   1.75 min 1 max 2
+comm partners z ave   1.50 min 1 max 2
+comm partners total ave   5.00 min 3 max 6
+comm partners unique ave   5.00 min 3 max 6
+
+Timestep 576 time 575.000000 delta 1.000000
+Timestep 577 time 576.000000 delta 1.000000
+Timestep 578 time 577.000000 delta 1.000000
+Timestep 579 time 578.000000 delta 1.000000
+Timestep 580 time 579.000000 delta 1.000000
+Number of blocks at level 0 at timestep 580 is 256
+Number of blocks at level 1 at timestep 580 is 0
+Number of blocks at level 2 at timestep 580 is 0
+Number of blocks at level 3 at timestep 580 is 0
+Number of blocks at level 4 at timestep 580 is 0
+Total number of blocks at timestep 580 is 256
+comm partners x ave   1.75 min 1 max 2
+comm partners y ave   1.75 min 1 max 2
+comm partners z ave   1.50 min 1 max 2
+comm partners total ave   5.00 min 3 max 6
+comm partners unique ave   5.00 min 3 max 6
+
+Timestep 581 time 580.000000 delta 1.000000
+Timestep 582 time 581.000000 delta 1.000000
+Timestep 583 time 582.000000 delta 1.000000
+Timestep 584 time 583.000000 delta 1.000000
+Timestep 585 time 584.000000 delta 1.000000
+Number of blocks at level 0 at timestep 585 is 256
+Number of blocks at level 1 at timestep 585 is 0
+Number of blocks at level 2 at timestep 585 is 0
+Number of blocks at level 3 at timestep 585 is 0
+Number of blocks at level 4 at timestep 585 is 0
+Total number of blocks at timestep 585 is 256
+comm partners x ave   1.75 min 1 max 2
+comm partners y ave   1.75 min 1 max 2
+comm partners z ave   1.50 min 1 max 2
+comm partners total ave   5.00 min 3 max 6
+comm partners unique ave   5.00 min 3 max 6
+
+Timestep 586 time 585.000000 delta 1.000000
+Timestep 587 time 586.000000 delta 1.000000
+Timestep 588 time 587.000000 delta 1.000000
+Timestep 589 time 588.000000 delta 1.000000
+Timestep 590 time 589.000000 delta 1.000000
+Number of blocks at level 0 at timestep 590 is 256
+Number of blocks at level 1 at timestep 590 is 0
+Number of blocks at level 2 at timestep 590 is 0
+Number of blocks at level 3 at timestep 590 is 0
+Number of blocks at level 4 at timestep 590 is 0
+Total number of blocks at timestep 590 is 256
+comm partners x ave   1.75 min 1 max 2
+comm partners y ave   1.75 min 1 max 2
+comm partners z ave   1.50 min 1 max 2
+comm partners total ave   5.00 min 3 max 6
+comm partners unique ave   5.00 min 3 max 6
+
+Timestep 591 time 590.000000 delta 1.000000
+Timestep 592 time 591.000000 delta 1.000000
+Timestep 593 time 592.000000 delta 1.000000
+Timestep 594 time 593.000000 delta 1.000000
+Timestep 595 time 594.000000 delta 1.000000
+Number of blocks at level 0 at timestep 595 is 256
+Number of blocks at level 1 at timestep 595 is 0
+Number of blocks at level 2 at timestep 595 is 0
+Number of blocks at level 3 at timestep 595 is 0
+Number of blocks at level 4 at timestep 595 is 0
+Total number of blocks at timestep 595 is 256
+comm partners x ave   1.75 min 1 max 2
+comm partners y ave   1.75 min 1 max 2
+comm partners z ave   1.50 min 1 max 2
+comm partners total ave   5.00 min 3 max 6
+comm partners unique ave   5.00 min 3 max 6
+
+Timestep 596 time 595.000000 delta 1.000000
+Timestep 597 time 596.000000 delta 1.000000
+Timestep 598 time 597.000000 delta 1.000000
+Timestep 599 time 598.000000 delta 1.000000
+Timestep 600 time 599.000000 delta 1.000000
+Number of blocks at level 0 at timestep 600 is 256
+Number of blocks at level 1 at timestep 600 is 0
+Number of blocks at level 2 at timestep 600 is 0
+Number of blocks at level 3 at timestep 600 is 0
+Number of blocks at level 4 at timestep 600 is 0
+Total number of blocks at timestep 600 is 256
+comm partners x ave   1.75 min 1 max 2
+comm partners y ave   1.75 min 1 max 2
+comm partners z ave   1.50 min 1 max 2
+comm partners total ave   5.00 min 3 max 6
+comm partners unique ave   5.00 min 3 max 6
+
+Timestep 601 time 600.000000 delta 1.000000
+Timestep 602 time 601.000000 delta 1.000000
+Timestep 603 time 602.000000 delta 1.000000
+Timestep 604 time 603.000000 delta 1.000000
+Timestep 605 time 604.000000 delta 1.000000
+Number of blocks at level 0 at timestep 605 is 256
+Number of blocks at level 1 at timestep 605 is 0
+Number of blocks at level 2 at timestep 605 is 0
+Number of blocks at level 3 at timestep 605 is 0
+Number of blocks at level 4 at timestep 605 is 0
+Total number of blocks at timestep 605 is 256
+comm partners x ave   1.75 min 1 max 2
+comm partners y ave   1.75 min 1 max 2
+comm partners z ave   1.50 min 1 max 2
+comm partners total ave   5.00 min 3 max 6
+comm partners unique ave   5.00 min 3 max 6
+
+Timestep 606 time 605.000000 delta 1.000000
+Timestep 607 time 606.000000 delta 1.000000
+Timestep 608 time 607.000000 delta 1.000000
+Timestep 609 time 608.000000 delta 1.000000
+Timestep 610 time 609.000000 delta 1.000000
+Number of blocks at level 0 at timestep 610 is 256
+Number of blocks at level 1 at timestep 610 is 0
+Number of blocks at level 2 at timestep 610 is 0
+Number of blocks at level 3 at timestep 610 is 0
+Number of blocks at level 4 at timestep 610 is 0
+Total number of blocks at timestep 610 is 256
+comm partners x ave   1.75 min 1 max 2
+comm partners y ave   1.75 min 1 max 2
+comm partners z ave   1.50 min 1 max 2
+comm partners total ave   5.00 min 3 max 6
+comm partners unique ave   5.00 min 3 max 6
+
+Timestep 611 time 610.000000 delta 1.000000
+Timestep 612 time 611.000000 delta 1.000000
+Timestep 613 time 612.000000 delta 1.000000
+Timestep 614 time 613.000000 delta 1.000000
+Timestep 615 time 614.000000 delta 1.000000
+Number of blocks at level 0 at timestep 615 is 256
+Number of blocks at level 1 at timestep 615 is 0
+Number of blocks at level 2 at timestep 615 is 0
+Number of blocks at level 3 at timestep 615 is 0
+Number of blocks at level 4 at timestep 615 is 0
+Total number of blocks at timestep 615 is 256
+comm partners x ave   1.75 min 1 max 2
+comm partners y ave   1.75 min 1 max 2
+comm partners z ave   1.50 min 1 max 2
+comm partners total ave   5.00 min 3 max 6
+comm partners unique ave   5.00 min 3 max 6
+
+Timestep 616 time 615.000000 delta 1.000000
+Timestep 617 time 616.000000 delta 1.000000
+Timestep 618 time 617.000000 delta 1.000000
+Timestep 619 time 618.000000 delta 1.000000
+Timestep 620 time 619.000000 delta 1.000000
+Number of blocks at level 0 at timestep 620 is 256
+Number of blocks at level 1 at timestep 620 is 0
+Number of blocks at level 2 at timestep 620 is 0
+Number of blocks at level 3 at timestep 620 is 0
+Number of blocks at level 4 at timestep 620 is 0
+Total number of blocks at timestep 620 is 256
+comm partners x ave   1.75 min 1 max 2
+comm partners y ave   1.75 min 1 max 2
+comm partners z ave   1.50 min 1 max 2
+comm partners total ave   5.00 min 3 max 6
+comm partners unique ave   5.00 min 3 max 6
+
+Timestep 621 time 620.000000 delta 1.000000
+Timestep 622 time 621.000000 delta 1.000000
+Timestep 623 time 622.000000 delta 1.000000
+Timestep 624 time 623.000000 delta 1.000000
+Timestep 625 time 624.000000 delta 1.000000
+Number of blocks at level 0 at timestep 625 is 256
+Number of blocks at level 1 at timestep 625 is 0
+Number of blocks at level 2 at timestep 625 is 0
+Number of blocks at level 3 at timestep 625 is 0
+Number of blocks at level 4 at timestep 625 is 0
+Total number of blocks at timestep 625 is 256
+comm partners x ave   1.75 min 1 max 2
+comm partners y ave   1.75 min 1 max 2
+comm partners z ave   1.50 min 1 max 2
+comm partners total ave   5.00 min 3 max 6
+comm partners unique ave   5.00 min 3 max 6
+
+Timestep 626 time 625.000000 delta 1.000000
+Timestep 627 time 626.000000 delta 1.000000
+Timestep 628 time 627.000000 delta 1.000000
+Timestep 629 time 628.000000 delta 1.000000
+Timestep 630 time 629.000000 delta 1.000000
+Number of blocks at level 0 at timestep 630 is 256
+Number of blocks at level 1 at timestep 630 is 0
+Number of blocks at level 2 at timestep 630 is 0
+Number of blocks at level 3 at timestep 630 is 0
+Number of blocks at level 4 at timestep 630 is 0
+Total number of blocks at timestep 630 is 256
+comm partners x ave   1.75 min 1 max 2
+comm partners y ave   1.75 min 1 max 2
+comm partners z ave   1.50 min 1 max 2
+comm partners total ave   5.00 min 3 max 6
+comm partners unique ave   5.00 min 3 max 6
+
+Timestep 631 time 630.000000 delta 1.000000
+Timestep 632 time 631.000000 delta 1.000000
+Timestep 633 time 632.000000 delta 1.000000
+Timestep 634 time 633.000000 delta 1.000000
+Timestep 635 time 634.000000 delta 1.000000
+Number of blocks at level 0 at timestep 635 is 256
+Number of blocks at level 1 at timestep 635 is 0
+Number of blocks at level 2 at timestep 635 is 0
+Number of blocks at level 3 at timestep 635 is 0
+Number of blocks at level 4 at timestep 635 is 0
+Total number of blocks at timestep 635 is 256
+comm partners x ave   1.75 min 1 max 2
+comm partners y ave   1.75 min 1 max 2
+comm partners z ave   1.50 min 1 max 2
+comm partners total ave   5.00 min 3 max 6
+comm partners unique ave   5.00 min 3 max 6
+
+Timestep 636 time 635.000000 delta 1.000000
+Timestep 637 time 636.000000 delta 1.000000
+Timestep 638 time 637.000000 delta 1.000000
+Timestep 639 time 638.000000 delta 1.000000
+Timestep 640 time 639.000000 delta 1.000000
+Number of blocks at level 0 at timestep 640 is 256
+Number of blocks at level 1 at timestep 640 is 0
+Number of blocks at level 2 at timestep 640 is 0
+Number of blocks at level 3 at timestep 640 is 0
+Number of blocks at level 4 at timestep 640 is 0
+Total number of blocks at timestep 640 is 256
+comm partners x ave   1.75 min 1 max 2
+comm partners y ave   1.75 min 1 max 2
+comm partners z ave   1.50 min 1 max 2
+comm partners total ave   5.00 min 3 max 6
+comm partners unique ave   5.00 min 3 max 6
+
+Timestep 641 time 640.000000 delta 1.000000
+Timestep 642 time 641.000000 delta 1.000000
+Timestep 643 time 642.000000 delta 1.000000
+Timestep 644 time 643.000000 delta 1.000000
+Timestep 645 time 644.000000 delta 1.000000
+Number of blocks at level 0 at timestep 645 is 256
+Number of blocks at level 1 at timestep 645 is 0
+Number of blocks at level 2 at timestep 645 is 0
+Number of blocks at level 3 at timestep 645 is 0
+Number of blocks at level 4 at timestep 645 is 0
+Total number of blocks at timestep 645 is 256
+comm partners x ave   1.75 min 1 max 2
+comm partners y ave   1.75 min 1 max 2
+comm partners z ave   1.50 min 1 max 2
+comm partners total ave   5.00 min 3 max 6
+comm partners unique ave   5.00 min 3 max 6
+
+Timestep 646 time 645.000000 delta 1.000000
+Timestep 647 time 646.000000 delta 1.000000
+Timestep 648 time 647.000000 delta 1.000000
+Timestep 649 time 648.000000 delta 1.000000
+Timestep 650 time 649.000000 delta 1.000000
+Number of blocks at level 0 at timestep 650 is 256
+Number of blocks at level 1 at timestep 650 is 0
+Number of blocks at level 2 at timestep 650 is 0
+Number of blocks at level 3 at timestep 650 is 0
+Number of blocks at level 4 at timestep 650 is 0
+Total number of blocks at timestep 650 is 256
+comm partners x ave   1.75 min 1 max 2
+comm partners y ave   1.75 min 1 max 2
+comm partners z ave   1.50 min 1 max 2
+comm partners total ave   5.00 min 3 max 6
+comm partners unique ave   5.00 min 3 max 6
+
+Timestep 651 time 650.000000 delta 1.000000
+Timestep 652 time 651.000000 delta 1.000000
+Timestep 653 time 652.000000 delta 1.000000
+Timestep 654 time 653.000000 delta 1.000000
+Timestep 655 time 654.000000 delta 1.000000
+Number of blocks at level 0 at timestep 655 is 256
+Number of blocks at level 1 at timestep 655 is 0
+Number of blocks at level 2 at timestep 655 is 0
+Number of blocks at level 3 at timestep 655 is 0
+Number of blocks at level 4 at timestep 655 is 0
+Total number of blocks at timestep 655 is 256
+comm partners x ave   1.75 min 1 max 2
+comm partners y ave   1.75 min 1 max 2
+comm partners z ave   1.50 min 1 max 2
+comm partners total ave   5.00 min 3 max 6
+comm partners unique ave   5.00 min 3 max 6
+
+Timestep 656 time 655.000000 delta 1.000000
+Timestep 657 time 656.000000 delta 1.000000
+Timestep 658 time 657.000000 delta 1.000000
+Timestep 659 time 658.000000 delta 1.000000
+Timestep 660 time 659.000000 delta 1.000000
+Number of blocks at level 0 at timestep 660 is 256
+Number of blocks at level 1 at timestep 660 is 0
+Number of blocks at level 2 at timestep 660 is 0
+Number of blocks at level 3 at timestep 660 is 0
+Number of blocks at level 4 at timestep 660 is 0
+Total number of blocks at timestep 660 is 256
+comm partners x ave   1.75 min 1 max 2
+comm partners y ave   1.75 min 1 max 2
+comm partners z ave   1.50 min 1 max 2
+comm partners total ave   5.00 min 3 max 6
+comm partners unique ave   5.00 min 3 max 6
+
+Timestep 661 time 660.000000 delta 1.000000
+Timestep 662 time 661.000000 delta 1.000000
+Timestep 663 time 662.000000 delta 1.000000
+Timestep 664 time 663.000000 delta 1.000000
+Timestep 665 time 664.000000 delta 1.000000
+Number of blocks at level 0 at timestep 665 is 256
+Number of blocks at level 1 at timestep 665 is 0
+Number of blocks at level 2 at timestep 665 is 0
+Number of blocks at level 3 at timestep 665 is 0
+Number of blocks at level 4 at timestep 665 is 0
+Total number of blocks at timestep 665 is 256
+comm partners x ave   1.75 min 1 max 2
+comm partners y ave   1.75 min 1 max 2
+comm partners z ave   1.50 min 1 max 2
+comm partners total ave   5.00 min 3 max 6
+comm partners unique ave   5.00 min 3 max 6
+
+Timestep 666 time 665.000000 delta 1.000000
+Timestep 667 time 666.000000 delta 1.000000
+Timestep 668 time 667.000000 delta 1.000000
+Timestep 669 time 668.000000 delta 1.000000
+Timestep 670 time 669.000000 delta 1.000000
+Number of blocks at level 0 at timestep 670 is 256
+Number of blocks at level 1 at timestep 670 is 0
+Number of blocks at level 2 at timestep 670 is 0
+Number of blocks at level 3 at timestep 670 is 0
+Number of blocks at level 4 at timestep 670 is 0
+Total number of blocks at timestep 670 is 256
+comm partners x ave   1.75 min 1 max 2
+comm partners y ave   1.75 min 1 max 2
+comm partners z ave   1.50 min 1 max 2
+comm partners total ave   5.00 min 3 max 6
+comm partners unique ave   5.00 min 3 max 6
+
+Timestep 671 time 670.000000 delta 1.000000
+Timestep 672 time 671.000000 delta 1.000000
+Timestep 673 time 672.000000 delta 1.000000
+Timestep 674 time 673.000000 delta 1.000000
+Timestep 675 time 674.000000 delta 1.000000
+Number of blocks at level 0 at timestep 675 is 256
+Number of blocks at level 1 at timestep 675 is 0
+Number of blocks at level 2 at timestep 675 is 0
+Number of blocks at level 3 at timestep 675 is 0
+Number of blocks at level 4 at timestep 675 is 0
+Total number of blocks at timestep 675 is 256
+comm partners x ave   1.75 min 1 max 2
+comm partners y ave   1.75 min 1 max 2
+comm partners z ave   1.50 min 1 max 2
+comm partners total ave   5.00 min 3 max 6
+comm partners unique ave   5.00 min 3 max 6
+
+Timestep 676 time 675.000000 delta 1.000000
+Timestep 677 time 676.000000 delta 1.000000
+Timestep 678 time 677.000000 delta 1.000000
+Timestep 679 time 678.000000 delta 1.000000
+Timestep 680 time 679.000000 delta 1.000000
+Number of blocks at level 0 at timestep 680 is 256
+Number of blocks at level 1 at timestep 680 is 0
+Number of blocks at level 2 at timestep 680 is 0
+Number of blocks at level 3 at timestep 680 is 0
+Number of blocks at level 4 at timestep 680 is 0
+Total number of blocks at timestep 680 is 256
+comm partners x ave   1.75 min 1 max 2
+comm partners y ave   1.75 min 1 max 2
+comm partners z ave   1.50 min 1 max 2
+comm partners total ave   5.00 min 3 max 6
+comm partners unique ave   5.00 min 3 max 6
+
+Timestep 681 time 680.000000 delta 1.000000
+Timestep 682 time 681.000000 delta 1.000000
+Timestep 683 time 682.000000 delta 1.000000
+Timestep 684 time 683.000000 delta 1.000000
+Timestep 685 time 684.000000 delta 1.000000
+Number of blocks at level 0 at timestep 685 is 256
+Number of blocks at level 1 at timestep 685 is 0
+Number of blocks at level 2 at timestep 685 is 0
+Number of blocks at level 3 at timestep 685 is 0
+Number of blocks at level 4 at timestep 685 is 0
+Total number of blocks at timestep 685 is 256
+comm partners x ave   1.75 min 1 max 2
+comm partners y ave   1.75 min 1 max 2
+comm partners z ave   1.50 min 1 max 2
+comm partners total ave   5.00 min 3 max 6
+comm partners unique ave   5.00 min 3 max 6
+
+Timestep 686 time 685.000000 delta 1.000000
+Timestep 687 time 686.000000 delta 1.000000
+Timestep 688 time 687.000000 delta 1.000000
+Timestep 689 time 688.000000 delta 1.000000
+Timestep 690 time 689.000000 delta 1.000000
+Number of blocks at level 0 at timestep 690 is 256
+Number of blocks at level 1 at timestep 690 is 0
+Number of blocks at level 2 at timestep 690 is 0
+Number of blocks at level 3 at timestep 690 is 0
+Number of blocks at level 4 at timestep 690 is 0
+Total number of blocks at timestep 690 is 256
+comm partners x ave   1.75 min 1 max 2
+comm partners y ave   1.75 min 1 max 2
+comm partners z ave   1.50 min 1 max 2
+comm partners total ave   5.00 min 3 max 6
+comm partners unique ave   5.00 min 3 max 6
+
+Timestep 691 time 690.000000 delta 1.000000
+Timestep 692 time 691.000000 delta 1.000000
+Timestep 693 time 692.000000 delta 1.000000
+Timestep 694 time 693.000000 delta 1.000000
+Timestep 695 time 694.000000 delta 1.000000
+Number of blocks at level 0 at timestep 695 is 256
+Number of blocks at level 1 at timestep 695 is 0
+Number of blocks at level 2 at timestep 695 is 0
+Number of blocks at level 3 at timestep 695 is 0
+Number of blocks at level 4 at timestep 695 is 0
+Total number of blocks at timestep 695 is 256
+comm partners x ave   1.75 min 1 max 2
+comm partners y ave   1.75 min 1 max 2
+comm partners z ave   1.50 min 1 max 2
+comm partners total ave   5.00 min 3 max 6
+comm partners unique ave   5.00 min 3 max 6
+
+Timestep 696 time 695.000000 delta 1.000000
+Timestep 697 time 696.000000 delta 1.000000
+Timestep 698 time 697.000000 delta 1.000000
+Timestep 699 time 698.000000 delta 1.000000
+Timestep 700 time 699.000000 delta 1.000000
+Number of blocks at level 0 at timestep 700 is 256
+Number of blocks at level 1 at timestep 700 is 0
+Number of blocks at level 2 at timestep 700 is 0
+Number of blocks at level 3 at timestep 700 is 0
+Number of blocks at level 4 at timestep 700 is 0
+Total number of blocks at timestep 700 is 256
+comm partners x ave   1.75 min 1 max 2
+comm partners y ave   1.75 min 1 max 2
+comm partners z ave   1.50 min 1 max 2
+comm partners total ave   5.00 min 3 max 6
+comm partners unique ave   5.00 min 3 max 6
+
+Timestep 701 time 700.000000 delta 1.000000
+Timestep 702 time 701.000000 delta 1.000000
+Timestep 703 time 702.000000 delta 1.000000
+Timestep 704 time 703.000000 delta 1.000000
+Timestep 705 time 704.000000 delta 1.000000
+Number of blocks at level 0 at timestep 705 is 256
+Number of blocks at level 1 at timestep 705 is 0
+Number of blocks at level 2 at timestep 705 is 0
+Number of blocks at level 3 at timestep 705 is 0
+Number of blocks at level 4 at timestep 705 is 0
+Total number of blocks at timestep 705 is 256
+comm partners x ave   1.75 min 1 max 2
+comm partners y ave   1.75 min 1 max 2
+comm partners z ave   1.50 min 1 max 2
+comm partners total ave   5.00 min 3 max 6
+comm partners unique ave   5.00 min 3 max 6
+
+Timestep 706 time 705.000000 delta 1.000000
+Timestep 707 time 706.000000 delta 1.000000
+Timestep 708 time 707.000000 delta 1.000000
+Timestep 709 time 708.000000 delta 1.000000
+Timestep 710 time 709.000000 delta 1.000000
+Number of blocks at level 0 at timestep 710 is 256
+Number of blocks at level 1 at timestep 710 is 0
+Number of blocks at level 2 at timestep 710 is 0
+Number of blocks at level 3 at timestep 710 is 0
+Number of blocks at level 4 at timestep 710 is 0
+Total number of blocks at timestep 710 is 256
+comm partners x ave   1.75 min 1 max 2
+comm partners y ave   1.75 min 1 max 2
+comm partners z ave   1.50 min 1 max 2
+comm partners total ave   5.00 min 3 max 6
+comm partners unique ave   5.00 min 3 max 6
+
+Timestep 711 time 710.000000 delta 1.000000
+Timestep 712 time 711.000000 delta 1.000000
+Timestep 713 time 712.000000 delta 1.000000
+Timestep 714 time 713.000000 delta 1.000000
+Timestep 715 time 714.000000 delta 1.000000
+Number of blocks at level 0 at timestep 715 is 256
+Number of blocks at level 1 at timestep 715 is 0
+Number of blocks at level 2 at timestep 715 is 0
+Number of blocks at level 3 at timestep 715 is 0
+Number of blocks at level 4 at timestep 715 is 0
+Total number of blocks at timestep 715 is 256
+comm partners x ave   1.75 min 1 max 2
+comm partners y ave   1.75 min 1 max 2
+comm partners z ave   1.50 min 1 max 2
+comm partners total ave   5.00 min 3 max 6
+comm partners unique ave   5.00 min 3 max 6
+
+Timestep 716 time 715.000000 delta 1.000000
+Timestep 717 time 716.000000 delta 1.000000
+Timestep 718 time 717.000000 delta 1.000000
+Timestep 719 time 718.000000 delta 1.000000
+Timestep 720 time 719.000000 delta 1.000000
+Number of blocks at level 0 at timestep 720 is 256
+Number of blocks at level 1 at timestep 720 is 0
+Number of blocks at level 2 at timestep 720 is 0
+Number of blocks at level 3 at timestep 720 is 0
+Number of blocks at level 4 at timestep 720 is 0
+Total number of blocks at timestep 720 is 256
+comm partners x ave   1.75 min 1 max 2
+comm partners y ave   1.75 min 1 max 2
+comm partners z ave   1.50 min 1 max 2
+comm partners total ave   5.00 min 3 max 6
+comm partners unique ave   5.00 min 3 max 6
+
+Timestep 721 time 720.000000 delta 1.000000
+Timestep 722 time 721.000000 delta 1.000000
+Timestep 723 time 722.000000 delta 1.000000
+Timestep 724 time 723.000000 delta 1.000000
+Timestep 725 time 724.000000 delta 1.000000
+Number of blocks at level 0 at timestep 725 is 256
+Number of blocks at level 1 at timestep 725 is 0
+Number of blocks at level 2 at timestep 725 is 0
+Number of blocks at level 3 at timestep 725 is 0
+Number of blocks at level 4 at timestep 725 is 0
+Total number of blocks at timestep 725 is 256
+comm partners x ave   1.75 min 1 max 2
+comm partners y ave   1.75 min 1 max 2
+comm partners z ave   1.50 min 1 max 2
+comm partners total ave   5.00 min 3 max 6
+comm partners unique ave   5.00 min 3 max 6
+
+Timestep 726 time 725.000000 delta 1.000000
+Timestep 727 time 726.000000 delta 1.000000
+Timestep 728 time 727.000000 delta 1.000000
+Timestep 729 time 728.000000 delta 1.000000
+Timestep 730 time 729.000000 delta 1.000000
+Number of blocks at level 0 at timestep 730 is 256
+Number of blocks at level 1 at timestep 730 is 0
+Number of blocks at level 2 at timestep 730 is 0
+Number of blocks at level 3 at timestep 730 is 0
+Number of blocks at level 4 at timestep 730 is 0
+Total number of blocks at timestep 730 is 256
+comm partners x ave   1.75 min 1 max 2
+comm partners y ave   1.75 min 1 max 2
+comm partners z ave   1.50 min 1 max 2
+comm partners total ave   5.00 min 3 max 6
+comm partners unique ave   5.00 min 3 max 6
+
+Timestep 731 time 730.000000 delta 1.000000
+Timestep 732 time 731.000000 delta 1.000000
+Timestep 733 time 732.000000 delta 1.000000
+Timestep 734 time 733.000000 delta 1.000000
+Timestep 735 time 734.000000 delta 1.000000
+Number of blocks at level 0 at timestep 735 is 256
+Number of blocks at level 1 at timestep 735 is 0
+Number of blocks at level 2 at timestep 735 is 0
+Number of blocks at level 3 at timestep 735 is 0
+Number of blocks at level 4 at timestep 735 is 0
+Total number of blocks at timestep 735 is 256
+comm partners x ave   1.75 min 1 max 2
+comm partners y ave   1.75 min 1 max 2
+comm partners z ave   1.50 min 1 max 2
+comm partners total ave   5.00 min 3 max 6
+comm partners unique ave   5.00 min 3 max 6
+
+Timestep 736 time 735.000000 delta 1.000000
+Timestep 737 time 736.000000 delta 1.000000
+Timestep 738 time 737.000000 delta 1.000000
+Timestep 739 time 738.000000 delta 1.000000
+Timestep 740 time 739.000000 delta 1.000000
+Number of blocks at level 0 at timestep 740 is 256
+Number of blocks at level 1 at timestep 740 is 0
+Number of blocks at level 2 at timestep 740 is 0
+Number of blocks at level 3 at timestep 740 is 0
+Number of blocks at level 4 at timestep 740 is 0
+Total number of blocks at timestep 740 is 256
+comm partners x ave   1.75 min 1 max 2
+comm partners y ave   1.75 min 1 max 2
+comm partners z ave   1.50 min 1 max 2
+comm partners total ave   5.00 min 3 max 6
+comm partners unique ave   5.00 min 3 max 6
+
+Timestep 741 time 740.000000 delta 1.000000
+Timestep 742 time 741.000000 delta 1.000000
+Timestep 743 time 742.000000 delta 1.000000
+Timestep 744 time 743.000000 delta 1.000000
+Timestep 745 time 744.000000 delta 1.000000
+Number of blocks at level 0 at timestep 745 is 256
+Number of blocks at level 1 at timestep 745 is 0
+Number of blocks at level 2 at timestep 745 is 0
+Number of blocks at level 3 at timestep 745 is 0
+Number of blocks at level 4 at timestep 745 is 0
+Total number of blocks at timestep 745 is 256
+comm partners x ave   1.75 min 1 max 2
+comm partners y ave   1.75 min 1 max 2
+comm partners z ave   1.50 min 1 max 2
+comm partners total ave   5.00 min 3 max 6
+comm partners unique ave   5.00 min 3 max 6
+
+Timestep 746 time 745.000000 delta 1.000000
+Timestep 747 time 746.000000 delta 1.000000
+Timestep 748 time 747.000000 delta 1.000000
+Timestep 749 time 748.000000 delta 1.000000
+Timestep 750 time 749.000000 delta 1.000000
+Number of blocks at level 0 at timestep 750 is 256
+Number of blocks at level 1 at timestep 750 is 0
+Number of blocks at level 2 at timestep 750 is 0
+Number of blocks at level 3 at timestep 750 is 0
+Number of blocks at level 4 at timestep 750 is 0
+Total number of blocks at timestep 750 is 256
+comm partners x ave   1.75 min 1 max 2
+comm partners y ave   1.75 min 1 max 2
+comm partners z ave   1.50 min 1 max 2
+comm partners total ave   5.00 min 3 max 6
+comm partners unique ave   5.00 min 3 max 6
+
+Timestep 751 time 750.000000 delta 1.000000
+Timestep 752 time 751.000000 delta 1.000000
+Timestep 753 time 752.000000 delta 1.000000
+Timestep 754 time 753.000000 delta 1.000000
+Timestep 755 time 754.000000 delta 1.000000
+Number of blocks at level 0 at timestep 755 is 256
+Number of blocks at level 1 at timestep 755 is 0
+Number of blocks at level 2 at timestep 755 is 0
+Number of blocks at level 3 at timestep 755 is 0
+Number of blocks at level 4 at timestep 755 is 0
+Total number of blocks at timestep 755 is 256
+comm partners x ave   1.75 min 1 max 2
+comm partners y ave   1.75 min 1 max 2
+comm partners z ave   1.50 min 1 max 2
+comm partners total ave   5.00 min 3 max 6
+comm partners unique ave   5.00 min 3 max 6
+
+Timestep 756 time 755.000000 delta 1.000000
+Timestep 757 time 756.000000 delta 1.000000
+Timestep 758 time 757.000000 delta 1.000000
+Timestep 759 time 758.000000 delta 1.000000
+Timestep 760 time 759.000000 delta 1.000000
+Number of blocks at level 0 at timestep 760 is 256
+Number of blocks at level 1 at timestep 760 is 0
+Number of blocks at level 2 at timestep 760 is 0
+Number of blocks at level 3 at timestep 760 is 0
+Number of blocks at level 4 at timestep 760 is 0
+Total number of blocks at timestep 760 is 256
+comm partners x ave   1.75 min 1 max 2
+comm partners y ave   1.75 min 1 max 2
+comm partners z ave   1.50 min 1 max 2
+comm partners total ave   5.00 min 3 max 6
+comm partners unique ave   5.00 min 3 max 6
+
+Timestep 761 time 760.000000 delta 1.000000
+Timestep 762 time 761.000000 delta 1.000000
+Timestep 763 time 762.000000 delta 1.000000
+Timestep 764 time 763.000000 delta 1.000000
+Timestep 765 time 764.000000 delta 1.000000
+Number of blocks at level 0 at timestep 765 is 256
+Number of blocks at level 1 at timestep 765 is 0
+Number of blocks at level 2 at timestep 765 is 0
+Number of blocks at level 3 at timestep 765 is 0
+Number of blocks at level 4 at timestep 765 is 0
+Total number of blocks at timestep 765 is 256
+comm partners x ave   1.75 min 1 max 2
+comm partners y ave   1.75 min 1 max 2
+comm partners z ave   1.50 min 1 max 2
+comm partners total ave   5.00 min 3 max 6
+comm partners unique ave   5.00 min 3 max 6
+
+Timestep 766 time 765.000000 delta 1.000000
+Timestep 767 time 766.000000 delta 1.000000
+Timestep 768 time 767.000000 delta 1.000000
+Timestep 769 time 768.000000 delta 1.000000
+Timestep 770 time 769.000000 delta 1.000000
+Number of blocks at level 0 at timestep 770 is 256
+Number of blocks at level 1 at timestep 770 is 0
+Number of blocks at level 2 at timestep 770 is 0
+Number of blocks at level 3 at timestep 770 is 0
+Number of blocks at level 4 at timestep 770 is 0
+Total number of blocks at timestep 770 is 256
+comm partners x ave   1.75 min 1 max 2
+comm partners y ave   1.75 min 1 max 2
+comm partners z ave   1.50 min 1 max 2
+comm partners total ave   5.00 min 3 max 6
+comm partners unique ave   5.00 min 3 max 6
+
+Timestep 771 time 770.000000 delta 1.000000
+Timestep 772 time 771.000000 delta 1.000000
+Timestep 773 time 772.000000 delta 1.000000
+Timestep 774 time 773.000000 delta 1.000000
+Timestep 775 time 774.000000 delta 1.000000
+Number of blocks at level 0 at timestep 775 is 256
+Number of blocks at level 1 at timestep 775 is 0
+Number of blocks at level 2 at timestep 775 is 0
+Number of blocks at level 3 at timestep 775 is 0
+Number of blocks at level 4 at timestep 775 is 0
+Total number of blocks at timestep 775 is 256
+comm partners x ave   1.75 min 1 max 2
+comm partners y ave   1.75 min 1 max 2
+comm partners z ave   1.50 min 1 max 2
+comm partners total ave   5.00 min 3 max 6
+comm partners unique ave   5.00 min 3 max 6
+
+Timestep 776 time 775.000000 delta 1.000000
+Timestep 777 time 776.000000 delta 1.000000
+Timestep 778 time 777.000000 delta 1.000000
+Timestep 779 time 778.000000 delta 1.000000
+Timestep 780 time 779.000000 delta 1.000000
+Number of blocks at level 0 at timestep 780 is 256
+Number of blocks at level 1 at timestep 780 is 0
+Number of blocks at level 2 at timestep 780 is 0
+Number of blocks at level 3 at timestep 780 is 0
+Number of blocks at level 4 at timestep 780 is 0
+Total number of blocks at timestep 780 is 256
+comm partners x ave   1.75 min 1 max 2
+comm partners y ave   1.75 min 1 max 2
+comm partners z ave   1.50 min 1 max 2
+comm partners total ave   5.00 min 3 max 6
+comm partners unique ave   5.00 min 3 max 6
+
+Timestep 781 time 780.000000 delta 1.000000
+Timestep 782 time 781.000000 delta 1.000000
+Timestep 783 time 782.000000 delta 1.000000
+Timestep 784 time 783.000000 delta 1.000000
+Timestep 785 time 784.000000 delta 1.000000
+Number of blocks at level 0 at timestep 785 is 256
+Number of blocks at level 1 at timestep 785 is 0
+Number of blocks at level 2 at timestep 785 is 0
+Number of blocks at level 3 at timestep 785 is 0
+Number of blocks at level 4 at timestep 785 is 0
+Total number of blocks at timestep 785 is 256
+comm partners x ave   1.75 min 1 max 2
+comm partners y ave   1.75 min 1 max 2
+comm partners z ave   1.50 min 1 max 2
+comm partners total ave   5.00 min 3 max 6
+comm partners unique ave   5.00 min 3 max 6
+
+Timestep 786 time 785.000000 delta 1.000000
+Timestep 787 time 786.000000 delta 1.000000
+Timestep 788 time 787.000000 delta 1.000000
+Timestep 789 time 788.000000 delta 1.000000
+Timestep 790 time 789.000000 delta 1.000000
+Number of blocks at level 0 at timestep 790 is 256
+Number of blocks at level 1 at timestep 790 is 0
+Number of blocks at level 2 at timestep 790 is 0
+Number of blocks at level 3 at timestep 790 is 0
+Number of blocks at level 4 at timestep 790 is 0
+Total number of blocks at timestep 790 is 256
+comm partners x ave   1.75 min 1 max 2
+comm partners y ave   1.75 min 1 max 2
+comm partners z ave   1.50 min 1 max 2
+comm partners total ave   5.00 min 3 max 6
+comm partners unique ave   5.00 min 3 max 6
+
+Timestep 791 time 790.000000 delta 1.000000
+Timestep 792 time 791.000000 delta 1.000000
+Timestep 793 time 792.000000 delta 1.000000
+Timestep 794 time 793.000000 delta 1.000000
+Timestep 795 time 794.000000 delta 1.000000
+Number of blocks at level 0 at timestep 795 is 256
+Number of blocks at level 1 at timestep 795 is 0
+Number of blocks at level 2 at timestep 795 is 0
+Number of blocks at level 3 at timestep 795 is 0
+Number of blocks at level 4 at timestep 795 is 0
+Total number of blocks at timestep 795 is 256
+comm partners x ave   1.75 min 1 max 2
+comm partners y ave   1.75 min 1 max 2
+comm partners z ave   1.50 min 1 max 2
+comm partners total ave   5.00 min 3 max 6
+comm partners unique ave   5.00 min 3 max 6
+
+Timestep 796 time 795.000000 delta 1.000000
+Timestep 797 time 796.000000 delta 1.000000
+Timestep 798 time 797.000000 delta 1.000000
+Timestep 799 time 798.000000 delta 1.000000
+Timestep 800 time 799.000000 delta 1.000000
+Number of blocks at level 0 at timestep 800 is 256
+Number of blocks at level 1 at timestep 800 is 0
+Number of blocks at level 2 at timestep 800 is 0
+Number of blocks at level 3 at timestep 800 is 0
+Number of blocks at level 4 at timestep 800 is 0
+Total number of blocks at timestep 800 is 256
+comm partners x ave   1.75 min 1 max 2
+comm partners y ave   1.75 min 1 max 2
+comm partners z ave   1.50 min 1 max 2
+comm partners total ave   5.00 min 3 max 6
+comm partners unique ave   5.00 min 3 max 6
+
+Timestep 801 time 800.000000 delta 1.000000
+Timestep 802 time 801.000000 delta 1.000000
+Timestep 803 time 802.000000 delta 1.000000
+Timestep 804 time 803.000000 delta 1.000000
+Timestep 805 time 804.000000 delta 1.000000
+Number of blocks at level 0 at timestep 805 is 256
+Number of blocks at level 1 at timestep 805 is 0
+Number of blocks at level 2 at timestep 805 is 0
+Number of blocks at level 3 at timestep 805 is 0
+Number of blocks at level 4 at timestep 805 is 0
+Total number of blocks at timestep 805 is 256
+comm partners x ave   1.75 min 1 max 2
+comm partners y ave   1.75 min 1 max 2
+comm partners z ave   1.50 min 1 max 2
+comm partners total ave   5.00 min 3 max 6
+comm partners unique ave   5.00 min 3 max 6
+
+Timestep 806 time 805.000000 delta 1.000000
+Timestep 807 time 806.000000 delta 1.000000
+Timestep 808 time 807.000000 delta 1.000000
+Timestep 809 time 808.000000 delta 1.000000
+Timestep 810 time 809.000000 delta 1.000000
+Number of blocks at level 0 at timestep 810 is 256
+Number of blocks at level 1 at timestep 810 is 0
+Number of blocks at level 2 at timestep 810 is 0
+Number of blocks at level 3 at timestep 810 is 0
+Number of blocks at level 4 at timestep 810 is 0
+Total number of blocks at timestep 810 is 256
+comm partners x ave   1.75 min 1 max 2
+comm partners y ave   1.75 min 1 max 2
+comm partners z ave   1.50 min 1 max 2
+comm partners total ave   5.00 min 3 max 6
+comm partners unique ave   5.00 min 3 max 6
+
+Timestep 811 time 810.000000 delta 1.000000
+Timestep 812 time 811.000000 delta 1.000000
+Timestep 813 time 812.000000 delta 1.000000
+Timestep 814 time 813.000000 delta 1.000000
+Timestep 815 time 814.000000 delta 1.000000
+Number of blocks at level 0 at timestep 815 is 256
+Number of blocks at level 1 at timestep 815 is 0
+Number of blocks at level 2 at timestep 815 is 0
+Number of blocks at level 3 at timestep 815 is 0
+Number of blocks at level 4 at timestep 815 is 0
+Total number of blocks at timestep 815 is 256
+comm partners x ave   1.75 min 1 max 2
+comm partners y ave   1.75 min 1 max 2
+comm partners z ave   1.50 min 1 max 2
+comm partners total ave   5.00 min 3 max 6
+comm partners unique ave   5.00 min 3 max 6
+
+Timestep 816 time 815.000000 delta 1.000000
+Timestep 817 time 816.000000 delta 1.000000
+Timestep 818 time 817.000000 delta 1.000000
+Timestep 819 time 818.000000 delta 1.000000
+Timestep 820 time 819.000000 delta 1.000000
+Number of blocks at level 0 at timestep 820 is 256
+Number of blocks at level 1 at timestep 820 is 0
+Number of blocks at level 2 at timestep 820 is 0
+Number of blocks at level 3 at timestep 820 is 0
+Number of blocks at level 4 at timestep 820 is 0
+Total number of blocks at timestep 820 is 256
+comm partners x ave   1.75 min 1 max 2
+comm partners y ave   1.75 min 1 max 2
+comm partners z ave   1.50 min 1 max 2
+comm partners total ave   5.00 min 3 max 6
+comm partners unique ave   5.00 min 3 max 6
+
+Timestep 821 time 820.000000 delta 1.000000
+Timestep 822 time 821.000000 delta 1.000000
+Timestep 823 time 822.000000 delta 1.000000
+Timestep 824 time 823.000000 delta 1.000000
+Timestep 825 time 824.000000 delta 1.000000
+Number of blocks at level 0 at timestep 825 is 256
+Number of blocks at level 1 at timestep 825 is 0
+Number of blocks at level 2 at timestep 825 is 0
+Number of blocks at level 3 at timestep 825 is 0
+Number of blocks at level 4 at timestep 825 is 0
+Total number of blocks at timestep 825 is 256
+comm partners x ave   1.75 min 1 max 2
+comm partners y ave   1.75 min 1 max 2
+comm partners z ave   1.50 min 1 max 2
+comm partners total ave   5.00 min 3 max 6
+comm partners unique ave   5.00 min 3 max 6
+
+Timestep 826 time 825.000000 delta 1.000000
+Timestep 827 time 826.000000 delta 1.000000
+Timestep 828 time 827.000000 delta 1.000000
+Timestep 829 time 828.000000 delta 1.000000
+Timestep 830 time 829.000000 delta 1.000000
+Number of blocks at level 0 at timestep 830 is 256
+Number of blocks at level 1 at timestep 830 is 0
+Number of blocks at level 2 at timestep 830 is 0
+Number of blocks at level 3 at timestep 830 is 0
+Number of blocks at level 4 at timestep 830 is 0
+Total number of blocks at timestep 830 is 256
+comm partners x ave   1.75 min 1 max 2
+comm partners y ave   1.75 min 1 max 2
+comm partners z ave   1.50 min 1 max 2
+comm partners total ave   5.00 min 3 max 6
+comm partners unique ave   5.00 min 3 max 6
+
+Timestep 831 time 830.000000 delta 1.000000
+Timestep 832 time 831.000000 delta 1.000000
+Timestep 833 time 832.000000 delta 1.000000
+Timestep 834 time 833.000000 delta 1.000000
+Timestep 835 time 834.000000 delta 1.000000
+Number of blocks at level 0 at timestep 835 is 256
+Number of blocks at level 1 at timestep 835 is 0
+Number of blocks at level 2 at timestep 835 is 0
+Number of blocks at level 3 at timestep 835 is 0
+Number of blocks at level 4 at timestep 835 is 0
+Total number of blocks at timestep 835 is 256
+comm partners x ave   1.75 min 1 max 2
+comm partners y ave   1.75 min 1 max 2
+comm partners z ave   1.50 min 1 max 2
+comm partners total ave   5.00 min 3 max 6
+comm partners unique ave   5.00 min 3 max 6
+
+Timestep 836 time 835.000000 delta 1.000000
+Timestep 837 time 836.000000 delta 1.000000
+Timestep 838 time 837.000000 delta 1.000000
+Timestep 839 time 838.000000 delta 1.000000
+Timestep 840 time 839.000000 delta 1.000000
+Number of blocks at level 0 at timestep 840 is 256
+Number of blocks at level 1 at timestep 840 is 0
+Number of blocks at level 2 at timestep 840 is 0
+Number of blocks at level 3 at timestep 840 is 0
+Number of blocks at level 4 at timestep 840 is 0
+Total number of blocks at timestep 840 is 256
+comm partners x ave   1.75 min 1 max 2
+comm partners y ave   1.75 min 1 max 2
+comm partners z ave   1.50 min 1 max 2
+comm partners total ave   5.00 min 3 max 6
+comm partners unique ave   5.00 min 3 max 6
+
+Timestep 841 time 840.000000 delta 1.000000
+Timestep 842 time 841.000000 delta 1.000000
+Timestep 843 time 842.000000 delta 1.000000
+Timestep 844 time 843.000000 delta 1.000000
+Timestep 845 time 844.000000 delta 1.000000
+Number of blocks at level 0 at timestep 845 is 256
+Number of blocks at level 1 at timestep 845 is 0
+Number of blocks at level 2 at timestep 845 is 0
+Number of blocks at level 3 at timestep 845 is 0
+Number of blocks at level 4 at timestep 845 is 0
+Total number of blocks at timestep 845 is 256
+comm partners x ave   1.75 min 1 max 2
+comm partners y ave   1.75 min 1 max 2
+comm partners z ave   1.50 min 1 max 2
+comm partners total ave   5.00 min 3 max 6
+comm partners unique ave   5.00 min 3 max 6
+
+Timestep 846 time 845.000000 delta 1.000000
+Timestep 847 time 846.000000 delta 1.000000
+Timestep 848 time 847.000000 delta 1.000000
+Timestep 849 time 848.000000 delta 1.000000
+Timestep 850 time 849.000000 delta 1.000000
+Number of blocks at level 0 at timestep 850 is 256
+Number of blocks at level 1 at timestep 850 is 0
+Number of blocks at level 2 at timestep 850 is 0
+Number of blocks at level 3 at timestep 850 is 0
+Number of blocks at level 4 at timestep 850 is 0
+Total number of blocks at timestep 850 is 256
+comm partners x ave   1.75 min 1 max 2
+comm partners y ave   1.75 min 1 max 2
+comm partners z ave   1.50 min 1 max 2
+comm partners total ave   5.00 min 3 max 6
+comm partners unique ave   5.00 min 3 max 6
+
+Timestep 851 time 850.000000 delta 1.000000
+Timestep 852 time 851.000000 delta 1.000000
+Timestep 853 time 852.000000 delta 1.000000
+Timestep 854 time 853.000000 delta 1.000000
+Timestep 855 time 854.000000 delta 1.000000
+Number of blocks at level 0 at timestep 855 is 256
+Number of blocks at level 1 at timestep 855 is 0
+Number of blocks at level 2 at timestep 855 is 0
+Number of blocks at level 3 at timestep 855 is 0
+Number of blocks at level 4 at timestep 855 is 0
+Total number of blocks at timestep 855 is 256
+comm partners x ave   1.75 min 1 max 2
+comm partners y ave   1.75 min 1 max 2
+comm partners z ave   1.50 min 1 max 2
+comm partners total ave   5.00 min 3 max 6
+comm partners unique ave   5.00 min 3 max 6
+
+Timestep 856 time 855.000000 delta 1.000000
+Timestep 857 time 856.000000 delta 1.000000
+Timestep 858 time 857.000000 delta 1.000000
+Timestep 859 time 858.000000 delta 1.000000
+Timestep 860 time 859.000000 delta 1.000000
+Number of blocks at level 0 at timestep 860 is 256
+Number of blocks at level 1 at timestep 860 is 0
+Number of blocks at level 2 at timestep 860 is 0
+Number of blocks at level 3 at timestep 860 is 0
+Number of blocks at level 4 at timestep 860 is 0
+Total number of blocks at timestep 860 is 256
+comm partners x ave   1.75 min 1 max 2
+comm partners y ave   1.75 min 1 max 2
+comm partners z ave   1.50 min 1 max 2
+comm partners total ave   5.00 min 3 max 6
+comm partners unique ave   5.00 min 3 max 6
+
+Timestep 861 time 860.000000 delta 1.000000
+Timestep 862 time 861.000000 delta 1.000000
+Timestep 863 time 862.000000 delta 1.000000
+Timestep 864 time 863.000000 delta 1.000000
+Timestep 865 time 864.000000 delta 1.000000
+Number of blocks at level 0 at timestep 865 is 256
+Number of blocks at level 1 at timestep 865 is 0
+Number of blocks at level 2 at timestep 865 is 0
+Number of blocks at level 3 at timestep 865 is 0
+Number of blocks at level 4 at timestep 865 is 0
+Total number of blocks at timestep 865 is 256
+comm partners x ave   1.75 min 1 max 2
+comm partners y ave   1.75 min 1 max 2
+comm partners z ave   1.50 min 1 max 2
+comm partners total ave   5.00 min 3 max 6
+comm partners unique ave   5.00 min 3 max 6
+
+Timestep 866 time 865.000000 delta 1.000000
+Timestep 867 time 866.000000 delta 1.000000
+Timestep 868 time 867.000000 delta 1.000000
+Timestep 869 time 868.000000 delta 1.000000
+Timestep 870 time 869.000000 delta 1.000000
+Number of blocks at level 0 at timestep 870 is 256
+Number of blocks at level 1 at timestep 870 is 0
+Number of blocks at level 2 at timestep 870 is 0
+Number of blocks at level 3 at timestep 870 is 0
+Number of blocks at level 4 at timestep 870 is 0
+Total number of blocks at timestep 870 is 256
+comm partners x ave   1.75 min 1 max 2
+comm partners y ave   1.75 min 1 max 2
+comm partners z ave   1.50 min 1 max 2
+comm partners total ave   5.00 min 3 max 6
+comm partners unique ave   5.00 min 3 max 6
+
+Timestep 871 time 870.000000 delta 1.000000
+Timestep 872 time 871.000000 delta 1.000000
+Timestep 873 time 872.000000 delta 1.000000
+Timestep 874 time 873.000000 delta 1.000000
+Timestep 875 time 874.000000 delta 1.000000
+Number of blocks at level 0 at timestep 875 is 256
+Number of blocks at level 1 at timestep 875 is 0
+Number of blocks at level 2 at timestep 875 is 0
+Number of blocks at level 3 at timestep 875 is 0
+Number of blocks at level 4 at timestep 875 is 0
+Total number of blocks at timestep 875 is 256
+comm partners x ave   1.75 min 1 max 2
+comm partners y ave   1.75 min 1 max 2
+comm partners z ave   1.50 min 1 max 2
+comm partners total ave   5.00 min 3 max 6
+comm partners unique ave   5.00 min 3 max 6
+
+Timestep 876 time 875.000000 delta 1.000000
+Timestep 877 time 876.000000 delta 1.000000
+Timestep 878 time 877.000000 delta 1.000000
+Timestep 879 time 878.000000 delta 1.000000
+Timestep 880 time 879.000000 delta 1.000000
+Number of blocks at level 0 at timestep 880 is 256
+Number of blocks at level 1 at timestep 880 is 0
+Number of blocks at level 2 at timestep 880 is 0
+Number of blocks at level 3 at timestep 880 is 0
+Number of blocks at level 4 at timestep 880 is 0
+Total number of blocks at timestep 880 is 256
+comm partners x ave   1.75 min 1 max 2
+comm partners y ave   1.75 min 1 max 2
+comm partners z ave   1.50 min 1 max 2
+comm partners total ave   5.00 min 3 max 6
+comm partners unique ave   5.00 min 3 max 6
+
+Timestep 881 time 880.000000 delta 1.000000
+Timestep 882 time 881.000000 delta 1.000000
+Timestep 883 time 882.000000 delta 1.000000
+Timestep 884 time 883.000000 delta 1.000000
+Timestep 885 time 884.000000 delta 1.000000
+Number of blocks at level 0 at timestep 885 is 256
+Number of blocks at level 1 at timestep 885 is 0
+Number of blocks at level 2 at timestep 885 is 0
+Number of blocks at level 3 at timestep 885 is 0
+Number of blocks at level 4 at timestep 885 is 0
+Total number of blocks at timestep 885 is 256
+comm partners x ave   1.75 min 1 max 2
+comm partners y ave   1.75 min 1 max 2
+comm partners z ave   1.50 min 1 max 2
+comm partners total ave   5.00 min 3 max 6
+comm partners unique ave   5.00 min 3 max 6
+
+Timestep 886 time 885.000000 delta 1.000000
+Timestep 887 time 886.000000 delta 1.000000
+Timestep 888 time 887.000000 delta 1.000000
+Timestep 889 time 888.000000 delta 1.000000
+Timestep 890 time 889.000000 delta 1.000000
+Number of blocks at level 0 at timestep 890 is 256
+Number of blocks at level 1 at timestep 890 is 0
+Number of blocks at level 2 at timestep 890 is 0
+Number of blocks at level 3 at timestep 890 is 0
+Number of blocks at level 4 at timestep 890 is 0
+Total number of blocks at timestep 890 is 256
+comm partners x ave   1.75 min 1 max 2
+comm partners y ave   1.75 min 1 max 2
+comm partners z ave   1.50 min 1 max 2
+comm partners total ave   5.00 min 3 max 6
+comm partners unique ave   5.00 min 3 max 6
+
+Timestep 891 time 890.000000 delta 1.000000
+Timestep 892 time 891.000000 delta 1.000000
+Timestep 893 time 892.000000 delta 1.000000
+Timestep 894 time 893.000000 delta 1.000000
+Timestep 895 time 894.000000 delta 1.000000
+Number of blocks at level 0 at timestep 895 is 256
+Number of blocks at level 1 at timestep 895 is 0
+Number of blocks at level 2 at timestep 895 is 0
+Number of blocks at level 3 at timestep 895 is 0
+Number of blocks at level 4 at timestep 895 is 0
+Total number of blocks at timestep 895 is 256
+comm partners x ave   1.75 min 1 max 2
+comm partners y ave   1.75 min 1 max 2
+comm partners z ave   1.50 min 1 max 2
+comm partners total ave   5.00 min 3 max 6
+comm partners unique ave   5.00 min 3 max 6
+
+Timestep 896 time 895.000000 delta 1.000000
+Timestep 897 time 896.000000 delta 1.000000
+Timestep 898 time 897.000000 delta 1.000000
+Timestep 899 time 898.000000 delta 1.000000
+Timestep 900 time 899.000000 delta 1.000000
+Number of blocks at level 0 at timestep 900 is 256
+Number of blocks at level 1 at timestep 900 is 0
+Number of blocks at level 2 at timestep 900 is 0
+Number of blocks at level 3 at timestep 900 is 0
+Number of blocks at level 4 at timestep 900 is 0
+Total number of blocks at timestep 900 is 256
+comm partners x ave   1.75 min 1 max 2
+comm partners y ave   1.75 min 1 max 2
+comm partners z ave   1.50 min 1 max 2
+comm partners total ave   5.00 min 3 max 6
+comm partners unique ave   5.00 min 3 max 6
+
+Timestep 901 time 900.000000 delta 1.000000
+Timestep 902 time 901.000000 delta 1.000000
+Timestep 903 time 902.000000 delta 1.000000
+Timestep 904 time 903.000000 delta 1.000000
+Timestep 905 time 904.000000 delta 1.000000
+Number of blocks at level 0 at timestep 905 is 256
+Number of blocks at level 1 at timestep 905 is 0
+Number of blocks at level 2 at timestep 905 is 0
+Number of blocks at level 3 at timestep 905 is 0
+Number of blocks at level 4 at timestep 905 is 0
+Total number of blocks at timestep 905 is 256
+comm partners x ave   1.75 min 1 max 2
+comm partners y ave   1.75 min 1 max 2
+comm partners z ave   1.50 min 1 max 2
+comm partners total ave   5.00 min 3 max 6
+comm partners unique ave   5.00 min 3 max 6
+
+Timestep 906 time 905.000000 delta 1.000000
+Timestep 907 time 906.000000 delta 1.000000
+Timestep 908 time 907.000000 delta 1.000000
+Timestep 909 time 908.000000 delta 1.000000
+Timestep 910 time 909.000000 delta 1.000000
+Number of blocks at level 0 at timestep 910 is 256
+Number of blocks at level 1 at timestep 910 is 0
+Number of blocks at level 2 at timestep 910 is 0
+Number of blocks at level 3 at timestep 910 is 0
+Number of blocks at level 4 at timestep 910 is 0
+Total number of blocks at timestep 910 is 256
+comm partners x ave   1.75 min 1 max 2
+comm partners y ave   1.75 min 1 max 2
+comm partners z ave   1.50 min 1 max 2
+comm partners total ave   5.00 min 3 max 6
+comm partners unique ave   5.00 min 3 max 6
+
+Timestep 911 time 910.000000 delta 1.000000
+Timestep 912 time 911.000000 delta 1.000000
+Timestep 913 time 912.000000 delta 1.000000
+Timestep 914 time 913.000000 delta 1.000000
+Timestep 915 time 914.000000 delta 1.000000
+Number of blocks at level 0 at timestep 915 is 256
+Number of blocks at level 1 at timestep 915 is 0
+Number of blocks at level 2 at timestep 915 is 0
+Number of blocks at level 3 at timestep 915 is 0
+Number of blocks at level 4 at timestep 915 is 0
+Total number of blocks at timestep 915 is 256
+comm partners x ave   1.75 min 1 max 2
+comm partners y ave   1.75 min 1 max 2
+comm partners z ave   1.50 min 1 max 2
+comm partners total ave   5.00 min 3 max 6
+comm partners unique ave   5.00 min 3 max 6
+
+Timestep 916 time 915.000000 delta 1.000000
+Timestep 917 time 916.000000 delta 1.000000
+Timestep 918 time 917.000000 delta 1.000000
+Timestep 919 time 918.000000 delta 1.000000
+Timestep 920 time 919.000000 delta 1.000000
+Number of blocks at level 0 at timestep 920 is 256
+Number of blocks at level 1 at timestep 920 is 0
+Number of blocks at level 2 at timestep 920 is 0
+Number of blocks at level 3 at timestep 920 is 0
+Number of blocks at level 4 at timestep 920 is 0
+Total number of blocks at timestep 920 is 256
+comm partners x ave   1.75 min 1 max 2
+comm partners y ave   1.75 min 1 max 2
+comm partners z ave   1.50 min 1 max 2
+comm partners total ave   5.00 min 3 max 6
+comm partners unique ave   5.00 min 3 max 6
+
+Timestep 921 time 920.000000 delta 1.000000
+Timestep 922 time 921.000000 delta 1.000000
+Timestep 923 time 922.000000 delta 1.000000
+Timestep 924 time 923.000000 delta 1.000000
+Timestep 925 time 924.000000 delta 1.000000
+Number of blocks at level 0 at timestep 925 is 256
+Number of blocks at level 1 at timestep 925 is 0
+Number of blocks at level 2 at timestep 925 is 0
+Number of blocks at level 3 at timestep 925 is 0
+Number of blocks at level 4 at timestep 925 is 0
+Total number of blocks at timestep 925 is 256
+comm partners x ave   1.75 min 1 max 2
+comm partners y ave   1.75 min 1 max 2
+comm partners z ave   1.50 min 1 max 2
+comm partners total ave   5.00 min 3 max 6
+comm partners unique ave   5.00 min 3 max 6
+
+Timestep 926 time 925.000000 delta 1.000000
+Timestep 927 time 926.000000 delta 1.000000
+Timestep 928 time 927.000000 delta 1.000000
+Timestep 929 time 928.000000 delta 1.000000
+Timestep 930 time 929.000000 delta 1.000000
+Number of blocks at level 0 at timestep 930 is 256
+Number of blocks at level 1 at timestep 930 is 0
+Number of blocks at level 2 at timestep 930 is 0
+Number of blocks at level 3 at timestep 930 is 0
+Number of blocks at level 4 at timestep 930 is 0
+Total number of blocks at timestep 930 is 256
+comm partners x ave   1.75 min 1 max 2
+comm partners y ave   1.75 min 1 max 2
+comm partners z ave   1.50 min 1 max 2
+comm partners total ave   5.00 min 3 max 6
+comm partners unique ave   5.00 min 3 max 6
+
+Timestep 931 time 930.000000 delta 1.000000
+Timestep 932 time 931.000000 delta 1.000000
+Timestep 933 time 932.000000 delta 1.000000
+Timestep 934 time 933.000000 delta 1.000000
+Timestep 935 time 934.000000 delta 1.000000
+Number of blocks at level 0 at timestep 935 is 256
+Number of blocks at level 1 at timestep 935 is 0
+Number of blocks at level 2 at timestep 935 is 0
+Number of blocks at level 3 at timestep 935 is 0
+Number of blocks at level 4 at timestep 935 is 0
+Total number of blocks at timestep 935 is 256
+comm partners x ave   1.75 min 1 max 2
+comm partners y ave   1.75 min 1 max 2
+comm partners z ave   1.50 min 1 max 2
+comm partners total ave   5.00 min 3 max 6
+comm partners unique ave   5.00 min 3 max 6
+
+Timestep 936 time 935.000000 delta 1.000000
+Timestep 937 time 936.000000 delta 1.000000
+Timestep 938 time 937.000000 delta 1.000000
+Timestep 939 time 938.000000 delta 1.000000
+Timestep 940 time 939.000000 delta 1.000000
+Number of blocks at level 0 at timestep 940 is 256
+Number of blocks at level 1 at timestep 940 is 0
+Number of blocks at level 2 at timestep 940 is 0
+Number of blocks at level 3 at timestep 940 is 0
+Number of blocks at level 4 at timestep 940 is 0
+Total number of blocks at timestep 940 is 256
+comm partners x ave   1.75 min 1 max 2
+comm partners y ave   1.75 min 1 max 2
+comm partners z ave   1.50 min 1 max 2
+comm partners total ave   5.00 min 3 max 6
+comm partners unique ave   5.00 min 3 max 6
+
+Timestep 941 time 940.000000 delta 1.000000
+Timestep 942 time 941.000000 delta 1.000000
+Timestep 943 time 942.000000 delta 1.000000
+Timestep 944 time 943.000000 delta 1.000000
+Timestep 945 time 944.000000 delta 1.000000
+Number of blocks at level 0 at timestep 945 is 256
+Number of blocks at level 1 at timestep 945 is 0
+Number of blocks at level 2 at timestep 945 is 0
+Number of blocks at level 3 at timestep 945 is 0
+Number of blocks at level 4 at timestep 945 is 0
+Total number of blocks at timestep 945 is 256
+comm partners x ave   1.75 min 1 max 2
+comm partners y ave   1.75 min 1 max 2
+comm partners z ave   1.50 min 1 max 2
+comm partners total ave   5.00 min 3 max 6
+comm partners unique ave   5.00 min 3 max 6
+
+Timestep 946 time 945.000000 delta 1.000000
+Timestep 947 time 946.000000 delta 1.000000
+Timestep 948 time 947.000000 delta 1.000000
+Timestep 949 time 948.000000 delta 1.000000
+Timestep 950 time 949.000000 delta 1.000000
+Number of blocks at level 0 at timestep 950 is 256
+Number of blocks at level 1 at timestep 950 is 0
+Number of blocks at level 2 at timestep 950 is 0
+Number of blocks at level 3 at timestep 950 is 0
+Number of blocks at level 4 at timestep 950 is 0
+Total number of blocks at timestep 950 is 256
+comm partners x ave   1.75 min 1 max 2
+comm partners y ave   1.75 min 1 max 2
+comm partners z ave   1.50 min 1 max 2
+comm partners total ave   5.00 min 3 max 6
+comm partners unique ave   5.00 min 3 max 6
+
+Timestep 951 time 950.000000 delta 1.000000
+Timestep 952 time 951.000000 delta 1.000000
+Timestep 953 time 952.000000 delta 1.000000
+Timestep 954 time 953.000000 delta 1.000000
+Timestep 955 time 954.000000 delta 1.000000
+Number of blocks at level 0 at timestep 955 is 256
+Number of blocks at level 1 at timestep 955 is 0
+Number of blocks at level 2 at timestep 955 is 0
+Number of blocks at level 3 at timestep 955 is 0
+Number of blocks at level 4 at timestep 955 is 0
+Total number of blocks at timestep 955 is 256
+comm partners x ave   1.75 min 1 max 2
+comm partners y ave   1.75 min 1 max 2
+comm partners z ave   1.50 min 1 max 2
+comm partners total ave   5.00 min 3 max 6
+comm partners unique ave   5.00 min 3 max 6
+
+Timestep 956 time 955.000000 delta 1.000000
+Timestep 957 time 956.000000 delta 1.000000
+Timestep 958 time 957.000000 delta 1.000000
+Timestep 959 time 958.000000 delta 1.000000
+Timestep 960 time 959.000000 delta 1.000000
+Number of blocks at level 0 at timestep 960 is 256
+Number of blocks at level 1 at timestep 960 is 0
+Number of blocks at level 2 at timestep 960 is 0
+Number of blocks at level 3 at timestep 960 is 0
+Number of blocks at level 4 at timestep 960 is 0
+Total number of blocks at timestep 960 is 256
+comm partners x ave   1.75 min 1 max 2
+comm partners y ave   1.75 min 1 max 2
+comm partners z ave   1.50 min 1 max 2
+comm partners total ave   5.00 min 3 max 6
+comm partners unique ave   5.00 min 3 max 6
+
+Timestep 961 time 960.000000 delta 1.000000
+Timestep 962 time 961.000000 delta 1.000000
+Timestep 963 time 962.000000 delta 1.000000
+Timestep 964 time 963.000000 delta 1.000000
+Timestep 965 time 964.000000 delta 1.000000
+Number of blocks at level 0 at timestep 965 is 256
+Number of blocks at level 1 at timestep 965 is 0
+Number of blocks at level 2 at timestep 965 is 0
+Number of blocks at level 3 at timestep 965 is 0
+Number of blocks at level 4 at timestep 965 is 0
+Total number of blocks at timestep 965 is 256
+comm partners x ave   1.75 min 1 max 2
+comm partners y ave   1.75 min 1 max 2
+comm partners z ave   1.50 min 1 max 2
+comm partners total ave   5.00 min 3 max 6
+comm partners unique ave   5.00 min 3 max 6
+
+Timestep 966 time 965.000000 delta 1.000000
+Timestep 967 time 966.000000 delta 1.000000
+Timestep 968 time 967.000000 delta 1.000000
+Timestep 969 time 968.000000 delta 1.000000
+Timestep 970 time 969.000000 delta 1.000000
+Number of blocks at level 0 at timestep 970 is 256
+Number of blocks at level 1 at timestep 970 is 0
+Number of blocks at level 2 at timestep 970 is 0
+Number of blocks at level 3 at timestep 970 is 0
+Number of blocks at level 4 at timestep 970 is 0
+Total number of blocks at timestep 970 is 256
+comm partners x ave   1.75 min 1 max 2
+comm partners y ave   1.75 min 1 max 2
+comm partners z ave   1.50 min 1 max 2
+comm partners total ave   5.00 min 3 max 6
+comm partners unique ave   5.00 min 3 max 6
+
+Timestep 971 time 970.000000 delta 1.000000
+Timestep 972 time 971.000000 delta 1.000000
+Timestep 973 time 972.000000 delta 1.000000
+Timestep 974 time 973.000000 delta 1.000000
+Timestep 975 time 974.000000 delta 1.000000
+Number of blocks at level 0 at timestep 975 is 256
+Number of blocks at level 1 at timestep 975 is 0
+Number of blocks at level 2 at timestep 975 is 0
+Number of blocks at level 3 at timestep 975 is 0
+Number of blocks at level 4 at timestep 975 is 0
+Total number of blocks at timestep 975 is 256
+comm partners x ave   1.75 min 1 max 2
+comm partners y ave   1.75 min 1 max 2
+comm partners z ave   1.50 min 1 max 2
+comm partners total ave   5.00 min 3 max 6
+comm partners unique ave   5.00 min 3 max 6
+
+Timestep 976 time 975.000000 delta 1.000000
+Timestep 977 time 976.000000 delta 1.000000
+Timestep 978 time 977.000000 delta 1.000000
+Timestep 979 time 978.000000 delta 1.000000
+Timestep 980 time 979.000000 delta 1.000000
+Number of blocks at level 0 at timestep 980 is 256
+Number of blocks at level 1 at timestep 980 is 0
+Number of blocks at level 2 at timestep 980 is 0
+Number of blocks at level 3 at timestep 980 is 0
+Number of blocks at level 4 at timestep 980 is 0
+Total number of blocks at timestep 980 is 256
+comm partners x ave   1.75 min 1 max 2
+comm partners y ave   1.75 min 1 max 2
+comm partners z ave   1.50 min 1 max 2
+comm partners total ave   5.00 min 3 max 6
+comm partners unique ave   5.00 min 3 max 6
+
+Timestep 981 time 980.000000 delta 1.000000
+Timestep 982 time 981.000000 delta 1.000000
+Timestep 983 time 982.000000 delta 1.000000
+Timestep 984 time 983.000000 delta 1.000000
+Timestep 985 time 984.000000 delta 1.000000
+Number of blocks at level 0 at timestep 985 is 256
+Number of blocks at level 1 at timestep 985 is 0
+Number of blocks at level 2 at timestep 985 is 0
+Number of blocks at level 3 at timestep 985 is 0
+Number of blocks at level 4 at timestep 985 is 0
+Total number of blocks at timestep 985 is 256
+comm partners x ave   1.75 min 1 max 2
+comm partners y ave   1.75 min 1 max 2
+comm partners z ave   1.50 min 1 max 2
+comm partners total ave   5.00 min 3 max 6
+comm partners unique ave   5.00 min 3 max 6
+
+Timestep 986 time 985.000000 delta 1.000000
+Timestep 987 time 986.000000 delta 1.000000
+Timestep 988 time 987.000000 delta 1.000000
+Timestep 989 time 988.000000 delta 1.000000
+Timestep 990 time 989.000000 delta 1.000000
+Number of blocks at level 0 at timestep 990 is 256
+Number of blocks at level 1 at timestep 990 is 0
+Number of blocks at level 2 at timestep 990 is 0
+Number of blocks at level 3 at timestep 990 is 0
+Number of blocks at level 4 at timestep 990 is 0
+Total number of blocks at timestep 990 is 256
+comm partners x ave   1.75 min 1 max 2
+comm partners y ave   1.75 min 1 max 2
+comm partners z ave   1.50 min 1 max 2
+comm partners total ave   5.00 min 3 max 6
+comm partners unique ave   5.00 min 3 max 6
+
+Timestep 991 time 990.000000 delta 1.000000
+Timestep 992 time 991.000000 delta 1.000000
+Timestep 993 time 992.000000 delta 1.000000
+Timestep 994 time 993.000000 delta 1.000000
+Timestep 995 time 994.000000 delta 1.000000
+Number of blocks at level 0 at timestep 995 is 256
+Number of blocks at level 1 at timestep 995 is 0
+Number of blocks at level 2 at timestep 995 is 0
+Number of blocks at level 3 at timestep 995 is 0
+Number of blocks at level 4 at timestep 995 is 0
+Total number of blocks at timestep 995 is 256
+comm partners x ave   1.75 min 1 max 2
+comm partners y ave   1.75 min 1 max 2
+comm partners z ave   1.50 min 1 max 2
+comm partners total ave   5.00 min 3 max 6
+comm partners unique ave   5.00 min 3 max 6
+
+Timestep 996 time 995.000000 delta 1.000000
+Timestep 997 time 996.000000 delta 1.000000
+Timestep 998 time 997.000000 delta 1.000000
+Timestep 999 time 998.000000 delta 1.000000
+Timestep 1000 time 999.000000 delta 1.000000
+Number of blocks at level 0 at timestep 1000 is 256
+Number of blocks at level 1 at timestep 1000 is 0
+Number of blocks at level 2 at timestep 1000 is 0
+Number of blocks at level 3 at timestep 1000 is 0
+Number of blocks at level 4 at timestep 1000 is 0
+Total number of blocks at timestep 1000 is 256
+comm partners x ave   1.75 min 1 max 2
+comm partners y ave   1.75 min 1 max 2
+comm partners z ave   1.50 min 1 max 2
+comm partners total ave   5.00 min 3 max 6
+comm partners unique ave   5.00 min 3 max 6
+
+
+ ================ Start report ===================
+
+          Mantevo miniAMR
+          version 1.7.0 (modified w/OpenMP)
+
+Run on 256 ranks arranged in a 8 x 8 x 4 grid
+Threads per rank 1
+initial blocks per rank 1 x 1 x 1
+block size 16 x 16 x 16
+Initial ranks arranged by RCB across machine
+
+change_dir 0 group_blocks 0 limit_move 0
+Maximum number of blocks per rank is 3000
+Number of levels of refinement is 4
+Blocks can change by 4 levels per refinement step
+
+Blocks will be refined by 0 objects
+
+
+Number of timesteps is 1000
+Communicaion/computation stages per timestep is 500
+Communication will be performed with nonblocking sends
+Will perform checksums every 5 stages
+Will refine every 5 timesteps
+Load balance by RCB (Recursive Coordinate Bisection)
+Load balance when inbalanced by 0%
+Will not plot results
+Calculate on 20 variables with 7 point stencil
+Communicate 20 variables at a time
+Error tolorance for variable sums is 10^(-8)
+
+Total time for test: ave, std, min, max (sec): 434.937633 0.000001 434.937632 434.937635
+
+
+Number of malloc calls: ave, std, min, max (sec): 20583079.996094 0.062378 20583079.000000 20583080.000000
+
+Amount malloced: ave, std, min, max: 4645105524.000000 0.000000 4645105524.000000 4645105524.000000
+
+Malloc calls in init: ave, std, min, max (sec): 20583079.996094 0.062378 20583079.000000 20583080.000000
+
+Amount malloced in init: ave, std, min, max: 4645105524.000000 0.000000 4645105524.000000 4645105524.000000
+
+Malloc calls in timestepping: ave, std, min, max (sec): 0.000000 0.000000 0.000000 0.000000
+
+Amount malloced in timestepping: ave, std, min, max: 0.000000 0.000000 0.000000 0.000000
+
+Main (parse, allocate) Time: ave, stddev, min, max (sec): 2.766784 0.014343 2.657042 2.797684
+
+Initailize Time: ave, stddev, min, max (sec): 0.041340 0.014356 0.010250 0.150964
+
+---------------------------------------------
+          Computational Performance
+---------------------------------------------
+
+     Time: ave, stddev, min, max (sec): 75.343958 1.525884 72.735004 79.617261
+
+     total GFLOPS:             907.297369
+     Average GFLOPS per rank:  3.544130
+
+     Total floating point ops: 73400320000000.000000
+
+        Adds:                  62914560000000.000000
+        Muls:                  0.000000
+        Divides:               10485760000000.000000
+
+     Sum of min/max compute times per ts: 72.615729 79.744021
+
+---------------------------------------------
+           Interblock communication
+---------------------------------------------
+
+     Time: ave, stddev, min, max (sec): 318.650958 8.276875 286.806267 328.408604
+
+
+Total communication:
+
+                              average    stddev  minimum  maximum
+     Total                  : 318.546646 8.275445 286.711076 328.311843
+     Post IRecv             : 0.736378 0.160782 0.327606 1.018527
+     Pack faces             : 9.123636 1.773949 5.586013 11.725679
+     Send messages          : 1.704130 0.304578 0.747493 2.223155
+     Exchange same level    : 0.000000 0.000000 0.000000 0.000000
+     Exchange diff level    : 0.000000 0.000000 0.000000 0.000000
+     Apply BC               : 0.000000 0.000000 0.000000 0.000000
+     Wait time              : 291.222912 7.190502 265.028613 301.167417
+     Unpack faces           : 11.821575 2.143326 6.644341 15.268293
+
+     Comm partners total ave: 5.000000 0.790569 3.000000 6.000000
+     Comm partners total min: 5.000000 0.790569 3.000000 6.000000
+     Comm partners total max: 5.000000 0.790569 3.000000 6.000000
+     Comm partners uniq ave : 5.000000 0.790569 3.000000 6.000000
+     Comm partners uniq min : 5.000000 0.790569 3.000000 6.000000
+     Comm partners uniq max : 5.000000 0.790569 3.000000 6.000000
+     Messages received      : 2500000.000000 395284.707521 1500000.000000 3000000.000000
+     Bytes received         : 102400000000.000000 16190861620.062101 61440000000.000000 122880000000.000000
+     Faces received         : 2500000.000000 395284.707521 1500000.000000 3000000.000000
+     Messages sent          : 2500000.000000 395284.707521 1500000.000000 3000000.000000
+     Bytes sent             : 102400000000.000000 16190861620.062101 61440000000.000000 122880000000.000000
+     Faces sent             : 2500000.000000 395284.707521 1500000.000000 3000000.000000
+     Faces exchanged same   : 0.000000 0.000000 0.000000 0.000000
+     Faces exchanged diff   : 0.000000 0.000000 0.000000 0.000000
+     Faces with BC applied  : 1.000000 0.790569 0.000000 3.000000
+
+X direction communication statistics:
+
+                              average    stddev  minimum  maximum
+     Total                  : 92.803393 7.240501 75.506443 107.353758
+     Post IRecv             : 0.158088 0.029518 0.101316 0.237238
+     Pack faces             : 1.841068 0.454073 1.017306 2.223320
+     Send messages          : 0.667255 0.167107 0.286210 0.884360
+     Exchange same level    : 0.000000 0.000000 0.000000 0.000000
+     Exchange diff level    : 0.000000 0.000000 0.000000 0.000000
+     Apply BC               : 0.000000 0.000000 0.000000 0.000000
+     Wait time              : 86.162569 6.733135 70.506638 99.968110
+     Unpack faces           : 3.122763 0.747284 1.645258 3.891377
+
+     Comm partners average  : 1.750000 0.433013 1.000000 2.000000
+     Comm partners minimum  : 1.750000 0.433013 1.000000 2.000000
+     Comm partners maximum  : 1.750000 0.433013 1.000000 2.000000
+     Messages received      : 875000.000000 216506.350946 500000.000000 1000000.000000
+     Bytes received         : 35840000000.000000 8868100134.752651 20480000000.000000 40960000000.000000
+     Faces received         : 875000.000000 216506.350946 500000.000000 1000000.000000
+     Messages sent          : 875000.000000 216506.350946 500000.000000 1000000.000000
+     Bytes sent             : 35840000000.000000 8868100134.752651 20480000000.000000 40960000000.000000
+     Faces sent             : 875000.000000 216506.350946 500000.000000 1000000.000000
+     Faces exchanged same   : 0.000000 0.000000 0.000000 0.000000
+     Faces exchanged diff   : 0.000000 0.000000 0.000000 0.000000
+     Faces with BC applied  : 0.250000 0.433013 0.000000 1.000000
+
+Y direction communication statistics:
+
+                              average    stddev  minimum  maximum
+     Total                  : 115.928995 6.821987 86.739499 126.125923
+     Post IRecv             : 0.318826 0.108964 0.114287 0.500406
+     Pack faces             : 2.212050 0.545237 1.229456 2.703851
+     Send messages          : 0.556951 0.155008 0.206138 0.743939
+     Exchange same level    : 0.000000 0.000000 0.000000 0.000000
+     Exchange diff level    : 0.000000 0.000000 0.000000 0.000000
+     Apply BC               : 0.000000 0.000000 0.000000 0.000000
+     Wait time              : 108.633120 6.446722 81.075284 118.481887
+     Unpack faces           : 3.232569 0.795568 1.580282 4.011716
+
+     Comm partners average  : 1.750000 0.433013 1.000000 2.000000
+     Comm partners minimum  : 1.750000 0.433013 1.000000 2.000000
+     Comm partners maximum  : 1.750000 0.433013 1.000000 2.000000
+     Messages received      : 875000.000000 216506.350946 500000.000000 1000000.000000
+     Bytes received         : 35840000000.000000 8868100134.752651 20480000000.000000 40960000000.000000
+     Faces received         : 875000.000000 216506.350946 500000.000000 1000000.000000
+     Messages sent          : 875000.000000 216506.350946 500000.000000 1000000.000000
+     Bytes sent             : 35840000000.000000 8868100134.752651 20480000000.000000 40960000000.000000
+     Faces sent             : 875000.000000 216506.350946 500000.000000 1000000.000000
+     Faces exchanged same   : 0.000000 0.000000 0.000000 0.000000
+     Faces exchanged diff   : 0.000000 0.000000 0.000000 0.000000
+     Faces with BC applied  : 0.250000 0.433013 0.000000 1.000000
+
+Z direction communication statistics:
+
+                              average    stddev  minimum  maximum
+     Total                  : 109.814259 5.187931 100.096631 123.888590
+     Post IRecv             : 0.259464 0.125519 0.104423 0.445746
+     Pack faces             : 5.070518 1.605983 3.316074 6.878784
+     Send messages          : 0.479924 0.175214 0.255145 0.715089
+     Exchange same level    : 0.000000 0.000000 0.000000 0.000000
+     Exchange diff level    : 0.000000 0.000000 0.000000 0.000000
+     Apply BC               : 0.000000 0.000000 0.000000 0.000000
+     Wait time              : 96.427223 6.594054 85.899161 113.101433
+     Unpack faces           : 5.466243 1.837321 3.075569 7.672341
+
+     Comm partners average  : 1.500000 0.500000 1.000000 2.000000
+     Comm partners minimum  : 1.500000 0.500000 1.000000 2.000000
+     Comm partners maximum  : 1.500000 0.500000 1.000000 2.000000
+     Messages received      : 750000.000000 250000.000000 500000.000000 1000000.000000
+     Bytes received         : 30720000000.000000 10240000000.000000 20480000000.000000 40960000000.000000
+     Faces received         : 750000.000000 250000.000000 500000.000000 1000000.000000
+     Messages sent          : 750000.000000 250000.000000 500000.000000 1000000.000000
+     Bytes sent             : 30720000000.000000 10240000000.000000 20480000000.000000 40960000000.000000
+     Faces sent             : 750000.000000 250000.000000 500000.000000 1000000.000000
+     Faces exchanged same   : 0.000000 0.000000 0.000000 0.000000
+     Faces exchanged diff   : 0.000000 0.000000 0.000000 0.000000
+     Faces with BC applied  : 0.500000 0.500000 0.000000 1.000000
+
+     Sum of min/max communicate times per ts: 286.742395 329.229954
+
+     Sum of min/max calc and comm times per ts: 360.753319 405.053150
+
+---------------------------------------------
+             Gridsum performance
+---------------------------------------------
+
+     Time: ave, stddev, min, max (sec): 40.703350 8.887550 30.411159 73.788444
+
+        red : ave, stddev, min, max (sec): 29.784680 8.994928 19.295531 63.079210
+
+        calc: ave, stddev, min, max (sec): 10.356627 0.197387 9.908039 10.599832
+
+     total number:             2000000
+     number per timestep:      20
+
+     Sum of min/max gridsum times per ts: 29.672766 73.864331
+
+---------------------------------------------
+               Mesh Refinement
+---------------------------------------------
+
+     Time: ave, stddev, min, max (sec): 0.178388 0.016052 0.156887 0.247538
+
+     Number of refinement steps: 201
+
+     Number of load balance steps: 0
+
+     Number of redistributing steps: 0
+
+     Total blocks           : 128000000
+     Blocks/timestep ave, min, max : 256.000000 256 256
+     Max blocks on a processor at any time: 1
+     total blocks split     : 0.000000
+     total blocks reformed  : 0.000000
+
+     total blocks moved     : 0.000000
+     total moved load bal   : 0.000000
+     total moved redistribut: 0.000000
+     total moved coasening  : 0.000000
+
+     parents ave, min, max  : 0.000000 0 0
+     max dots ave, min, max : 0.000000 0 0
+     ave dots used          : -nan
+
+     number of times more sets of blocks than ranks: 0
+     total sets of blocks over num of ranks: 0
+     max number of sets of blocks on a rank: 1
+
+                              average    stddev  minimum  maximum
+     Per processor:
+     total blocks split     : 0.000000 0.000000 0.000000 0.000000
+     total blocks reformed  : 0.000000 0.000000 0.000000 0.000000
+     Total blocks moved     : 0.000000 0.000000 0.000000 0.000000
+     Blocks moved load bal  : 0.000000 0.000000 0.000000 0.000000
+     Blocks moved redistribu: 0.000000 0.000000 0.000000 0.000000
+     Blocks moved coarsening: 0.000000 0.000000 0.000000 0.000000
+     Time:
+        initial refine      : 0.011128 0.000001 0.011127 0.011137
+
+        compare objects     : 0.000742 0.000030 0.000660 0.000829
+        mark refine/coarsen : 0.012811 0.000856 0.009531 0.014120
+        communicate block 1 : 0.009102 0.000866 0.007664 0.012489
+        split blocks        : 0.003264 0.000345 0.002133 0.003892
+        communicate block 2 : 0.002529 0.000175 0.002192 0.002833
+        sync time           : 0.047279 0.016182 0.025746 0.122537
+        time for groups     : 0.017564 0.001047 0.000986 0.018087
+        misc time           : 0.022897 0.000371 0.017155 0.023067
+        total coarsen blocks: 0.070628 0.000642 0.069608 0.073305
+           coarsen blocks   : 0.070557 0.000642 0.069538 0.073238
+           pack blocks      : 0.000000 0.000000 0.000000 0.000000
+           move blocks      : 0.000000 0.000000 0.000000 0.000000
+           unpack blocks    : 0.000000 0.000000 0.000000 0.000000
+        total redistribute  : 0.008827 0.000014 0.008791 0.008858
+           choose blocks    : 0.000000 0.000000 0.000000 0.000000
+           pack blocks      : 0.000000 0.000000 0.000000 0.000000
+           move blocks      : 0.000000 0.000000 0.000000 0.000000
+           unpack blocks    : 0.000000 0.000000 0.000000 0.000000
+        total load balance  : 0.000000 0.000000 0.000000 0.000000
+           sort             : 0.000000 0.000000 0.000000 0.000000
+           move dots back   : 0.000000 0.000000 0.000000 0.000000
+           move blocks total: 0.000000 0.000000 0.000000 0.000000
+              pack blocks   : 0.000000 0.000000 0.000000 0.000000
+              move blocks   : 0.000000 0.000000 0.000000 0.000000
+              unpack blocks : 0.000000 0.000000 0.000000 0.000000
+              misc          : 0.000000 0.000000 0.000000 0.000000
+
+     Sum of min/max refinement times per ts: 0.134169 0.276706
+
+---------------------------------------------
+                   Plot
+---------------------------------------------
+
+     Time: ave, stddev, min, max (sec): 0.000041 0.000002 0.000039 0.000050
+
+     Number of plot steps: 0
+
+ ================== End report ===================
+Summary: ranks 256 threads 1 ts 1000 time 434.937633 calc 75.343958 comm 318.650958 red 40.703350 refine 0.178388 blocks/ts 256.000000 max_blocks 1
+--------------------------------------------------------------------------------
