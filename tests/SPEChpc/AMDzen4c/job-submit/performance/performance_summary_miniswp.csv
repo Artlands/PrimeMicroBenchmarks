@@ -1,6 +1,7 @@
 subfolder,benchmark,Total runtime [s],Average total power [W],Total energy [J],EDP [J*s]
-Average,miniswp,630.14,640.72,402929.06,253912611.75
+Average,miniswp,633.98,641.47,405888.94,257377458.31
 performance-0,miniswp,621.74,636.62,395099.87,245648274.77
 performance-1,miniswp,635.28,638.88,404832.83,257181547.48
 performance-2,miniswp,627.77,656.15,411172.39,258121600.68
 performance-3,miniswp,635.78,631.24,400611.16,254699024.05
+performance-4,miniswp,649.31,644.46,417728.44,271236844.59
