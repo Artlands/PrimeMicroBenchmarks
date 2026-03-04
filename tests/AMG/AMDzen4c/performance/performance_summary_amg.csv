@@ -1,0 +1,7 @@
+subfolder,benchmark,Total runtime [s],Average total power [W],Total energy [J],EDP [J*s]
+Average,amg,456.90,608.78,277416.61,126758029.56
+performance-0,amg,458.15,607.92,277966.87,127351397.83
+performance-1,amg,460.48,608.96,279709.12,128799123.35
+performance-2,amg,457.58,604.31,275795.98,126199191.56
+performance-3,amg,450.89,608.24,273557.42,123344615.84
+performance-4,amg,457.40,614.48,280053.65,128095819.26

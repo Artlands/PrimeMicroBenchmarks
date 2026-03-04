@@ -1,0 +1,7 @@
+subfolder,benchmark,Total runtime [s],Average total power [W],Total energy [J],EDP [J*s]
+Average,snap,992.13,668.38,649093.36,639519806.66
+turbo-performance-0,snap,853.66,818.00,697402.75,595346526.36
+turbo-performance-1,snap,857.66,816.28,698958.73,599468351.76
+turbo-performance-2,snap,1083.62,575.32,623438.20,675571502.40
+turbo-performance-3,snap,1082.65,569.73,616636.41,667600635.65
+turbo-performance-4,snap,1083.05,562.55,609030.71,659612017.14

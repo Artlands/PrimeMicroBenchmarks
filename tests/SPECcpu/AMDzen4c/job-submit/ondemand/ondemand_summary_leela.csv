@@ -1,0 +1,7 @@
+subfolder,benchmark,Total runtime [s],Average total power [W],Total energy [J],EDP [J*s]
+Average,leela,566.94,583.87,330512.42,187381447.13
+ondemand-0,leela,566.97,579.27,328325.55,186150577.88
+ondemand-1,leela,566.06,581.26,328297.50,185837528.45
+ondemand-2,leela,565.98,584.14,329878.77,186706313.12
+ondemand-3,leela,570.07,582.87,331552.95,189007883.47
+ondemand-4,leela,565.62,591.82,334507.33,189204932.73

@@ -1,0 +1,7 @@
+subfolder,benchmark,Total runtime [s],Average total power [W],Total energy [J],EDP [J*s]
+Average,clvleaf,2469.14,475.16,1172633.54,2895369745.83
+ondemand-0,clvleaf,2465.40,490.36,1208325.51,2979003683.45
+ondemand-1,clvleaf,2467.80,470.66,1160825.51,2864685808.47
+ondemand-2,clvleaf,2471.42,480.12,1185999.02,2931101175.27
+ondemand-3,clvleaf,2468.77,466.61,1151421.13,2842590346.72
+ondemand-4,clvleaf,2472.31,468.05,1156596.55,2859467715.25

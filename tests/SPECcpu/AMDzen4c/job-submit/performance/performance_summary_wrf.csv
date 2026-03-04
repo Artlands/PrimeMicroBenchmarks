@@ -1,0 +1,6 @@
+subfolder,benchmark,Total runtime [s],Average total power [W],Total energy [J],EDP [J*s]
+Average,wrf,3804.72,544.72,2072182.28,7884252500.61
+performance-0,wrf,3798.88,543.99,2066515.93,7850446791.55
+performance-1,wrf,3816.93,545.23,2080837.61,7942417317.08
+performance-2,wrf,3823.45,545.08,2083573.11,7966428516.46
+performance-4,wrf,3779.62,544.58,2057802.47,7777717377.36

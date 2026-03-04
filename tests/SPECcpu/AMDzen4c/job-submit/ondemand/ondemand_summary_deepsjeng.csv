@@ -1,0 +1,7 @@
+subfolder,benchmark,Total runtime [s],Average total power [W],Total energy [J],EDP [J*s]
+Average,deepsjeng,1254.05,373.13,460976.35,583946501.17
+ondemand-0,deepsjeng,1124.37,390.00,437028.63,491380626.13
+ondemand-1,deepsjeng,1103.40,382.93,420216.44,463666019.14
+ondemand-2,deepsjeng,1132.17,391.39,440951.72,499230942.83
+ondemand-3,deepsjeng,1420.77,354.06,495045.39,703344040.38
+ondemand-4,deepsjeng,1489.55,347.26,511639.57,762110877.39

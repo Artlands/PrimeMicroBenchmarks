@@ -1,0 +1,6 @@
+subfolder,benchmark,Total runtime [s],Average total power [W],Total energy [J],EDP [J*s]
+Average,amg,452.76,589.09,266037.40,120453023.13
+turbo-performance-0,amg,451.87,582.68,262628.17,118673979.66
+turbo-performance-2,amg,452.48,589.24,265940.97,120332340.21
+turbo-performance-3,amg,453.87,593.95,268909.34,122049562.26
+turbo-performance-4,amg,452.83,590.48,266671.11,120756210.37

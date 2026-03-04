@@ -1,0 +1,7 @@
+subfolder,benchmark,Total runtime [s],Average total power [W],Total energy [J],EDP [J*s]
+Average,miniQMC,70.04,588.29,40478.21,2835024.96
+performance-0,miniQMC,70.15,572.08,39422.92,2765331.79
+performance-1,miniQMC,70.15,600.31,41361.12,2901287.25
+performance-2,miniQMC,69.64,586.33,40096.75,2792329.99
+performance-3,miniQMC,70.13,592.14,40834.13,2863549.73
+performance-4,miniQMC,70.13,590.60,40676.15,2852626.04

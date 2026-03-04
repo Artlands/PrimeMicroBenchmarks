@@ -1,0 +1,7 @@
+subfolder,benchmark,Total runtime [s],Average total power [W],Total energy [J],EDP [J*s]
+Average,hpgmgfv,1305.99,550.40,718168.29,937950234.59
+ondemand-0,hpgmgfv,1303.19,551.03,717437.30,934958379.83
+ondemand-1,hpgmgfv,1311.75,553.94,725973.99,952293963.55
+ondemand-2,hpgmgfv,1309.29,545.10,712988.72,933509171.74
+ondemand-3,hpgmgfv,1296.99,547.19,709054.10,919635265.53
+ondemand-4,hpgmgfv,1308.76,554.75,725387.33,949354392.29

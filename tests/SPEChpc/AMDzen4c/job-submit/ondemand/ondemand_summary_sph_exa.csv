@@ -1,0 +1,7 @@
+subfolder,benchmark,Total runtime [s],Average total power [W],Total energy [J],EDP [J*s]
+Average,sph_exa,1719.31,543.40,933709.20,1609608404.58
+ondemand-0,sph_exa,1714.17,545.11,937198.64,1606516601.50
+ondemand-1,sph_exa,1724.56,549.65,948109.51,1635067577.84
+ondemand-2,sph_exa,1567.60,554.23,868548.53,1361534934.59
+ondemand-3,sph_exa,2410.74,544.58,1312805.34,3164834104.53
+ondemand-4,sph_exa,1870.90,524.62,980980.12,1835314504.37

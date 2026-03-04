@@ -1,28 +1,22 @@
 .venv/
 bin/
 out/
-# profiles/
-# *.out
-# *.err
-# *.prof
+*.out
+*.err
+*.prof
 *.tmp
 *.o
 dvfs_controller
 !apps/
 *GHz*/
 test_app
-scripts/AMDzen4c/dvfs/2.25GHz/
-scripts/AMDzen4c/energy/2.25GHz/
 !2.25GHz/
 # DVFS/
 # ondemand/
 # performance/
-DVFS-edp/
-# DVFS-energy/
-DVFS-energy2/
-# everest/
 *.log
-pattern_edp
-pattern_energy
-# plot_likwid_profiles_all.ipynb
-# SPECcpu/
+*-0/
+*-1/
+*-2/
+*-3/
+*-4/

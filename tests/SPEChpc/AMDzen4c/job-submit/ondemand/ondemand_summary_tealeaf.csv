@@ -1,0 +1,7 @@
+subfolder,benchmark,Total runtime [s],Average total power [W],Total energy [J],EDP [J*s]
+Average,tealeaf,3238.61,460.55,1490895.19,4828416594.41
+ondemand-0,tealeaf,3240.55,457.24,1481101.39,4799586339.11
+ondemand-1,tealeaf,3238.42,465.40,1506547.88,4878833349.96
+ondemand-2,tealeaf,3236.57,465.07,1504576.32,4869659483.06
+ondemand-3,tealeaf,3240.67,458.19,1484229.08,4809903766.00
+ondemand-4,tealeaf,3236.83,456.85,1478021.26,4784100033.91

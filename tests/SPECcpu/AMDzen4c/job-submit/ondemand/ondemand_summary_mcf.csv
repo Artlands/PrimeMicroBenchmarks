@@ -1,0 +1,7 @@
+subfolder,benchmark,Total runtime [s],Average total power [W],Total energy [J],EDP [J*s]
+Average,mcf,1504.15,543.93,817417.61,1229525118.73
+ondemand-0,mcf,1501.93,539.81,809898.01,1216410367.29
+ondemand-1,mcf,1505.35,538.32,809857.90,1219120966.64
+ondemand-2,mcf,1508.49,546.77,824074.58,1243111219.35
+ondemand-3,mcf,1505.86,547.06,822948.86,1239246457.20
+ondemand-4,mcf,1499.11,547.70,820308.70,1229736583.16

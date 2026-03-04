@@ -1,0 +1,7 @@
+subfolder,benchmark,Total runtime [s],Average total power [W],Total energy [J],EDP [J*s]
+Average,snap,1075.78,575.12,618044.54,664880854.05
+ondemand-0,snap,1075.07,582.80,625854.28,672837893.19
+ondemand-1,snap,1072.58,575.55,616629.02,661384208.19
+ondemand-2,snap,1079.61,572.97,617930.75,667122928.18
+ondemand-3,snap,1077.04,576.42,620214.57,667994909.97
+ondemand-4,snap,1074.59,567.85,609594.07,655064330.70

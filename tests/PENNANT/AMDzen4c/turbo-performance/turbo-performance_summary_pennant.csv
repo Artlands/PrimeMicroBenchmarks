@@ -1,0 +1,7 @@
+subfolder,benchmark,Total runtime [s],Average total power [W],Total energy [J],EDP [J*s]
+Average,pennant,1508.04,570.44,859581.59,1296290982.04
+turbo-performance-0,pennant,1508.49,570.05,859252.89,1296172281.63
+turbo-performance-1,pennant,1510.00,574.26,866466.16,1308361291.43
+turbo-performance-2,pennant,1507.64,572.62,862617.82,1300520000.65
+turbo-performance-3,pennant,1506.51,569.13,856712.25,1290647427.82
+turbo-performance-4,pennant,1507.58,566.15,852858.85,1285753908.68

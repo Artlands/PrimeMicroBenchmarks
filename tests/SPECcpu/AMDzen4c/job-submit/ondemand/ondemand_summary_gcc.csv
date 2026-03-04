@@ -1,0 +1,7 @@
+subfolder,benchmark,Total runtime [s],Average total power [W],Total energy [J],EDP [J*s]
+Average,gcc,146.50,564.88,82053.08,12021299.63
+ondemand-0,gcc,146.43,554.03,80401.26,11772808.48
+ondemand-1,gcc,146.33,566.97,82289.11,12041719.69
+ondemand-2,gcc,146.91,571.77,83305.79,12238626.55
+ondemand-3,gcc,146.41,564.80,81978.67,12002653.42
+ondemand-4,gcc,146.44,566.83,82290.58,12050690.02

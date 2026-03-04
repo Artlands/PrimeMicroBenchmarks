@@ -1,0 +1,7 @@
+subfolder,benchmark,Total runtime [s],Average total power [W],Total energy [J],EDP [J*s]
+Average,amg,460.61,595.84,273635.78,126057455.44
+ondemand-0,amg,452.93,594.90,268795.34,121744460.19
+ondemand-1,amg,451.54,605.86,272924.54,123236580.56
+ondemand-2,amg,462.58,598.74,275919.28,127635657.69
+ondemand-3,amg,460.98,595.86,273998.55,126307681.92
+ondemand-4,amg,475.02,583.81,276541.19,131362896.82

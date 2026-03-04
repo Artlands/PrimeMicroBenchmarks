@@ -1,0 +1,7 @@
+subfolder,benchmark,Total runtime [s],Average total power [W],Total energy [J],EDP [J*s]
+Average,exchange2,498.84,465.33,222006.77,114165170.19
+ondemand-0,exchange2,568.56,416.22,236343.41,134374371.15
+ondemand-1,exchange2,597.06,399.23,238082.79,142149682.13
+ondemand-2,exchange2,631.55,403.59,254702.13,160857089.06
+ondemand-3,exchange2,391.53,508.00,198458.38,77702095.56
+ondemand-4,exchange2,305.53,599.63,182447.16,55742613.04

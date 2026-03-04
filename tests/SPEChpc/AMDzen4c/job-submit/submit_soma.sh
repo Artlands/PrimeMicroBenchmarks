@@ -2,7 +2,7 @@
 #SBATCH -J spechpc_soma
 #SBATCH -N 1
 #SBATCH --reservation=cpufreq
-#SBATCH --nodelist=rpc-97-[1-20]
+#SBATCH --nodelist=rpc-97-[1-20],rpc-96-[1-20]
 #SBATCH --ntasks-per-node=256
 #SBATCH --cpus-per-task=1
 #SBATCH --exclusive

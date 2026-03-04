@@ -1,0 +1,7 @@
+subfolder,benchmark,Total runtime [s],Average total power [W],Total energy [J],EDP [J*s]
+Average,leela,569.64,573.88,326166.48,185814218.16
+performance-0,leela,570.11,570.33,324430.32,184961114.12
+performance-1,leela,564.12,572.78,322358.97,181848344.39
+performance-2,leela,578.63,576.46,332838.05,192589418.61
+performance-3,leela,572.16,572.02,326555.31,186842068.51
+performance-4,leela,563.16,577.83,324649.78,182830145.16

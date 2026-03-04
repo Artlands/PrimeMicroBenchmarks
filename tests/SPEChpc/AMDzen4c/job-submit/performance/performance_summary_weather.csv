@@ -1,0 +1,7 @@
+subfolder,benchmark,Total runtime [s],Average total power [W],Total energy [J],EDP [J*s]
+Average,weather,1757.02,660.30,1159315.74,2036977250.81
+performance-0,weather,1754.59,666.27,1167962.82,2049291449.46
+performance-1,weather,1756.49,673.66,1182469.38,2076991067.32
+performance-2,weather,1760.48,662.65,1165741.66,2052259961.01
+performance-3,weather,1754.98,622.45,1091562.62,1915666771.23
+performance-4,weather,1758.58,676.46,1188842.22,2090677005.03

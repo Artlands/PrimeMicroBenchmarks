@@ -1,0 +1,6 @@
+subfolder,benchmark,Total runtime [s],Average total power [W],Total energy [J],EDP [J*s]
+Average,tealeaf,3232.57,460.88,1489239.89,4814216375.91
+performance-0,tealeaf,3243.71,470.89,1526708.30,4952204643.22
+performance-1,tealeaf,3229.19,454.94,1468458.08,4741928319.03
+performance-2,tealeaf,3228.74,463.83,1496954.93,4833281286.18
+performance-3,tealeaf,3228.65,453.88,1464838.26,4729451255.20

@@ -1,0 +1,7 @@
+subfolder,benchmark,Total runtime [s],Average total power [W],Total energy [J],EDP [J*s]
+Average,lbm,939.01,683.29,640979.61,602479776.53
+ondemand-0,lbm,959.26,688.62,659830.89,632949873.94
+ondemand-1,lbm,907.68,676.06,612882.42,556300810.32
+ondemand-2,lbm,905.32,679.75,614643.31,556447671.23
+ondemand-3,lbm,956.51,688.05,657362.29,628775080.97
+ondemand-4,lbm,966.29,683.98,660179.15,637925446.17

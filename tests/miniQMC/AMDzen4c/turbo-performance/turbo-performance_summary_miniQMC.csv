@@ -1,0 +1,7 @@
+subfolder,benchmark,Total runtime [s],Average total power [W],Total energy [J],EDP [J*s]
+Average,miniQMC,68.03,649.02,43173.41,2928521.97
+turbo-performance-0,miniQMC,65.12,737.04,47073.19,3065512.25
+turbo-performance-1,miniQMC,65.12,748.96,47907.58,3119624.84
+turbo-performance-2,miniQMC,69.63,592.32,40526.58,2821977.03
+turbo-performance-3,miniQMC,70.13,589.92,40624.10,2848985.50
+turbo-performance-4,miniQMC,70.13,576.85,39735.61,2786510.23

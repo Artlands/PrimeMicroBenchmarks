@@ -1,0 +1,7 @@
+subfolder,benchmark,Total runtime [s],Average total power [W],Total energy [J],EDP [J*s]
+Average,soma,1400.00,555.53,777043.67,1087866363.83
+ondemand-0,soma,1399.86,549.55,768596.54,1075930630.83
+ondemand-1,soma,1400.28,562.22,786555.10,1101399027.96
+ondemand-2,soma,1400.73,566.09,792267.90,1109751763.08
+ondemand-3,soma,1398.82,550.62,769517.88,1076420513.97
+ondemand-4,soma,1400.31,549.17,768280.90,1075829883.33

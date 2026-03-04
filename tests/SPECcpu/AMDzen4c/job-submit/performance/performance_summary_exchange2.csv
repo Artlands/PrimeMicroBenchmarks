@@ -1,0 +1,7 @@
+subfolder,benchmark,Total runtime [s],Average total power [W],Total energy [J],EDP [J*s]
+Average,exchange2,420.11,497.68,201717.45,87568274.07
+performance-0,exchange2,304.61,570.37,173020.78,52703523.17
+performance-1,exchange2,462.62,451.24,208455.31,96434770.16
+performance-2,exchange2,446.12,466.59,207881.39,92740044.19
+performance-3,exchange2,586.11,418.15,244666.02,143401249.76
+performance-4,exchange2,301.10,582.07,174563.77,52561783.07

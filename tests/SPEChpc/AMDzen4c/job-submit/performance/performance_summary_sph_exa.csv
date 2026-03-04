@@ -1,0 +1,6 @@
+subfolder,benchmark,Total runtime [s],Average total power [W],Total energy [J],EDP [J*s]
+Average,sph_exa,1769.22,542.11,959507.67,1698105622.33
+performance-0,sph_exa,1778.79,535.48,952459.85,1694224652.70
+performance-1,sph_exa,1790.46,544.23,975121.22,1745919195.12
+performance-3,sph_exa,1792.22,544.94,977422.11,1751756725.38
+performance-4,sph_exa,1715.41,543.80,933027.50,1600521916.12

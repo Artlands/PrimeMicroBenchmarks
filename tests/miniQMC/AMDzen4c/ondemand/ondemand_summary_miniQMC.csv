@@ -1,0 +1,7 @@
+subfolder,benchmark,Total runtime [s],Average total power [W],Total energy [J],EDP [J*s]
+Average,miniQMC,72.87,581.51,41616.55,3032811.73
+ondemand-0,miniQMC,72.81,572.98,41003.22,2985515.03
+ondemand-1,miniQMC,72.77,578.17,41423.04,3014245.23
+ondemand-2,miniQMC,72.73,580.28,41481.13,3016818.25
+ondemand-3,miniQMC,72.80,586.41,42010.32,3058351.80
+ondemand-4,miniQMC,73.26,589.69,42165.03,3089128.32

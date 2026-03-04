@@ -1,0 +1,7 @@
+subfolder,benchmark,Total runtime [s],Average total power [W],Total energy [J],EDP [J*s]
+Average,hpcg,677.69,520.19,351914.28,238496687.56
+ondemand-0,hpcg,675.27,514.34,346719.29,234130868.70
+ondemand-1,hpcg,677.74,521.43,352783.75,239097128.64
+ondemand-2,hpcg,675.85,516.38,348260.90,235372598.76
+ondemand-3,hpcg,680.24,526.96,357873.09,243440351.42
+ondemand-4,hpcg,679.34,521.85,353934.36,240442490.29

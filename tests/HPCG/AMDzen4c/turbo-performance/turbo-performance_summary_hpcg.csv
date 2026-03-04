@@ -1,0 +1,7 @@
+subfolder,benchmark,Total runtime [s],Average total power [W],Total energy [J],EDP [J*s]
+Average,hpcg,674.85,531.83,358237.94,241758124.89
+turbo-performance-0,hpcg,678.86,533.67,361590.61,245470296.13
+turbo-performance-1,hpcg,672.38,532.52,357403.45,240311753.01
+turbo-performance-2,hpcg,674.35,534.87,360035.86,242790650.97
+turbo-performance-3,hpcg,676.30,523.39,353325.76,238954697.97
+turbo-performance-4,hpcg,672.35,534.68,358834.01,241263226.39

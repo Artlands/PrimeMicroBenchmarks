@@ -1,0 +1,7 @@
+subfolder,benchmark,Total runtime [s],Average total power [W],Total energy [J],EDP [J*s]
+Average,weather,1765.98,676.10,1193191.82,2107160597.66
+ondemand-0,weather,1764.38,676.06,1192058.20,2103239827.92
+ondemand-1,weather,1766.39,690.08,1218157.76,2151741636.64
+ondemand-2,weather,1768.32,676.99,1196409.38,2115638612.17
+ondemand-3,weather,1766.66,671.04,1184786.35,2093114738.45
+ondemand-4,weather,1764.14,666.32,1174547.43,2072068173.11

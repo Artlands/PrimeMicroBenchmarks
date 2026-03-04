@@ -1,0 +1,7 @@
+subfolder,benchmark,Total runtime [s],Average total power [W],Total energy [J],EDP [J*s]
+Average,pennant,1513.77,571.61,864626.30,1308847489.55
+ondemand-0,pennant,1512.60,573.69,867141.20,1311637132.79
+ondemand-1,pennant,1514.51,566.07,856695.57,1297472954.58
+ondemand-2,pennant,1514.37,575.35,870465.95,1318209206.19
+ondemand-3,pennant,1513.44,576.58,871984.47,1319697282.50
+ondemand-4,pennant,1513.95,566.38,856844.30,1297220871.68
