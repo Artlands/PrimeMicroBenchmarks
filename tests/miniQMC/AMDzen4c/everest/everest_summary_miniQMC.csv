@@ -1,0 +1,7 @@
+subfolder,benchmark,Total runtime [s],Average total power [W],Total energy [J],EDP [J*s]
+Average,miniQMC,75.85,522.41,38793.17,2938139.37
+everest-0,miniQMC,83.15,451.35,36956.33,3072945.08
+everest-1,miniQMC,71.15,571.63,39961.30,2843192.84
+everest-2,miniQMC,75.16,529.10,39093.27,2938244.39
+everest-3,miniQMC,73.14,550.16,39536.75,2891885.23
+everest-4,miniQMC,76.64,509.79,38418.20,2944429.31

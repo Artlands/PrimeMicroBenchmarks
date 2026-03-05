@@ -1,0 +1,7 @@
+subfolder,benchmark,Total runtime [s],Average total power [W],Total energy [J],EDP [J*s]
+Average,miniQMC,80.05,473.17,37258.32,2982640.14
+pulse-0,miniQMC,80.16,471.06,37175.23,2979964.54
+pulse-1,miniQMC,80.16,478.71,37745.80,3025648.60
+pulse-2,miniQMC,79.64,470.04,36783.72,2929524.69
+pulse-3,miniQMC,80.15,468.10,36904.23,2957908.71
+pulse-4,miniQMC,80.15,477.95,37682.62,3020154.18

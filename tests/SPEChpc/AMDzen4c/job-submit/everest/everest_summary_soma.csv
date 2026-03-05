@@ -1,0 +1,7 @@
+subfolder,benchmark,Total runtime [s],Average total power [W],Total energy [J],EDP [J*s]
+Average,soma,1554.90,483.85,751501.25,1168282485.20
+everest-0,soma,1542.96,492.17,758938.27,1171014116.75
+everest-1,soma,1539.99,514.49,791581.95,1219025499.73
+everest-2,soma,1558.97,472.52,735820.63,1147124965.49
+everest-3,soma,1581.64,464.58,734331.24,1161450006.73
+everest-4,soma,1550.96,475.49,736834.13,1142797837.31

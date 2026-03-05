@@ -1,0 +1,7 @@
+subfolder,benchmark,Total runtime [s],Average total power [W],Total energy [J],EDP [J*s]
+Average,sph_exa,2275.92,430.69,980163.47,2263438321.75
+pulse-0,sph_exa,1882.47,430.16,809549.03,1523950119.70
+pulse-1,sph_exa,2138.03,436.74,936288.26,2001815108.61
+pulse-2,sph_exa,2739.27,416.26,1141582.97,3127099079.71
+pulse-3,sph_exa,2432.53,435.36,1061976.40,2583284617.80
+pulse-4,sph_exa,2187.30,434.91,951420.70,2081042682.92

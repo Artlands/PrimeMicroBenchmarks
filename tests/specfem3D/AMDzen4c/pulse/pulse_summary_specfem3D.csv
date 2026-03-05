@@ -1,0 +1,7 @@
+subfolder,benchmark,Total runtime [s],Average total power [W],Total energy [J],EDP [J*s]
+Average,specfem3D,774.05,658.70,508942.45,395685144.63
+pulse-0,specfem3D,705.84,659.22,464627.34,327950953.93
+pulse-1,specfem3D,744.89,663.84,493789.48,367820516.33
+pulse-2,specfem3D,862.65,644.45,555248.76,478984220.77
+pulse-3,specfem3D,752.90,658.25,494890.98,372605660.43
+pulse-4,specfem3D,803.99,667.76,536155.67,431064371.68

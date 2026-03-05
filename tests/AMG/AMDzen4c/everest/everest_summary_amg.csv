@@ -1,0 +1,7 @@
+subfolder,benchmark,Total runtime [s],Average total power [W],Total energy [J],EDP [J*s]
+Average,amg,482.33,534.00,256909.58,123937485.58
+everest-0,amg,502.98,522.05,262134.80,131848856.27
+everest-1,amg,473.93,549.59,259975.45,123211232.76
+everest-2,amg,480.91,521.53,250196.77,120321530.02
+everest-3,amg,481.94,534.79,256947.26,123832767.08
+everest-4,amg,471.90,542.07,255293.59,120473041.76

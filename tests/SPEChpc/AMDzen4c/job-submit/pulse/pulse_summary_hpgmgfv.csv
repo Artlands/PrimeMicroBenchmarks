@@ -1,0 +1,7 @@
+subfolder,benchmark,Total runtime [s],Average total power [W],Total energy [J],EDP [J*s]
+Average,hpgmgfv,1302.79,551.25,717424.68,934714980.15
+pulse-0,hpgmgfv,1311.59,558.99,732459.10,960687160.06
+pulse-1,hpgmgfv,1298.57,548.58,711721.38,924220586.81
+pulse-2,hpgmgfv,1308.08,557.62,728614.70,953085192.45
+pulse-3,hpgmgfv,1298.64,535.02,693888.95,901113116.30
+pulse-4,hpgmgfv,1297.08,556.06,720439.26,934468845.15

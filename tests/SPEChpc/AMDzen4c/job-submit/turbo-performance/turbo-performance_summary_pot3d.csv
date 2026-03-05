@@ -1,0 +1,7 @@
+subfolder,benchmark,Total runtime [s],Average total power [W],Total energy [J],EDP [J*s]
+Average,pot3d,2655.50,557.68,1480630.39,3933693525.84
+turbo-performance-0,pot3d,2671.81,613.82,1638780.10,4378513676.39
+turbo-performance-1,pot3d,2655.34,608.49,1614975.42,4288308752.90
+turbo-performance-2,pot3d,2664.33,612.29,1630030.43,4342939160.04
+turbo-performance-3,pot3d,2642.77,480.18,1268280.03,3351770104.49
+turbo-performance-4,pot3d,2643.25,473.63,1251085.98,3306935935.39

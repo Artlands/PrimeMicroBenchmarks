@@ -1,0 +1,7 @@
+subfolder,benchmark,Total runtime [s],Average total power [W],Total energy [J],EDP [J*s]
+2.25GHz-0,miniswp,625.25,644.97,402165.13,251453566.15
+2.25GHz-1,miniswp,637.27,647.02,411610.54,262306564.93
+2.25GHz-2,miniswp,627.26,645.60,404218.66,253550331.61
+2.25GHz-3,miniswp,626.26,656.56,410431.02,257035424.74
+2.25GHz-4,miniswp,636.27,646.05,410333.08,261081187.63
+Average,miniswp,631.51,645.91,407081.85,257097912.58

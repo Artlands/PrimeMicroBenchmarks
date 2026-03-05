@@ -1,0 +1,6 @@
+subfolder,benchmark,Total runtime [s],Average total power [W],Total energy [J],EDP [J*s]
+Average,soma,1317.41,642.14,838022.55,1098846060.70
+turbo-performance-0,soma,1230.36,732.04,899819.79,1107105704.34
+turbo-performance-1,soma,1239.38,728.13,901699.28,1117544849.25
+turbo-performance-3,soma,1401.15,556.36,778964.16,1091447787.88
+turbo-performance-4,soma,1398.75,552.04,771606.97,1079285901.33

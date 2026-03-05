@@ -1,0 +1,7 @@
+subfolder,benchmark,Total runtime [s],Average total power [W],Total energy [J],EDP [J*s]
+2.25GHz-0,omnetpp,791.34,499.00,394259.39,311994707.09
+2.25GHz-1,omnetpp,793.94,497.82,393987.01,312801427.43
+2.25GHz-2,omnetpp,779.39,500.15,388659.98,302917542.80
+2.25GHz-3,omnetpp,792.94,499.38,395345.60,313483510.23
+2.25GHz-4,omnetpp,785.88,495.25,388590.30,305384711.71
+Average,omnetpp,788.70,498.32,392168.46,309316379.85

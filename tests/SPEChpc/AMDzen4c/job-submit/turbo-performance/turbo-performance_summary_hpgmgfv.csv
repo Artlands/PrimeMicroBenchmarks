@@ -1,0 +1,7 @@
+subfolder,benchmark,Total runtime [s],Average total power [W],Total energy [J],EDP [J*s]
+Average,hpgmgfv,1286.16,650.82,835165.11,1072866257.73
+turbo-performance-0,hpgmgfv,1280.02,715.10,914543.81,1170636405.28
+turbo-performance-1,hpgmgfv,1288.04,733.43,943863.80,1215738892.65
+turbo-performance-2,hpgmgfv,1259.95,726.82,914976.27,1152826106.85
+turbo-performance-3,hpgmgfv,1303.65,536.68,698995.22,911248515.03
+turbo-performance-4,hpgmgfv,1299.15,542.06,703446.47,913881368.83

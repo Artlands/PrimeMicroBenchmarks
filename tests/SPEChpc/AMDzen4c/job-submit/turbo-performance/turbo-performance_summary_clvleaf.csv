@@ -1,0 +1,7 @@
+subfolder,benchmark,Total runtime [s],Average total power [W],Total energy [J],EDP [J*s]
+Average,clvleaf,2452.73,532.41,1304711.94,3199056788.83
+turbo-performance-0,clvleaf,2460.92,480.54,1181973.48,2908747625.34
+turbo-performance-1,clvleaf,2445.38,613.07,1498463.83,3664312354.69
+turbo-performance-2,clvleaf,2444.44,620.66,1516376.43,3706692717.87
+turbo-performance-3,clvleaf,2456.53,471.74,1158224.48,2845208712.38
+turbo-performance-4,clvleaf,2456.37,476.07,1168521.47,2870322533.85

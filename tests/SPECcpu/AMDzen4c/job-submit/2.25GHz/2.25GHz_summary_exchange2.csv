@@ -1,0 +1,7 @@
+subfolder,benchmark,Total runtime [s],Average total power [W],Total energy [J],EDP [J*s]
+2.25GHz-0,exchange2,304.60,590.92,179247.48,54598985.39
+2.25GHz-1,exchange2,304.58,597.67,181314.63,55224839.31
+2.25GHz-2,exchange2,445.12,484.54,215080.01,95737236.10
+2.25GHz-3,exchange2,540.12,434.98,234568.36,126694825.99
+2.25GHz-4,exchange2,307.10,597.02,182607.13,56079123.98
+Average,exchange2,380.31,541.03,198563.52,77667002.16

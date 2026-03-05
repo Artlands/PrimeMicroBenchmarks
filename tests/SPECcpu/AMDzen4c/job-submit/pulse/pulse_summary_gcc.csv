@@ -1,0 +1,7 @@
+subfolder,benchmark,Total runtime [s],Average total power [W],Total energy [J],EDP [J*s]
+Average,gcc,145.08,568.73,81720.77,11855733.15
+pulse-0,gcc,144.78,559.25,80286.98,11624169.45
+pulse-1,gcc,145.27,561.31,80798.45,11737776.68
+pulse-2,gcc,145.29,569.68,81710.71,11871406.19
+pulse-3,gcc,145.27,574.40,82733.12,12018660.41
+pulse-4,gcc,144.77,579.03,83074.61,12026653.03

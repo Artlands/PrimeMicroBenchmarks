@@ -1,0 +1,6 @@
+subfolder,benchmark,Total runtime [s],Average total power [W],Total energy [J],EDP [J*s]
+Average,gcc,145.15,567.77,81680.58,11856563.53
+turbo-performance-0,gcc,144.78,555.53,79664.89,11533861.25
+turbo-performance-1,gcc,145.28,576.37,82996.01,12057478.27
+turbo-performance-2,gcc,145.28,563.01,81134.30,11787290.60
+turbo-performance-4,gcc,145.28,576.15,82927.11,12047624.02

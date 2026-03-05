@@ -1,0 +1,5 @@
+subfolder,benchmark,Total runtime [s],Average total power [W],Total energy [J],EDP [J*s]
+Average,hpcg,718.46,459.64,329667.76,236841586.13
+everest-0,hpcg,720.48,441.47,317541.83,228783381.48
+everest-1,hpcg,717.45,476.87,341533.15,245033171.33
+everest-2,hpcg,717.45,460.58,329928.30,236708205.58

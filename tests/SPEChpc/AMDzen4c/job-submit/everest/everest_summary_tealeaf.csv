@@ -1,0 +1,7 @@
+subfolder,benchmark,Total runtime [s],Average total power [W],Total energy [J],EDP [J*s]
+Average,tealeaf,3242.86,417.45,1353243.75,4388412211.46
+everest-0,tealeaf,3244.63,426.43,1383129.24,4487740728.57
+everest-1,tealeaf,3243.45,418.98,1358469.96,4406135548.37
+everest-2,tealeaf,3244.18,418.59,1357536.05,4404093854.45
+everest-3,tealeaf,3241.68,412.37,1336287.94,4331817414.88
+everest-4,tealeaf,3240.37,410.86,1330795.57,4312273511.02

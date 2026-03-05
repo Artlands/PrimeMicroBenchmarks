@@ -1,0 +1,7 @@
+subfolder,benchmark,Total runtime [s],Average total power [W],Total energy [J],EDP [J*s]
+Average,hpcg,736.33,431.31,317029.69,233442498.75
+pulse-0,hpcg,737.46,418.25,307890.73,227056707.93
+pulse-1,hpcg,732.92,433.04,316802.05,232189171.63
+pulse-2,hpcg,734.43,434.03,318210.59,233702653.53
+pulse-3,hpcg,740.44,438.10,323820.43,239770556.53
+pulse-4,hpcg,736.42,433.16,318424.65,234493404.13

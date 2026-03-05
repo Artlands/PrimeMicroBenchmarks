@@ -1,0 +1,7 @@
+subfolder,benchmark,Total runtime [s],Average total power [W],Total energy [J],EDP [J*s]
+Average,weather,1762.36,542.65,958258.45,1688555168.79
+everest-0,weather,1763.61,497.53,886197.35,1562904472.46
+everest-1,weather,1766.12,501.94,887132.62,1566780765.18
+everest-2,weather,1761.00,598.19,1052876.52,1854111106.51
+everest-3,weather,1763.62,495.70,876322.91,1545496754.85
+everest-4,weather,1757.48,619.92,1088762.87,1913482744.96

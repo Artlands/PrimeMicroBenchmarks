@@ -1,0 +1,7 @@
+subfolder,benchmark,Total runtime [s],Average total power [W],Total energy [J],EDP [J*s]
+Average,lbm,891.17,756.19,667912.60,594323477.26
+turbo-performance-0,lbm,829.63,812.66,673313.50,558598235.82
+turbo-performance-1,lbm,820.12,818.41,670290.51,549720021.78
+turbo-performance-2,lbm,853.18,819.04,697892.38,595429246.67
+turbo-performance-3,lbm,960.46,664.31,637326.85,612125822.74
+turbo-performance-4,lbm,992.44,666.50,660739.75,655744059.30

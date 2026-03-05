@@ -1,0 +1,7 @@
+subfolder,benchmark,Total runtime [s],Average total power [W],Total energy [J],EDP [J*s]
+Average,omnetpp,791.99,501.89,396844.03,314301701.05
+pulse-0,omnetpp,788.37,495.61,390108.76,307550996.55
+pulse-1,omnetpp,797.89,498.69,397293.60,316996713.13
+pulse-2,omnetpp,786.38,512.97,402758.18,316719660.28
+pulse-3,omnetpp,790.90,497.72,392915.96,310758635.50
+pulse-4,omnetpp,796.43,504.47,401143.64,319482499.77

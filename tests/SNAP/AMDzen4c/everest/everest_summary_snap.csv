@@ -1,0 +1,6 @@
+subfolder,benchmark,Total runtime [s],Average total power [W],Total energy [J],EDP [J*s]
+Average,snap,1160.66,535.72,621206.81,721016148.20
+everest-0,snap,1160.80,536.40,622086.08,722118652.57
+everest-1,snap,1161.27,532.58,617811.45,717445868.56
+everest-3,snap,1165.32,536.86,625131.41,728478742.64
+everest-4,snap,1155.25,537.04,619798.28,716021329.04

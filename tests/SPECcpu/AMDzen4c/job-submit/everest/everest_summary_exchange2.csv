@@ -1,0 +1,6 @@
+subfolder,benchmark,Total runtime [s],Average total power [W],Total energy [J],EDP [J*s]
+Average,exchange2,339.92,534.39,181015.52,61585673.20
+everest-0,exchange2,337.18,529.46,177945.12,59999989.18
+everest-1,exchange2,325.16,539.13,174646.91,56788738.80
+everest-2,exchange2,343.17,534.53,182805.17,62732813.80
+everest-4,exchange2,354.18,534.43,188664.88,66821151.01

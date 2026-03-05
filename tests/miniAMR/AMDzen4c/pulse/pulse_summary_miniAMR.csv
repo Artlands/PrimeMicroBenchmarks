@@ -1,0 +1,7 @@
+subfolder,benchmark,Total runtime [s],Average total power [W],Total energy [J],EDP [J*s]
+Average,miniAMR,586.23,454.33,265584.37,155700203.61
+pulse-0,miniAMR,587.13,455.56,266490.82,156464247.40
+pulse-1,miniAMR,591.64,456.46,269202.05,159270574.75
+pulse-2,miniAMR,582.62,454.86,264323.78,153999938.80
+pulse-3,miniAMR,587.64,452.44,265097.49,155781147.66
+pulse-4,miniAMR,582.12,452.35,262807.68,152985109.43

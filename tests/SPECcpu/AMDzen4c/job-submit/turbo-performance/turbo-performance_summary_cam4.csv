@@ -1,0 +1,7 @@
+subfolder,benchmark,Total runtime [s],Average total power [W],Total energy [J],EDP [J*s]
+Average,cam4,3838.72,612.83,2350798.85,9020073967.52
+turbo-performance-0,cam4,3817.82,691.17,2638075.71,10071706802.04
+turbo-performance-1,cam4,3864.85,522.81,2020299.79,7808160777.97
+turbo-performance-2,cam4,3829.39,741.05,2837040.02,10864132273.30
+turbo-performance-3,cam4,3837.19,550.01,2109676.30,8095234323.94
+turbo-performance-4,cam4,3844.35,559.11,2148902.44,8261135660.35

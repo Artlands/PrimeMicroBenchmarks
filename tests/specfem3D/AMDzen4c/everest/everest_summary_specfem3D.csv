@@ -1,0 +1,7 @@
+subfolder,benchmark,Total runtime [s],Average total power [W],Total energy [J],EDP [J*s]
+Average,specfem3D,824.16,615.82,506613.50,418921071.66
+everest-0,specfem3D,747.46,613.63,457982.34,342322679.66
+everest-1,specfem3D,856.54,610.66,522419.22,447471037.09
+everest-2,specfem3D,787.49,632.77,497057.35,391428853.89
+everest-3,specfem3D,845.15,605.85,511456.41,432255269.45
+everest-4,specfem3D,884.18,616.21,544152.21,481127518.22

@@ -1,0 +1,7 @@
+subfolder,benchmark,Total runtime [s],Average total power [W],Total energy [J],EDP [J*s]
+Average,miniswp,673.54,596.59,401130.96,270228812.28
+everest-0,miniswp,689.33,591.35,407032.73,280580850.54
+everest-1,miniswp,656.81,597.18,391589.17,257201149.94
+everest-2,miniswp,668.84,610.60,407753.44,272720373.45
+everest-3,miniswp,668.84,593.72,396365.61,265103548.15
+everest-4,miniswp,683.86,590.09,402913.87,275538139.33

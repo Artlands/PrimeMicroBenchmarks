@@ -1,0 +1,7 @@
+subfolder,benchmark,Total runtime [s],Average total power [W],Total energy [J],EDP [J*s]
+Average,sph_exa,2426.65,470.04,1151183.96,2833605016.89
+everest-0,sph_exa,2573.01,451.98,1173337.06,3019003823.28
+everest-1,sph_exa,2481.29,483.33,1206075.88,2992623667.46
+everest-2,sph_exa,2051.70,457.38,938211.33,1924924706.01
+everest-3,sph_exa,2172.36,485.61,1068958.09,2322156910.09
+everest-4,sph_exa,2854.90,471.89,1369337.47,3909315977.62

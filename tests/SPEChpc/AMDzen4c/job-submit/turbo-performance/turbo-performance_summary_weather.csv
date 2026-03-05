@@ -1,0 +1,7 @@
+subfolder,benchmark,Total runtime [s],Average total power [W],Total energy [J],EDP [J*s]
+Average,weather,1757.62,721.60,1267600.14,2228178866.55
+turbo-performance-0,weather,1752.48,826.07,1446723.81,2535349653.15
+turbo-performance-1,weather,1766.48,819.88,1447400.47,2556809839.19
+turbo-performance-2,weather,1756.59,657.25,1153750.34,2026661759.20
+turbo-performance-3,weather,1756.47,652.80,1145907.53,2012751624.14
+turbo-performance-4,weather,1756.06,651.98,1144218.56,2009321457.07

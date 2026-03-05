@@ -1,0 +1,7 @@
+subfolder,benchmark,Total runtime [s],Average total power [W],Total energy [J],EDP [J*s]
+Average,miniAMR,511.88,619.05,316169.59,161847917.83
+everest-0,miniAMR,512.48,610.68,312156.84,159973749.45
+everest-1,miniAMR,514.48,620.04,318383.70,163800585.72
+everest-2,miniAMR,504.98,623.17,313882.09,158504506.43
+everest-3,miniAMR,515.51,619.92,318932.69,164412758.40
+everest-4,miniAMR,511.97,621.45,317492.64,162547989.16

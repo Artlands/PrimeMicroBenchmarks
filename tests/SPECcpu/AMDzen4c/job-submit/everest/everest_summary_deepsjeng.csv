@@ -1,0 +1,7 @@
+subfolder,benchmark,Total runtime [s],Average total power [W],Total energy [J],EDP [J*s]
+Average,deepsjeng,1266.07,350.29,441866.92,559843833.50
+everest-0,deepsjeng,1193.78,364.86,434805.62,519063814.11
+everest-1,deepsjeng,1220.80,357.16,435014.16,531064875.67
+everest-2,deepsjeng,1349.16,338.19,455256.69,614212900.14
+everest-3,deepsjeng,1303.92,342.29,444681.98,579831902.09
+everest-4,deepsjeng,1262.68,348.97,439576.17,555045675.52

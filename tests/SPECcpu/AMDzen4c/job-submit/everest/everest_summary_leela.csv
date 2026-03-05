@@ -1,0 +1,7 @@
+subfolder,benchmark,Total runtime [s],Average total power [W],Total energy [J],EDP [J*s]
+Average,leela,603.02,546.73,328974.92,198375564.16
+everest-0,leela,610.75,533.73,325227.79,198632729.40
+everest-1,leela,604.74,546.66,330022.35,199576602.52
+everest-2,leela,596.23,554.42,329829.00,196653035.19
+everest-3,leela,604.72,550.40,332026.31,200782836.91
+everest-4,leela,598.69,548.44,327769.18,196232616.80

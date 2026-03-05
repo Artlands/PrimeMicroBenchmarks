@@ -1,0 +1,7 @@
+subfolder,benchmark,Total runtime [s],Average total power [W],Total energy [J],EDP [J*s]
+Average,deepsjeng,997.10,476.16,465328.07,461511874.76
+turbo-performance-0,deepsjeng,906.33,547.48,494537.30,448216307.88
+turbo-performance-1,deepsjeng,1109.07,391.46,432744.79,479944427.47
+turbo-performance-2,deepsjeng,921.85,529.24,485380.70,447449922.35
+turbo-performance-3,deepsjeng,1139.10,386.81,439251.16,500351657.43
+turbo-performance-4,deepsjeng,909.15,525.83,474726.40,431597058.67

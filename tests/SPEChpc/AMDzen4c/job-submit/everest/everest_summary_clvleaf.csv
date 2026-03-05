@@ -1,0 +1,7 @@
+subfolder,benchmark,Total runtime [s],Average total power [W],Total energy [J],EDP [J*s]
+Average,clvleaf,2474.12,433.32,1071569.92,2651196342.80
+everest-0,clvleaf,2473.61,432.06,1068169.63,2642237017.45
+everest-1,clvleaf,2470.11,435.16,1074437.05,2653981404.98
+everest-2,clvleaf,2473.11,428.42,1059024.05,2619087421.35
+everest-3,clvleaf,2478.18,428.16,1060548.25,2628225537.78
+everest-4,clvleaf,2475.61,442.77,1095670.61,2712450332.44

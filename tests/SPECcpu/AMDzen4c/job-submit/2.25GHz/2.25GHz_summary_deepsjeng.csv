@@ -1,0 +1,7 @@
+subfolder,benchmark,Total runtime [s],Average total power [W],Total energy [J],EDP [J*s]
+2.25GHz-0,deepsjeng,1166.30,379.61,439484.01,512570711.07
+2.25GHz-1,deepsjeng,1091.44,392.42,426455.02,465449597.66
+2.25GHz-2,deepsjeng,1100.71,387.82,424209.22,466931183.66
+2.25GHz-3,deepsjeng,1155.72,384.79,442060.24,510897676.64
+2.25GHz-4,deepsjeng,1108.74,389.35,430351.08,477147545.44
+Average,deepsjeng,1124.58,386.80,432511.91,486599342.89

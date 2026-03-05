@@ -1,0 +1,7 @@
+subfolder,benchmark,Total runtime [s],Average total power [W],Total energy [J],EDP [J*s]
+Average,tealeaf,3246.40,391.22,1269256.50,4120507380.28
+pulse-0,tealeaf,3243.57,395.95,1283412.76,4162841942.71
+pulse-1,tealeaf,3243.97,396.93,1286823.38,4174411003.34
+pulse-2,tealeaf,3244.98,390.13,1265176.17,4105473942.57
+pulse-3,tealeaf,3241.47,385.52,1248890.86,4048242833.97
+pulse-4,tealeaf,3258.03,387.58,1261979.33,4111567178.82

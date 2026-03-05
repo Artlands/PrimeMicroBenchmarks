@@ -1,0 +1,7 @@
+subfolder,benchmark,Total runtime [s],Average total power [W],Total energy [J],EDP [J*s]
+Average,pennant,1633.45,471.88,770859.92,1259137324.96
+everest-0,pennant,1636.25,468.71,767256.18,1255419952.77
+everest-1,pennant,1626.28,482.85,784736.45,1276202211.88
+everest-2,pennant,1633.15,470.25,768241.41,1254651172.00
+everest-3,pennant,1634.82,461.50,754618.17,1233667583.67
+everest-4,pennant,1636.73,476.07,779447.37,1275745704.50

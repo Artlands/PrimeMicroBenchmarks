@@ -1,0 +1,7 @@
+subfolder,benchmark,Total runtime [s],Average total power [W],Total energy [J],EDP [J*s]
+Average,gcc,165.52,500.41,81785.96,13530204.65
+everest-0,gcc,184.86,440.00,80766.34,14930474.46
+everest-1,gcc,161.30,507.23,81254.61,13106767.34
+everest-2,gcc,151.80,550.78,82846.17,12576136.78
+everest-3,gcc,167.83,488.96,81426.33,13666115.29
+everest-4,gcc,161.81,515.06,82636.36,13371529.39

@@ -1,0 +1,7 @@
+subfolder,benchmark,Total runtime [s],Average total power [W],Total energy [J],EDP [J*s]
+Average,omnetpp,841.00,454.88,382008.32,321268571.60
+everest-0,omnetpp,846.60,447.12,378002.78,320016388.43
+everest-1,omnetpp,835.46,455.73,380214.17,317655039.52
+everest-2,omnetpp,835.52,462.42,385849.02,322382946.14
+everest-3,omnetpp,836.00,456.98,381556.14,318979627.08
+everest-4,omnetpp,851.44,452.14,384419.47,327308856.85

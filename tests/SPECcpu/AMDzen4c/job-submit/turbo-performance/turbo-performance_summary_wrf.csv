@@ -1,0 +1,7 @@
+subfolder,benchmark,Total runtime [s],Average total power [W],Total energy [J],EDP [J*s]
+Average,wrf,3816.59,549.48,2096508.36,8001735936.57
+turbo-performance-0,wrf,3803.90,550.99,2095364.97,7970568260.31
+turbo-performance-1,wrf,3786.08,553.21,2093955.63,7927882192.43
+turbo-performance-2,wrf,3812.74,550.11,2096760.31,7994409240.07
+turbo-performance-3,wrf,3801.81,548.79,2085716.89,7929507409.85
+turbo-performance-4,wrf,3878.40,544.29,2110744.02,8186312580.20

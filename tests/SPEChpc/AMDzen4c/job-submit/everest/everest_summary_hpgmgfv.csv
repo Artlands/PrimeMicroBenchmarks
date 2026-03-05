@@ -1,0 +1,7 @@
+subfolder,benchmark,Total runtime [s],Average total power [W],Total energy [J],EDP [J*s]
+Average,hpgmgfv,1341.50,508.31,681212.55,913757350.41
+everest-0,hpgmgfv,1337.23,523.10,698878.30,934558077.41
+everest-1,hpgmgfv,1344.73,503.38,676297.96,909438526.75
+everest-2,hpgmgfv,1325.62,522.06,691485.46,916645620.56
+everest-3,hpgmgfv,1348.75,494.77,666718.89,899235769.49
+everest-4,hpgmgfv,1351.17,498.24,672682.14,908908757.85
